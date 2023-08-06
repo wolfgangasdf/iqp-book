@@ -1,0 +1,34 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+defaults:
+  numbered: True
+parts:
+  - caption: Basics
+    chapters:
+    - file: b-qubits-realization
+    - file: b-degrees-of-freedom
+    - file: b-evidence-for-qm
+  - caption: The Schrödinger equation
+    chapters:
+    - file: se-free-particle
+    - file: se-1d-schroedinger
+    - file: se-square-well
+    - file: se-qho
+  - caption: Quantum mechanics in 3 dimensions
+    chapters:
+    - file: 3d-schroedinger
+    - file: 3d-angular-momentum
+  - caption: The spin
+    chapters:
+    - file: sp-concepts
+    - file: sp-half
+    - file: sp-magnetic-field
+    - file: sp-clebschgordan
+  - caption: Advanced
+    chapters:
+    - file: ad-perturbation-theory
+    - file: ad-perturbation-theory-degenerate
+    - file: ad-quantum-dynamics
