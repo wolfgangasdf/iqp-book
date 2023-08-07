@@ -32,8 +32,9 @@ We assume that you are familiar with the following topics:
 
 ## Notational conventions
 
-TODO
-
+* We often leave out the arrow on top of vectors. Which variable is a vector or a scalar should be clear from the context.
+* We also often leave out the hat on operators - the same applies, if one gets used to it there is no ambiguity.
+* We use SI units.
 
 ## Contributing
 
