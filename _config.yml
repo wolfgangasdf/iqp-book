@@ -69,7 +69,7 @@ parse:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/wolfgangasdf/todo  # Online location of your book
+  url: https://github.com/wolfgangasdf/iqp-reader  # Online location of your book
   # path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
@@ -82,6 +82,6 @@ html:
     hypothesis: true  # Hypothesis for comments
   extra_footer: |
     <p>
-    All material Copyright © 2023 xxx.<br>
+    All material Copyright © 2023 Wolfgang Löffler.<br>
     License: none yet.
     </p>

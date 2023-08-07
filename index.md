@@ -80,7 +80,13 @@ open ./_build/html/index.html
   * Typora is better for undistracted writing.
 * Buy https://snip.mathpix.com/ for typesetting equations from screenshots and handwritten images.
 * Syntax is very fragile - always have new lines before and after equations.
-* Key documentation: https://jupyterbook.org/en/stable/content/references.html
+* Key documentation: [jupyter book](https://jupyterbook.org/en/stable/content/references.html)
+  * ```$$ \Psi $$(my_label) -> {eq}`my_label` ```
+  * figure: ``` ![fishy](../images/fun-fish.png) ```
+  * note: ``:::{note}` close with `:::`
+  * similar things: 
+    * comment at right side: `{margin}`
+    * tip: `:::{tip}`
 * Debug python code: Remove `remove-output` if you want to see the error, but better use an ipynb to make plots then copy over the code.
 
 
