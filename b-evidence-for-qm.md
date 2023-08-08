@@ -12,7 +12,9 @@ kernelspec:
 
 # Evidence for quantum mechanics
 
-`[slide] quantizations`
+## Quantizations
+
+`[slide]`
 
 What were the first indications that we need quantum mechanics to understand nature?
 
@@ -35,7 +37,8 @@ Light has already long ago been postulated to consist of light particles, howeve
 
 TODO: graph of planck spectrum.
 
-`[slide] energy of a photon`
+## The energy of a photon
+`[slide]`
 
 Photons are particle-like quanta of electromagnetic radiation. In vacuum, they travel with speed c, another fundamental constant of nature. By using the property of any monochromatic (single-frequency) wave linking propagation speed to frequency and wavelength, $c=\lambda f$, $E=hc/\lambda$, and momentum $p=h/\lambda$. 
 
@@ -60,7 +63,9 @@ We show in an exercise how this pattern can be calculated – for now it is enou
 
 Note that this is a wave-optical interference experiment and works in principle equally well for water waves.
 
-`[slide] single photon double slit`
+### A single photon in a double slit
+
+`[slide]`
 
 Now we use our single-photon sensitive camera for detection. We see that each photon is detected at one specific position – but this position is largely random, however, if we wait and collect enough data we see that the probability follows the intensity distribution: P(x) is like the intensity before I(x) – which is the square of the electric field – as we see later, we can see the dimensionless and normalized E(x) as the quantum wavefunction of photons – Psi(x)!
 Note that the interference pattern disappears if one of the two slits is blocked – therefore the “photon” wave must have gone through both slits at once.

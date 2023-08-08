@@ -14,8 +14,6 @@ kernelspec:
 
 ## Towards time independent solutions
 
-### The need for potential energy 
-
 `[slide]`
 <!-- [Ph2.2] -->
 We want to describe quantum behaviour of particles, which usually are not in free space but bound by a certain potential – we need to add this to the Schrödinger equation, this is usually done by adding a potential energy that is dependent on position. 
@@ -38,7 +36,7 @@ $$
 
 TODO fig :)
 
-### Separation of variables
+## Separation of variables
 
 `[slide]`
 <!-- Gr 2.1. -->
@@ -95,7 +93,7 @@ The second equation is the time-independent Schrodinger equation, and can only b
 
 TODO Quick check exercises: Gr 2.1a show that E must be real. Gr 2.2 Show that E must be positive.  [MB thinks last one is too hard]
 
-### Probability densities
+## Probability densities
 
 `[slide]`
 
@@ -134,7 +132,7 @@ $$
 
 TODO Exercise/slide: show that this makes sense with a de Broglie wave
 
-### Expectation values of operators
+## Expectation values of operators
 
 `[slide]`
 <!-- Ph3.5.  -->

@@ -44,7 +44,8 @@ E_y
 \end{array}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1
 $$
 
-`[slide] quantum measurement & probabilities`
+## Quantum measurements & probabilities
+`[slide]`
 
 Let’s consider one example, where $E_H=E_V=1/\sqrt{2}$. If we have a detector which only detects a certain polarization, with chance 1/2 we detect one $H$ photon and same for $V$.
 Formally, we can describe quantum measurements like this: the probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is $|\langle\psi_{meas}|\psi\rangle|^2$. By repeating the measurement many times, we can derive the detection probabilities of the states., e.g.:
@@ -62,7 +63,8 @@ $$
 
 Quantum mechanics (like any other theories) is based on a number of postulates, one postulate of quantum mechanics is, that if we measure the detection state $|\psi_{meas}\rangle$, then the state of the system will be in that state. 
 
-`[slide] bases`
+## Bases & quantum superpositions
+`[slide]`
 
 With this, we can easily calculate the probability of a detector that detects a different polarization. For instance, having again $|\psi\rangle = 1/\sqrt{2}(1,1)$, if we rotate the detector by 45 degrees so it detects only
 $|D\rangle = 1/\sqrt{2}(1,1)$ photons, it would click every time, and $|A\rangle = 1/\sqrt{2}(1,-1)$ would never detect anything. This is because $|\psi\rangle$ is actually diagonally polarized.
@@ -91,7 +93,7 @@ A linear polarizer transmits light only completely of a certain orientation of t
 
 We can think of this as a quantum measurement, with a state vector $|\psi_{meas}\rangle=(\sin\alpha,\cos\alpha)$. 
 
-The probability to measure this state for horizontally polarized input light state $|H\rangl=(1,0)$ is as we had above $\sin^2(\alpha)$. 
+The probability to measure this state for horizontally polarized input light state $|H\rangle=(1,0)$ is as we had above $\sin^2(\alpha)$. 
 
 For $\alpha=\pi/2$, vertical polarization, this is zero. 
 
