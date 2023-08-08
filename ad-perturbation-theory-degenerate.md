@@ -229,12 +229,8 @@ $$
 \left|\psi_n^{(1)}\right\rangle=\sum_{m\neq n}\frac{\left\langle\psi_m^{(0)}\right|H'\left|\psi_n^{(0)}\right\rangle}{E_n^{(0)}-E_m^{(0)}}\left|\psi_m^{(0)}\right\rangle
 $$
 
-Now we just have to re-formulate the sum and include our new states, this is a bit tedious and won't be done here. But in any case it is more important that we have seen that, naturally, energy degeneracies are lifted under perturbations!
+Now we just have to re-formulate the sum and include our new states, this is a bit tedious and won't be done here. But in any case it is more important that we have seen that, naturally, energy degeneracies are (often) lifted under perturbations!
 
-`[todo] [peter]`
+<!-- PD said yes leave it with this. -->
 
-
-TODO:
-see docx - zeeman, SOC, ... is this really useful here?
-
-
+TODO: Example 7.3 & example 7.4 exercise etc.

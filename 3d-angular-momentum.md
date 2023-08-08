@@ -31,7 +31,7 @@ where the vector $L$ is the angular momentum, $r$ the position of the mass, and 
 
 The angular momentum is an extensive quantity, so for a composite system and not a point-like particle, it is the sum of the AM of the constituents of the body.
 
-## Quantum operators for angular momentum
+## Angular momentum algebra
 
 `[slide]`
 
@@ -69,26 +69,31 @@ $$
 
 This means we can measure those quantities with arbitrary precision at the same time!
 
-The ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$.  
+The ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$. 
 
-Now, what restrictions does this algebra impose on the quantum numbers $\ell$ and $m$? For this we look at the eigenfunction $f_\ell^m$, we find that:
+We start by defining $\hbar\ell$ as the highest angular momentum state $L_z f_t=\hbar \ell f_t$, then we can calculate the eigenvalue of $L^2$ using the ladder operator algebra and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1)\lambda f_t$. 
 
-$$
-L^2 f_{\ell}^m=\hbar^2 \ell(\ell+1) f_{\ell}^m ; \quad L_z f_{\ell}^m=\hbar m f_{\ell}^m
-$$
+Now we do the same with bottom rung of angular momentum states, and we find that it must have $m=-\ell$. 
 
-Now, however, the conditions have changed, we have:
-* $\ell$ is half-integer or integer
-* $m=-\ell,-\ell+1,\ldots,\ell$
+So, the eigenstates of $L_z$ are $m\hbar$ where $m$ goes from $-\ell$ to $\ell$ in $N$ integer steps, or $\ell=\ell+N$. Therefore $\ell=N/2$ which means that $\ell$ is either integer or half-integer!
 
-Exciting, half-integer values are possible - we will come back to this.
+We summarize:
+
+$$\begin{align*}
+L^2 f_{\ell}^m&=\hbar^2 \ell(\ell+1) f_{\ell}^m\\
+L_z f_{\ell}^m&=\hbar m f_{\ell}^m\\
+\ell&=0,1 / 2,1,3 / 2, \ldots\\
+m&=-\ell,-\ell+1, \ldots, \ell-1, \ell
+\end{align*}$$
+
+Exciting, half-integer values are possible -prob we will come back to this.
 
 
 ## Quantum angular momentum example
 
 `[slide]`
 
-We now discuss what the obtain relations imply for an example with $\ell=2$. First, we plot a 3D sphere with a radius of the length of $|L|=\sqrt{2*(2+1)}\approx 2.45$ - classically $L$ could be oriented towards any point on this sphere.
+We now discuss what the obtain relations imply for an example with $\ell=2$. First, we plot a 3D sphere with a radius of the length of $|L|=\sqrt{2(2+1)}\approx 2.45$ - classically $L$ could be oriented towards any point on this sphere.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]

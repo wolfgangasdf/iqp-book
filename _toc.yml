@@ -38,4 +38,5 @@ parts:
     chapters:
     - file: ad-perturbation-theory
     - file: ad-perturbation-theory-degenerate
+    - file: ad-perturbation-theory-apps
     - file: ad-quantum-dynamics

@@ -40,7 +40,7 @@ In contrast to an electron in a harmonic potential, where we needed to add an an
 
 `[slide]`
 
-Now we can use relatively simple algebra – we have two basis states, therefore our spin-1/2 Hilbert space is two-dimensional, and  operators are $2x2$ matrices. Since our spin states are eigenstates of the operators $S^2$ and $S_z$ , we can work them out simply by calculating their eigenvalues for $\left|0\right\rangle$ and $\left|1\right\rangle$:
+Now we can use relatively simple algebra – we have two basis states, therefore our spin-1/2 Hilbert space is two-dimensional, and  operators are $2\times 2$ matrices. Since our spin states are eigenstates of the operators $S^2$ and $S_z$ , we can work them out simply by calculating their eigenvalues for $\left|0\right\rangle$ and $\left|1\right\rangle$:
 
 $$
 S^2\left|0\right\rangle=\hbar^2\ s(s=1)=\frac{3}{4}\hbar^2\left|0\right\rangle,\\
@@ -90,13 +90,113 @@ The spin operator (vectorial here) can then be written as $\vec{S}=\left(\hbar/2
 
 The Pauli matrices $\sigma$ form the basis of unitary operators on spin states. Since the spin-1/2 system is equivalent to any two-level system describing qubits, the whole algebra for qubits is based on them!
 
-## Bloch sphere
+## Pauli rotations
 
 `[slide]`
 
-TODO: from http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf
+Spin is about rotation. Rotation of what? We mean rotations in qubit space. If we take the arbitrary qubit $\psi\rangle=\alpha |0\rangle+\beta|1\rangle$, we have two complex coefficients and therefore 4 real numbers. We can, however, remove one because a global phase is irrelevant for all observable quantities. Therefore we have a 3 dimensional parameter space, which can be visualized in 3 dimensions! Due to normalization $|\alpha|^2+|\beta|^2=1$, (pure) quantum states reside on the sphere with radius 1:
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+
+def pol2cart(r, theta, phi):
+    theta=pi/2+theta
+    return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+ax.set_aspect("equal")
+ax.view_init(elev=10, azim=10, roll=0)
+
+rr=1.2
+ax.plot([0,rr],[0,0],[0,0],'r-', linewidth=3)
+ax.plot([0,0],[0,rr],[0,0],'g-', linewidth=3)
+ax.plot([0,0],[0,0],[0,rr],'b-', linewidth=3)
+
+thax=linspace(-pi,pi,50);
+fiax=linspace(0,2*pi,50)
+
+for fi in linspace(0,2*pi,10):
+    c1=pol2cart(1,thax,fi)
+    ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
+
+for th in linspace(-pi,pi,10):
+    c1=pol2cart(1,th,fiax)
+    ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
+
+c1=pol2cart(1,-pi/4,pi/4)
+ax.plot([0,c1[0]], [0,c1[1]], [0,c1[2]], color="c",linewidth=4)
+ax.plot([c1[0],c1[0]], [0,c1[1]], [0,0], color="k")
+ax.plot([0,c1[0]], [c1[1],c1[1]], [0,0], color="k")
+ax.plot([c1[0],c1[0]], [c1[1],c1[1]], [0,c1[2]], color="k")
+
+ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
+plt.show()
+
+glue("sp-bloch-sphere", fig, display=False)
+```
+
+(sp-bloch-sphere)=
+```{glue:figure} sp-bloch-sphere
+The qubit Bloch sphere with a particular qubit vector in cyan.
+```
+
+There is a deeper connection between Pauli matrices and rotations. You can quite easily convince yourselves using series expansion that we can construct from the Pauli matrices rotation matrices for vectors, but equally for qubit quantum states.
 
 
+Coming back to the rotations, 
+
+$$
+\begin{aligned}
+R_x(\theta) & \equiv e^{-i \frac{\theta}{2} \sigma_x} \\
+R_y(\theta) & \equiv e^{-i \frac{\theta}{2} \sigma_y} \\
+R_z(\theta) & \equiv e^{-i \frac{\theta}{2} \sigma_z}
+\end{aligned}
+$$
+
+In general, like the Euler formula, if an operator satisfies $A^2=I$ then we have $e^{i \theta A}=\cos (\theta) I+i \sin (\theta) A$.
+
+Therefore we can obtain well-known rotation matrices:
+
+$$
+\begin{aligned}
+& R_x(\theta) \equiv e^{-i \frac{\theta}{2} \sigma_x}=\cos \frac{\theta}{2} I-i \sin \frac{\theta}{2} \sigma_x=\left[\begin{array}{cc}
+\cos \frac{\theta}{2} & -i \sin \frac{\theta}{2} \\
+-i \sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+\end{array}\right] \\
+& R_y(\theta) \equiv e^{-i \frac{\theta}{2} \sigma_y}=\cos \frac{\theta}{2} I-i \sin \frac{\theta}{2} \sigma_y=\left[\begin{array}{cc}
+\cos \frac{\theta}{2} & -\sin \frac{\theta}{2} \\
+\sin \frac{\theta}{2} & \cos \frac{\theta}{2}
+\end{array}\right] \\
+& R_z(\theta) \equiv e^{-i \frac{\theta}{2} \sigma_z}=\cos \frac{\theta}{2} I-i \sin \frac{\theta}{2} \sigma_z=\left[\begin{array}{cc}
+e^{-i \theta / 2} & 0 \\
+0 & e^{i \theta / 2}
+\end{array}\right]
+\end{aligned}
+$$
+
+<!-- from http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf -->
+
+The visualization here is not very nice, we suggest to use the [qutip](https://qutip.org/docs/latest/guide/guide-bloch.html) or probably even better the [qiskit](https://qiskit.org/documentation/stubs/qiskit.visualization.plot_bloch_multivector.html) Bloch sphere functions. Play around with Pauli rotations!
+
+## Measurement and spin 1/2 states
+
+`[slide]`
+<!-- Classic Griffiths dialogue section -->
+
+If we have a particle in the spin-up state, and we measure the $z$-component of the spin angular momentum, which value do we get?
+
+We obtain $S_z=\hbar /2$. 
+
+Now, let us measure afterwards the $x$-component of the spin angular momentum of the particle, what is the outcome? 
+
+We obtain with 50% chance $\hbar /2$, and with 50% chance $-\hbar /2$.
+
+This might first seem weird, since we know the state exactly before the second measurement, it was in the spin-up state. But remember photon polarization, or any other degree of freedom: If we measure in a different “unbiased” basis, the outcome is always 50:50.
 
 
 

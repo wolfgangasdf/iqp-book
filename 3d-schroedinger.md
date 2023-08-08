@@ -145,9 +145,9 @@ $$
 Y_{\ell}^m(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^m(\cos \theta)
 $$
 
-where $P_{\ell}^m$ are the *associated Legendre polynomials*.
+where $P_{\ell}^m$ are the *associated Legendre polynomials*. In the derivation, $\ell$ appears as the $\ell$-th partial derivative, so $\ell$ must be a non-negative integer number.
 
-One also obtains more strict conditions on $\ell$ and $m$:
+One also obtains a more strict condition on $m$ and we have:
 
 $$
 \ell=0,1,\ldots\quad\text{and}\quad m=\ell,-\ell+1,\ldots,\ell
