@@ -32,9 +32,34 @@ $$
 i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\left(x\right)\Psi. 
 $$
 
-![atomic-emission-lines](figures/schroedinger/coulomb-potential.png)
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
 
-TODO fig :)
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+
+fig, ax = plt.subplots(figsize=(4,3))
+
+x = linspace(-7, 7, 200)
+y=-1/abs(x)
+
+ax.plot(x, y, color='red')
+ax.set_ylim(-3,1)
+ax.set_xlabel('$r$')
+ax.set_ylabel('$V(r)$')
+ax.set_xticks([0])
+ax.set_yticks([0])
+ax.text(-0.8,0.1,"⊕",fontsize=30)
+ax.text(5,0.1,"⊖",fontsize=30)
+
+glue("se-coloumb", fig, display=False)
+```
+
+(se-coloumb)=
+```{glue:figure} se-coloumb
+The Coloumb potential of the electron in the field of a positive charge (nucleus) at the origin.
+```
 
 ## Separation of variables
 
@@ -91,7 +116,7 @@ This is an oscillation, therefore $\phi$ is also called the "wiggle factor".
 
 The second equation is the time-independent Schrodinger equation, and can only be solved when we know $V(x)$.
 
-TODO Quick check exercises: Gr 2.1a show that E must be real. Gr 2.2 Show that E must be positive.  [MB thinks last one is too hard]
+<!-- Quick check exercises: Gr 2.1a show that E must be real. Gr 2.2 Show that E must be positive.  [MB thinks last one is too hard] -->
 
 ## Probability densities
 

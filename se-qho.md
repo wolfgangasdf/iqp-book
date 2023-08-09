@@ -101,7 +101,9 @@ $$
 [\hat{x}, \hat{p}]=i \hbar
 $$
 
-TODO: exercise!
+:::{note}
+Show this!
+:::
 
 we obtain $\hat{a}_{-} \hat{a}_{+}=\frac{1}{\hbar \omega} \hat{H}+\frac{1}{2}$, or written differently
 
@@ -109,7 +111,9 @@ $$
 H=\hbar \omega\left(\hat{a}_{+} \hat{a}_{-}+1 / 2\right)
 $$
 
-TODO: Exercise: show that [a-,a+]=1.
+:::{note}
+Exercise: show that $[a_-,a_+]=1$
+:::
 
 Up to now, this was just rewriting the Schrodinger equation, now we will see that the ladder operators allow us to find the solutions.
 
@@ -134,7 +138,6 @@ $$
 So, $a_-$ lowers the energy of the system by $\hbar\omega$!
 
 Therefore, $a_\pm$ are called "ladder operators", because they allow us to climb up and down in energy; $a_+$ is the raising operator, and $a_-$ is the lowering operator. As you can show, the hermitian conjugate of $a_-$ is $a_+$ and vice versa - therefore you often also read simply $a$ for $a_-$ and $a^\dagger$ for $a_+$.
-[add figure like GFig2.5]
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -305,7 +308,6 @@ glue("qho-wavefunctions", fig, display=False)
 The first few wavefunctions of the quantum harmonic oscillator. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
 ```
 
-  [https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator]
 The corresponding probability density is the square of these wavefunctions:
 
 ```{code-cell} ipython3
@@ -387,7 +389,7 @@ $$
 Its eigenvalue is simply $n$, the number of excitations.
 
 :::{warning}
-A big warning: The number states are very different to the states $|H\rangle$, $|0\rangle$, $|1\rangle$ etcetera which we discussed in the introduction - there, we always "had" a qubit or quantum state, and the ket vector described the state of the particular degree of freedom.
+The number states are very different to the states $|H\rangle$, $|0\rangle$, $|1\rangle$ etcetera which we discussed in the introduction - there, we always "had" a qubit or quantum state, and the ket vector described the state of the particular degree of freedom.
 
 Number states are different, they describe the excitations of a particular system. They can describe an "empty" system without excitations , the ground state $n=0$, one excitation (like one photon!), two excitations (two photons!) and so on.
 

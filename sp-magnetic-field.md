@@ -43,7 +43,7 @@ $$
 And we know already the eigenstates of $S_z$, they are the spin-up and down states. As shown in Griffith, the solution is that the spin rotates around the B-field with the so-called Larmor frequency $\omega=\gamma B_0$. As you can probably imagine, the relative phase of the spin-up and spin-down components change during rotation, therefore is this Larmor precession an important tool for spin qubit manipulation in the lab.
 
 ![sp-larmor](figures/spin/larmor.png)
-TODO: re-do, griffith 4.14
+<!-- TODO: re-do, griffith 4.14 -->
 
 ## The Stern-Gerlach experiment
 

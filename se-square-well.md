@@ -62,9 +62,9 @@ $$
 $$
 
 This equation is the simple classical harmonic oscillator equation, where the general solution is:
-$$
-\psi\left(x\right)=A\sin{\left(kx\right)}+B\cos(kx)
-$$
+
+$$\psi\left(x\right)=A\sin{\left(kx\right)}+B\cos(kx)$$
+
 where $A$ and $B$ are constants. These constants are fixed by the boundary conditions $\psi\left(0\right)=\psi\left(a\right)=0$ and general conditions on $\Psi$: Usually, both $\psi$ and $d\psi/dx$ must be continuous – the latter however does not apply here because the potential goes to infinity. 
 
 `[slide]`
@@ -82,7 +82,7 @@ $$
 We see that the energy for a particle in a box is quantized, it cannot have just any value. We can find the value of $A$ by normalizing the wavefunction: 
 
 $$
-\int_{0}^{a}{\left|A\right|^2\ sin^2\left(kx\right)dx}=\left|A\right|^2\frac{a}{2}=1
+\int_{0}^{a}{\left|A\right|^2\sin^2\left(kx\right)dx}=\left|A\right|^2\frac{a}{2}=1
 $$
 
 This gives $A=\sqrt{2/a}$. 
@@ -156,8 +156,10 @@ $$
 
 These wave functions $\Psi_n(x,t)$ form a complete set, which means that all possible $\Psi(x,0)$ can be expressed by choosing appropriate coefficients $c_n$.
 
-TODO ex: Exercise: show that this solves the time-dep S.EQ.
+:::{note}
+Exercise: show that this solves the time-dep Schrödinger equation!
+:::
 
-TODO Homework assignment: Finite barriers; see applications wikipedia; 
+<!-- Homework assignment: Finite barriers; see applications wikipedia;  -->
 
 

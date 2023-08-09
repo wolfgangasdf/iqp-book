@@ -18,50 +18,50 @@ kernelspec:
 
 Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which you might know.
 
-The state of a qubit is written in the ket notation often as |Psi>, Psi reminding of the quantum wave function of a particle. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a DOF of a physical system.
+:::{margin}
+![erwin](figures/basics/erwin.png)
+:::
+
+The state of a qubit is written in the ket notation often as $\left|\psi\right\rangle$, psi is traditionally the greek letter used for the quantum wave function of a particle. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a degree of freedom of a physical system.
+
 We now show how we can encode qubits in the polarization of light, for instance of a laser pointer beam. In this case, the polarization is fully defined by the horizontal H and a vertical V electric field amplitude, and we have with the known basis vectors: 
 
 $$
 \vec{E}=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=\ E_0\left( E_H\left(\begin{matrix}1\\0\\\end{matrix}\right)+E_V\left(\begin{matrix}0\\1\\\end{matrix}\right) \right)
 $$
 
-Here we have absorbed the e-field units into E0, and Eh, Ev are dimensionless.
+<!-- TODO: picture of polarization -->
+Here we have absorbed the electric-field units into $E_0$, and $E_H$ and $E_V$ are dimensionless complex coefficients.
 
 Now to the quantum state, the Psi ket-vector. By analogy, the dimensionless polarization vector is simply our qubit state vector, with the basis states H and V, where we assume normalization $|E|=1$:
 
-$$
-\left|\left.\Psi\right\rangle\right.=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=E_H\left|\left.H\right\rangle\right.\>+E_V\left|\left.V\right\rangle\right.
-$$
+$$\left|\Psi\right\rangle=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=E_H\left|H\right\rangle+E_V\left|V\right\rangle$$
 
-$E_H$ and $E_V$ are truly quantum amplitudes, where the squared amplitude gives the probability to measure the specific state. This is very similar to polarization in optics, where we often can not measure directly the electric field, but detectors measure the intensity, which is $I=\vec{E}^2=\vec{E}* \vec{E}$. This can again be written in the bra-ket notation where  $\langle E|$ is the complex transpose of ket $|E\rangle$, with this we can mathematically correct calculate quantum state overlaps, as an example, we can express the normalization condition like this:
+$E_H$ and $E_V$ are truly quantum amplitudes, where the squared amplitude gives the probability to measure the specific state. This is very similar to polarization in optics, where we often can not measure directly the electric field, but detectors measure the intensity, which is $I=\vec{E}^2=\vec{E}\cdot \vec{E}$. This can again be written in the bra-ket notation where  $\left\langle E\right|$ is the complex transpose of ket $\left|E\right\rangle$, with this we can mathematically correct calculate quantum state overlaps, as an example, we can express the normalization condition like this:
 
-$$
-\langle\Psi \mid \Psi\rangle=\left(\begin{array}{ll}
-E_x^* & E_y^*
-\end{array}\right) \cdot\left(\begin{array}{l}
-E_x \\
-E_y
-\end{array}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1
-$$
+$$\left\langle\Psi | \Psi\right\rangle=\left(\begin{matrix}
+E_x^*,\, E_y^*\end{matrix}\right)
+\cdot\left(\begin{matrix}E_x \\E_y\end{matrix}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1$$
 
 ## Quantum measurements & probabilities
 `[slide]`
 
 Let’s consider one example, where $E_H=E_V=1/\sqrt{2}$. If we have a detector which only detects a certain polarization, with chance 1/2 we detect one $H$ photon and same for $V$.
-Formally, we can describe quantum measurements like this: the probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is $|\langle\psi_{meas}|\psi\rangle|^2$. By repeating the measurement many times, we can derive the detection probabilities of the states., e.g.:
+Formally, we can describe quantum measurements like this: the probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is $|\langle\psi_{meas}|\psi\rangle|^2$. By repeating the measurement many times, we can derive the detection probabilities of the states, for instance:
 
 $$
-\left|\left\langle\Psi_{\text {detector }} \mid \Psi_{\text {photon }}\right\rangle\right|^2
+\begin{align*}
+\left|\left\langle\Psi_{\text {detector }} \mid \Psi_{\text {photon }}\right\rangle\right|^2&
 \\
-|\langle V \mid H\rangle|^2=0
+|\langle V \mid H\rangle|^2&=0
 \\
-|\langle D \mid H\rangle|^2
+|\langle D \mid H\rangle|^2&
 = \left| \frac{1}{\sqrt{2}}(\langle H \mid+\langle V|) \, |H\rangle\right|^ 2=\frac{1}{2}
+\end{align*}
 $$
-
-`TODO: Q: how can we derive the quantum amplitudes, and can we do this unambiguously? [square root, but phase unclear, requires other measurements]`
 
 Quantum mechanics (like any other theories) is based on a number of postulates, one postulate of quantum mechanics is, that if we measure the detection state $|\psi_{meas}\rangle$, then the state of the system will be in that state. 
+
 
 ## Bases & quantum superpositions
 `[slide]`
@@ -104,3 +104,4 @@ According to the rules of quantum mechanics, if the “measurement” of the mid
 
 This highlights the importance of quantum superpositions, which probably seem very natural for the polarization of light, but is in fact the cornerstone of quantum mechanics. In IQP we will see that quantum superpositions are also possible for matter systems, like electrons and other fundamental particles, and also for composite systems like electronic – photonic excitations or lattice vibrations.
 
+<!-- TODO: pic 3 pol -->

@@ -28,15 +28,49 @@ The de Broglie wave can also be described with wavenumber $k=\ \frac{2\pi}{\lamb
 
 The length of this wavepacket is a measure of the uncertainty in position, and it can be shown to be simply $\Delta x\approx\ 2\pi/\Delta k$. Note, the derivation of this requires a fourier transform! 
 
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+
+fig, ax = plt.subplots(1,2, figsize=(9,4))
+
+k=2*pi/0.5
+xax=linspace(-3,3,500)
+uxe=exp(-xax**2/1**2)
+ux=sin(k*xax)*uxe
+kax=linspace(-3,3,500)
+uk=exp(-kax**2/(1)**2)
+
+ax[0].plot(xax, uxe, color="k")
+ax[0].plot(xax, ux, color="0.5")
+ax[0].set_xlabel("$x/m$")
+ax[0].set_ylabel("$u(x)$")
+ax[0].set_yticks([0]); 
+ax[1].plot(k+kax, uk, color="k")
+ax[1].set_xlabel("$k/(1/m)$")
+ax[1].set_ylabel("$u(k)$")
+ax[1].set_yticks([0]); 
+plt.show()
+
+glue("b-uncertainty", fig, display=False)
+```
+
+(b-uncertainty)=
+```{glue:figure} b-uncertainty
+The same de Broglie wavepacket plotted in position space (left) and momentum/wavevector space (right).
+```
+
+
 If we multiply these uncertainties we obtain $\Delta x\Delta p\approx h$, therefore de Broglie wave packets automatically lead to the Heisenberg uncertainty principle! 
 
 Two notes: first, this is the maximum precision so we better write $\Delta x\Delta p\ge\ h$, and second, the precise numeric value on the right-hand side depends on the specific waveform of our wavefunction.
 
 The condition for the wavepacket to describe a moving quantum particle is that the group velocity of the packet is equal to the velocity of a particle with mass $m$ and momentum $p\ =\hbar k$.
 
-TODO pic: wavepacket in x- and k-space
-
-## Phase and group velocity
+## The Schrödinger equation
 
 <!-- Additional: Philips 2.1 -->
 `[slide]`
@@ -56,10 +90,7 @@ Note that the main goal of physics research is to develop models to describe nat
 One solution to this wave equation is 
 $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is called a plane wave moving in the $x$ direction. The momentum $k$ is obviously well defined, and we see that the wave has a non-vanishing amplitude all over space – therefore Heisenberg uncertainty is preserved: $\Delta k=0$ and $\Delta x=\infty$. The momentum is $p\ =\hbar k$ and energy $E=p^2/m=\hbar\omega$.
 
-TODO animated plot: wave packet evolving and moving in time, without dispersion.
-v_phase=v_group 
-
-TODO Quick question: verify that real functions Acos(k x – w t) and Asin(k x – w t) are not solutions – remind yourselves of Euler’s formula.
+<!-- Quick question: verify that real functions Acos(k x – w t) and Asin(k x – w t) are not solutions – remind yourselves of Euler’s formula. -->
 <!-- Ph problem 2.3 -->
 
 ## Possible wavefunctions
@@ -75,8 +106,39 @@ $$\Psi\left(x,t\right)=\ \sum_{n=1}^{\infty}{A_n(k_n)e^{i\left(k_nx-\omega_nt\ri
 
 where $\hbar\omega_n=\frac{\hbar^2k_n^2}{2m}$. If $A_n(k_n)$ is such that the sum involves only a narrow range of wave numbers around a positive value $k$, this superposition yields a wave packet moving in the positive $x$ direction with a group velocity $\hbar k/m$. In free space, such a wave packet describes a quantum particle moving at velocity $\hbar k/m$, preserving shape during propagation, but the position and momentum uncertainties are in agreement with the Heisenberg uncertainty principle as explained before.
 
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
 
-Todo: 2 plots of wavepacket of slide before: (I) real space Re(Psi(x,0)) (ii) Fourier space   Possibly: add Griffiths 2.1 
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
 
-![wavefunctions-envelope](figures/schroedinger/wavefunctions-envelope.png)
+fig, ax = plt.subplots(2,2, figsize=(6,4))
 
+k=2*pi/0.5
+xax=linspace(-3,3,500)
+kax=linspace(-10,10,500)
+wx=[0.3,1]
+uxe=[1,2]
+uk=[1,2]
+for i in range(2):
+    uxe[i]=exp(-xax**2/wx[i]**2)
+    uk[i]=exp(-kax**2/(1/wx[i])**2)
+    ax[i,0].plot(xax, uxe[i], color="k")
+    ax[i,0].plot(xax, uxe[i], color="0.5")
+    ax[i,0].set_xlabel("$x/m$")
+    ax[i,0].set_ylabel("$u(x)$")
+    ax[i,0].set_yticks([0]); 
+    ax[i,1].plot(k+kax, uk[i], color="k")
+    ax[i,1].set_xlabel("$k/(1/m)$")
+    ax[i,1].set_ylabel("$u(k)$")
+    ax[i,1].set_yticks([0]); 
+plt.show()
+
+glue("b-wavepackets", fig, display=False)
+```
+
+(b-wavepackets)=
+```{glue:figure} b-wavepackets
+The real-space (left) and wavevector-space (right) wavepacket envelope of a spatially narrow (top) and wider (bottom) wavefunction.
+```
