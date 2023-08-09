@@ -58,9 +58,13 @@ $$H_{so}^{\prime}=\left(\frac{e^2}{8 \pi \epsilon_0}\right) \frac{1}{m^2 c^2 r^3
 
 In the presence of such interaction, you probably agree that $H$ no longer commutes with $\vec{L}$ and $\vec{S}$, and the spin and orbital angular momenta are not separately conserved.
 
-Luckily, $H_{so}$ does commute with $L^2$, $S^2$, and the total angular momentum $\vec{J}=\vec{L}+\vec{S}$. So $L_z$ and $S_z$ became bad states, but the eigenstates of $L^2$, $S^2$, $J^2$, and $J_z$ are "good"! We won't calculate them here, see Griffith 7.3.2 for more information.
+Luckily, $H_{so}$ does commute with $L^2$, $S^2$, and the total angular momentum $\vec{J}=\vec{L}+\vec{S}$. So $L_z$ and $S_z$ became bad states, but the eigenstates of $L^2$, $S^2$, $J^2$, and $J_z$ are "good"! We won't calculate them here, see Griffith 7.3.2 for more information. The result is:
 
-The most important outcome is that the energy of the electronic states in hydrogen depend not only on $n$, but also on the total angular momentum quantum number $j$, which therefore splits different $\ell$ and $s$ states:
+$$
+E_{\mathrm{so}}^1=\frac{\left(E_n\right)^2}{m c^2}\left\{\frac{n[j(j+1)-\ell(\ell+1)-3 / 4]}{\ell(\ell+1 / 2)(\ell+1)}\right\}
+$$
+
+The most important outcome is that the energy of the electronic states in hydrogen depend not only on $n$ and $\ell$, but also on the spin via $j$, which therefore splits different $\ell$ and $s$ states:
 
 ```{figure} figures/perturbation-theory/h-finestructure.png
 ---
@@ -73,7 +77,7 @@ name: h-finestructure
 
 Historically, the "fine structure" of the hydrogen atom includes the relativistic corrections and spin-orbit coupling, which itself has contributions by a number of effects.
 
-Here is a very useful wikipedia page which sums up very well many decades of research on the fine structure of hydrigen: [wikipedia](https://en.wikipedia.org/wiki/Fine_structure). Effects can work in different directions, as shown here:
+Here is a very useful wikipedia page which sums up very well many decades of research on the fine structure of hydrogen: [wikipedia](https://en.wikipedia.org/wiki/Fine_structure). Effects can work in different directions, as shown here:
 
 ```{figure} figures/perturbation-theory/h-finestructure-wp.png
 ---
@@ -81,17 +85,76 @@ name: h-finestructure-wp
 ---
 ```
 
-Of course, everything is in excellent agreement with experiments! Probably a note on the existence of "true degeneracies" - probably it's best not to think that they are fundamental, but only due to our level of approximation of a model. For instance, even the levels on the right in the figure above are degenerate - what splits this last degeneracy in $m_j$?
+Of course, everything is in excellent agreement with experiments! A note on the existence of "true degeneracies" - probably it's best not to think that they are fundamental, but only due to our level of approximation of a model. For instance, even the energy levels on the right in the figure above are degenerate in $m_j$ - what lifts this last degeneracy?
 
 
 ## The Zeeman effect
 
+`[slide]`
 
-TODO but only strong...
-also do zeeman here, mention that lots of confusion of strong field and weak field - this is just because the effective magnetic field of SOC in atoms is pretty strong (tesla) - but in qutech it doesn't really play a role so we usually are in the easy strong field regime.
+The last degeneracy in $m_j$ is lifted by the Zeeman effect in an external magnetic field, which we have seen before, now with the dipole moment for electron spin $\vec{\mu}_s=-\frac{e}{m} \vec{S}$ and orbital motion $\vec{\mu}_l=-\frac{e}{2 m} \vec{L}$:
 
+$$H_Z^{\prime}=\frac{e}{2 m}(\vec{L}+2 \vec{S}) \cdot \vec{B}_{\vec{ext}}$$
 
-also own data!
+Depending on the strength of the magnetic field compared to the internal magnetic fields that lead to spin-orbit interaction, one distinguishes different regimes: The weak- and strong-field Zeeman effect.
+
+### Weak-field Zeeman effect
+
+`[slide]`
+
+For $B_{\mathrm{ext}} \ll B_{\mathrm{int}}$, the fine structure splitting dominates, and $H_Z'$ can be treated as a perturbation. Luckily, $\left|n \ell j m_j\right\rangle$ are good eigenstates and we can use first-order perturbation theory (for details see Griffith 7.4.1):
+
+$$E_Z^1=\left\langle n \ell j m_j\left|H_Z^{\prime}\right| n \ell j m_j\right\rangle=\frac{e}{2 m} B_{\mathrm{ext}} \hat{k} \cdot\langle\vec{L}+2 \vec{S}\rangle$$
+
+One can calculate 
+
+$$\langle\vec{L}+2 \vec{S}\rangle=\left[1+\frac{j(j+1)-\ell(\ell+1)+s(s+1)}{2 j(j+1)}\right]\langle\vec{J}\rangle$$
+
+where the term in brackets is the **Landé g-factor** $g_J$:
+
+$$E_Z^1=\mu_B g_J B_{\mathrm{ext}} m_j$$
+
+And, 
+
+$$\mu_B \equiv \frac{e \hbar}{2 m}=5.788 \times 10^{-5} \mathrm{eV} / \mathrm{T}$$
+
+is the **Bohr magneton**, a useful quantity in quantum mechanics.
+
+The magnetic field breaks rotation symmetry and $H_Z'$ lifts the degeneracy in $m$.
+
+### Strong-field and intermediate fields
+
+`[slide]`
+
+If $B_{\mathrm{ext}} \gg B_{\mathrm{int}}$, we can use $H_{\mathrm{Bohr}}+H_Z^{\prime}$ as the unperturbed Hamiltonian, and use $H_{fs}'$ as the perturbation. 
+
+Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a theory needs to connect the corrections by the weak- and strong-field Zeeman effect in a continuous way. In this intermediate regime we need to treat $ H^{\prime}=H_Z^{\prime}+H_{\mathrm{fs}}^{\prime}$ as the perturbation, and it is not clear what good eigenstates are. Therefore, we have to use the Clebsch-Gordan coefficients to find the state decomposition, and have to run perturbation theory with them. We do not do this here but it works, as can be seen in Griffith 7.4.3.
+
+```{figure} figures/perturbation-theory/zeeman-all.png
+---
+name: zeeman-all
+---
+Zeeman splitting of the $n=2$ states of hydrogen where we see that the different regimes connect nicely.
+```
+<!-- TODO replace G7.11 -->
+
+## Hyperfine splitting
+
+As a last effect, we want to mention the hyperfine splitting, since it appears also in other qubit systems than atoms.
+
+It comes by the magnetic dipole moment of the proton, which is much smaller than the dipole moment of the electron because the proton mass is much higher:
+
+$$
+\vec{\mu}_p=\frac{g_p e}{2 m_p} \vec{S}_p, \quad \vec{\mu}_e=-\frac{e}{m_e} \vec{S}_e
+$$
+
+We find a first-order perturbation theory correction to energy 
+
+$$E_{\mathrm{hf}}^1=\frac{\mu_0 g_p e^2}{3 \pi m_p m_e a^3}\left\langle\vec{S}_p \cdot \vec{S}_e\right\rangle$$
+
+which is a first example of spin-spin coupling! It is suggestive that it splits the "triplet" state where both spins are aligned parallel, and the singlet state.
+
+It turns out that this energy difference is $1420$ MHz which corresponds to a wavelength of 21 cm. This radiation can easily be detected with radio antennas, and since it can easily be thermally excited, it is one of the key frequencies omnipresent in radiation from the universe, it indicates the presence of hydrogen!
 
 
 
