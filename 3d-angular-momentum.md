@@ -27,9 +27,16 @@ $$
 
 where the vector $L$ is the angular momentum, $r$ the position of the mass, and $p$ the linear momentum equal to mass times velocity: $p=mv$. Of course the mass would not follow a circular path - therefore we assume that it is connected to the coordinate system origin by a string:
 
-![classical-am](figures/schroedinger/classical-angular-momentum.png)
+```{figure} figures/schroedinger/classical-angular-momentum.png
+---
+name: classical-am
+scale: 50%
+---
+Classical angular momentum.
+```
 
 The angular momentum is an extensive quantity, so for a composite system and not a point-like particle, it is the sum of the AM of the constituents of the body.
+
 
 ## Angular momentum algebra
 
@@ -101,7 +108,19 @@ We now discuss what the obtain relations imply for an example with $\ell=2$. Fir
 from matplotlib import pyplot as plt
 from myst_nb import glue
 from numpy import *
-
+# 3d arrows, omg - https://stackoverflow.com/a/74122407
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        super().__init__((0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+    def do_3d_projection(self, renderer=None):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        return min(zs)
+arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA=0, shrinkB=0)
 def pol2cart(r, theta, phi):
     theta=pi/2+theta
     return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
@@ -109,12 +128,16 @@ def pol2cart(r, theta, phi):
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')
 ax.set_aspect("equal")
-ax.view_init(elev=10, azim=10, roll=0)
+ax.view_init(elev=10, azim=15, roll=0)
 
-rr=3
-ax.plot([0,rr],[0,0],[0,0],'r-', linewidth=3)
-ax.plot([0,0],[0,rr],[0,0],'g-', linewidth=3)
-ax.plot([0,0],[0,0],[0,rr],'b-', linewidth=3)
+rr=3.5
+ax.add_artist(Arrow3D([-rr, rr], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
+ax.add_artist(Arrow3D([0, 0], [-rr, rr], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
+ax.add_artist(Arrow3D([0, 0], [0, 0], [-rr, rr], **(arrow_prop_dict | dict(color="0.2"))))
+ax.text3D(rr,-0.5,0.0,"$L_x$", fontsize=15)
+ax.text3D(0,rr,0.2,"$L_y$", fontsize=15)
+ax.text3D(rr,0.2,rr,"$L_z$", fontsize=15)
+
 
 thax=linspace(-pi,pi,50);
 fiax=linspace(0,2*pi,50)
@@ -123,13 +146,13 @@ ll=sqrt(2*(2+1))
 c1=pol2cart(ll,thax,pi/2)
 ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
 for m in [-2,-1,0,1,2]:
-    print("m=", m, " as=", arcsin(m/ll))
     c1=pol2cart(ll,arcsin(m/ll),fiax)
     ax.plot(c1[0], c1[1], c1[2], color="0.4")
     c1=pol2cart(ll,arcsin(m/ll),pi/2)
-    ax.plot([0,c1[0]],[0,c1[1]],[0,c1[2]], color="cyan", linewidth=2.5)
-    
-ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
+    ax.add_artist(Arrow3D([0,c1[0]],[0,c1[1]],[0,c1[2]], **(arrow_prop_dict | dict(color="r"))))
+
+ax.text3D(0.1,1.7,2,r"$\vec{L}$", fontsize=15, color='r')
+ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([-2,-1,0,1,2])
 plt.show()
 
 glue("am-l-two", fig, display=False)
@@ -137,7 +160,7 @@ glue("am-l-two", fig, display=False)
 
 (am-l-two)=
 ```{glue:figure} am-l-two
-Possible angular momentum orientations for $\ell=2$. We see allowed $L$ orientations at $z$-values of $-2,-1,0,1,2$.
+Possible angular momentum orientations for $\ell=2$. We see allowed $L$ orientations at $L_z$-values of $-2,-1,0,1,2$.
 ```
 
 In quantum mechanics, however, the conditions on the quantum number $m$ determines which expectation values of $L_z$ can exist - and this only reaches $2$! This and the other $m$-values are indicated as circles on the sphere, because the polar orientation of $L$ is arbitrary.

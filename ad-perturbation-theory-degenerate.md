@@ -84,7 +84,9 @@ $$
 
 The increased potential at that position has as a consequence that "it is harder for the wavefunction to be there".
 
-`[slide]degenerate perturbation`
+## The perturbation couples states
+
+`[slide]`
 
 Now we define $\psi_a^{(0)}\equiv\psi_{1,2}^{(0)}$ and $\psi_b^{(0)}\equiv\psi_{2,1}^{(0)}$ also to emphasize the generic nature of our procedure. First we calculate the matrix elements 
 
@@ -110,7 +112,10 @@ $$
 
 which is non-zero! This implies coupling between the states. Similar to two coupled pendulums, we might already here expect that we get new eigenfunctions with different energies! If we use these states our previous non-degenerate perturbation theory procedure is applicable again. Instead of guessing the states, which often works, we give a formal procedure now.
 
-`[slide]degenerate perturbation`
+
+## Finding good quantum states
+
+`[slide]`
 
 We go back to our power-series expansion up to first order from Eq. {eq}`pt-1storderseq` but with ommitted state number $n$:
 
@@ -155,7 +160,9 @@ H_{b a}' & H_{b b}'
 =E^{(1)}\left(\begin{array}{l} \alpha \\ \beta \end{array}\right)
 $$
 
-`[slide]degenerate perturbation`
+## The new quantum states
+
+`[slide]`
 
 Note that this is quite easy to be generalized to $n$-fold degeneracies, one basically just has to add all $n$ degenerate states to the superposition, and obtains an $n\times n$ matrix!
 
@@ -173,7 +180,10 @@ $$
 \psi^{(0)}_\pm=\frac{1}{\sqrt{2}}\left(\psi^{(0)}_a \pm \psi^{(0)}_b \right)
 $$
 
-`[slide]degenerate perturbation`
+
+### Visualizing the new quantum states
+
+`[slide]`
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -214,8 +224,9 @@ The two new wavefunctions $\psi^{(0)}_+$ (left) and $\psi^{(0)}_-$ (right) lifti
 
 It is clear that $\psi^{(0)}_+$ has the higher energy, since it has a much higher expectation value at the position of the perturbation, this increases the energy of that state.
 
+## Wrapping up
 
-`[slide]degenerate perturbation`
+`[slide]`
 
 We check if now our approach for degenerate perturbation theory works:
 
@@ -233,4 +244,4 @@ Now we just have to re-formulate the sum and include our new states, this is a b
 
 <!-- PD said yes leave it with this. -->
 
-TODO: Example 7.3 & example 7.4 exercise etc.
+<!-- Example 7.3 & example 7.4 exercise etc. -->

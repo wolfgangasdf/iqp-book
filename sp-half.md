@@ -74,7 +74,7 @@ $$
 \mathrm{S}_x=\frac{\hbar}{2}\left(\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right), \quad \mathrm{S}_y=\frac{\hbar}{2}\left(\begin{array}{cc}0 & -i \\ i & 0\end{array}\right)
 $$
 
-TODO: [ex: Griffith example 4.2 & see text below!]
+<!-- [ex: Griffith example 4.2 & see text below!] -->
 
 ## Pauli matrices
 
@@ -102,7 +102,19 @@ Spin is about rotation. Rotation of what? We mean rotations in qubit space. If w
 from matplotlib import pyplot as plt
 from myst_nb import glue
 from numpy import *
-
+# 3d arrows, omg - https://stackoverflow.com/a/74122407
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        super().__init__((0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+    def do_3d_projection(self, renderer=None):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        return min(zs)
+arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA=0, shrinkB=0)
 def pol2cart(r, theta, phi):
     theta=pi/2+theta
     return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
@@ -110,12 +122,15 @@ def pol2cart(r, theta, phi):
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')
 ax.set_aspect("equal")
-ax.view_init(elev=10, azim=10, roll=0)
+ax.view_init(elev=10, azim=20, roll=0)
 
-rr=1.2
-ax.plot([0,rr],[0,0],[0,0],'r-', linewidth=3)
-ax.plot([0,0],[0,rr],[0,0],'g-', linewidth=3)
-ax.plot([0,0],[0,0],[0,rr],'b-', linewidth=3)
+rr=1.5
+ax.add_artist(Arrow3D([-rr, rr], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
+ax.add_artist(Arrow3D([0, 0], [-rr, rr], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
+ax.add_artist(Arrow3D([0, 0], [0, 0], [-rr, rr], **(arrow_prop_dict | dict(color="0.2"))))
+ax.text3D(rr,-0.2,0.0,"$S_x$", fontsize=15)
+ax.text3D(0,rr,0.1,"$S_y$", fontsize=15)
+ax.text3D(rr,0.2,rr,"$S_z$", fontsize=15)
 
 thax=linspace(-pi,pi,50);
 fiax=linspace(0,2*pi,50)
@@ -128,8 +143,9 @@ for th in linspace(-pi,pi,10):
     c1=pol2cart(1,th,fiax)
     ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
 
-c1=pol2cart(1,-pi/4,pi/4)
-ax.plot([0,c1[0]], [0,c1[1]], [0,c1[2]], color="c",linewidth=4)
+c1=pol2cart(1,-pi/4,pi/3)
+ax.add_artist(Arrow3D([0,c1[0]],[0,c1[1]],[0,c1[2]], **(arrow_prop_dict | dict(color="r"))))
+ax.text3D(0.0,c1[0],c1[2],r"$\psi$", fontsize=20, color='r')
 ax.plot([c1[0],c1[0]], [0,c1[1]], [0,0], color="k")
 ax.plot([0,c1[0]], [c1[1],c1[1]], [0,0], color="k")
 ax.plot([c1[0],c1[0]], [c1[1],c1[1]], [0,c1[2]], color="k")
@@ -142,7 +158,7 @@ glue("sp-bloch-sphere", fig, display=False)
 
 (sp-bloch-sphere)=
 ```{glue:figure} sp-bloch-sphere
-The qubit Bloch sphere with a particular qubit vector in cyan.
+The qubit Bloch sphere with a particular qubit vector.
 ```
 
 There is a deeper connection between Pauli matrices and rotations. You can quite easily convince yourselves using series expansion that we can construct from the Pauli matrices rotation matrices for vectors, but equally for qubit quantum states.
@@ -181,7 +197,7 @@ $$
 
 <!-- from http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf -->
 
-The visualization here is not very nice, we suggest to use the [qutip](https://qutip.org/docs/latest/guide/guide-bloch.html) or probably even better the [qiskit](https://qiskit.org/documentation/stubs/qiskit.visualization.plot_bloch_multivector.html) Bloch sphere functions. Play around with Pauli rotations!
+We suggest to use the [qutip](https://qutip.org/docs/latest/guide/guide-bloch.html) or probably even better the [qiskit](https://qiskit.org/documentation/stubs/qiskit.visualization.plot_bloch_multivector.html) Bloch sphere functions. Play around with Pauli rotations!
 
 ## Measurement and spin 1/2 states
 
@@ -197,19 +213,3 @@ Now, let us measure afterwards the $x$-component of the spin angular momentum of
 We obtain with 50% chance $\hbar /2$, and with 50% chance $-\hbar /2$.
 
 This might first seem weird, since we know the state exactly before the second measurement, it was in the spin-up state. But remember photon polarization, or any other degree of freedom: If we measure in a different “unbiased” basis, the outcome is always 50:50.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

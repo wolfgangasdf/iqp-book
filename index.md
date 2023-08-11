@@ -89,6 +89,7 @@ open ./_build/html/index.html
     * comment at right side: `{margin}`
     * tip: `:::{tip}`
 * Debug python code: Remove `remove-output` if you want to see the error, but better use an ipynb to make plots then copy over the code.
+* Pictures are either made with inline matplotlib, and https://github.com/otfried/ipe (zoom in to export PNG high-res)!
 
 
 # References

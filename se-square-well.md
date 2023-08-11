@@ -10,7 +10,7 @@ kernelspec:
     name: python3
 ---
 
-# The Square well potential
+# The square well potential
 
 ## A particle in a box
 

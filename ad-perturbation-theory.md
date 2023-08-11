@@ -263,11 +263,11 @@ ax.set_xlabel('$x/a$')
 ax.set_ylabel('$\psi_n^{(0)}(x)$')
 ax.set_ylim(-1,18)
 
-glue("potential-well-wavefunctions", fig, display=False)
+glue("potential-well-wavefunctions2", fig, display=False)
 ```
 
-(potential-well-wavefunctions)=
-```{glue:figure} potential-well-wavefunctions
+(potential-well-wavefunctions2)=
+```{glue:figure} potential-well-wavefunctions2
 The unperturbed wavefunctions of an infinite-well potential
 ```
 

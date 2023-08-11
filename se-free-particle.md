@@ -99,7 +99,9 @@ $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is called a plane wave moving 
 
 Since $\Psi$ appears only linearly (no powers) in the differential equation, we say that the Schrödinger equation is linear in the wavefunction $\Psi$. As a consequence, any superposition of solutions for instance with a different wavelength or wavevector $k$, is also a solution. 
 
-TODO Quick question: confirm that $\Psi(x,t)=A_1 e^{i(k_1x-\omega_1 t)}+A_2 e^{i(k_2x-\omega_2 t)}$ is also a solution. 
+:::{note}
+Quick question: confirm that $\Psi(x,t)=A_1 e^{i(k_1x-\omega_1 t)}+A_2 e^{i(k_2x-\omega_2 t)}$ is also a solution. 
+:::
 
 The most general solution of our one-dimensional Schrödinger equation is a superposition of complex-exponential waves with many angular frequencies and wavenumbers: 
 $$\Psi\left(x,t\right)=\ \sum_{n=1}^{\infty}{A_n(k_n)e^{i\left(k_nx-\omega_nt\right)}}$$

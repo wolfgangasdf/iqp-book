@@ -155,7 +155,9 @@ $$
 \hat{H} \psi=E \psi
 $$
 
-TODO Exercise/slide: show that this makes sense with a de Broglie wave
+:::{note}
+Show that this makes sense with a de Broglie wave above!
+:::
 
 ## Expectation values of operators
 

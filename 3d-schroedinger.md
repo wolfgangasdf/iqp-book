@@ -18,7 +18,7 @@ kernelspec:
 
 It is now time to extend our formulation of the Schrodinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the Hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
 
-In classical mechanics in 3 dimensions, we simply add up the kinetic energies for the 3 spatial directions. We do the same in quantum mechanics, the Hamilton operator was in 1D
+In classical mechanics in 3 dimensions, we simply add up the kinetic energies for the 3 spatial simensions. We do the same in quantum mechanics, the Hamilton operator was in 1D
 
 $$
 H=-\frac{\hbar}{2m}\ \frac{\partial^2}{\ \partial x^2}+V(x)
@@ -173,9 +173,8 @@ $$
 V=\ -\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}\ 
 $$
 
-TODO: GFig.4.4 and 4.5
-
 It is attractive so it counteracts the centrifugal term before - even more, if we study the effective potential with the $\ell$-term, if $\ell>0$, we see that for very small distances the effective potential results in a repulsive force - preventing the electron to fall into the core!
+
 
 ## The Hydrogen atom
 
@@ -211,6 +210,11 @@ $$
 \psi_{n \ell m}=\sqrt{\left(\frac{2}{n a}\right)^3 \frac{(n-\ell-1) !}{2 n(n+\ell) !}} e^{-r / n a}\left(\frac{2 r}{n a}\right)^{\ell}\left[L_{n-\ell-1}^{2 \ell+1}(2 r / n a)\right] Y_{\ell}^m(\theta, \phi)
 $$
 
+This figure shows the energy levels, showing the bound states, and the spacing becomes increasingly small for higher states. For now, the different $\ell$ states are degenerate - you might already guess that this will change if we dive deeper into interactions.
+
+![se-hydrogen](figures/schroedinger/hydrogen.png)
+<!-- TODO: G4.6 and do I understand it? -->
+
 
 Now, we visualize this and comment on a few properties.
 
@@ -226,7 +230,7 @@ Credits to [Qijing Zheng](http://staff.ustc.edu.cn/~zqj/posts/Hydrogen-Wavefunct
 
 We see that $n$ determines the number of radial nodes which is $n-1$ for $\ell=0$. We also see a rich angular structure, which is key for the directionality of chemical bonds and the formation of molecules.
 
-TODO [For deep learning sessions: Griffiths problems 4.4, 4.7, 4.9, 4.11 ]
+<!-- For exercises: Griffiths problems 4.4, 4.7, 4.9, 4.11 -->
 
 
 

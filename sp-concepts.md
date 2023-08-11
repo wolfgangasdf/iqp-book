@@ -22,6 +22,8 @@ The spinning rotation leads to a spin angular momentum around the center of mass
 
 ![spin-classical](figures/spin/spin-classical.png)
 
+
+
 ## Quantum spin
 
 `[slide]`
@@ -33,8 +35,6 @@ Remember that this can only be done for $L$ and $L_z$, but not for $L_z$ and $L_
 Now, it is one of the most profound discoveries in quantum mechanics that fundamental particles in nature seem to have a spin angular momentum, despite they are considered to be “point like” if their position is measured. Note: if we measure e.g. the position of the electron in the hydrogen atom many, many times, we will of course reproduce the spatial wavefunction probability distribution which we have seen before – but as far as we know, the electron should be considered a point-like particle if its position is measured. This is fascinating and very different to a classical world, you will get used to it. 
 
 The spin is so important in quantum mechanics because of a number of reasons, but probably above all because all known fundamental particles (electron, photon, quarks, gluons and a few more) have a nonzero spin - except for the recently discovered Higgs boson, which was confirmed experimentally in 2013 – it has zero spin.
-
-TODO [selfass: which numbers can take up the magnetic quantum number m for given ell? Corr: -ell, -ell+1…ell ; wrong: in ½ steps.; wrong: 0…ell]
 
 ## Spin Operators and Commutation Relations
 
@@ -71,6 +71,7 @@ The so-called standard model particle physics is shown here, where we see the qu
 For our daily interactions with nature, but also for quantum information science, two spins are in particular important: $s=1$, for the photon, the quantum particle of light, and $s=1/2$, which is the spin of the electron, protons, and neutrons – key constituents of matter. 
 
 ![standard-model](figures/spin/standard-model.png)
+[Image credit](https://en.wikipedia.org/wiki/Standard_Model)
 
 
 
