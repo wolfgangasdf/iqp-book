@@ -85,7 +85,12 @@ It is the theory of quantum mechanics that allows description of all these excit
 
 Another strong indication that electrons also have wave character came from observing emission from molecular gasses and atomic vapour such as sodium. Physicists observe narrow bright “lines” and not a continuous emission spectrum as expected from black body radiation. Now, it turns out that these emission frequencies can be explained by assuming that the electron is described by a wave where allowed energies correspond waves with particular radii such that the electron wave repeats itself after one round trip., in the Born picture one calculates simply for which electron energies one obtains constructively interfering orbits of the electron and finds good agreement to experimental data.
 
-![atomic-emission-lines](figures/basics/atomic-emission-lines.png)
+```{figure} figures/basics/atomic-emission-lines.png
+---
+name: atomic-emission-lines
+---
+Hydrogen emission lines. The fact that they are lines in the first place is a very strong indication that electrons have wave-like properties.
+```
 <!-- TODO: figure from ph fig1.5 -->
 
 ```{code-cell} ipython3

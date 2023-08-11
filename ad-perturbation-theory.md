@@ -101,7 +101,7 @@ $$
 
 So, the first correction term to the energy is simply the expectation value of the perturbation Hamiltonian for the unperturbed eigenstate! This is a very important equation in quantum mechanics.
 
-`TODO G example 7.1+2 as exercise.`
+<!-- `G example 7.1+2 as exercise.` -->
 
 ## Normalisation
 
@@ -348,7 +348,7 @@ glue("potential-well-perturbed-wf", fig, display=False)
 The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculate up to $m=20$.
 ```
 
-<!--TODO G problem 7.1 as exercise.-->
+<!--G problem 7.1 as exercise.-->
 
 ## Higher order corrections
 

@@ -56,6 +56,12 @@ To mention one, the first rule is that the configuration with the highest spin m
 For example, 3 electrons in the $p$ subshell will be in the $\uparrow\uparrow\uparrow$ spin state. Only if a fourth electron is added, it has to go into the down state and we obtain $\uparrow\downarrow\uparrow\uparrow$. Remember this simply as the “bus seat rule”! The reason for this rule is a bit beyond this course.
 Look up the rules in [wikipedia](https://en.wikipedia.org/wiki/Hund%27s_rules)
 
+```{figure} figures/periodic-table-configuration.png
+---
+name: periodic-table
+---
+The periodic table of elements in configuration space - the elements are behaving nicely! [Credit: wikipedia](https://en.wikipedia.org/wiki/Periodic_table#Electron_configuration_table)
+```
 
 
 

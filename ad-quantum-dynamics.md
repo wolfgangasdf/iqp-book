@@ -16,6 +16,9 @@ kernelspec:
 
 TODO: see docx 3.4, useful!
 
+`TODO: here or later in dynamics: G Problem 4.36 An electron is at rest in an oscillating magnetic field`
+
+
 ## Time dependent perturbation theory 
 
 ## Radiative transitions

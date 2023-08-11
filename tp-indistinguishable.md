@@ -68,7 +68,7 @@ This is not normalizable and therefore doesn't make sense and is not possible -n
 
 This is the famous **Pauli exclusion principle** for fermions – no two fermions can be in the same state. Amongst other things, this makes electrons in higher atomic levels stable and thus makes matter “hard” – in combination with coloumb repulsion. 
 
-TODO [exercises: G5.4,5] [TODO from MB from jos thijssen dictaat] WL: too hard
+<!-- TODO [exercises: G5.4,5] [TODO from MB from jos thijssen dictaat] WL: too hard -->
 
 ## Bosons bunch
 
@@ -90,9 +90,8 @@ If the particles are not distinguishable, $\left|+-\right\rangle$ and $\left|-+\
 
 All this might seem like magic because we have started with a different state – but in fact the state space for identical particles must be either in the symmetric or antisymmetric state – one can call this the symmetrization postulate or theorem.
 
-TODO [exercise: QuantumNotes.pdf 7.2.2]
-
-[TODO check Jos Thijssen - LECTURE NOTES STATISTICAL PHYSICS TN2624.pdf]
+<!-- TODO [exercise: QuantumNotes.pdf 7.2.2]
+[TODO check Jos Thijssen - LECTURE NOTES STATISTICAL PHYSICS TN2624.pdf] -->
 
 ## The exchange force
 <!-- G5.1.2 -->

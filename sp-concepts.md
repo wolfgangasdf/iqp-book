@@ -20,7 +20,12 @@ Classically, a body can show an orbiting motion and a spinning rotation, like th
 
 The spinning rotation leads to a spin angular momentum around the center of mass of the spinning body, which is calculated using the same equation $L=r \times p$ for all constituents that make op the earth. Approximately, the SAM does not contribute to $L$ measured around the origin, but it is clear that both have the same origin and the distinction is largely semantically. Also, a point-like particle cannot have a spin angular momentum classically, because $r$ is zero if measured from the center of mass of the particle.
 
-![spin-classical](figures/spin/spin-classical.png)
+```{figure} figures/spin/spin-classical.png
+---
+name: spin-classical
+---
+Classically, the spin angular momentum is identical to the orbital angular momentum measured around the center of mass of the spinning, and possibly orbiting, body.
+```
 
 
 
@@ -70,9 +75,12 @@ The so-called standard model particle physics is shown here, where we see the qu
 
 For our daily interactions with nature, but also for quantum information science, two spins are in particular important: $s=1$, for the photon, the quantum particle of light, and $s=1/2$, which is the spin of the electron, protons, and neutrons – key constituents of matter. 
 
-![standard-model](figures/spin/standard-model.png)
-[Image credit](https://en.wikipedia.org/wiki/Standard_Model)
-
+```{figure} figures/spin/standard-model.png
+---
+name: standard-model
+---
+The standard model of particles with mass, charge & spin. [Image credit](https://en.wikipedia.org/wiki/Standard_Model)
+```
 
 
 

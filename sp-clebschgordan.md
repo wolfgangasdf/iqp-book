@@ -82,10 +82,8 @@ $$
 As we hypothesized before, these states are not eigenstates of $S^2$ - but the superposition on the right hand side gives a hint - we try this again and we obtain:
 
 $$\begin{gather*}
-\vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)=2 \hbar^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)\\
-
-\vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)=0
-
+\vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)&=2 \hbar^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)\\
+\vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)&=0
 \end{gather*}$$
 
 So both are indeed eigenstates of $S^2$!

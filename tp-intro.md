@@ -62,4 +62,3 @@ These states we call *separable* or *not entangled*, it is a *product state* of 
 
 In the other case, if the potential depends on both positions, this interaction will often lead to states that makes it impossible to write the 2-particle wavefunction as a product – these states are *quantum entangled* or *non-separable*.
 
-TODO: add bell inequ or so?

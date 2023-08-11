@@ -19,7 +19,12 @@ kernelspec:
 Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which you might know.
 
 :::{margin}
-![erwin](figures/basics/erwin.png)
+```{figure} figures/basics/erwin.png
+---
+name: erwin
+---
+The Schrödinger equation with $\psi$ on his bust in Vienna.
+```
 :::
 
 The state of a qubit is written in the ket notation often as $\left|\psi\right\rangle$, psi is traditionally the greek letter used for the quantum wave function of a particle. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a degree of freedom of a physical system.

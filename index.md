@@ -83,7 +83,7 @@ open ./_build/html/index.html
 * Syntax is very fragile - always have new lines before and after equations.
 * Key documentation: [jupyter book](https://jupyterbook.org/en/stable/content/references.html), [cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
   * ```$$ \Psi $$(my_label) -> {eq}`my_label` ```
-  * figure: ``` ![fishy](../images/fun-fish.png) ```
+  * figure: use long form to have caption.
   * note: `:::{note}` close with `:::`
   * similar things: 
     * comment at right side: `{margin}`

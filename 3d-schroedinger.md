@@ -210,10 +210,15 @@ $$
 \psi_{n \ell m}=\sqrt{\left(\frac{2}{n a}\right)^3 \frac{(n-\ell-1) !}{2 n(n+\ell) !}} e^{-r / n a}\left(\frac{2 r}{n a}\right)^{\ell}\left[L_{n-\ell-1}^{2 \ell+1}(2 r / n a)\right] Y_{\ell}^m(\theta, \phi)
 $$
 
-This figure shows the energy levels, showing the bound states, and the spacing becomes increasingly small for higher states. For now, the different $\ell$ states are degenerate - you might already guess that this will change if we dive deeper into interactions.
+The figure shows the energy levels, showing the bound states, and the spacing becomes increasingly small for higher states. For now, the different $\ell$ states are degenerate - you might already guess that this will change if we dive deeper into interactions.
 
-![se-hydrogen](figures/schroedinger/hydrogen.png)
-<!-- TODO: G4.6 and do I understand it? -->
+```{figure} figures/schroedinger/hydrogen.png
+---
+name: se-hydrogen
+---
+Possible states for different angular momentum quantum number $\ell$.
+```
+<!-- TODO: redo G4.6 and do I understand it? -->
 
 
 Now, we visualize this and comment on a few properties.
@@ -224,9 +229,15 @@ Now, we visualize this and comment on a few properties.
 
 Here we show plots of $|\psi|$ - the norm or square root of the probability density to find an electron at a certain position, and for different quantum numbers, for $n=0,1,2,3$. The plots are made in the $xy$-pane at $z=0$.
 
-![fishy](figures/schroedinger/hydrogen-wavefunctions.png)
+```{figure} figures/schroedinger/hydrogen-wavefunctions.png
+---
+name: h-wavefunctions
+---
+Picture of hydrogen wavefunctions, credits to [Qijing Zheng](http://staff.ustc.edu.cn/~zqj/posts/Hydrogen-Wavefunction/). Note that $\ell=l$ here.
+```
 
-Credits to [Qijing Zheng](http://staff.ustc.edu.cn/~zqj/posts/Hydrogen-Wavefunction/). Note that $\ell=l$ here.
+
+
 
 We see that $n$ determines the number of radial nodes which is $n-1$ for $\ell=0$. We also see a rich angular structure, which is key for the directionality of chemical bonds and the formation of molecules.
 
