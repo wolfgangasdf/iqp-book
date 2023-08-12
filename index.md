@@ -20,21 +20,27 @@ TODO
 
 ## Prerequisites
 
-We assume that you are familiar with the following topics:
+We assume that you are familiar with:
 
-- differential and integral calculus
-- infinite series
-- complex numbers and complex functions, at the level of [Chapter
-  1](https://mathforquantum.quantumtinkerer.tudelft.nl/1_complex_numbers/)
-  of the lecture notes also titled [Mathematics for Quantum
-  Physics](https://mathforquantum.quantumtinkerer.tudelft.nl/)
-- The course "Mathematics for Quantum Physics"
+- Differential and integral calculus
+- Infinite series
+- Complex numbers and complex functions
+- The course [Mathematics for Quantum Physics](https://pub.math.leidenuniv.nl/~bruinpj/MQP/)
+
+## Content overview
 
 ## Notational conventions
 
 * We often leave out the arrow on top of vectors. Which variable is a vector or a scalar should be clear from the context.
 * We also often leave out the hat on operators - the same applies, if one gets used to it there is no ambiguity.
 * We use SI units.
+
+## What is missing?
+
+* The variational principle (Griffith 8)
+* Helium
+* Scattering theory (Griffith 10)
+* Large parts of quantum electrodynamics, for instance the [Aharonov–Bohm effect](https://en.wikipedia.org/wiki/Aharonov%E2%80%93Bohm_effect).
 
 ## Contributing
 
@@ -44,12 +50,14 @@ Please send us comments - TODO
 
 Griffiths
 
-These notes were built using [Jupyter Book](https://jupyterbook.org/).
-Parts of the technical “infrastructure” were adapted from the [Jupyter
+These notes were made using [Jupyter Book](https://jupyterbook.org/), based on Peter Bruin's script for [Mathematics for Quantum Physics](https://pub.math.leidenuniv.nl/~bruinpj/MQP/) which in turn is based on the [Jupyter
 Book demo](https://idemalab.tudelft.nl/jupyterbookdemo/) by Timon
 Idema.
 
-# how to build this book?
+# Development notes
+
+````{toggle}
+:show:
 
 ## install stuff in addition to anaconda
 conda install is heavily broken, use pip!
@@ -92,7 +100,5 @@ open ./_build/html/index.html
 * Pictures are either made with inline matplotlib, and https://github.com/otfried/ipe (zoom in to export PNG high-res)!
 
 
-# References
 
-:::{bibliography}
-:::
+````
