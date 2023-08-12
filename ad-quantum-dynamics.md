@@ -18,148 +18,159 @@ TODO: see docx 3.4, useful! or as exercise?
 
 `TODO: here or later in dynamics: G Problem 4.36 An electron is at rest in an oscillating magnetic field`
 
-## Tunneling
-
-<!-- G9.2 -->
-
-`[slide]`
-
-You might see quantum tunnelling every day! Many fingerprint sensors are based on *frustrated total internal reflection* of light, or your fingers on the outer side of a glass when seen through water - see [wikipedia](https://en.wikipedia.org/wiki/Total_internal_reflection#Frustrated_total_internal_reflection) for some nice examples.
-
-The same also occurs for quantum wavefunctions also for massive particles - because in the end, Maxwell's equations describing light results in a wave equation as is the Schrödinger equation.
-
-### The WKB method
-
-The WKB method named after Wentzel, Kramers and Brillouin is a very useful method to calculate localized (bound) states and tunneling through potential barriers. We want to calculate what happens to a quantum wave incident from the left for this case:
-
-```{code-cell} ipython3
-:tags: [hide-input, remove-output]
-
-from matplotlib import pyplot as plt
-from myst_nb import glue
-from numpy import *
-
-fig, ax = plt.subplots(figsize=(7,3))
-
-ee=5
-a=1
-x = linspace(-a/2, 1.5*a, 201)
-v = piecewise(x, [x < 0, x >= 0, x>a], [0, lambda x: 1.5*ee+(sin(10*pi*x/a)+sin(19*pi*x/a))+3*x, 0])
-ax.plot(x, v, color='red')
-ax.plot(x,x*0+ee,'--',color="0.5")
-ax.set_xlabel('$x$')
-ax.set_ylabel('$V(x)$')
-ax.set_xticks([0,a])
-ax.set_xticklabels(["0","a"])
-ax.text(-0.2,ee+0.5,"$E$",fontsize=15)
-ax.arrow(-0.3,3,0.2,0,width=0.2, head_length=0.05, color='black')
-ax.text(-0.4,2.6,"$A$",fontsize=15)
-ax.arrow(-0.06,1.5,-0.2,0,width=0.2, head_length=0.05, color='black')
-ax.text(-0.4,1.1,"$B$",fontsize=15)
-ax.arrow(a+0.1,3,0.2,0,width=0.2, head_length=0.05, color='black')
-ax.text(a+0.4,2.6,"$F$",fontsize=15)
-ax.set_yticks([])
-
-glue("wkb-potential", fig, display=False)
-```
-
-(wkb-potential)=
-```{glue:figure} wkb-potential
-The setup for studying quantum tunneling. An incident quantum wave with energy $E$ and amplitude $A$ is reflected ($B$) and transmitted ($F$) by the potential $V(x)$.
-```
-
-`[slide]`
-
-Usually, the Schrödinger is written in a different form: 
-
-$$\frac{d^2 \psi}{d x^2}=-\frac{p^2}{\hbar^2} \psi$$
-
-where
-
-$$p(x) \equiv \sqrt{2 m[E-V(x)]}$$
-
-If $E\gt V(x)$, $p$ is real and we call this the classical region, in our case for $x<0$ and $x>a$. is the classical momentum for a particle with energy $E$ in the potential $V(x)$.
-
-We can express the complex function $psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffith 9.1 for details). If we now make the approximation that the amplitude of $\psi$ changes slowly, we obtain with $C$ some real constant:
-
-$$\psi(x) \approx \frac{C}{\sqrt{p(x)}} e^{ \pm \frac{i}{\hbar} \int p(x) d x}$$
-
-The probability amplitude is 
-
-$$|\psi(x)|^2 \approx \frac{|C|^2}{p(x)}$$
-
-Which makes sense - we see that the probability of finding a particle is inversely proportional to its momentum, this makes sense also classically.
-
-The WKB method of obtaining wavefunctions is very powerful to calculate localized bound states or if potentials change slowly - see Griffith for examples.
-
-### Tunneling
-
-`[slide]`
-
-Now we return to our problem in {numref}`wkb-potential`. To the left of the barrier ($x<0$) everything is fine and we can write the wavefunction as a right and left propagating wave:
-
-$$\psi(x)=A e^{i k x}+B e^{-i k x}$$
-
-And on the right we have only a right-propagating wave:
-
-$$\psi(x)=F e^{i k x}$$
-
-In the tunneling region which is classically forbidden for the particle, $p(x)$ is imaginary and it is useful to write 
-
-$$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{ \pm \frac{1}{\hbar} \int|p(x)| d x}$$
-
-Note that only $p^2$ appears in the Schrödinger equation, and you can test that taking the modulus of $p$ works. This describes an exxponentially increasing or decreasing function, which is non-oscillatory!
-
-In the tunneling region we therefore have
-
-$$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{\frac{1}{\hbar} \int_0^x\left|p\left(x^{\prime}\right)\right| d x^{\prime}}+\frac{D}{\sqrt{|p(x)|}} e^{-\frac{1}{\hbar} \int_0^x\left|p\left(x^{\prime}\right)\right| d x^{\prime}}$$
-
-By enforcing continuity of the wavefunction, we can calculate from this the tunneling probability:
-
-$$T=\frac{|F|^2}{|A|^2} = e^{-2\gamma}\quad \textrm{with}\quad\gamma \equiv \frac{1}{\hbar} \int_0^a|p(x)| d x
-$$
-
-The wave function looks like this:
-
-
-```{code-cell} ipython3
-:tags: [hide-input, remove-output]
-
-from matplotlib import pyplot as plt
-from myst_nb import glue
-from numpy import *
-fig, ax = plt.subplots(figsize=(7,3))
-ee=5
-a=1
-x = linspace(-a/2, 1.5*a, 601)
-v = piecewise(x, [x < 0, x >= 0, x>a], [0, lambda x: 1.5*ee+(sin(10*pi*x/a)+sin(19*pi*x/a))+3*x, 0])
-ax.plot(x, v, color='red')
-psi= 15*piecewise(x, [x < 0, x >= 0, x>a], [lambda x: sin(20*pi*x+pi/2), lambda x: exp(-x), lambda x: exp(-a)*sin(20*ee*x++pi/2)])
-ax.plot(x, psi, color='blue')
-ax.set_xlabel('$x$')
-ax.set_ylabel('$\psi(x),V(x)$')
-ax.set_xticks([0,a])
-ax.set_xticklabels(["0","a"])
-ax.plot(x,x*0+15,'--',color="0.5")
-ax.plot(x,x*0+15*exp(-a),'--',color="0.5")
-ax.set_yticks([0,15*exp(-a),15*a])
-ax.set_yticklabels(["0","F", "A"])
-
-glue("wkb-wave", fig, display=False)
-```
-
-(wkb-wave)=
-```{glue:figure} wkb-wave
-Quantitative plot of the wave function for the tunneling problem, in the classically forbidden region it is exponentially decaying.
-```
-<!-- could calculate correctly, exercise? -->
-
 
 ## Time dependent perturbation theory 
+
+<!-- G11, P9.4 -->
+
+`[slide]`
+
+We discuss - of course - qubits, that is a quantum system with two energy levels. We have seen that, for instance, the electron spin in a magnetic field is such a system. Now, we apply a time-dependent perturbation, that is a change in the potential or Hamiltonian, and see what happens, using standard non-degenerate perturbation theory.
+
+We first define the orthonormal eigenstates of the unperturbed Hamiltonian:
+
+$$\hat{H}^0 \psi_a=E_a \psi_a, \quad \text { and } \quad \hat{H}^0 \psi_b=E_b \psi_b$$
+
+and any state can be expressed as a superposition of these:
+
+$$\Psi(0)=c_a \psi_a+c_b \psi_b$$
+
+We know already how the state evolves in time
+
+$$\Psi(t)=c_a(t) \psi_a e^{-i E_a t / \hbar}+c_b(t) \psi_b e^{-i E_b t / \hbar}$$
+
+In absence of a perturbation the two constants $c_i$ are time-independent and the state will *wiggle* with the two eigen-energies.
+
+`[slide]`
+
+We now assume that we are in a particular states, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation:
+
+$$\hat{H} \Psi=i \hbar \frac{\partial \Psi}{\partial t}, \quad \text { where } \quad \hat{H}=\hat{H}^0+\hat{H}^{\prime}(t)$$
+
+We use the matrix elements 
+
+$$H_{i j}^{\prime} \equiv\left\langle\psi_i\left|\hat{H}^{\prime}\right| \psi_j\right\rangle$$
+
+where we additionally assume that $H_{aa}'=H_{bb}'=0$, which is reasonable since we usually wish to make transitions between the states and not just change the unperturbed states.
+
+We obtain for the time-derivatives of the coefficients (where we assume $E_b\gt E_a$)
+
+$$\dot{c}_a=-\frac{i}{\hbar} H_{a b}^{\prime} e^{-i \omega_0 t} c_b, \quad \dot{c}_b=-\frac{i}{\hbar} H_{b a}^{\prime} e^{i \omega_0 t} c_a,\quad \omega_0 \equiv \frac{E_b-E_a}{\hbar}$$(pt-1st)
+
+## First order perturbation
+
+`[slide]`
+
+We start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$. We insert these at the RHS of Eq. {eq}`pt-1st` abnd obtain after integration:
+
+$$
+\begin{align}
+\frac{d c_a^{(1)}}{d t}=0 &\Rightarrow c_a^{(1)}(t)=1 \\
+\frac{d c_b^{(1)}}{d t}=-\frac{i}{\hbar} H_{b a}^{\prime} e^{i \omega_0 t} &\Rightarrow c_b^{(1)}=-\frac{i}{\hbar} \int_0^t H_{b a}^{\prime}\left(t^{\prime}\right) e^{i \omega_0 t^{\prime}} d t^{\prime}
+\end{align}
+$$(pt-1st-res)
+
+This clearly shows that it is an approximation, since $c_a$ remains at 1 and normalization is violated. 
+
+## Sinusoidal perturbation
+
+`[slide]`
+
+Now we assume a sinusoidal perturbation, for instance in real space $\hat{H}^{\prime}(\mathbf{r}, t)=V(\mathbf{r}) \cos (\omega t)$, such that the we get
+
+$$H_{a b}^{\prime}=V_{a b} \cos (\omega t)
+\quad \textrm{with} \quad V_{a b} \equiv\left\langle\psi_a|V| \psi_b\right\rangle$$
+
+We calculate Eq. {eq}`pt-1st-res` and obtain
+
+$$c_b(t)\approx -\frac{V_{b a}}{2 \hbar}\left[\frac{e^{i\left(\omega_0+\omega\right) t}-1}{\omega_0+\omega}+\frac{e^{i\left(\omega_0-\omega\right) t}-1}{\omega_0-\omega}\right]$$
+
+Experimentally, one often works with driving frequencies $\omega$ close to the transition frequency $\omega_0$. In this case, we can neglect the second term in brackets which is called the *rotating wave approximation*, and we obtain:
+
+$$c_b(t)=-i \frac{V_{b a}}{\hbar} \frac{\sin \left[\left(\omega_0-\omega\right) t / 2\right]}{\omega_0-\omega} e^{i\left(\omega_0-\omega\right) t / 2}$$
+
+From this we calculate the transition probability
+
+$$P_{a \rightarrow b}(t)=\left|c_b(t)\right|^2 \approx \frac{\left|V_{a b}\right|^2}{\hbar^2} \frac{\sin ^2\left[\left(\omega_0-\omega\right) t / 2\right]}{\left(\omega_0-\omega\right)^2}$$
+
+`[slide]`
+
+This is an oscillatory function of time! What does this mean?
+* After switching on the interaction, the probility to be in the upper state oscillates - and does not saturate as one might think classically.
+* After a specific time, the probability to be in the upper state is maximal - if we wish to make a transition to the upper state, we should switch our perturbation off at this time.
+* Since we work in first-order perturbation theory, the probability needs to remain small in any case, otherwise our assumption is not valid. It turns out, however, that we can make transitions with near-unity probability this way.
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+fig, ax = plt.subplots(figsize=(7,3))
+ee=5
+a=1
+x = linspace(0,10, 601)
+cb = sin(x)**2
+ax.plot(x, cb, color='red')
+ax.set_xlabel('$t$')
+ax.set_ylabel('$P(t)$')
+ax.set_xticks([0])
+ax.set_xticklabels(["0"])
+ax.plot(x,x*0+1,'--',color="0.5")
+ax.set_yticks([0])
+ax.set_yticklabels(["0"])
+
+glue("ad-rabipt", fig, display=False)
+```
+
+(ad-rabipt)=
+```{glue:figure} ad-rabipt
+Excited-state probability as a function of time.  
+```
+
+In the figure, the maximum excited-state probability reaches 
+
+$$\left[\frac{\left|V_{a b}\right|}{\hbar\left(\omega_0-\omega\right)}\right]^2$$
+
+at times 
+
+$$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$
+
+### Rabi oscillations
+
+`[slide]`
+
+Rabi noticed that if you make the rotating wave approximation at the beginning of the calculation, Eq. {eq}`pt-1st` can be solved exactly, and we obtain
+
+$$c_b(t)=-\frac{i}{2 \hbar \omega_r} V_{b a} e^{i\left(\omega_0-\omega\right) t / 2} \sin \left(\omega_r t\right)$$
+
+and a similar expresswion for $c_a$, and with the Rabi frequency
+
+$$\omega_r \equiv \frac{1}{2} \sqrt{\left(\omega-\omega_0\right)^2+\left(\left|V_{a b}\right| / \hbar\right)^2}$$
+
+This result is properly normalized, the transition probability doesn't exceed one and is also suited for strong drive. This effect is the work horse for qubit manipulation, but up to now we haven't clearly defined *how* we make the perturbation, which we will do now.
 
 
 
 ## Radiative transitions
 
-## Fermi’s Golden Rule (G11.3)
+`[slide]`
+
+The atom or electron wavefunction is usually very small compared to the wavelengths of optical and even more microwave radiation. Therefore, we can ignore the spatial dependency. Additionally, physicists like to only discuss one frequency or wavelength, and then talk about *quasi-monochromatic* radiation. Perfect monochromatic waves cannot exist as you might guess from the Heisenberg uncertainty principle between energy and time.
+The electric field is simply oscillatory, if we assume linear polarization along the $z$-axis we have:
+
+$$\vec{E}=E_0 \cos (\omega t) \vec{z}$$
+
+In principle, in electromagnetic radiation, the electric field is always accompanied by a magnetic field, but often one can neglect the one or the other - here we discuss only the electric field.
+
+Now an electron in an electric field experiences an potential and therefore has an energy 
+
+$$U=-q\int_C \vec{E}\cdot d\vec{l}$$
+
+where $C$ is an arbitrary path e.g. from the origin, and $q$ the electron charge. We now assume that the electron will move instantaneously with the field. With this, the interaction Hamiltonian becomes:
+
+$$H^{\prime}=-q E_0 z \cos (\omega t)$$
+
+This is exactly what we used above for inducing Rabi oscillations!
+
 
