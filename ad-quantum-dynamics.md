@@ -12,11 +12,9 @@ kernelspec:
 
 # Quantum dynamics
 
-`[slide] quantum dynamics`
+<!-- TODO: see docx 3.4, useful! or as exercise?
 
-TODO: see docx 3.4, useful! or as exercise?
-
-`TODO: here or later in dynamics: G Problem 4.36 An electron is at rest in an oscillating magnetic field`
+`TODO: here or later in dynamics: G Problem 4.36 An electron is at rest in an oscillating magnetic field` -->
 
 
 ## Time dependent perturbation theory 

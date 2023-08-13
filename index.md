@@ -25,7 +25,7 @@ We assume that you are familiar with:
 
 * Magnetic resonance, only basics.
 * The variational principle (Griffith 8)
-* Helium molecule
+* Molecules
 * Scattering theory (Griffith 10)
 * Large parts of quantum electrodynamics, for instance the [Aharonov–Bohm effect](https://en.wikipedia.org/wiki/Aharonov%E2%80%93Bohm_effect).
 * Fermi’s Golden Rule (G11.3)
