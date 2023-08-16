@@ -48,6 +48,16 @@ $$\left\langle\Psi | \Psi\right\rangle=\left(\begin{matrix}
 E_x^*,\, E_y^*\end{matrix}\right)
 \cdot\left(\begin{matrix}E_x \\E_y\end{matrix}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1$$
 
+```{figure} figures/basics/polarization.png
+---
+name: b-polarization
+scale: 50%
+---
+Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
+```
+
+
+
 ## Quantum measurements & probabilities
 `[slide]`
 
@@ -79,13 +89,13 @@ We say that $H$ and $V$ polarizations form a basis, there are two orthogonal bas
 The other bases, in fact quantum superpositions of the HV-basis, are the DA basis 
 
 $$
-|D/A\rangle=1/\sqrt{2}(|H\rangle+/-|V\rangle)
+|D/A\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-|V\rangle)
 $$
 
 which corresponds to diagonal/antidiagonal linear polarization and 
 
 $$
-|R/L\rangle=1/\sqrt{2}(|H\rangle+/-i |V\rangle)
+|R/L\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-i |V\rangle)
 $$
 
 which corresponds to right/left circular polarization.

@@ -12,18 +12,6 @@ kernelspec:
 
 # Evidence for quantum mechanics
 
-## Quantizations
-
-`[slide]`
-
-What were the first indications that we need quantum mechanics to understand nature? We first have to clarify what "quantum means" - historically there happened two so-called "quantizations" of classical-mechanics models - and it clearly is a matter of taste if we do or do not consider both as describing true "quantum" effects:
-
-The **first quantization** is the realization that we have to describe objects with (quantum) waves that are usually, or previously, assumed to be particles. This holds clearly for atoms, electrons, neutrons, protons and so on. But for light, I think that there was never the need for a first quantization since it was already considered to be a wave since Maxwell! 
-
-But how do we get the quantum into light waves?
-
-This is described by the **second quantization**, where wave fields become (again) quantized, for instance, by deriving a model where a light wave field can be excited with a single photon. Note, currently we think that the 2nd quantization is essential to build quantum machines which can do something really exciting - but this is still not fully known.
-
 
 ## Black body radiation
 
@@ -93,6 +81,7 @@ Hydrogen emission lines. The fact that they are lines in the first place is a ve
 ```
 <!-- TODO: figure from ph fig1.5 -->
 
+
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
 
@@ -128,5 +117,57 @@ If electrons are waves around the core of an atom, only particular wavelengths l
 ```
 
 The underlying physics of all these phenomena will be explained in this course. Moreover, we will also show that quantum mechanics is needed to understand why atoms are stable in the first place, why the electron *does not fall* into the atomic nucleus.
+
+## The two "quantizations"
+
+`[slide]`
+
+You will see in this course that *quantum* can mean different things, and it sometimes is also a matter of taste. Historically, two so-called "quantizations" happened:
+
+The **first quantization** is the realization that we have to describe objects with (quantum) waves that are usually, or previously, assumed to be particles. This holds clearly for atoms, electrons, neutrons, protons and so on. But for light, I think that there was never the need for a first quantization since it was already considered to be a wave since Maxwell! 
+
+But how do we get the quantum into light waves?
+
+This is described by the **second quantization**, where wave fields become (again) quantized, for instance, by deriving a model where a light wave field can be excited with a single photon. Note, currently we think that the 2nd quantization is essential to build quantum machines which can do something really exciting - but this is still not fully known.
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+fig, ax = plt.subplots(figsize=(8,6))
+ax.set_aspect("equal")
+ax.add_patch(plt.Circle((0,0),0.3, color="orange"))
+ax.arrow(0.6,0,0.3,0, linewidth=3, head_width=0.05, color='black')
+x=linspace(-0.5, 0.5, 101)
+y=sin(x*50)*exp(-x**2/0.05)
+ax.plot(x+2,y)
+ax.arrow(3,1,0.3,0.5, linewidth=3, head_width=0.05, color='black')
+ax.arrow(3,0,0.3,0, linewidth=3, head_width=0.05, color='black')
+ax.arrow(3,-1,0.3,-0.5, linewidth=3, head_width=0.05, color='black')
+ax.text(1.5,0.5,"$\Psi$",fontsize=20)
+dx=4
+ax.plot(dx+x,y+2,color="tab:blue")
+ax.plot(dx+x,y,color="tab:blue")
+ax.plot(dx+x,y-2,color="tab:blue")
+ax.add_patch(plt.Circle((dx,2),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx-0.2,0),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx+0.2,0),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx+0.2,-2.2),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx-0.2,-2.2),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx,-1.8),0.15, color="orange",zorder=100))
+ax.text(0.2,0.5,"1st\nquantization")
+ax.text(2.3,0.5,"2nd\nquantization")
+ax.axis("off")
+
+glue("b-quant", fig, display=False)
+```
+
+(b-quant)=
+```{glue:figure} b-quant
+In the first quantization, a particle gets wave properties, and in the second quantization, a quantum wave can be exited a discrete number of times - corresponding again to particles.
+```
+
 
 

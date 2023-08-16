@@ -12,7 +12,7 @@ kernelspec:
 
 # Schrödinger equation
 
-## Towards time independent solutions
+## The potential energy
 
 `[slide]`
 <!-- [Ph2.2] -->
