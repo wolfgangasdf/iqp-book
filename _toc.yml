@@ -3,39 +3,39 @@
 
 format: jb-book
 root: index
-defaults:
+# defaults:
+#   numbered: True
+options:  # The options key will be applied to all chapters, but not sub-sections
   numbered: True
-parts:
-  - caption: Basics
-    chapters:
+chapters:
+  - file: b
+    sections:
     - file: b-qubits-realization
     - file: b-degrees-of-freedom
     - file: b-evidence-for-qm
-  - caption: The Schrödinger equation
-    chapters:
+  - file: se
+    sections:
     - file: se-free-particle
     - file: se-1d-schroedinger
     - file: se-square-well
     - file: se-qho
-  - caption: Quantum mechanics in 3 dimensions
-    chapters:
+  - file: 3d
+    sections:
     - file: 3d-schroedinger
     - file: 3d-angular-momentum
-  - caption: The spin
-    chapters:
+  - file: sp
+    sections:
     - file: sp-concepts
     - file: sp-half
     - file: sp-magnetic-field
     - file: sp-clebschgordan
-  - caption: Two quantum particles
-    chapters:
+  - file: tp
+    sections:
     - file: tp-intro
     - file: tp-indistinguishable
-  - caption: The periodic system
-    chapters:
-    - file: perdiodic-system
-  - caption: Advanced
-    chapters:
+  - file: perdiodic-system
+  - file: ad
+    sections:
     - file: ad-perturbation-theory
     - file: ad-perturbation-theory-degenerate
     - file: ad-perturbation-theory-apps
