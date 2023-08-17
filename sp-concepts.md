@@ -78,6 +78,7 @@ For our daily interactions with nature, but also for quantum information science
 ```{figure} figures/spin/standard-model.png
 ---
 name: standard-model
+scale: 50%
 ---
 The standard model of particles with mass, charge & spin. [Image credit](https://en.wikipedia.org/wiki/Standard_Model)
 ```

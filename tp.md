@@ -11,3 +11,6 @@ kernelspec:
 ---
 
 # Two quantum particles
+
+```{tableofcontents}
+```

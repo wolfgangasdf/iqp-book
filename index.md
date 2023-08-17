@@ -6,6 +6,9 @@ The script here is very talkative because it's also the script for the videos. T
 
 To gain most from this course, do the brightspace quizzes, exercise assignments (do it yourselves or in a group!), collect questions for the workgroup sessions, and read a bit in Griffith.
 
+<!-- make deeper but https://github.com/executablebooks/jupyter-book/issues/1131 -->
+```{tableofcontents}
+```
 
 ## Prerequisites
 

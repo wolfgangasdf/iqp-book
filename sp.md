@@ -11,3 +11,6 @@ kernelspec:
 ---
 
 # The spin
+
+```{tableofcontents}
+```

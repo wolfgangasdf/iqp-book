@@ -11,3 +11,6 @@ kernelspec:
 ---
 
 # The Schrödinger equation
+
+```{tableofcontents}
+```

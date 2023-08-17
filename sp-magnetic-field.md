@@ -12,7 +12,7 @@ kernelspec:
 
 # Magnetic fields
 
-<!-- Griffiths 4.4.2(but much better text in Ph8.2 TODO: think if to include higher AM) -->
+<!-- Griffiths 4.4.2(but much better text in Ph8.2 -->
 
 ## An electron in a magnetic field
 

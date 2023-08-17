@@ -11,3 +11,6 @@ kernelspec:
 ---
 
 # Advanced topics
+
+```{tableofcontents}
+```

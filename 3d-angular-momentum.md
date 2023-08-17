@@ -196,5 +196,3 @@ Now you might see that we have already seen these equations, and we know that th
 
 But you might notice that before, by the method of separation of variables, only integer values for $\ell$ were allowed - and now, using the algebraic theory of angular momentum operators, also half-integer values are possible. This is a crucial result - the algebraic theory of angular momentum leads to the concept of half-integer angular momentum which will turn out to be the "spin", discussed in the following lectures.
 
-<!-- TODO Q peter denteneer: understand why this is so. -->
-

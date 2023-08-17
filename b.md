@@ -11,3 +11,6 @@ kernelspec:
 ---
 
 # Introduction
+
+```{tableofcontents}
+```

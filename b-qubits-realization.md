@@ -35,7 +35,6 @@ $$
 \vec{E}=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=\ E_0\left( E_H\left(\begin{matrix}1\\0\\\end{matrix}\right)+E_V\left(\begin{matrix}0\\1\\\end{matrix}\right) \right)
 $$
 
-<!-- TODO: picture of polarization -->
 Here we have absorbed the electric-field units into $E_0$, and $E_H$ and $E_V$ are dimensionless complex coefficients.
 
 Now to the quantum state, the Psi ket-vector. By analogy, the dimensionless polarization vector is simply our qubit state vector, with the basis states H and V, where we assume normalization $|E|=1$:

@@ -345,7 +345,7 @@ glue("potential-well-perturbed-wf", fig, display=False)
 
 (potential-well-perturbed-wf)=
 ```{glue:figure} potential-well-perturbed-wf
-The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculate up to $m=20$.
+The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculated up to $m=20$.
 ```
 
 <!--G problem 7.1 as exercise.-->
