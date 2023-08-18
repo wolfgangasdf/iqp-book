@@ -12,7 +12,7 @@ kernelspec:
 
 # Free particle
 
-## De Broglie & Heisenbgerg
+## De Broglie & Heisenberg
 
 `[slide]`
 

@@ -23,6 +23,8 @@ The same also occurs for quantum wavefunctions also for massive particles - beca
 
 ### The WKB method
 
+`[slide]`
+
 The WKB method named after Wentzel, Kramers and Brillouin is a very useful method to calculate localized (bound) states and tunneling through potential barriers. We want to calculate what happens to a quantum wave incident from the left for this case:
 
 ```{code-cell} ipython3
@@ -102,6 +104,8 @@ In the tunneling region which is classically forbidden for the particle, $p(x)$ 
 $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{ \pm \frac{1}{\hbar} \int|p(x)| d x}$$
 
 Note that only $p^2$ appears in the Schrödinger equation, and you can test that taking the modulus of $p$ works. This describes an exxponentially increasing or decreasing function, which is non-oscillatory!
+
+`[slide]`
 
 In the tunneling region we therefore have
 

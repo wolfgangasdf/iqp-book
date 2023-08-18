@@ -10,7 +10,7 @@ kernelspec:
     name: python3
 ---
 
-# Schrödinger equation
+# Potentials and wavefunctions
 
 ## The potential energy
 

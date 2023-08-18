@@ -89,7 +89,7 @@ $$
 
 We see that the first term in curly brackets only depends on the radial coordinate $r$, while the second term only on the angular coordinates $\theta$ and $\phi$. Therefore, both parts must be individually constant and their negatives, we choose as the constant for the left part $\ell(\ell+1)$, therefore $-\ell(\ell+1)$ for the right part. We will see later why we choose this.
 
-### The azimuthal part
+## The azimuthal part
 
 `[slide]`
 
@@ -139,6 +139,8 @@ glue("3d-aziwave", fig, display=False)
 An azimuthal wave function that repeats itself after one round trip.
 ```
 
+`[slide]`
+
 One can also solve the polar part, where we don't show the derivation - see Griffith Chapter 4.1 for more details. At the end, we obtain the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
 
 $$
@@ -155,7 +157,7 @@ $$
 
 Later we will see that $\ell$ is associated with the total angular momentum of the state, and $m$ the projection of the angular momentum along a particular axis.
 
-### The radial part
+## The radial part
 
 `[slide]`
 
@@ -198,6 +200,16 @@ $$
 E_1=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right]=-13.6\,\mathrm{eV}
 $$
 
+```{figure} figures/schroedinger/hydrogen.png
+---
+name: se-hydrogen
+---
+Possible states for different angular momentum quantum number $\ell$.
+```
+<!-- TODO: redo G4.6 and do I understand it? -->
+
+`[slide]`
+
 We also get a new quantum number $n$ - this describes the energy $E$ which therefore does not depend on $\ell$ or $m$! However, we also get a new restriction on $\ell$:
 
 $$
@@ -211,14 +223,6 @@ $$
 $$
 
 The figure shows the energy levels, showing the bound states, and the spacing becomes increasingly small for higher states. For now, the different $\ell$ states are degenerate - you might already guess that this will change if we dive deeper into interactions.
-
-```{figure} figures/schroedinger/hydrogen.png
----
-name: se-hydrogen
----
-Possible states for different angular momentum quantum number $\ell$.
-```
-<!-- TODO: redo G4.6 and do I understand it? -->
 
 
 Now, we visualize this and comment on a few properties.

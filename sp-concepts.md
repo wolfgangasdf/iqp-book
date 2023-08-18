@@ -41,7 +41,7 @@ Now, it is one of the most profound discoveries in quantum mechanics that fundam
 
 The spin is so important in quantum mechanics because of a number of reasons, but probably above all because all known fundamental particles (electron, photon, quarks, gluons and a few more) have a nonzero spin - except for the recently discovered Higgs boson, which was confirmed experimentally in 2013 – it has zero spin.
 
-## Spin Operators and Commutation Relations
+## Spin operators and commutation relations
 
 `[slide]`
 
@@ -53,7 +53,7 @@ $$
  
 Again, the cartesian spin components do not commute and cannot be simultaneously known  due to the uncertainty principle. On the other hand, $\left[S^2,S_i\right]=0$, so the spin vector length commutes with each of the individual components and can be known and measured simultaneously with arbitrary precision. 
 
-## Spin Eigenvectors and Eigenvalues 
+## Spin eigenvectors and eigenvalues 
 
 `[slide]`
 

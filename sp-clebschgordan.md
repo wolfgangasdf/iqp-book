@@ -49,7 +49,7 @@ $$
 
 So, $m=m_1+m_2$ is just the sum. But $s$ is more complex, therefore we discuss the simplest example. 
 
-### Two spin-1/2 particles
+## Two spin-1/2 particles
 
 `[slide]`
 

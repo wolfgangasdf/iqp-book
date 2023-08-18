@@ -14,7 +14,9 @@ kernelspec:
 
 # Degenerate perturbation theory
 
-`[slide]degenerate perturbation`
+## Example: 2D infinite square well
+
+`[slide]`
 
 Often a quantum systems has degenerate eigenvalues or energies - this happens if different solutions of the Hamiltonian result in the same energy. Then our previous expression for the first-order correction to energy blows up:
 
@@ -36,7 +38,7 @@ $$
 E_{1,2}=E_{2,1}=\frac{\hbar^2 \pi^2}{2m_0 a^2}(1^2+2^2)
 $$
 
-`[slide]degenerate perturbation`
+`[slide]`
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -181,7 +183,7 @@ $$
 $$
 
 
-### Visualizing the new quantum states
+## Visualizing the new quantum states
 
 `[slide]`
 

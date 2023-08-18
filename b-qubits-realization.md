@@ -14,7 +14,7 @@ kernelspec:
 
 ## Light's polarization
 
-`[slide] polarization`
+`[slide]`
 
 Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which you might know.
 
@@ -99,7 +99,9 @@ $$
 
 which corresponds to right/left circular polarization.
 
-`[slide] quantum measurement & normalization`
+## Quantum measurements and normalization
+
+`[slide]`
 
 With this, we can already explain a first quantum experiment that highlights the meaning of quantum superpositions: 
 

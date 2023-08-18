@@ -144,6 +144,8 @@ Zeeman splitting of the $n=2$ states of hydrogen where we see that the different
 
 ## Hyperfine splitting
 
+`[slide]`
+
 As a last effect, we want to mention the hyperfine splitting, since it appears also in other qubit systems than atoms.
 
 It comes by the magnetic dipole moment of the proton, which is much smaller than the dipole moment of the electron because the proton mass is much higher:

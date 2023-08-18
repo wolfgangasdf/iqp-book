@@ -12,7 +12,9 @@ kernelspec:
 
 # Perturbation theory
 
-`[slide] perturbation theory`
+## A small perturbation & power series
+
+`[slide]`
 
 Let's assume that we have solved the Schrödinger equation for a particular Hamiltonian, for instance the infinite square well Hamiltonian that we now call $H_0$. As we have shown before, we have obtained a set of orthonormal eigenfunctions $\psi_n^{(0)}$ and energies or eigenvalues $E_n^{(0)}$. Now, there is a small time-indepentend perturbation of the system - for instance a small hump in the potential:
 
@@ -51,8 +53,6 @@ $$(pt-ham)
 
 $H'$ in Eq. {eq}`pt-ham` can for instance be the potential for the "hump".
 
-`[slide] power series`
-
 Now we write the eigenfunction, the wavefunction $\psi_n$ and its energy $E_n$ of a particular state $n$ as power series in $\lambda$ - If you don't remember these check the [wikipedia page](https://en.wikipedia.org/wiki/Power_series)!
 
 $$
@@ -67,7 +67,7 @@ We call for instance $E_n^{(1)}$ the first-order correction to the $n$th eigenva
 
 ## First-order perturbation theory: energy
 
-`[slide] perturbation theory: energy`
+`[slide]`
 
 We plug in the power series into the Schrödinger equation and obtain:
 
@@ -105,7 +105,7 @@ So, the first correction term to the energy is simply the expectation value of t
 
 ## Normalisation
 
-`[slide] normalization`
+`[slide]`
 
 Now we want to find $|\psi_n^{(1)}\rangle$. For this, it is useful to know properties of the correction states $\psi_n^{(i)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
 
@@ -129,7 +129,7 @@ We can assume that the terms are real since in time-independent quantum mechanic
 
 ## First-order eigenstates
 
-`[slide] eigenstates 1`
+`[slide]`
 
 We now need to play around with our equations to find an expression for $|\psi_n^{(1)}\rangle$, for the first order corrections! We use a trick that is often useful in quantum mechanics: we insert the identity and see what we can do with it.
 
@@ -170,7 +170,7 @@ $$
 E_n^{(1)} \langle\psi_k^{(0)}\psi_n^{(0)}\rangle
 $$
 
-`[slide] eigenstates 2`
+`[slide]`
 
 The left hand side is zero for $k = n$ and we obtain again the Expression for the first-order Energy correction.
 
@@ -192,7 +192,7 @@ $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
 $$
 
-`[slide] eigenstates 3`
+`[slide]`
 
 Some observations:
 
@@ -202,9 +202,9 @@ Some observations:
 
 ## 1st order perturbation theory: example
 
-`[slide] perturbation theory example `
+`[slide]`
 
-`GProb7.1`
+<!-- GProb7.1 -->
 
 ```{glue:figure} potential-well-hump
 A potential with a hump.
@@ -229,7 +229,7 @@ $$
 
 Remember that the Poisson brackets can be taken literally 0 it is an integral over all parameters, in this case position. I will continue to use the ket notation although if one could often simply use the real-space wavefunction.
 
-`[slide] example`
+`[slide]`
 
 $$
 E_n^{(1)}=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{a} \frac{a}{2}\right)=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{2}\right)=\left\{\begin{array}{cc}
@@ -273,7 +273,7 @@ The unperturbed wavefunctions of an infinite-well potential
 
 
 
-`[slide] example continued`
+`[slide]`
 
 Now we want to find the 1st-order correction to the wavefunction for the ground state with $n=1$. Before, we derived for this the equation:
 
@@ -297,7 +297,7 @@ $$
 E_1^{(0)}-E_m^{(0)}=\frac{\pi^2 \hbar^2}{2 m_0 a^2}\left(1-m^2\right)
 $$
 
-`[slide] example continued`
+`[slide]`
 
 Now we can combine the results and obtain
 
@@ -352,11 +352,12 @@ The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculated up t
 
 ## Higher order corrections
 
-<!--[slide] higher order -->
+`[slide]`
 
 The procedure for the second-order corrections is in principle similar to the first-order ones above, but now we will obtain double sums. 
 
 The energy correction is:
+
 $$
 E_n^{(2)}=\sum_{m \neq n} 
 \frac{
@@ -365,7 +366,6 @@ E_n^{(2)}=\sum_{m \neq n}
 E_n^{(0)}-E_m^{(0)}
 }
 $$
-
 
 Luckily, often the first-order corrections are sufficient to understand the behaviour of systems.
 

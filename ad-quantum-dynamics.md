@@ -132,7 +132,7 @@ at times
 
 $$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$
 
-### Rabi oscillations
+## Rabi oscillations
 
 `[slide]`
 

@@ -58,6 +58,8 @@ All potential minima can be approximated by a quadratic potential in the neighbo
 
 ## A Schrödinger equation for the harmonic oscillator
 
+`[slide]`
+
 For a one-dimensional harmonic oscillator, we need to solve the Schrödinger equation for the potential
 
 $$

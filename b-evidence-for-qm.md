@@ -15,7 +15,7 @@ kernelspec:
 
 ## Black body radiation
 
-`[slide] black body`
+`[slide]`
 
 Light has already long ago, since Newton, been postulated to consist of light particles but in a wrong way. More often it was thought to consist of electromagnetic waves since interference effects are evident even in every-day physics, think of the color of soap bubbles. In 1900, Max Planck published a theory of black-body radiation – this is about thermal radiation in equilibrium with a perfectly absorbing body – despite not black, the sun is to a good degree such a black body. The spectra of black body ratiation could not be explained with classical light waves only - as shown in the figure classical models predict a divergence of the emission towards short wavelengths. 
 
@@ -92,7 +92,7 @@ Let us look at some numbers, for instance for a candle. A candle emits 1 *candel
 
 ## Double slit interference
 
-`[slide] double slit]`
+`[slide]`
 
 Nowadays we have access to arrayed cameras which have a noise level low enough to observe the absorption of single photons. This allows us to repeat known wave-optical experiments but see photons arriving one by one, if the light source is weak enough. 
 Let's look at a classical interference experiment, the double-slit experiment. Here, a coherent laser source impinges on two narrow slits and far away an interference pattern can be observed:
@@ -141,7 +141,7 @@ In the double-slit experiment, a coherent wave is incident from the left, excite
 ```
 
 
-### A single photon in a double slit
+## A single photon in a double slit
 
 `[slide]`
 
@@ -200,7 +200,7 @@ glue("b-dssp", fig, display=False)
 If we use a single-photon sensitive camera, we can see the build-up of the interference pattern - before being detected at a particular position, each photon's wavepacket must have passed both slits, otherwise the interference pattern would not be visible.
 ```
 
-`[slide] particle interference`
+`[slide]`
 
 At the beginning of the 20th century, it was not clear that such interference doesn’t happen also for objects that people call particles. Nowadays, electron diffraction is observed regularly in transmission electron microscopes, neutrons are diffracted in crystals, and in dedicated experiments physicists have observed interference of buckeyballs (C60), many different molecules up to around 15000 atoms. 
 
@@ -215,7 +215,7 @@ Double-slit like interference of a macromolecule. This experiment done in M. Arn
 
 ## Atomic emission lines
 
-`[slide] atomic emission lines`
+`[slide]`
 
 Another strong indication that electrons also have wave character came from observing emission from molecular gasses and atomic vapour such as sodium. Physicists observe narrow bright “lines” and not a continuous emission spectrum as expected from black body radiation. Now, it turns out that these emission frequencies can be explained by assuming that the electron is described by a wave where allowed energies correspond waves with particular radii such that the electron wave repeats itself after one round trip., in the Born picture one calculates simply for which electron energies one obtains constructively interfering orbits of the electron and finds good agreement to experimental data.
 

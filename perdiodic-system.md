@@ -12,7 +12,7 @@ kernelspec:
 
 # The periodic table of elements
 
-## atomic quantum states and the periodic table
+## The electronic structure of atoms
 
 <!-- [G5.2.2 The Periodic Table and P11.1,2] -->
 `[slide]`
@@ -55,6 +55,8 @@ To mention one, the first rule is that the configuration with the highest spin m
 
 For example, 3 electrons in the $p$ subshell will be in the $\uparrow\uparrow\uparrow$ spin state. Only if a fourth electron is added, it has to go into the down state and we obtain $\uparrow\downarrow\uparrow\uparrow$. Remember this simply as the “bus seat rule”! The reason for this rule is a bit beyond this course.
 Look up the rules in [wikipedia](https://en.wikipedia.org/wiki/Hund%27s_rules)
+
+`[slide]`
 
 ```{figure} figures/periodic-table-configuration.png
 ---
