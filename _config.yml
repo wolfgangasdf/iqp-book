@@ -16,10 +16,11 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - bibliography.bib
+# bibtex_bibfiles:
+#   - bibliography.bib
 
-only_build_toc_files: true
+# can't use this, development.md
+# only_build_toc_files: true
 
 sphinx:
   config:
@@ -41,7 +42,7 @@ parse:
     # - attrs_block
     - colon_fence
     - dollarmath
-    # - linkify
+    - linkify
     # - substitution
   # the following option is currently ignored due to a bug (see
   # https://github.com/executablebooks/jupyter-book/issues/1738)
