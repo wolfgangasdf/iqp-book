@@ -12,6 +12,8 @@ kernelspec:
 
 # Quantum mechanics in 3D
 
+In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary radially-symmetric potentials. We will see that restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
+
 ## The Schrödinger equation in 3D
 
 `[slide]`
@@ -48,7 +50,7 @@ $$
 
 `[slide]`
 
-Like the hydrogen atom, quantum systems are often spherically symmetric. Therefore, it is useful to know how to express the Hamiltonian in spherical coordinates, where we obtain this rather complex expression:
+Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates, where we can use this identity for the square of the nabla operator:
 
 $$
 \nabla^2=\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)

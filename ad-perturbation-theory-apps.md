@@ -12,6 +12,8 @@ kernelspec:
 
 # Applications of perturbation theory
 
+In this section, we give an overview how perturbation theory is used to calculate all kinds of corrections to the very simple hydrogen model that we had discussed before.
+
 Historically and in most books, perturbation theory has been applied to calculate energy levels of atoms with better and better precision - to keep pace with the constantly increasing precision of experimental data - and this race is still on-going.
 
 However, perturbation theory is equally useful for prediction of the behaviour of modern quantum systems that are used as qubits, therefore learning perturbation theory is useful for QIST! Anyway, in this course we will focus on the hydrogen atom.

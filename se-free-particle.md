@@ -12,6 +12,8 @@ kernelspec:
 
 # Free particle
 
+In this section, we introduce the concept of a wave and a wave function for particles, derive a differential equation describing the dynamics of such waves, and investigate how such wavefunctions should look alike if they should describe particles.
+
 ## De Broglie & Heisenberg
 
 `[slide]`
@@ -75,7 +77,7 @@ The condition for the wavepacket to describe a moving quantum particle is that t
 <!-- Additional: Philips 2.1 -->
 `[slide]`
 
-For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find $d\omega/dk\ =\hbar k/m$, which by integrating results in the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a wave equation that obeys this dispersion relation. 
+In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find $d\omega/dk\ =\hbar k/m$, which by integrating results in the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a wave equation that obeys this dispersion relation. 
 
 The skilled eye will see that the equation  
 

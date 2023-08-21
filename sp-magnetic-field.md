@@ -13,6 +13,8 @@ kernelspec:
 # Magnetic fields
 
 <!-- Griffiths 4.4.2(but much better text in Ph8.2 -->
+In this section we investigate spins and angular momenta in a magnetic field, this field splits the energy of the angular momentum states which has enabled a crucial experiment proving that the quantum spin is correctly modelling nature: the Stern-Gerlach experiment.
+
 
 ## An electron in a magnetic field
 

@@ -12,6 +12,9 @@ kernelspec:
 
 # The square well potential
 
+In this section, we discuss a particular potential that appears approximately many times in quantum physics: the square well potential, we will solve the Schrödinger equation and find the eigenstates or wavefunctions with their eigenvalues, the energies.
+
+
 ## A particle in a box
 
 `[slide]`

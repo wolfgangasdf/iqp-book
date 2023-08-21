@@ -10,7 +10,10 @@ kernelspec:
     name: python3
 ---
 
-# Qubit realizations
+# Qubits realizations
+
+We want to start by giving a simple overview how easy it can be to encode a qubit into a physical system. On one hand, it is useful to keep this in mind while studying quantum mechanics, and on the other hand we repeat basic linear algebra that will come back many times.
+
 
 ## Light's polarization
 

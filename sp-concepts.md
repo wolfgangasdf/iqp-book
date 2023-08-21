@@ -12,6 +12,9 @@ kernelspec:
 
 # Spin: concepts
 
+In this section, we discuss the quantum version of spinning rotation: the spin - and show that it is a crucial quantum number that discriminates different fundamental particles of nature.
+
+
 ## Classical spin
 
 `[slide]`

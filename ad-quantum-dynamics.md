@@ -12,6 +12,9 @@ kernelspec:
 
 # Quantum dynamics
 
+In this section, we show how to calculate the effect of a time-dependent perturbation, which is key for controlling qubits in the lab.
+
+
 <!-- exercise: G Problem 4.36 An electron is at rest in an oscillating magnetic field` -->
 
 
@@ -25,7 +28,7 @@ We discuss - of course - qubits, that is a quantum system with two energy levels
 
 We first define the orthonormal eigenstates of the unperturbed Hamiltonian:
 
-$$\hat{H}^0 \psi_a=E_a \psi_a, \quad \text { and } \quad \hat{H}^0 \psi_b=E_b \psi_b$$
+$$\hat{H}_0 \psi_a=E_a \psi_a, \quad \text { and } \quad \hat{H}_0 \psi_b=E_b \psi_b$$
 
 and any state can be expressed as a superposition of these:
 
@@ -41,7 +44,7 @@ In absence of a perturbation the two constants $c_i$ are time-independent and th
 
 We now assume that we are in a particular states, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation:
 
-$$\hat{H} \Psi=i \hbar \frac{\partial \Psi}{\partial t}, \quad \text { where } \quad \hat{H}=\hat{H}^0+\hat{H}^{\prime}(t)$$
+$$\hat{H} \Psi=i \hbar \frac{\partial \Psi}{\partial t}, \quad \text { where } \quad \hat{H}=\hat{H}_0+\hat{H}^{\prime}(t)$$
 
 We use the matrix elements 
 

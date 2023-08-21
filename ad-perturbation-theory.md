@@ -12,6 +12,8 @@ kernelspec:
 
 # Perturbation theory
 
+In this section we introduce a powerful method, perturbation theory, to obtain an approximation to what happens to a quantum system if we add a small perturbation - for instance if the the square-well potential is not really flat at the bottom.
+
 ## A small perturbation & power series
 
 `[slide]`

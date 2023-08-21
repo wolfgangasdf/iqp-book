@@ -13,6 +13,8 @@ kernelspec:
 # Angular momentum coupling
 
 <!-- G 4.4.3 -->
+In this section we investigate what happens if two angular momenta couple, for instance of two electrons - we will find that contrary to the classical case which is rather boring, quantum angular momenta couple in a very peculiar way!
+
 
 ## Coupling of two angular momenta
 

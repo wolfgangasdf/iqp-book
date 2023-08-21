@@ -11,9 +11,10 @@ kernelspec:
 ---
 
 
-## Tunneling and WKB theory
+# Tunneling and WKB theory
 
 <!-- G9.2 -->
+In this section, we show how to calculate quantum tunneling, the passage of particles through a barrier that is not possible classically.
 
 `[slide]`
 
@@ -21,7 +22,7 @@ You might see quantum tunnelling every day! Many fingerprint sensors are based o
 
 The same also occurs for quantum wavefunctions also for massive particles - because in the end, Maxwell's equations describing light results in a wave equation as is the Schrödinger equation.
 
-### The WKB method
+## The WKB method
 
 `[slide]`
 
@@ -87,7 +88,7 @@ Which makes sense - we see that the probability of finding a particle is inverse
 
 The WKB method of obtaining wavefunctions is very powerful to calculate localized bound states or if potentials change slowly - see Griffith for examples.
 
-### Tunneling
+## Tunneling
 
 `[slide]`
 

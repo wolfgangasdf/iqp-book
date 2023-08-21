@@ -12,12 +12,15 @@ kernelspec:
 
 # The quantum harmonic oscillator
 
+In this section we discuss a slightly different potential than the square-well potential: the quantum harmonic oscillator. This is a key model system of quantum mechanics, introducing also the concepts of excitations and ladder operators. The same equations appear at many places in physics including even quantum optics!
+
+
 ## Harmonic potentials
 
 `[slide]`
 <!-- [Sakurai 2.3] [Griffiths 2.3] -->
 
-The harmonic oscillator is as it is in classical mechanics, one of the most important systems in quantum mechanics – because it appears everywhere in nature, and it is simple enough to solve it analytically and highlights many of the basic concepts and methods of quan¬tum mechanics. It appears everywhere in nature because nearly any potential landscape can be approximated by a harmonic oscillator, from optical systems over molecular vibrations to the dynamics of nuclear particles. 
+The harmonic oscillator is as it is in classical mechanics, one of the most important systems in quantum mechanics – because it appears everywhere in nature, and it is simple enough to solve it analytically and highlights many of the basic concepts and methods of quantum mechanics. It appears everywhere in nature because nearly any potential landscape can be approximated by a harmonic oscillator, from optical systems over molecular vibrations to the dynamics of nuclear particles. 
 
 The paradigm for a classical one-dimensional harmonic oscillator is a mass m attached to a spring of force constant k. The motion is governed by Hooke’s law, $F=-kx=m\ddot{x}$ (ignoring friction), and the solution is $x(t)=A\sin(\omega t)+B\cos(\omega t)$, where $k\equiv m\omega^2$ is the (angular) frequency of the oscillation. 
 

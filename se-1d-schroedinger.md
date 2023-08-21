@@ -12,11 +12,14 @@ kernelspec:
 
 # Potentials and wavefunctions
 
+In this section, we discuss the quantum behaviour of particles that are localized by some forces, and calculate expectation values of operators. 
+
+
 ## The potential energy
 
 `[slide]`
 <!-- [Ph2.2] -->
-We want to describe quantum behaviour of particles, which usually are not in free space but bound by a certain potential – we need to add this to the Schrödinger equation, this is usually done by adding a potential energy that is dependent on position. 
+We want to describe quantum behaviour of particles, which usually are not in free space but bound by a certain potential – we need to add this to the Schrödinger equation, this is usually done by adding a potential energy that is dependent on position.
 
 For example, an electron in a hydrogen atom is mainly bound to the positively charged proton core by the Coulomb force, which can be written by the potential energy 
 

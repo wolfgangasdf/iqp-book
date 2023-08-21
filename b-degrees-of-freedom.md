@@ -12,6 +12,9 @@ kernelspec:
 
 # Degrees of freedom
 
+In this section we briefly discuss different degrees of freedom in which we can encode quantum information, and give a glimpse into the physical systems which can carry quantum information - from fundamental particles to composite systems.
+
+
 ## Degrees of freedom of light
 `[slide]`
 

@@ -13,6 +13,8 @@ kernelspec:
 # Multiple quantum systems
 
 <!-- [G 5.1] -->
+In this section we briefly introduce the Schrödinger equation for two particles, and what interaction of the particles means for the potential.
+
 
 ## The two particle Hamiltonian
 

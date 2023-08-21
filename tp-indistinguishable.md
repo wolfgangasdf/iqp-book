@@ -12,6 +12,9 @@ kernelspec:
 
 # Indinstinguishable particles
 
+In this section, we study an in particular fascinating consequence of quantum mechanics - the concept of indistinguishable particles. We will see that for such particles, if we calculate what happens if we swap their positions, only two classes of particles are possible - on the one hand particles which like to huddle up, called bosons, and on the other hand particles which prefer to stay apart, fermions.
+
+
 ## Bosons and Fermions
 
 `[slide]`

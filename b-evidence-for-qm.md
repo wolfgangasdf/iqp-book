@@ -12,6 +12,8 @@ kernelspec:
 
 # Evidence for quantum mechanics
 
+In this section, we briefly outline the key experimental observations more than 100 years ago that showed that quantum mechanics is an essential model to explain the bahaviour of nature, at least on the microscopic scale.
+
 
 ## Black body radiation
 

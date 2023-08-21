@@ -12,6 +12,9 @@ kernelspec:
 
 # Spin one half
 
+In this section, we discuss the most common spin: $1/2$ - we show how this can be used to realize qubits in many systems and how the spin operators are connected to rotations.
+
+
 ## Spin 1/2 quantum states
 
 <!-- Griffiths 4.4.1 -->

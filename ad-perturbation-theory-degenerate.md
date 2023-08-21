@@ -14,6 +14,9 @@ kernelspec:
 
 # Degenerate perturbation theory
 
+In this section we discuss an extension of perturbation theory for the case that two quantum states have the same energy - this happens often in reality. We will see that in this case, the perturbation is mixing the states and new eigenstates appear.
+
+
 ## Example: 2D infinite square well
 
 `[slide]`

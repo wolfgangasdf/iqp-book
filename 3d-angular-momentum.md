@@ -12,6 +12,9 @@ kernelspec:
 
 # Angular momentum
 
+In this section we discuss the quantum analog of the orbital angular momentum - which will turn out to be equally important in quantum mechanics as it is in celestial mechanics for the orbiting and rotating motion of our earth around the sun.
+
+
 ## Classical angular momentum
 
 `[slide]`
@@ -48,7 +51,7 @@ So we have $\hat{L}=\hat{r}\times\hat{p}$, where $\hat{p}=-i\hbar\nabla$ for the
 
 We now want to figure out what quantum mechanical momenta are allowed. Similar to the procedure we used for finding solutions and eigenvalues for the 3D Schrödinger equation, we now do the following:
 
-1. We derive the commutation relations which are more complex because we have 3 components ($x,y,z) of the AM operator.
+1. We derive the commutation relations which are more complex because we have 3 components ($x,y,z$) of the AM operator.
 2. We again derive ladder operators which increase or decrease the angular momentum, and derive the commutation relations thereof.
 3. We find the lowest angular momentum state, and then figure out which eigenvalues are allowed.
 
