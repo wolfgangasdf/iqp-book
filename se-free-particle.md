@@ -116,10 +116,8 @@ where $\hbar\omega_n=\frac{\hbar^2k_n^2}{2m}$. If $A_n(k_n)$ is such that the su
 from matplotlib import pyplot as plt
 from myst_nb import glue
 from numpy import *
-
 fig, ax = plt.subplots(2,2, figsize=(6,4))
-
-k=2*pi/0.5
+k=2*pi*4
 xax=linspace(-3,3,500)
 kax=linspace(-10,10,500)
 wx=[0.3,1]
@@ -128,7 +126,7 @@ uk=[1,2]
 for i in range(2):
     uxe[i]=exp(-xax**2/wx[i]**2)
     uk[i]=exp(-kax**2/(1/wx[i])**2)
-    ax[i,0].plot(xax, uxe[i], color="k")
+    ax[i,0].plot(xax, uxe[i]*sin(k*xax), color="k")
     ax[i,0].plot(xax, uxe[i], color="0.5")
     ax[i,0].set_xlabel("$x/m$")
     ax[i,0].set_ylabel("$u(x)$")
@@ -137,6 +135,10 @@ for i in range(2):
     ax[i,1].set_xlabel("$k/(1/m)$")
     ax[i,1].set_ylabel("$u(k)$")
     ax[i,1].set_yticks([0]); 
+ax[0,0].set_title("Real space")
+ax[0,1].set_title("Momentum space")
+plt.gcf().text(0.93, 0.65, "narrow", fontsize=14, rotation='vertical')
+plt.gcf().text(0.93, 0.10, "Spatially wide", fontsize=14, rotation='vertical')
 plt.show()
 
 glue("b-wavepackets", fig, display=False)
@@ -146,3 +148,9 @@ glue("b-wavepackets", fig, display=False)
 ```{glue:figure} b-wavepackets
 The real-space (left) and wavevector-space (right) wavepacket envelope of a spatially narrow (top) and wider (bottom) wavefunction.
 ```
+
+The figure shows two examples of a wavefunction, one more narrow and one wider in real space - we see what the Heisenberg uncertainty principle implies: If a wavepacket is more localized in real space, it is wider in momentum space. This is because there are fewer oscillations in the narrower wavepacket, therefore the frequency or momentum of the wave is less good defined. This is what the frequency spectrum shows us.
+
+:::{note}
+Think where and why the [Heisenberg microscope](https://en.wikipedia.org/wiki/Heisenberg%27s_microscope) does falls short in explaining the essence of the Heisenberg uncertainty relation!
+:::
