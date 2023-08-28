@@ -100,7 +100,7 @@ $$
 \left\{\begin{aligned}
 |11\rangle & =|\uparrow \uparrow\rangle \\
 |10\rangle & =\frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle) \\
-|1-1\rangle & =|\downarrow \downarrow\rangle
+|1\,−1\rangle & =|\downarrow \downarrow\rangle
 \end{aligned}\right\} \quad s=1
 $$(sp-cg-t)
 

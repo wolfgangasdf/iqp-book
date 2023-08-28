@@ -45,10 +45,10 @@ In the rest frame of the proton, there is no magnetic field produced by the prot
 ```{figure} figures/perturbation-theory/soc-protonfield.png
 ---
 name: soc-protonfield
+scale: 50%
 ---
-The hydrogen atom, from the perspective of the electron the proton is orbiting around the electron and produces a magnetic field.
+The hydrogen atom, from the perspective of the electron, the proton is orbiting around the electron and produces a magnetic field.
 ```
-<!-- TODO replace -->
 
 The magnetic field is proportional to the angular momentum of the electron: 
 
@@ -75,20 +75,24 @@ The most important outcome is that the energy of the electronic states in hydrog
 ```{figure} figures/perturbation-theory/h-finestructure.png
 ---
 name: h-finestructure
+scale: 50%
 ---
+Electronic energy levels of hydrogen with fine structure. From Griffiths, to be replaced.
 ```
-<!-- TODO replace -->
+<!-- TODO replace also bad-->
 
 `[slide]`
 
 Historically, the "fine structure" of the hydrogen atom includes the relativistic corrections and spin-orbit coupling, which itself has contributions by a number of effects.
 
-Here is a very useful wikipedia page which sums up very well many decades of research on the fine structure of hydrogen: [wikipedia](https://en.wikipedia.org/wiki/Fine_structure). Effects can work in different directions, as shown here:
+Here is a very useful wikipedia page which sums up very well many decades of research on the fine structure of hydrogen: [wikipedia](https://en.wikipedia.org/wiki/Fine_structure). Effects can work in different directions, as shown in the Figure.
 
 ```{figure} figures/perturbation-theory/h-finestructure-wp.png
 ---
 name: h-finestructure-wp
+scale: 50%
 ---
+Image credit: [link](https://commons.wikimedia.org/wiki/File:Hydrogen_fine_structure_energy_2.svg)
 ```
 
 Of course, everything is in excellent agreement with experiments! A note on the existence of "true degeneracies" - probably it's best not to think that they are fundamental, but only due to our level of approximation of a model. For instance, even the energy levels on the right in the figure above are degenerate in $m_j$ - what lifts this last degeneracy?
@@ -139,8 +143,9 @@ Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a the
 ```{figure} figures/perturbation-theory/zeeman-all.png
 ---
 name: zeeman-all
+scale: 50%
 ---
-Zeeman splitting of the $n=2$ states of hydrogen where we see that the different regimes connect nicely.
+Zeeman splitting of the $n=2$ states of hydrogen where we see that the different regimes connect nicely. Figure from Griffiths, to be changed.
 ```
 <!-- TODO replace G7.11 -->
 

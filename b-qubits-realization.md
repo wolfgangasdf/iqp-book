@@ -50,14 +50,59 @@ $$\left\langle\Psi | \Psi\right\rangle=\left(\begin{matrix}
 E_x^*,\, E_y^*\end{matrix}\right)
 \cdot\left(\begin{matrix}E_x \\E_y\end{matrix}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1$$(b-qr-03)
 
-```{figure} figures/basics/polarization.png
----
-name: b-polarization
-scale: 50%
----
-Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
+
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+# 3d arrows, omg - https://stackoverflow.com/a/74122407
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        super().__init__((0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+    def do_3d_projection(self, renderer=None):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        return min(zs)
+arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA=0, shrinkB=0)
+def pol2cart(r, theta, phi):
+    theta=pi/2+theta
+    return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+ax.set_axis_off()
+ax.set_aspect("equal")
+ax.view_init(elev=-75, azim=20, roll=-20)
+rr=2.5
+ax.add_artist(Arrow3D([-rr, rr], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0, 0], [-rr, rr], [0, 0], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0, 0], [0, 0], [-rr, rr], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0,2], [0, 0], [-0.2, -0.2], **(arrow_prop_dict | dict(color="blue"))))
+ax.add_artist(Arrow3D([0,0], [0, 1.5], [-0.2, -0.2], **(arrow_prop_dict | dict(color="blue"))))
+ax.add_artist(Arrow3D([0,2], [0, 1.5], [-0.2, -0.2], **(arrow_prop_dict | dict(color="orange"))))
+ax.plot([0,2,2], [1.5,1.5,0], [-0.2,-0.2,-0.2],'-.',color='k')
+ax.text3D(1.8,-0.3,0.0,"$E_V$", fontsize=15)
+ax.text3D(-0.4,1.4,0.0,"$E_H$", fontsize=15)
+ax.text3D(2,1.5,0.0,r"$\vec{E}$", fontsize=15)
+# ax.text3D(rr,-0,0.0,"$x$", fontsize=15); ax.text3D(0,rr,0.2,"$y$", fontsize=15); ax.text3D(0,0,rr,"$z$", fontsize=15)
+# ax.set_xlim3d(-1,3); ax.set_ylim3d([-1,3]); ax.set_zlim3d([-1,3]); 
+# ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
+plt.show()
+
+glue("b-polarization", fig, display=False)
 ```
 
+(b-polarization)=
+```{glue:figure} b-polarization
+Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
+```
 
 
 ## Quantum measurements & probabilities
@@ -102,6 +147,60 @@ $$(b-qr-2)
 
 which corresponds to right/left circular polarization.
 
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+# 3d arrows, omg - https://stackoverflow.com/a/74122407
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        super().__init__((0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+    def do_3d_projection(self, renderer=None):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        return min(zs)
+arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA=0, shrinkB=0)
+def pol2cart(r, theta, phi):
+    theta=pi/2+theta
+    return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+ax.set_axis_off()
+ax.set_aspect("equal")
+ax.view_init(elev=-75, azim=20, roll=-20)
+rr=1.5
+ax.add_artist(Arrow3D([-rr, rr], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0, 0], [-rr, rr], [0, 0], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0, 0], [0, 0], [-rr, rr], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0,1], [0, 0], [-0.2, -0.2], **(arrow_prop_dict | dict(color="blue"))))
+ax.add_artist(Arrow3D([0,0], [0, 1], [-0.2, -0.2], **(arrow_prop_dict | dict(color="blue"))))
+ax.add_artist(Arrow3D([0,1/sqrt(2)], [0, 1/sqrt(2)], [-0.2, -0.2], **(arrow_prop_dict | dict(color="orange"))))
+ax.add_artist(Arrow3D([0,1/sqrt(2)], [0, -1/sqrt(2)], [-0.2, -0.2], **(arrow_prop_dict | dict(color="orange"))))
+th = linspace(0, 2*pi, 200)
+ax.plot(sin(th), cos(th), 0*th-0.2,'-.',color='k')
+ax.text3D(1.1,-0.0,0.0,"$V$", fontsize=15)
+ax.text3D(-0.2,1.1,0.0,"$H$", fontsize=15)
+ax.text3D(0.7,0.7,0.0,"$D$", fontsize=15)
+ax.text3D(0.7,-0.9,0.0,"$A$", fontsize=15)
+plt.show()
+
+glue("b-pbas", fig, display=False)
+```
+
+(b-pbas)=
+```{glue:figure} b-pbas
+$H$, $V$, $D$ and $A$ polarization vectors.
+```
+
+
 ## Quantum measurements and normalization
 
 `[slide]`
@@ -123,4 +222,61 @@ According to the rules of quantum mechanics, if the “measurement” of the mid
 
 This highlights the importance of quantum superpositions, which probably seem very natural for the polarization of light, but is in fact the cornerstone of quantum mechanics. In IQP we will see that quantum superpositions are also possible for matter systems, like electrons and other fundamental particles, and also for composite systems like electronic – photonic excitations or lattice vibrations.
 
-<!-- TODO: pic 3 pol -->
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+# 3d arrows, omg - https://stackoverflow.com/a/74122407
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        super().__init__((0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+    def do_3d_projection(self, renderer=None):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        return min(zs)
+arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA=0, shrinkB=0)
+def pol2cart(r, theta, phi):
+    theta=pi/2+theta
+    return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
+
+fig = plt.figure()
+ax = fig.add_subplot(1,2,1,projection='3d')
+ax.set_axis_off()
+ax.view_init(elev=5, azim=48, roll=0)
+ax.add_artist(Arrow3D([1,-1.5], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0.5, 0.5], [0, 1], [0,0], **(arrow_prop_dict | dict(color="blue"))))
+ax.add_artist(Arrow3D([-1, -1], [0, 0], [0,0.15], **(arrow_prop_dict | dict(color="blue"))))
+yax = linspace(-0.5, 0.5, 10)
+for y in yax:
+    ax.plot([-0.3,-0.3],[y,y],[-0.5,0.5],'-',color="0.6")
+
+ax = fig.add_subplot(1,2,2,projection='3d')
+ax.set_axis_off()
+ax.view_init(elev=5, azim=48, roll=0)
+ax.add_artist(Arrow3D([1,-2.5], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.6"))))
+ax.add_artist(Arrow3D([0.5, 0.5], [0, 1], [0,0], **(arrow_prop_dict | dict(color="blue"))))
+ax.add_artist(Arrow3D([-2.0, -2.0], [0, 0], [0,0.7], **(arrow_prop_dict | dict(color="blue"))))
+yax = linspace(-0.5, 0.5, 10)
+f=1/sqrt(2)
+for y in yax:
+    ax.plot([-0.3,-0.3],asarray([-0.5+y,0.5+y])*f,asarray([-0.5-(y),0.5-(y)])*f,'-',color="orange")
+for y in yax:
+    ax.plot([-1,-1],[y,y],[-0.5,0.5],'-',color="0.6")
+ax.set_xlabel("x"); ax.set_ylabel("y"); ax.set_zlabel("z")
+plt.show()
+
+glue("b-3pol", fig, display=False)
+```
+
+(b-3pol)=
+```{glue:figure} b-3pol
+The polarizer example. Left: a horizontally polarized light beam is not transmitted by a vertically oriented polarizer. Right: If a 45 degree oriented polarizer is inserted before the vertical polarizer, the transmission is not zero anymore because the polarization is projected onto the 45-degre polarizer in between!
+```
+
