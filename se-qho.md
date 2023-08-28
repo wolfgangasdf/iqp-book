@@ -82,7 +82,7 @@ $$
 $$(se-qho-v4)
 
 
-Solving this differential equation means finding the Eigenfunctions $\Psi$ and corresponding energies $E$. This can be done by looking up the solution for this particular differential equation. We will use another approach (Griffith 2.3.1) and introduce a very important algebraic technique involving so-called ladder or creation and annihilation operators - which create and annihilate quantum excitations in quantum systems.
+Solving this differential equation means finding the Eigenfunctions $\Psi$ and corresponding energies $E$. This can be done by looking up the solution for this particular differential equation. We will use another approach (Griffiths 2.3.1) and introduce a very important algebraic technique involving so-called ladder or creation and annihilation operators - which create and annihilate quantum excitations in quantum systems.
 
 ## Ladder operators
 

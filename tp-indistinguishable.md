@@ -41,9 +41,9 @@ or antisymmetric
 
 $$\psi\left(r_1,r_2\right)=-\psi\left(r_2,r_1\right)$$(tp-i-3)
 
-This classifies the quantum behaviour of particles in a very fundamental way - particles with symmetric wavefunctions under particle exchange are called **bosons**, and with antisymmetric wavefunctions are **fermions**. From before, you might already know that bosons are also all particles with integer spin, and fermions with half-integer spin. This is a very important connection, the so-called spin-statistics theorem – which in standard quantum mechanics must remain a theorem, it can be proven in relativistic quantum mechanics – have a read through the "suggestive but bogus argument" on [wikipedia](https://en.wikipedia.org/wiki/Spin%E2%80%93statistics_theorem#Suggestive_bogus_argument).
+This classifies the quantum behaviour of particles in a very fundamental way - particles with symmetric wavefunctions under particle exchange are called **bosons**, and with antisymmetric wavefunctions are **fermions**. From before, you might already know that bosons are also all particles with integer spin, and fermions with half-integer spin. This is a very important connection, the so-called spin-statistics theorem – it can only be proven in relativistic quantum mechanics – but you can have a read through the "suggestive but bogus argument" on [wikipedia](https://en.wikipedia.org/wiki/Spin%E2%80%93statistics_theorem#Suggestive_bogus_argument).
 
-Note: This is in 3 dimensions, for 2 dimensions such as used in quantum hall systems, other exchange phase as $\pm1$ are allowed – this gives rise to anyons and potentially majorana quasi-particles.
+Note: We have only discussed 3 dimensions, for 2 dimensions such as used in quantum hall systems, other exchange phase as $\pm1$ are allowed – this gives rise to anyons and potentially majorana quasi-particles.
 
 ## The Pauli exclusion principle 
 

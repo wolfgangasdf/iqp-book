@@ -76,7 +76,7 @@ $$p(x) \equiv \sqrt{2 m[E-V(x)]}$$(ad-wkb-2)
 
 If $E\gt V(x)$, $p$ is real and we call this the classical region, in our case for $x<0$ and $x>a$. is the classical momentum for a particle with energy $E$ in the potential $V(x)$.
 
-We can express the complex function $psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffith 9.1 for details). If we now make the approximation that the amplitude of $\psi$ changes slowly, we obtain with $C$ some real constant:
+We can express the complex function $psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffiths 9.1 for details). If we now make the approximation that the amplitude of $\psi$ changes slowly, we obtain with $C$ some real constant:
 
 $$\psi(x) \approx \frac{C}{\sqrt{p(x)}} e^{ \pm \frac{i}{\hbar} \int p(x) d x}$$(ad-wkb-3)
 
@@ -86,7 +86,7 @@ $$|\psi(x)|^2 \approx \frac{|C|^2}{p(x)}$$(ad-wkb-4)
 
 Which makes sense - we see that the probability of finding a particle is inversely proportional to its momentum, this makes sense also classically.
 
-The WKB method of obtaining wavefunctions is very powerful to calculate localized bound states or if potentials change slowly - see Griffith for examples.
+The WKB method of obtaining wavefunctions is very powerful to calculate localized bound states or if potentials change slowly - see Griffiths for examples.
 
 ## Tunneling
 

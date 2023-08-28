@@ -77,7 +77,7 @@ $$
 \mathrm{S}_x=\frac{\hbar}{2}\left(\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right), \quad \mathrm{S}_y=\frac{\hbar}{2}\left(\begin{array}{cc}0 & -i \\ i & 0\end{array}\right)
 $$(sp-oh-a4)
 
-<!-- [ex: Griffith example 4.2 & see text below!] -->
+<!-- [ex: Griffiths example 4.2 & see text below!] -->
 
 ## Pauli matrices
 

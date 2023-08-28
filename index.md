@@ -4,7 +4,7 @@
 
 The script here is very talkative because it's also the script for the videos. The teaching method might change in future, so this might change, too.
 
-To gain most from this course, do the brightspace quizzes, exercise assignments (do it yourselves or in a group!), collect questions for the workgroup sessions, and read a bit in Griffith.
+To gain most from this course, do the brightspace quizzes, exercise assignments (do it yourselves or in a group!), collect questions for the workgroup sessions, and read a bit in Griffiths.
 
 <!-- make deeper but https://github.com/executablebooks/jupyter-book/issues/1131 -->
 ```{tableofcontents}
@@ -27,9 +27,9 @@ We assume that you are familiar with:
 ## What is missing?
 
 * Magnetic resonance, only basics.
-* The variational principle (Griffith 8)
+* The variational principle (Griffiths 8)
 * Molecules
-* Scattering theory (Griffith 10)
+* Scattering theory (Griffiths 10)
 * Large parts of quantum electrodynamics, for instance the [Aharonov–Bohm effect](https://en.wikipedia.org/wiki/Aharonov%E2%80%93Bohm_effect).
 * Fermi’s Golden Rule (G11.3)
 * Stimulated and spontaneous emission, absorption

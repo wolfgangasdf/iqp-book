@@ -143,7 +143,7 @@ An azimuthal wave function that repeats itself after one round trip.
 
 `[slide]`
 
-One can also solve the polar part, where we don't show the derivation - see Griffith Chapter 4.1 for more details. At the end, we obtain the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
+One can also solve the polar part, where we don't show the derivation - see Griffiths Chapter 4.1 for more details. At the end, we obtain the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
 
 $$
 Y_{\ell}^m(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^m(\cos \theta)
@@ -184,7 +184,7 @@ It is attractive so it counteracts the centrifugal term before - even more, if w
 
 `[slide]`
 
-We do not derive the solution of the radial differential equation here, please have a look at Griffith 4.2 for details. The resulting energies are
+We do not derive the solution of the radial differential equation here, please have a look at Griffiths 4.2 for details. The resulting energies are
 
 $$
 E_n=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right] \frac{1}{n^2}=\frac{E_1}{n^2}, \quad n=1,2,3, \ldots

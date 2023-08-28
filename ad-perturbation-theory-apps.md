@@ -26,7 +26,7 @@ We had seen that the quantum wavefunction of the electron has angular momentum, 
 
 $$p=\frac{m v}{\sqrt{1-(v / c)^2}}$$(ad-pta-1)
 
-Calculation of this perturbation theory, luckily the standard non-degenerate theory works due to the nature of the corrections, for details please read Griffith 7.3.1. The result is:
+Calculation of this perturbation theory, luckily the standard non-degenerate theory works due to the nature of the corrections, for details please read Griffiths 7.3.1. The result is:
 
 $$
 E_r^1=-\frac{\left(E_n\right)^2}{2 m c^2}\left[\frac{4 n}{\ell+1 / 2}-3\right]
@@ -64,7 +64,7 @@ $$H_{so}^{\prime}=\left(\frac{e^2}{8 \pi \epsilon_0}\right) \frac{1}{m^2 c^2 r^3
 
 In the presence of such interaction, you probably agree that $H$ no longer commutes with $\vec{L}$ and $\vec{S}$, and the spin and orbital angular momenta are not separately conserved.
 
-Luckily, $H_{so}$ does commute with $L^2$, $S^2$, and the total angular momentum $\vec{J}=\vec{L}+\vec{S}$. So $L_z$ and $S_z$ became bad states, but the eigenstates of $L^2$, $S^2$, $J^2$, and $J_z$ are "good"! We won't calculate them here, see Griffith 7.3.2 for more information. The result is:
+Luckily, $H_{so}$ does commute with $L^2$, $S^2$, and the total angular momentum $\vec{J}=\vec{L}+\vec{S}$. So $L_z$ and $S_z$ became bad states, but the eigenstates of $L^2$, $S^2$, $J^2$, and $J_z$ are "good"! We won't calculate them here, see Griffiths 7.3.2 for more information. The result is:
 
 $$
 E_{\mathrm{so}}^1=\frac{\left(E_n\right)^2}{m c^2}\left\{\frac{n[j(j+1)-\ell(\ell+1)-3 / 4]}{\ell(\ell+1 / 2)(\ell+1)}\right\}
@@ -112,7 +112,7 @@ Depending on the strength of the magnetic field compared to the internal magneti
 
 `[slide]`
 
-For $B_{\mathrm{ext}} \ll B_{\mathrm{int}}$, the fine structure splitting dominates, and $H_Z'$ can be treated as a perturbation. Luckily, $\left|n \ell j m_j\right\rangle$ are good eigenstates and we can use first-order perturbation theory (for details see Griffith 7.4.1):
+For $B_{\mathrm{ext}} \ll B_{\mathrm{int}}$, the fine structure splitting dominates, and $H_Z'$ can be treated as a perturbation. Luckily, $\left|n \ell j m_j\right\rangle$ are good eigenstates and we can use first-order perturbation theory (for details see Griffiths 7.4.1):
 
 $$E_Z^1=\left\langle n \ell j m_j\left|H_Z^{\prime}\right| n \ell j m_j\right\rangle=\frac{e}{2 m} B_{\mathrm{ext}} \hat{k} \cdot\langle\vec{L}+2 \vec{S}\rangle$$
 
@@ -138,7 +138,7 @@ The magnetic field breaks rotation symmetry and $H_Z'$ lifts the degeneracy in $
 
 If $B_{\mathrm{ext}} \gg B_{\mathrm{int}}$, we can use $H_{\mathrm{Bohr}}+H_Z^{\prime}$ as the unperturbed Hamiltonian, and use $H_{fs}'$ as the perturbation. 
 
-Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a theory needs to connect the corrections by the weak- and strong-field Zeeman effect in a continuous way. In this intermediate regime we need to treat $ H^{\prime}=H_Z^{\prime}+H_{\mathrm{fs}}^{\prime}$ as the perturbation, and it is not clear what good eigenstates are. Therefore, we have to use the Clebsch-Gordan coefficients to find the state decomposition, and have to run perturbation theory with them. We do not do this here but it works, as can be seen in Griffith 7.4.3.
+Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a theory needs to connect the corrections by the weak- and strong-field Zeeman effect in a continuous way. In this intermediate regime we need to treat $ H^{\prime}=H_Z^{\prime}+H_{\mathrm{fs}}^{\prime}$ as the perturbation, and it is not clear what good eigenstates are. Therefore, we have to use the Clebsch-Gordan coefficients to find the state decomposition, and have to run perturbation theory with them. We do not do this here but it works, as can be seen in Griffiths 7.4.3.
 
 ```{figure} figures/perturbation-theory/zeeman-all.png
 ---

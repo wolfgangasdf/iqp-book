@@ -54,7 +54,7 @@ Zeeman splitting: The parallel and anti-parallel dipole moment orientation with 
 
 What happens for an arbitrarily aligned magnetic moment? Classically, this leads to a torque acting on the dipole $\vec{\mu}\times\vec{B}$, which tries to line up the dipole moment parallel to the field, just like a compass needle. In the absence of dissipation, also classically, the magnetic moment would rotate around the field forever.
 
-Quantum mechanically, for instance for a single electron, only particular orientations are allowed with respect to the quantization axis $z$ here. We have already seen that the magnetic field splits the energy of spin-up and down states - this implies a different "wiggle factor" that we found before! Now, If you simply calculate what this means for, for instance $\langle S_x\rangle$, you will find an oscillation. This is worked out in more detail in Griffith example 4.3 – please have a look!
+Quantum mechanically, for instance for a single electron, only particular orientations are allowed with respect to the quantization axis $z$ here. We have already seen that the magnetic field splits the energy of spin-up and down states - this implies a different "wiggle factor" that we found before! Now, If you simply calculate what this means for, for instance $\langle S_x\rangle$, you will find an oscillation. This is worked out in more detail in Griffiths example 4.3 – please have a look!
 
 The result is that the spin rotates around the B-field with the so-called Larmor frequency $\omega=\gamma B_0$. As mentioned, the relative phase of the spin-up and spin-down components change during rotation, therefore this Larmor precession an important tool for spin qubit manipulation in the lab.
 
@@ -69,7 +69,7 @@ Larmor precession: A spin precesses around the magnetic field along $z$.
 ## The Stern-Gerlach experiment
 
 `[slide]`
-<!-- [Griffith example 4.4] -->
+<!-- [Griffiths example 4.4] -->
 
 From magnetostatics in physics it was already long known that a magnetic dipole in an inhomogeneous magnetic field experiences not only a torque, but also a net force - we assume here that the magnetic field varies along the $z$-axis, and consider only the $z$-component of the magnetic moment:
 

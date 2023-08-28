@@ -57,7 +57,7 @@ We now want to figure out what quantum mechanical momenta are allowed. Similar t
 
 `[slide]`
 
-You can follow the derivations in Griffith chapter 4.3, here only the results. We have 3 angular momentum operators along the 3 coordinates
+You can follow the derivations in Griffiths chapter 4.3, here only the results. We have 3 angular momentum operators along the 3 coordinates
 
 $$
 L_x, L_y, L_z
