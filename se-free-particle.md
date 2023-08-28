@@ -83,7 +83,7 @@ The skilled eye will see that the equation
 
 $$
 i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}
-$$
+$$(se-fp-se)
 
 will be such an equation – this is the Schrodinger equation for a "quantum wave function" $\Psi$ describing a free particle moving in one dimension.
 
@@ -106,7 +106,8 @@ Quick question: confirm that $\Psi(x,t)=A_1 e^{i(k_1x-\omega_1 t)}+A_2 e^{i(k_2x
 :::
 
 The most general solution of our one-dimensional Schrödinger equation is a superposition of complex-exponential waves with many angular frequencies and wavenumbers: 
-$$\Psi\left(x,t\right)=\ \sum_{n=1}^{\infty}{A_n(k_n)e^{i\left(k_nx-\omega_nt\right)}}$$
+
+$$\Psi\left(x,t\right)=\ \sum_{n=1}^{\infty}{A_n(k_n)e^{i\left(k_nx-\omega_nt\right)}}$$(se-fp-wf)
 
 where $\hbar\omega_n=\frac{\hbar^2k_n^2}{2m}$. If $A_n(k_n)$ is such that the sum involves only a narrow range of wave numbers around a positive value $k$, this superposition yields a wave packet moving in the positive $x$ direction with a group velocity $\hbar k/m$. In free space, such a wave packet describes a quantum particle moving at velocity $\hbar k/m$, preserving shape during propagation, but the position and momentum uncertainties are in agreement with the Heisenberg uncertainty principle as explained before.
 

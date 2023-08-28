@@ -26,7 +26,7 @@ Similarly, if a system is rotationally symmetric like a bicycle wheel, the angul
 For a point mass, the angular momentum is defined by
 
 $$L=r\times p
-$$
+$$(3d-am-1)
 
 where the vector $L$ is the angular momentum, $r$ the position of the mass, and $p$ the linear momentum equal to mass times velocity: $p=mv$. Of course the mass would not follow a circular path - therefore we assume that it is connected to the coordinate system origin by a string:
 
@@ -61,13 +61,13 @@ You can follow the derivations in Griffith chapter 4.3, here only the results. W
 
 $$
 L_x, L_y, L_z
-$$
+$$(3d-am-2)
 
 We derive the commutation relations:
 
 $$
 \left[L_x, L_y\right]=i \hbar L_z ; \quad\left[L_y, L_z\right]=i \hbar L_x ; \quad\left[L_z, L_x\right]=i \hbar L_y
-$$
+$$(3d-am-3)
 
 Note that the indices can be permuted *cyclic*, so you have only to remember one. The non-vanishing commutator means that we never can measure all 3 components of the quantum orbital angular momentum at the same time with infinite precision! Remember that we had the same argument for position and momentum.
 
@@ -75,7 +75,7 @@ However, the square of the total angular momentum $L^2 \equiv L_x^2+L_y^2+L_z^2$
 
 $$
 \left[L^2, L_x\right]=0, \quad\left[L^2, L_y\right]=0, \quad\left[L^2, L_z\right]=0
-$$
+$$(3d-am-4)
 
 This means we can measure those quantities with arbitrary precision at the same time!
 
@@ -94,7 +94,7 @@ L^2 f_{\ell}^m&=\hbar^2 \ell(\ell+1) f_{\ell}^m\\
 L_z f_{\ell}^m&=\hbar m f_{\ell}^m\\
 \ell&=0,1 / 2,1,3 / 2, \ldots\\
 m&=-\ell,-\ell+1, \ldots, \ell-1, \ell
-\end{align*}$$
+\end{align*}$$(3d-am-5)
 
 Exciting, half-integer values are possible -prob we will come back to this.
 
@@ -181,19 +181,19 @@ Now we want to derive the eigenfunctions of the orbital angular momentum operato
 
 $$
 \nabla=\hat{r} \frac{\partial}{\partial r}+\hat{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}+\hat{\phi} \frac{1}{r \sin \theta} \frac{\partial}{\partial \phi}
-$$
+$$(3d-am-6)
 
 We write down the eigenvalue equations where we know already the eigenvalues, first for $L^2$:
 
 $$
 L^2 f_{\ell}^m=-\hbar^2\left[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{\sin ^2 \theta} \frac{\partial^2}{\partial \phi^2}\right] f_{\ell}^m=\hbar^2 \ell(\ell+1) f_{\ell}^m
-$$
+$$(3d-am-7)
 
 and for $L_z$:
 
 $$
 L_z f_{\ell}^m=-i \hbar \frac{\partial}{\partial \phi} f_{\ell}^m=\hbar m f_{\ell}^m
-$$
+$$(3d-am-8)
 
 Now you might see that we have already seen these equations, and we know that the eigenfunctions are the spherical harmonics $Y_l^m$!
 

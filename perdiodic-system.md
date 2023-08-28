@@ -35,7 +35,7 @@ Now, if interactions between electrons could be neglected, all electrons in the 
 
 Here we show a table of the first few elements, and how their electronic state is characterized. The *electron configuration* is indicated by $(n\ell)^N$ - meaning $N$ electrons in shell $n$, subshell $\ell$. $\ell$ is written as letters with $s,p,d,f,\ldots$ for $\ell=0,1,2,3$.
 
-The *term symbol* is written as $^{2(S+1)}L_J$. Here, $2(S+1)$ is the spin multiplicity - how many different spin configurations are possible (remember $m$=-s\ldots s). $J$ is the total angular momentum quantum number for the electrons in the atom – as we have seen before in angular momentum coupling it ranges from $|L-S|$ to $L+S$. Finally, $L$ is the total orbital angular momentum quantum number denoted by $S,P,D,F,\ldots$
+The *term symbol* is written as $^{2(S+1)}L_J$. Here, $2(S+1)$ is the spin multiplicity - how many different spin configurations are possible (remember $m=-s\ldots s$). $J$ is the total angular momentum quantum number for the electrons in the atom – as we have seen before in angular momentum coupling it ranges from $|L-S|$ to $L+S$. Finally, $L$ is the total orbital angular momentum quantum number denoted by $S,P,D,F,\ldots$
 
 Why do we need both? If we think about the two $(2p)^2$ electroncs, they could be either in the triplet or singlet state - the term symbol will clarify this.
 

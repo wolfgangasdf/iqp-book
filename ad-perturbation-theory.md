@@ -59,11 +59,11 @@ Now we write the eigenfunction, the wavefunction $\psi_n$ and its energy $E_n$ o
 
 $$
 E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots
-$$
+$$(ad-pt-1)
 
 $$
 \psi_n=\psi_n^{(0)}+\lambda \psi_n^{(1)}+\lambda^2 \psi_n^{(2)}+\ldots
-$$
+$$(ad-pt-2)
 
 We call for instance $E_n^{(1)}$ the first-order correction to the $n$th eigenvalue and so on. Since the perturbation is assumed to be small, the energies and eigenstates should be similar to the unperturbed case, and higher-order correction terms should become small. How do we determine these corrections?
 
@@ -79,7 +79,7 @@ $$
 =
 \left(E_n=E_n^{(0)}+\lambda E_n^{(1)}+\ldots\right)
 \left(|\psi_n^{(0)}\rangle+\lambda |\psi_n^{(1)}\rangle+\ldots\right)
-$$
+$$(ad-pt-3)
 
 We now collect terms in $\lambda$ according to the order that we want to calculate and obtain:
 
@@ -87,7 +87,7 @@ For the zeroth order we get for the terms without $\lambda$:
 
 $$
 H_0|\psi_n^{(0)}\rangle=E_n^{(0)}|\psi_n^{(0)}\rangle
-$$
+$$(ad-pt-4)
 
 and for the first order, the terms with $\lambda$ are (after dividing by $\lambda$):
 
@@ -99,7 +99,7 @@ We multiply from left with $\langle\psi_n^{(0)}|$, note that $H_0$ is hermitian 
 
 $$
 E_n^{(1)}=\langle\psi_n^{(0)}|H'|\psi_n^{(0)}\rangle
-$$
+$$(ad-pt-5)
 
 So, the first correction term to the energy is simply the expectation value of the perturbation Hamiltonian for the unperturbed eigenstate! This is a very important equation in quantum mechanics.
 
@@ -125,7 +125,7 @@ $$
 \\
 \langle \psi_n^{(0)}|\psi_n^{(1)}\rangle+
 \langle \psi_n^{(1)}|\psi_n^{(0)}\rangle=0
-$$
+$$(ad-pt-7)
 
 We can assume that the terms are real since in time-independent quantum mechanics the global phase can be set to 1, therefore we find that the zeroth and first order eigenstate are orthogonal: $\langle \psi_n^{(0)}|\psi_n^{(1)}\rangle$. Note that this is an unusual normalization and you might say this leads to errors - yes, but we check simply for normalization in the end.
 
@@ -140,13 +140,13 @@ First we re-arrange Eq. {eq}`pt-1storderseq`:
 $$
 \left(H_0-E_n^{(0)}\right)|\psi_n^{(1)}\rangle = 
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
-$$
+$$(ad-pt-8)
 
 Since $|\psi_n^{(0)}\rangle$ form a complete basis, we can express $|\psi_n^{(1)}\rangle$ with it:
 
 $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}c_m^{(n)}|\psi_m^{(0)}\rangle
-$$
+$$(ad-pt-9)
 
 We left out $m=n$ due to the normalization choice above. Now we insert this into the preceeding equation:
 
@@ -160,7 +160,7 @@ $$
 \left(E_m^{(0)}-E_n^{(0)}\right)c_m^{(n)}
 |\psi_m^{(0)}\rangle = 
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
-$$
+$$(ad-pt-10)
 
 And we multiply from left with $\langle\psi_k^{(0)}$
 
@@ -170,7 +170,7 @@ $$
 \langle\psi_k^{(0)}|\psi_m^{(0)}\rangle = 
 -\langle\psi_k^{(0)}|H'|\psi_n^{(0)}\rangle + 
 E_n^{(1)} \langle\psi_k^{(0)}\psi_n^{(0)}\rangle
-$$
+$$(ad-pt-11)
 
 `[slide]`
 
@@ -180,19 +180,19 @@ For $k \neq n$ we obtain
 
 $$
 \left(E_k^{(0)}-E_n^{(0)} \right)c_k^{(n)}=-\langle\psi_k^{(0)}|H'|\psi_n^{(0)}\rangle
-$$
+$$(ad-pt-12)
 
 or after renaming the index $k$ and rearranging
 
 $$
 c_m^{(n)}=\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}
-$$
+$$(ad-pt-13)
 
 With this we obtain the first-order correction to the eigenstate
 
 $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
-$$
+$$(ad-pt-14)
 
 `[slide]`
 
@@ -217,7 +217,7 @@ In physics, the simplest "hump" is often described by a delta function due to it
 
 $$
 H'=\alpha \delta(x-a / 2)
-$$
+$$(ad-pt-15)
 
 We know from before the wavefunction for the unperturbed case. 
 
@@ -227,7 +227,7 @@ $$
 \psi_n^{(0)}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)
 \\
 E_n^1=\left\langle\psi_n^{(0)}\left|H^{\prime}\right| \psi_n^{(0)}\right\rangle=\frac{2}{a} \alpha \int_0^a \sin ^2\left(\frac{n \pi}{a} x\right) \delta\left(x-\frac{a}{2}\right) d x \\
-$$
+$$(ad-pt-16)
 
 Remember that the Poisson brackets can be taken literally 0 it is an integral over all parameters, in this case position. I will continue to use the ket notation although if one could often simply use the real-space wavefunction.
 
@@ -238,7 +238,7 @@ E_n^{(1)}=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{a} \frac{a}{2}\right)=\fr
 0, & \text { if } n \text { is even, } \\
 2 \alpha / a, & \text { if } n \text { is odd. }
 \end{array}\right\}
-$$
+$$(ad-pt-17)
 
 
 * We calculate the overlap integral with the unperturbed wavefunctions in a straight-forward way. 
@@ -281,7 +281,7 @@ Now we want to find the 1st-order correction to the wavefunction for the ground 
 
 $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
-$$
+$$(ad-pt-18)
 
 We need to calculate the numerator:
 
@@ -289,7 +289,7 @@ $$
 \left\langle\psi_m^{(0)}\left|H^{\prime}\right| \psi_1^{(0)}\right\rangle=\frac{2 \alpha}{a} \int \sin \left(\frac{m \pi}{a} x\right) \delta\left(x-\frac{a}{2}\right) \sin \left(\frac{\pi}{a} x\right) d x
 \\
 =\frac{2 \alpha}{a} \sin \left(\frac{m \pi}{2}\right) \sin \left(\frac{\pi}{2}\right)=\frac{2 \alpha}{a} \sin \left(\frac{m \pi}{2}\right)
-$$
+$$(ad-pt-19)
 
 This is nearly the same result as above, it is zero for even $m$.
 
@@ -297,7 +297,7 @@ We know the denominator from some weeks ago, we have called the mass of the part
 
 $$
 E_1^{(0)}-E_m^{(0)}=\frac{\pi^2 \hbar^2}{2 m_0 a^2}\left(1-m^2\right)
-$$
+$$(ad-pt-20)
 
 `[slide]`
 
@@ -306,7 +306,7 @@ Now we can combine the results and obtain
 $$
 \left|\psi_1^{(1)}\right\rangle=
 \frac{2 \alpha}{a} \frac{2 m_0 a^2}{\pi^2 \hbar^2}\left[\frac{-1}{1-9} \left|\psi_3^{(0)}\right\rangle+\frac{1}{1-25} \left|\psi_5^{(0)}\right\rangle+\frac{-1}{1-49} \left|\psi_7^{(0)}\right\rangle+\ldots\right]
-$$
+$$(ad-pt-21)
 
 We see that the contribution of higher states reduces quadratically, which might also be used as an approximation. If you remember the shape of the odd wavefunctions, some have a maximum and some a minimum in the center - the result of the alternating sign of the corrections is that the central maximum of the $n=1$ wavefunction gets a small dip in the center where the potential hump is introduced. 
 
@@ -367,7 +367,7 @@ E_n^{(2)}=\sum_{m \neq n}
 }{
 E_n^{(0)}-E_m^{(0)}
 }
-$$
+$$(ad-pt-22)
 
 Luckily, often the first-order corrections are sufficient to understand the behaviour of systems.
 

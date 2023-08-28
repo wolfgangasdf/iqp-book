@@ -24,13 +24,13 @@ However, perturbation theory is equally useful for prediction of the behaviour o
 
 We had seen that the quantum wavefunction of the electron has angular momentum, which also implies linear momentum - and any moving particle with mass $m$ is subject to relativistic corrections. For a point-like particle, the momentum becomes 
 
-$$p=\frac{m v}{\sqrt{1-(v / c)^2}}$$
+$$p=\frac{m v}{\sqrt{1-(v / c)^2}}$$(ad-pta-1)
 
 Calculation of this perturbation theory, luckily the standard non-degenerate theory works due to the nature of the corrections, for details please read Griffith 7.3.1. The result is:
 
 $$
 E_r^1=-\frac{\left(E_n\right)^2}{2 m c^2}\left[\frac{4 n}{\ell+1 / 2}-3\right]
-$$
+$$(ad-pta-2)
 
 We see that now, the energy levels depend on the angular momentum quantum number $\ell$! The corrections are on the $10^-5$ level to the eigenenergies of hydrogen.
 
@@ -52,11 +52,11 @@ The hydrogen atom, from the perspective of the electron the proton is orbiting a
 
 The magnetic field is proportional to the angular momentum of the electron: 
 
-$$\vec{B}\propto\vec{L}$$
+$$\vec{B}\propto\vec{L}$$(ad-pta-3)
 
 We obtain as the spin-orbit coupling Hamiltonian this expression - we mainly note that it retains our initial assumption:
 
-$$H_{so}^{\prime}=\left(\frac{e^2}{8 \pi \epsilon_0}\right) \frac{1}{m^2 c^2 r^3} \vec{S}\cdot\vec{L}$$
+$$H_{so}^{\prime}=\left(\frac{e^2}{8 \pi \epsilon_0}\right) \frac{1}{m^2 c^2 r^3} \vec{S}\cdot\vec{L}$$(ad-pta-4)
 
 ## Quantum spin-orbit coupling
 
@@ -68,7 +68,7 @@ Luckily, $H_{so}$ does commute with $L^2$, $S^2$, and the total angular momentum
 
 $$
 E_{\mathrm{so}}^1=\frac{\left(E_n\right)^2}{m c^2}\left\{\frac{n[j(j+1)-\ell(\ell+1)-3 / 4]}{\ell(\ell+1 / 2)(\ell+1)}\right\}
-$$
+$$(ad-pta-5)
 
 The most important outcome is that the energy of the electronic states in hydrogen depend not only on $n$ and $\ell$, but also on the spin via $j$, which therefore splits different $\ell$ and $s$ states:
 
@@ -100,7 +100,7 @@ Of course, everything is in excellent agreement with experiments! A note on the 
 
 The last degeneracy in $m_j$ is lifted by the Zeeman effect in an external magnetic field, which we have seen before, now with the dipole moment for electron spin $\vec{\mu}_s=-\frac{e}{m} \vec{S}$ and orbital motion $\vec{\mu}_l=-\frac{e}{2 m} \vec{L}$:
 
-$$H_Z^{\prime}=\frac{e}{2 m}(\vec{L}+2 \vec{S}) \cdot \vec{B}_{\vec{ext}}$$
+$$H_Z^{\prime}=\frac{e}{2 m}(\vec{L}+2 \vec{S}) \cdot \vec{B}_{\vec{ext}}$$(ad-pta-6)
 
 Depending on the strength of the magnetic field compared to the internal magnetic fields that lead to spin-orbit interaction, one distinguishes different regimes: The weak- and strong-field Zeeman effect.
 
@@ -118,11 +118,11 @@ $$\langle\vec{L}+2 \vec{S}\rangle=\left[1+\frac{j(j+1)-\ell(\ell+1)+s(s+1)}{2 j(
 
 where the term in brackets is the **Landé g-factor** $g_J$:
 
-$$E_Z^1=\mu_B g_J B_{\mathrm{ext}} m_j$$
+$$E_Z^1=\mu_B g_J B_{\mathrm{ext}} m_j$$(ad-pta-7)
 
 And, 
 
-$$\mu_B \equiv \frac{e \hbar}{2 m}=5.788 \times 10^{-5} \mathrm{eV} / \mathrm{T}$$
+$$\mu_B \equiv \frac{e \hbar}{2 m}=5.788 \times 10^{-5} \mathrm{eV} / \mathrm{T}$$(ad-pta-8)
 
 is the **Bohr magneton**, a useful quantity in quantum mechanics.
 
@@ -154,11 +154,11 @@ It comes by the magnetic dipole moment of the proton, which is much smaller than
 
 $$
 \vec{\mu}_p=\frac{g_p e}{2 m_p} \vec{S}_p, \quad \vec{\mu}_e=-\frac{e}{m_e} \vec{S}_e
-$$
+$$(ad-pta-9)
 
 We find a first-order perturbation theory correction to energy 
 
-$$E_{\mathrm{hf}}^1=\frac{\mu_0 g_p e^2}{3 \pi m_p m_e a^3}\left\langle\vec{S}_p \cdot \vec{S}_e\right\rangle$$
+$$E_{\mathrm{hf}}^1=\frac{\mu_0 g_p e^2}{3 \pi m_p m_e a^3}\left\langle\vec{S}_p \cdot \vec{S}_e\right\rangle$$(ad-pta-10)
 
 which is a first example of spin-spin coupling! It is suggestive that it splits the "triplet" state where both spins are aligned parallel, and the singlet state.
 

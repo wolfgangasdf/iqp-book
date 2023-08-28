@@ -22,15 +22,15 @@ In this section we investigate spins and angular momenta in a magnetic field, th
 
 A particle with spin is a little magnet – called a magnetic dipole, with a north and south pole like the earth magnetic field. Its magnetic dipole moment $\vec{\mu}$ is proportional to its spin angular momentum $\vec{S}$:
 
-$$\vec{\mu}=\gamma\vec{S}$$ 
+$$\vec{\mu}=\gamma\vec{S}$$(sp-b-1)
 
 The proportionality constant $\gamma$ is called the gyromagnetic ratio. For an electron, it is equal to 
 
-$$\gamma=\frac{g_e\mu_B}{\hbar}$$
+$$\gamma=\frac{g_e\mu_B}{\hbar}$$(sp-b-2)
 
 Where $\mu_B$ is the **Bohr magneton**, which relates the spin (but also orbital) angular momentum of an electron to its magnetic moment:
 
-$$\mu_B \equiv \frac{e \hbar}{2 m}=5.788 \times 10^{-5} \mathrm{eV} / \mathrm{T}$$
+$$\mu_B \equiv \frac{e \hbar}{2 m}=5.788 \times 10^{-5} \mathrm{eV} / \mathrm{T}$$(sp-b-3)
 
 Now, $g_e$ or often written as $g_s$ for the spin is the Landé g-factor, which for a classical spinning charged ball or orbital motion would be $1$, but for the electron spin it is $g_e=2$. Derivation requires relativistic Dirac theory.
 
@@ -75,13 +75,13 @@ From magnetostatics in physics it was already long known that a magnetic dipole 
 
 $$
 F_z=µ_z\frac{\partial B}{\partial z}
-$$
+$$(sp-b-sg1)
 
 We now consider that the B-field only changes along the $z$ direction, and we ignore the $x$-component of the spin because this will in fact average out due to the Larmor precession. From before we know that $\vec{\mu}=\gamma \vec{S}$ , and we obtain for the force:
 
 $$
 F_z=\gamma\alpha S_z
-$$
+$$(sp-b-sg2)
 
 Where $\alpha$ describes the strength of the gradient along the $z$-direction of the $B$-field.
 

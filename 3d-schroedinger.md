@@ -24,19 +24,19 @@ In classical mechanics in 3 dimensions, we simply add up the kinetic energies fo
 
 $$
 H=-\frac{\hbar}{2m}\ \frac{\partial^2}{\ \partial x^2}+V(x)
-$$
+$$(3d-s-1)
 
 In 3D, we need to add up the kinetic energies for all 3 dimensions: 
 
 $$
 H=-\frac{\hbar}{2m}\ \left(\frac{\partial^2}{\ \partial x^2}+\frac{\partial^2}{\partial y^2\ }+\frac{\partial^2}{\ \partial z^2}\right)+V(x,y,z)
-$$
+$$(3d-s-2)
 
 The expression in brackets has a name, it is called the Laplace operator Delta since it is so useful in physics. This operator is the square of the nabla operator $\nabla$, sometimes called *del*, which is a vector containing the first derivaties:
 
 $$
 \nabla=\left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}  \right)
-$$
+$$(3d-s-3)
 
 The nabla operator is ues to calculate the gradient of a scalar field or the divergence of a vector field.
 
@@ -44,7 +44,7 @@ With this, we can write the Hamilton operator in 3D even shorter:
 
 $$
  H=-\frac{\hbar}{2m}\ \nabla^2+V.
-$$
+$$(3d-s-4)
 
 ## The Schrödinger equation in spherical coordinates
 
@@ -54,7 +54,7 @@ Many quantum systems, like the hydrogen atom, have a potential which only depend
 
 $$
 \nabla^2=\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)
-$$
+$$(3d-s-5)
 
 It is actually quite easy to convince yourself that this is how it needs to be - for instance if the operator is applied to a function that is varying only as a function of the azimuthal angle $\phi$. The same change as a function of cartesian distance appears to be much faster in spherical coordinates if the object is further away, and since the Laplacian should give us kinetic energy which doesn't depend on coordinate system choices, we need to divide by $r^2$ in the last term.
 
@@ -62,7 +62,7 @@ The time independent Schrödinger equation then becomes
 
 $$
 -\frac{\hbar}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=0
-$$
+$$(3d-s-6)
  
 Now, we show how you can solve this equation.
 
@@ -74,19 +74,19 @@ What we saw before that the method of separation of variables can be used to spl
 
 $$
 \psi\left(r,\theta,\phi\right)=R\left(r\right)Y\left(\theta,\phi\right)
-$$
+$$(3d-s-7)
 
 We now insert this back into the Schrödinger equation, and make use of the fact that partial derivatives only act on the individual parts
 
 $$
 -\frac{\hbar^2}{2 m}\left[\frac{Y}{r^2} \frac{d}{d r}\left(r^2 \frac{d R}{d r}\right)+\frac{R}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{R}{r^2 \sin ^2 \theta} \frac{\partial^2 Y}{\partial \phi^2}\right]+V R Y=E R Y
-$$
+$$(3d-s-8)
 
 We now divide by $YR$ and multiply with $-2 m r^2 / \hbar^2$  and obtain
 
 $$
 \left\{\frac{1}{R} \frac{d}{d r}\left(r^2 \frac{d R}{d r}\right)-\frac{2 m r^2}{\hbar^2}[V(r)-E]\right\}+\frac{1}{Y}\left\{\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{1}{\sin ^2 \theta} \frac{\partial^2 Y}{\partial \phi^2}\right\}=0
-$$
+$$(3d-s-9)
 
 
 We see that the first term in curly brackets only depends on the radial coordinate $r$, while the second term only on the angular coordinates $\theta$ and $\phi$. Therefore, both parts must be individually constant and their negatives, we choose as the constant for the left part $\ell(\ell+1)$, therefore $-\ell(\ell+1)$ for the right part. We will see later why we choose this.
@@ -99,13 +99,13 @@ The angular part can be split up further again by separation of variables with $
 
 $$
 \left\{\frac{1}{\Theta}\left[\sin \theta \frac{d}{d \theta}\left(\sin \theta \frac{d \Theta}{d \theta}\right)\right]+\ell(\ell+1) \sin ^2 \theta\right\}+\frac{1}{\Phi} \frac{d^2 \Phi}{d \phi^2}=0
-$$
+$$(3d-s-10)
 
 Same procedure as before - now we call the constant describing the rightmost term $m^2$, this right part is so easy that we can directly solve it:
 
 $$
 \frac{d^2 \Phi}{d \phi^2}=-m^2 \Phi \Rightarrow \Phi(\phi)=e^{i m \phi}
-$$
+$$(3d-s-11)
  
 Due to the periodicity of the azimuthal coordinate $\phi=\phi+2\pi$, we obtain that $m$ must be an integer number $0, \pm1, \ldots$ With this, we have found our first **quantum number** describing our system! Note, we have only assumed that the potential is centrosymmetric, and already a quantum number appears!
 
@@ -147,7 +147,7 @@ One can also solve the polar part, where we don't show the derivation - see Grif
 
 $$
 Y_{\ell}^m(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^m(\cos \theta)
-$$
+$$(3d-s-12)
 
 where $P_{\ell}^m$ are the *associated Legendre polynomials*. In the derivation, $\ell$ appears as the $\ell$-th partial derivative, so $\ell$ must be a non-negative integer number.
 
@@ -155,7 +155,7 @@ One also obtains a more strict condition on $m$ and we have:
 
 $$
 \ell=0,1,\ldots\quad\text{and}\quad m=\ell,-\ell+1,\ldots,\ell
-$$
+$$(3d-s-13)
 
 Later we will see that $\ell$ is associated with the total angular momentum of the state, and $m$ the projection of the angular momentum along a particular axis.
 
@@ -167,7 +167,7 @@ In order to solve the radial part, we can get insight even before assuming a spe
 
 $$
 -\frac{\hbar^2}{2m}\ \ \frac{d^2u}{dr^2}+\left[V+\frac{\hbar^2}{2m}\ \frac{l\left(l+1\right)}{r^2}\ \ \right]u=Eu\ 
-$$
+$$(3d-s-14)
 
 This is a again a 1D Schrödinger equation, with a radial-position dependent term added to the potential term. This term decreases quickly with radial distance, and it increases with larger $\ell$ or angular momentum - this means this term accellerates the quantum particle outwards, it is also called the centrifugal term. Together with $V$ the term in brackets is called the effective potential. 
 
@@ -175,7 +175,7 @@ To finally solve this equation and with this the full Schrödinger equation, we 
 
 $$
 V=\ -\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}\ 
-$$
+$$(3d-s-15)
 
 It is attractive so it counteracts the centrifugal term before - even more, if we study the effective potential with the $\ell$-term, if $\ell>0$, we see that for very small distances the effective potential results in a repulsive force - preventing the electron to fall into the core!
 
@@ -188,19 +188,19 @@ We do not derive the solution of the radial differential equation here, please h
 
 $$
 E_n=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right] \frac{1}{n^2}=\frac{E_1}{n^2}, \quad n=1,2,3, \ldots
-$$
+$$(3d-s-16)
  
 which is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the Hydrogen atom:
 
 $$
 a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{m_e e^2}=0.529 \times 10^{-10} \mathrm{~m}
-$$
+$$(3d-s-17)
 
 And $E_1$ is a measure of the binding energy of the electron, also called the Rydberg energy:
 
 $$
 E_1=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right]=-13.6\,\mathrm{eV}
-$$
+$$(3d-s-18)
 
 ```{figure} figures/schroedinger/hydrogen.png
 ---
@@ -216,13 +216,13 @@ We also get a new quantum number $n$ - this describes the energy $E$ which there
 
 $$
 \ell=0,\ldots,n-1
-$$
+$$(3d-s-19)
 
 Finally, we can derive a single equation describing the wavefunction of the electron in the Hydrogen atom (where $L$ are the associated Laguerre polynomials):
 
 $$
 \psi_{n \ell m}=\sqrt{\left(\frac{2}{n a}\right)^3 \frac{(n-\ell-1) !}{2 n(n+\ell) !}} e^{-r / n a}\left(\frac{2 r}{n a}\right)^{\ell}\left[L_{n-\ell-1}^{2 \ell+1}(2 r / n a)\right] Y_{\ell}^m(\theta, \phi)
-$$
+$$(3d-s-20)
 
 The figure shows the energy levels, showing the bound states, and the spacing becomes increasingly small for higher states. For now, the different $\ell$ states are degenerate - you might already guess that this will change if we dive deeper into interactions.
 

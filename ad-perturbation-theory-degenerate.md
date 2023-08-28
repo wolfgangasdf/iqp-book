@@ -25,7 +25,7 @@ Often a quantum systems has degenerate eigenvalues or energies - this happens if
 
 $$
 \left|\psi_n^{(1)}\right\rangle=\sum_{m\neq n}\frac{\left\langle\psi_m^{(0)}\right|H'\left|\psi_n^{(0)}\right\rangle}{E_n^{(0)}-E_m^{(0)}}\left|\psi_m^{(0)}\right\rangle
-$$
+$$(ad-ptd-1)
 
 As an example we consider now a particle in a 2D infinite square well potential with $V(x,y)=0$ for $0\leq x \leq a$ $0\leq y \leq a$ otherwise $V(x,y)=\infty$.
 
@@ -33,13 +33,13 @@ We know the solutions, they are
 
 $$
 \psi_{n_x,n_y}^{(0)}=\frac{2}{a} \sin\left(\frac{n_x \pi x}{a}\right)\sin\left(\frac{n_y \pi y}{a}\right)\,,\,n_x,n_y\geq 1
-$$
+$$(ad-ptd-2)
 
 The ground state with $n_x=n_y=1$ is non-degenerate since it is only one state, but the first excited states $\psi_{1,2}^{(0)}$ and $\psi_{2,1}^{(0)}$ are degenerate since both have the energy
 
 $$
 E_{1,2}=E_{2,1}=\frac{\hbar^2 \pi^2}{2m_0 a^2}(1^2+2^2)
-$$
+$$(ad-ptd-3)
 
 `[slide]`
 
@@ -85,7 +85,7 @@ Now we add our perturbation, we use again a delta function, now placed off-cente
 
 $$
 H'=\lambda\,\delta(x-a/4)\,\delta(y-a/4)
-$$
+$$(ad-ptd-4)
 
 The increased potential at that position has as a consequence that "it is harder for the wavefunction to be there".
 
@@ -101,19 +101,19 @@ H_{aa}'=\left\langle\psi_a^{(0)}\right|H'\left|\psi_a^{(0)}\right\rangle=
 \lambda \int \int dx\,dy \left(\psi_a^{(0)}\right)^2 \delta(x-a/4)\,\delta(y-a/4)
 \\
 =\frac{2\lambda}{a^2}
-$$
+$$(ad-ptd-5)
 
 Also, since as we were afraid that these eigenvalues are degenerate, we obtain
 
 $$
 H_{bb}'=H_{aa}'
-$$
+$$(ad-ptd-6)
 
 Interestingly, we obtain for the off-diagonal elements
 
 $$
 H_{ab}'=H_{ba}'=\frac{2\lambda}{a^2}
-$$
+$$(ad-ptd-7)
 
 which is non-zero! This implies coupling between the states. Similar to two coupled pendulums, we might already here expect that we get new eigenfunctions with different energies! If we use these states our previous non-degenerate perturbation theory procedure is applicable again. Instead of guessing the states, which often works, we give a formal procedure now.
 
@@ -126,13 +126,13 @@ We go back to our power-series expansion up to first order from Eq. {eq}`pt-1sto
 
 $$
 H_0 |\psi^{(1)}\rangle + H'|\psi^{(0)}\rangle=E^{(0)}|\psi^{(1)}\rangle + E^{(1)}|\psi^{(0)}\rangle
-$$
+$$(ad-ptd-8)
 
 We multiply from left with one of our degenerate solutions $\langle\psi_a^{(0)}|$:
 
 $$
 \langle\psi_a^{(0)}|H_0 |\psi^{(1)}\rangle + \langle\psi_a^{(0)}|H'|\psi^{(0)}\rangle=E^{(0)}\langle\psi_a^{(0)}|\psi^{(1)}\rangle + E^{(1)}\langle\psi_a^{(0)}|\psi^{(0)}\rangle
-$$
+$$(ad-ptd-9)
 
 For the first term, acting with $H_0$ to the left gives $E^{(0)}$ and therefore the first terms in the left and right hand side cancel.
 
@@ -140,19 +140,19 @@ Now we use as a test function a generic superposition of our two degenerate solu
 
 $$
 \psi^{(0)}=\alpha \psi_a^{(0)}+\beta \psi_b^{(0)}
-$$
+$$(ad-ptd-10)
 
 We obtain (remember that the solutions are orthogonal!):
 
 $$
 \alpha H_{aa}' + \beta H_{ab}' = \alpha E^{(1)}
-$$
+$$(ad-ptd-11)
 
 In the same way but by multiplying from left with $\langle\psi_b^{(0)}|$ we obtain:
 
 $$
 \alpha H_{ba}' + \beta H_{bb}' = \beta E^{(1)}
-$$
+$$(ad-ptd-12)
 
 This is an eigenvalue problem
 
@@ -163,7 +163,7 @@ H_{b a}' & H_{b b}'
 \end{array}\right)
 \left(\begin{array}{l} \alpha \\ \beta\end{array}\right)
 =E^{(1)}\left(\begin{array}{l} \alpha \\ \beta \end{array}\right)
-$$
+$$(ad-ptd-13)
 
 ## The new quantum states
 
@@ -177,13 +177,13 @@ $$
 E^{(1)}_+=\frac{4\lambda}{a^2}
 \\
 E^{(1)}_-=0
-$$
+$$(ad-ptd-14)
 
 With the wavefunctions
 
 $$
 \psi^{(0)}_\pm=\frac{1}{\sqrt{2}}\left(\psi^{(0)}_a \pm \psi^{(0)}_b \right)
-$$
+$$(ad-ptd-15)
 
 
 ## Visualizing the new quantum states
@@ -237,13 +237,13 @@ We check if now our approach for degenerate perturbation theory works:
 
 $$
 \langle\psi_+^{(0)}|H' |\psi^{(0)}_-\rangle = 0
-$$
+$$(ad-ptd-16)
 
 which is exactly what we need that the expression for the perturbed states does not blow up!
 
 $$
 \left|\psi_n^{(1)}\right\rangle=\sum_{m\neq n}\frac{\left\langle\psi_m^{(0)}\right|H'\left|\psi_n^{(0)}\right\rangle}{E_n^{(0)}-E_m^{(0)}}\left|\psi_m^{(0)}\right\rangle
-$$
+$$(ad-ptd-17)
 
 Now we just have to re-formulate the sum and include our new states, this is a bit tedious and won't be done here. But in any case it is more important that we have seen that, naturally, energy degeneracies are (often) lifted under perturbations!
 

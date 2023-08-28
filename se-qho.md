@@ -29,7 +29,7 @@ Note that in nature there is no perfect harmonic oscillator — Hooke’s law do
 
 $$
 V(x)=V\left(x_0\right)+V^{\prime}\left(x_0\right)\left(x-x_0\right)+\frac{1}{2} V^{\prime \prime}\left(x_0\right)\left(x-x_0\right)^2+\cdots
-$$
+$$(se-qho-v1)
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -67,19 +67,19 @@ For a one-dimensional harmonic oscillator, we need to solve the Schrödinger equ
 
 $$
 V(x)=\frac{1}{2}m\omega^2x^2
-$$
+$$(se-qho-v2)
 
 where we have eliminated the spring constant using the relation between spring constant, mass, and frequency:
 
 $$
 \omega \equiv \sqrt{\frac{k}{m}}
-$$
+$$(se-qho-v3)
  
 We can again split off the time dependence and we obtain for the time-independent Schrödinger equation: 
 
 $$
 -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+\frac{1}{2}m\omega^2x^2\psi=E\psi 
-$$
+$$(se-qho-v4)
 
 
 Solving this differential equation means finding the Eigenfunctions $\Psi$ and corresponding energies $E$. This can be done by looking up the solution for this particular differential equation. We will use another approach (Griffith 2.3.1) and introduce a very important algebraic technique involving so-called ladder or creation and annihilation operators - which create and annihilate quantum excitations in quantum systems.
@@ -92,19 +92,19 @@ We can write the Schrodinger equation $H\psi=E\psi$ using the momentum operator 
 
 $$
 H=\frac{1}{2m}\left[p^2+(m\omega x)^2\right]
-$$
+$$(se-qho-lo1)
 
 The idea is now to factor this term, motivated by  and using some hindsight we can construct these composite operators involving the position and momentum operator:
 
 $$
 a_{ \pm} \equiv \frac{1}{\sqrt{2 \hbar m \omega}}(\mp i p+m \omega x)
-$$
+$$(se-qho-lo2)
 
 With the commutation relation
 
 $$
 [\hat{x}, \hat{p}]=i \hbar
-$$
+$$(se-qho-lo3)
 
 :::{note}
 Show this!
@@ -114,7 +114,7 @@ we obtain $\hat{a}_{-} \hat{a}_{+}=\frac{1}{\hbar \omega} \hat{H}+\frac{1}{2}$, 
 
 $$
 H=\hbar \omega\left(\hat{a}_{+} \hat{a}_{-}+1 / 2\right)
-$$
+$$(se-qho-lo4)
 
 :::{note}
 Exercise: show that $[a_-,a_+]=1$
@@ -130,7 +130,7 @@ Then we can calculate quite easily that
 
 $$
 H\left(a_{+}|\psi\rangle\right)=(E+\hbar \omega)\left(a_{+}|\psi\rangle\right)
-$$
+$$(se-qho-lo5)
 
 where apparently $a_{+}$ has added $\hbar\omega$ to the energy of the system!
 
@@ -138,7 +138,7 @@ Similarly, we find that
 
 $$
 H\left(a_{-}|\psi\rangle\right)=(E-\hbar \omega)\left(a_{-}|\psi\rangle\right)
-$$
+$$(se-qho-lo6)
 
 So, $a_-$ lowers the energy of the system by $\hbar\omega$!
 
@@ -199,7 +199,7 @@ There has to be a catch, if we apply $a_-$ repeatedly we eventually will reach n
 
 $$
 a_{-}\left|\psi_0\right\rangle=0
-$$
+$$(se-qho-gs1)
 
 The energy of the ground state $\Psi_0$ is $E_0=\frac{1}{2}\hbar\omega$ which can be easily be seen from the Schrödinger equation.
 
@@ -207,7 +207,7 @@ Now we can finally calculate an explicit wavefunction, working out $a_{-}\left|\
 
 $$
 \psi_0(x)=\left(\frac{m \omega}{\pi \hbar}\right)^{1 / 4} e^{-\frac{m \omega}{2 \hbar} x^2}
-$$
+$$(se-qho-gs2)
 
 This is a simple Gaussian distribution, meaning that in the quantum ground state the probability to find the particle is highest at $x=0$ - this might still be intuitively explainable by classical thoughts - the particle is at rest.
 
@@ -247,20 +247,20 @@ Having the ground state energy and wave function, we can now find all excited st
 
 $$
 \psi_n=\frac{1}{\sqrt{n !}}\left(\hat{a}_{+}\right)^n \psi_0
-$$
+$$(se-qho-es1)
 
 We first find all energies:
 
 $$
 E_n=\left(n+\frac{1}{2}\right) \hbar \omega
-$$
+$$(se-qho-es2)
 
 The momentum operator in $a^\dagger$ basically leads to a spatial derivative of the previous state - resuklting in the so-called Hermite functions 
 
 $$
 \psi_n(x) = \frac{1}{\sqrt{2^n\,n!}}  \left(\frac{m\omega}{\pi \hbar}\right)^{1/4}  e^{
 - \frac{m\omega x^2}{2 \hbar}} H_n\left(\sqrt{\frac{m\omega}{\hbar}} x \right), \qquad n = 0,1,2,\ldots.
-$$
+$$(se-qho-es3)
 
 which look like this: 
 
@@ -380,7 +380,7 @@ $$
 a^{\dagger}|n\rangle & =\sqrt{n+1}|n+1\rangle \\
 a|n\rangle & =\sqrt{n}|n-1\rangle
 \end{aligned}
-$$
+$$(se-qho-ns1)
 
 Another important operator in Fock space is the number operator:
 
@@ -389,7 +389,7 @@ $$
 N & = a^{\dagger} a \\
 N|n\rangle & = n|n\rangle \\
 \end{aligned}
-$$
+$$(se-qho-ns2)
 
 Its eigenvalue is simply $n$, the number of excitations.
 
@@ -417,7 +417,7 @@ Therefore, in order to implement a qubit, we actually need to use an anharmonic 
 
 $$
 H=\frac{\hat{p}^2}{2 m}+\frac{1}{2} \omega^2 x^2+\lambda x^4
-$$
+$$(se-qho-ah1)
 
 
 ```{code-cell} ipython3

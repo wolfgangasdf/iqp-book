@@ -25,21 +25,21 @@ We have discussed different degrees of freedom of fundamental quantum particles,
 
 Now, we discuss two particles a and b that are exactly the same except for their positions r1 and r2, we call these idential particles. We assume that they are noninteracting so the joint wavefunction is again described by $\psi\left(r_1,r_2\right)=\psi_a\left(r_1\right)\psi_b\left(r_2\right)$.
 
-Now, the probability of finding particle a in the volume element $dr_1$ and b in $dr_2$ is given by $|\psi(r1,r2)|^2 dr_1 dr_2$. Since we assume that the particles are identical (except for their position), the wave function must give identical properties for each particle. 
+Now, the probability of finding particle a in the volume element $dr_1$ and b in $dr_2$ is given by $|\psi(r_1,r_2)|^2 dr_1 dr_2$. Since we assume that the particles are identical (except for their position), the wave function must give identical properties for each particle. 
 
 For instance, the probability of finding particle a at $r_1$ and b at $r_2$ must be equal to the probability of finding particle a at $r_2$ and b at $r_1$:
 
-$$\left|\psi\left(r_1,r_2\right)\right|^2=\left|\psi\left(r_2,r_1\right)\right|^2$$
+$$\left|\psi\left(r_1,r_2\right)\right|^2=\left|\psi\left(r_2,r_1\right)\right|^2$$(tp-i-1)
 
 This implies that the two wavefunctions on the LHS and RHS differ mostly by a phase factor and so $\psi\left(r_1,r_2\right)=e^{i\ \phi}\psi\left(r_2,r_1\right)$  - if we apply the procedure again we obtain $\psi\left(r_1,r_2\right)=e^{i\ \phi}e^{i\ \phi}\psi\left(r_1,r_2\right)$
 Which implies that $e^{i\ \phi}$ equals to $+1$ or $-1$.
 This means that the wave function of identical particles is either *symmetric* under particle exchange 
 
-$$\psi\left(r_1,r_2\right)=+\psi\left(r_2,r_1\right)$$
+$$\psi\left(r_1,r_2\right)=+\psi\left(r_2,r_1\right)$$(tp-i-2)
 
 or antisymmetric 
 
-$$\psi\left(r_1,r_2\right)=-\psi\left(r_2,r_1\right)$$
+$$\psi\left(r_1,r_2\right)=-\psi\left(r_2,r_1\right)$$(tp-i-3)
 
 This classifies the quantum behaviour of particles in a very fundamental way - particles with symmetric wavefunctions under particle exchange are called **bosons**, and with antisymmetric wavefunctions are **fermions**. From before, you might already know that bosons are also all particles with integer spin, and fermions with half-integer spin. This is a very important connection, the so-called spin-statistics theorem – which in standard quantum mechanics must remain a theorem, it can be proven in relativistic quantum mechanics – have a read through the "suggestive but bogus argument" on [wikipedia](https://en.wikipedia.org/wiki/Spin%E2%80%93statistics_theorem#Suggestive_bogus_argument).
 
@@ -53,11 +53,11 @@ Note: This is in 3 dimensions, for 2 dimensions such as used in quantum hall sys
 
 Let us now go back and construct from scratch two-particle wavefunctions that are either symmetric and anti-symmetric under particle exchange:
 
-$$\psi_\pm\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_b\left(r_2\right)\pm\psi_b\left(r_1\right)\psi_a\left(r_2\right)\right]$$
+$$\psi_\pm\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_b\left(r_2\right)\pm\psi_b\left(r_1\right)\psi_a\left(r_2\right)\right]$$(tp-p-1)
 
 You can easily check that 
 
-$$\psi_\pm\left(r_1,r_2\right)=\pm\psi_\pm\left(r_2,r_1\right)$$
+$$\psi_\pm\left(r_1,r_2\right)=\pm\psi_\pm\left(r_2,r_1\right)$$(tp-p-2)
 
 And you might note that these states are quantum entangled, but this is not relevant here.
 
@@ -65,9 +65,9 @@ This is actually a very useful procedure of symmetrization (+) or anti-symmetriz
 
 From this seemingly trivial superposition we can now test what happens if the particles are indistinguishable and at the same position. For the symmetric bosonic state $\psi_+$ nothing special happens so we focus on the anti-symmetric fermionic state:
 
-$$\psi_-\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_a\left(r_2\right)\ -\ \psi_a\left(r_1\right)\psi_a\left(r_2\right)\right]=0$$
+$$\psi_-\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_a\left(r_2\right)\ -\ \psi_a\left(r_1\right)\psi_a\left(r_2\right)\right]=0$$(tp-p-3)
 
-This is not normalizable and therefore doesn't make sense and is not possible -n o two antisymmetric particles can be in the same state! “State” means now everything, same spin, color, etcetera - and position! The latter we see also by letting $r1=r2$, where we also obtain 0.
+This is not normalizable and therefore doesn't make sense and is not possible -n o two antisymmetric particles can be in the same state! “State” means now everything, same spin, color, etcetera - and position! The latter we see also by letting $r_1=r_2$, where we also obtain 0.
 
 This is the famous **Pauli exclusion principle** for fermions – no two fermions can be in the same state. Amongst other things, this makes electrons in higher atomic levels stable and thus makes matter “hard” – in combination with coloumb repulsion. 
 
@@ -79,11 +79,11 @@ This is the famous **Pauli exclusion principle** for fermions – no two fermion
 
 Now we ask the question, has indistinguishability also an effect for bosons? We calculate the probability for finding both particles at the same location, for the non-entangled state of two distinguishable particles
 
-$$\Psi\left(r_{1},r_1\right)=\psi_a\left(r_1)\ \psi_b(r_1\right)$$
+$$\Psi\left(r_{1},r_1\right)=\psi_a\left(r_1)\ \psi_b(r_1\right)$$(tp-b-1)
 
 and for the symmetrized entangled state
 
-$$\begin{align*}\psi_+\left(r_1,r_1\right)&=\frac{1}{\sqrt2}\left[\psi_a\left(r_1\right)\psi_b\left(r_1\right)\ +\ \psi_a\left(r_1\right)\psi_b\left(r_1\right)\right]\\&=\sqrt2\ \psi_a\left(r_1\right)\psi_b\left(r_1\right)\end{align*}$$
+$$\begin{align*}\psi_+\left(r_1,r_1\right)&=\frac{1}{\sqrt2}\left[\psi_a\left(r_1\right)\psi_b\left(r_1\right)\ +\ \psi_a\left(r_1\right)\psi_b\left(r_1\right)\right]\\&=\sqrt2\ \psi_a\left(r_1\right)\psi_b\left(r_1\right)\end{align*}$$(tp-b-2)
 
 The latter has a factor $\sqrt{2}$ which becomes 2 in probability! Apparently, the chance of finding both particles at the same position is twice as high for indistinguishable particles compared to distinguishable particles! 
 
@@ -102,31 +102,32 @@ see also Jos Thijssen - LECTURE NOTES STATISTICAL PHYSICS TN2624.pdf but too har
 
 Intuitively, if we trust in the Pauli exclusion principle, the particles must feel a "force" if they get closer. To investigate this we calculate the expectation value of the squared distance between the particles:
 
-$$\left\langle\left(x_1-x_2\right)^2\right\rangle=\left\langle x_1^2\right\rangle+\left\langle x_2^2\right\rangle-2\left\langle x_1 x_2\right\rangle$$
+$$\left\langle\left(r_1-r_2\right)^2\right\rangle=\left\langle r_1^2\right\rangle+\left\langle r_2^2\right\rangle-2\left\langle r_1 r_2\right\rangle$$(tp-ef-1)
 
 Note, we often use the square and not the modulus, because the latter is far nastier mathematically.
 
 We calculate this expectation value first for two distinguishable particles
 
-$$\Psi\left(r_{1},r_1\right)=\psi_a\left(r_1)\ \psi_b(r_1\right)$$
+$$\Psi\left(r_{1},r_2\right)=\psi_a\left(r_1)\ \psi_b(r_2\right)$$(tp-ef-2)
 
 We obtain:
 
-$$\left\langle\left(x_1-x_2\right)^2\right\rangle_d=\left\langle x^2\right\rangle_a+\left\langle x^2\right\rangle_b-2\langle x\rangle_a\langle x\rangle_b$$
+$$\left\langle\left(r_1-r_2\right)^2\right\rangle_d=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b$$(tp-ef-3)
 
-Instread, if we calculate it for the either bosonic or fermionic indistinguishable particle wavefunction
+Instead, if we calculate it for the either bosonic or fermionic indistinguishable particle wavefunction
 
-$$\psi_\pm\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_b\left(r_2\right)\pm\psi_b\left(r_1\right)\psi_a\left(r_2\right)\right]$$
+$$\psi_\pm\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_b\left(r_2\right)\pm\psi_b\left(r_1\right)\psi_a\left(r_2\right)\right]$$(tp-ef-4)
 
 We obtain
 
-$$\left\langle\left(x_1-x_2\right)^2\right\rangle_{ \pm}=\left\langle x^2\right\rangle_a+\left\langle x^2\right\rangle_b-2\langle x\rangle_a\langle x\rangle_b \mp 2\left|\langle x\rangle_{a b}\right|^2$$
+$$\left\langle\left(r_1-r_2\right)^2\right\rangle_{ \pm}=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b \mp 2\left|\langle r\rangle_{a b}\right|^2$$(tp-ef-5)
 
 Where
-$$\int x_2 \psi_a\left(x_2\right)^* \psi_b\left(x_2\right) dx_2 = \langle x\rangle_{a b}$$
+
+$$\int r_2 \psi_a\left(r_2\right)^* \psi_b\left(r_2\right) dr_2 = \langle r\rangle_{a b}$$(tp-ef-6)
 
 describes the wave function overlap between the particles.
 
 We observe:
-* If the wavefunctions don't overlap spatially, $\langle x\rangle_{a b}=0$ and it doesn't matter if the particles are bosons, fermions, or if we have (anti) symmetrizised their wavefunctions or not.
+* If the wavefunctions don't overlap spatially, $\langle r\rangle_{a b}=0$ and it doesn't matter if the particles are bosons, fermions, or if we have (anti) symmetrizised their wavefunctions or not.
 * If the wavefunctions do overlap, then bosons are pulled together, and fermions pushed apart. We didn't use a potential for this, so it is not a real force - it is the consequence of the symmetrization requirement - nevertheless we call the virtual force the **exchange force**.

@@ -10,7 +10,7 @@ kernelspec:
     name: python3
 ---
 
-# Two quantum particles
+# Two particles
 
 ```{tableofcontents}
 ```

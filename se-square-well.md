@@ -27,7 +27,7 @@ V\left(x\right)=\begin{cases}
     0, & \text{if } 0\le x \le a\\
     \infty, & \text{otherwise}.
   \end{cases}
-$$
+$$(se-sw-1)
 
 A particle in this potential can move freely inside the well and the probability of finding the particle outside of it is zero: $\psi\left(x\right)=0$. 
 
@@ -62,11 +62,11 @@ Inside the well the potential energy is zero such that the time independent Schr
 
 $$
 -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi, or \frac{d^2\psi}{dx^2}=-k^2\psi,\quad \text{where } k\equiv\sqrt{2mE}/\hbar
-$$
+$$(se-sw-2)
 
 This equation is the simple classical harmonic oscillator equation, where the general solution is:
 
-$$\psi\left(x\right)=A\sin{\left(kx\right)}+B\cos(kx)$$
+$$\psi\left(x\right)=A\sin{\left(kx\right)}+B\cos(kx)$$(se-sw-3)
 
 where $A$ and $B$ are constants. These constants are fixed by the boundary conditions $\psi\left(0\right)=\psi\left(a\right)=0$ and general conditions on $\Psi$: Usually, both $\psi$ and $d\psi/dx$ must be continuous – the latter however does not apply here because the potential goes to infinity. 
 
@@ -80,13 +80,13 @@ Here $k=0$ again gives a non-normalizable solution, and the negative solutions g
 
 $$
 E_n=\frac{\hbar^2k_n^2}{2m}=\frac{n^2\pi^2\hbar^2}{2ma^2}
-$$
+$$(se-sw-4)
 
 We see that the energy for a particle in a box is quantized, it cannot have just any value. We can find the value of $A$ by normalizing the wavefunction: 
 
 $$
 \int_{0}^{a}{\left|A\right|^2\sin^2\left(kx\right)dx}=\left|A\right|^2\frac{a}{2}=1
-$$
+$$(se-sw-5)
 
 This gives $A=\sqrt{2/a}$. 
 
@@ -94,20 +94,20 @@ With this, inside the well, the solutions are:
 
 $$
 \psi_n\left(x\right)=\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi}{a}x\right)
-$$
+$$(se-sw-6)
 
 
 These solutions are mutually orthogonal, one case show that
 
 $$
 \int \psi_m(x)^* \psi_n(x) d x=\delta_{m n}
-$$
+$$(se-sw-7)
 
 where the Kronecker delta is defined by 
 
 $$
 \delta_{m n}= \begin{cases}0, & m \neq n \\ 1, & m=n\end{cases}
-$$
+$$(se-sw-8)
 
 ## Particle in a box wavefunctions
 

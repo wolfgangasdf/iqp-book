@@ -31,8 +31,8 @@ We start with two particles, with the spins $s_1$ and $s_2$ and the $z$-componen
 Without doing anything new, the state of the composite system can be written as $\left|s_1s_2m_1m_2\right\rangle$, and the squares of the total spin of particle 1 and 2, as well as the $z$-component can be calculated as before. Note that e.g. the operator $S^{(1)^2}$ acts only on particle one. We obtain:
 
 $$
-\begin{matrix}S^{(1)^2}\left|s_1s_2m_1m_2\right\rangle&=s_1\left(s_1+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\S^{(2)^2}\left|s_1s_2m_1m_2\right\rangle&=s_2\left(s_2+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\S_z^{\left(1\right)}\left|s_1s_2m_1m_2\right\rangle&=m_1\hbar\left|s_1s_2m_1m_2\right\rangle\\S_z^{\left(2\right)}\left|s_1s_2m_1m_2\right\rangle&=m_2\hbar\left|s_1s_2m_1m_2\right\rangle\\\end{matrix}
-$$
+\begin{align}S^{(1)^2}\left|s_1s_2m_1m_2\right\rangle&=s_1\left(s_1+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\S^{(2)^2}\left|s_1s_2m_1m_2\right\rangle&=s_2\left(s_2+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\S_z^{\left(1\right)}\left|s_1s_2m_1m_2\right\rangle&=m_1\hbar\left|s_1s_2m_1m_2\right\rangle\\S_z^{\left(2\right)}\left|s_1s_2m_1m_2\right\rangle&=m_2\hbar\left|s_1s_2m_1m_2\right\rangle\\\end{align}
+$$(sp-cg-ops)
 
 We now ask ourselves the seemingly simple question, what is the total angular momentum $\vec{S}=\vec{S}^{\left(1\right)}+\vec{S}^{\left(2\right)}$ and the total z-component $S_z=S_z^{\left(1\right)}+S_z^{\left(2\right)}$ of it of the composite system.
 
@@ -47,7 +47,7 @@ $$
 &=\hbar\left(m_1+m_2\right)\left|s_1s_2m_1m_2\right\rangle\\
 &=\hbar m\left|s_1s_2m_1m_2\right\rangle\\
 \end{align*}
-$$
+$$(sp-cg-sz)
 
 So, $m=m_1+m_2$ is just the sum. But $s$ is more complex, therefore we discuss the simplest example. 
 
@@ -64,7 +64,7 @@ $$
 |\downarrow \uparrow\rangle&=\left|\frac{1}{2} \frac{1}{2} \frac{-1}{2} \frac{1}{2}\right\rangle, \quad m=0 \\
 |\downarrow \downarrow\rangle&=\left|\frac{1}{2} \frac{1}{2} \frac{-1}{2} \frac{-1}{2}\right\rangle, \quad m=-1
 \end{align*}
-$$
+$$(sp-cg-m)
 
 This is weird, since $m$ runs from -1 to +1, $s$ should be equal to 1. But there are two $m$=0 states, we probably have to approach the problem from a different angle. The problem is that the 4 states are eigenstates of $S_z$ but not of $S^2$. For calculation of this operator we fist write it out:
 
@@ -73,20 +73,20 @@ $$
 S^2=\left(\vec{S}^{(1)}+\vec{S}^{(2)}\right) \cdot\left(\vec{S}^{(1)}+\vec{S}^{(2)}\right)=\left(S^{(1)}\right)^2+\left(S^{(2)}\right)^2+2 \vec{S}^{(1)} \cdot \vec{S}^{(2)}\\
 \vec{S}^{(1)} \cdot \vec{S}^{(2)}=S_x^{(1)}S_x^{(2)} + S_y^{(1)}S_y^{(2)} + S_z^{(1)}S_z^{(2)}
 \end{gather*}
-$$
+$$(sp-cg-s2)
 
 Using the matrix expressions for the operators we can calculate it now:
 
 $$
 \vec{S}^2|\uparrow \downarrow\rangle=\vec{S}^2|\downarrow \uparrow\rangle=\hbar^2(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)
-$$
+$$(sp-cg-s2a)
 
 As we hypothesized before, these states are not eigenstates of $S^2$ - but the superposition on the right hand side gives a hint - we try this again and we obtain:
 
-$$\begin{gather*}
+$$\begin{align*}
 \vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)&=2 \hbar^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)\\
-\vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)&=0
-\end{gather*}$$
+\vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)&=0(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)
+\end{align*}$$(sp-cg-es)
 
 So both are indeed eigenstates of $S^2$!
 
@@ -102,13 +102,13 @@ $$
 |10\rangle & =\frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle) \\
 |1-1\rangle & =|\downarrow \downarrow\rangle
 \end{aligned}\right\} \quad s=1
-$$
+$$(sp-cg-t)
 
 and one singlet states with $s=0$
 
 $$
 \left\{|00\rangle=\frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)\right\} \quad s=0
-$$
+$$(sp-cg-s)
 
 ## Higher spins
 
@@ -118,7 +118,7 @@ In general for higher spins $s_1$ and $s_2$, one can show (check Cohen-Tannoudji
 
 $$
 s=\left(s_1+s_2\right),\left(s_1+s_2-1\right),\left(s_1+s_2-2\right), \ldots,\left|s_1-s_2\right|
-$$
+$$(sp-cg-hs)
  
 This is not very surprising, as the upper bound is if both spins are aligned in parallel, the lower bound anti-parallel. Note also that since we have used only general angular momentum algebra, this holds for all angular momenta.
 
@@ -126,7 +126,7 @@ But what are the specific superposition states that form the total spin states? 
 
 $$
 |s m\rangle=\sum_{m_1+m_2=m} C_{m_1 m_2 m}^{s_1 s_2 s}\left|s_1 s_2 m_1 m_2\right\rangle
-$$
+$$(sp-cg-cg)
 
 where $C_{m_1 m_2 m}^{s_1 s_2 s}$ are the so-called Clebsch Gordan coefficients. These values are tabulated, a very useful table is on [wikipedia](https://en.wikipedia.org/wiki/Table_of_Clebsch%E2%80%93Gordan_coefficients).
 

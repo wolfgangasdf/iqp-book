@@ -19,7 +19,7 @@ In this section, we discuss the quantum version of spinning rotation: the spin -
 
 `[slide]`
 
-Classically, a body can show an orbiting motion and a spinning rotation, like the earth orbits once a year around the sun and spins every day around the earth center. If we place the origin of our coordinate system at the cenrter of the sun, it is clear from the classical-mechanics law $L=r \times p$ that the orbital angular momentum of the earth is nonzero and in our case points upwards, to the north. 
+Classically, a body can show an orbiting motion and a spinning rotation, like the earth orbits once a year around the sun and spins every day around the earth center. If we place the origin of our coordinate system at the center of the sun, it is clear from the classical-mechanics law $L=r \times p$ that the orbital angular momentum of the earth is nonzero and in our case points upwards, to the north. 
 
 The spinning rotation leads to a spin angular momentum around the center of mass of the spinning body, which is calculated using the same equation $L=r \times p$ for all constituents that make op the earth. Approximately, the SAM does not contribute to $L$ measured around the origin, but it is clear that both have the same origin and the distinction is largely semantically. Also, a point-like particle cannot have a spin angular momentum classically, because $r$ is zero if measured from the center of mass of the particle.
 
@@ -52,7 +52,7 @@ We now state the algebraic quantum theory of spin by exact analogy to the deriva
 
 $$
 \left[S_k, S_l\right]=i \hbar S_m \epsilon_{k l m}
-$$
+$$(sp-c-cr)
  
 Again, the cartesian spin components do not commute and cannot be simultaneously known  due to the uncertainty principle. On the other hand, $\left[S^2,S_i\right]=0$, so the spin vector length commutes with each of the individual components and can be known and measured simultaneously with arbitrary precision. 
 
@@ -64,13 +64,13 @@ We introduce the spin quantum number $s$ and the quantum number of $S_z$, $m_s$ 
 
 $$
 \begin{matrix}S^2\left|s,m_s\right\rangle=\hbar^2s\left(s+1\right)\left|s,m_s\right\rangle:&&S_z\left|sm_s\right\rangle=\hbar m\left|sm_s\right\rangle\\\end{matrix}
-$$
+$$(sp-c-s2)
 
 In contrast to the OAM, we do not know the eigenfunctions and it does not make sense to restrict ourselves to integer $s$ and $m_s$, which was needed for the OAM with the spherical harmonic eigenfunctions to make sense (single valued). Therefore also half-integer values are allowed as resulted from the algebraic theory of AM before: 
 
 $$
-\begin{matrix}s=0,\frac{1}{2},1,\frac{2}{3},\ldots;&&m_s=-s,-s+1,\ldots,s-1,s\\\end{matrix}
-$$
+\begin{matrix}s=0,\frac{1}{2},1,\frac{3}{2},\ldots;&&m_s=-s,-s+1,\ldots,s-1,s\\\end{matrix}
+$$(sp-c-s)
 
 Experimentalists have measured $s$ (you will see later how) for all elementary particles and found that every elementary particle has a specific spin $s$ – as mentioned above only the recently discovered Higgs boson has zero spin. But, classification of particles by their spin is also very useful for composite particles like a proton that consists of several quarks and gluons – but the case is very complicated if done exactly, and still subject to research. 
 

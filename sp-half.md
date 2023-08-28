@@ -24,7 +24,7 @@ We now discuss $s=1/2$, for instance for an electron – once we have understood
 
 $$
 \left|sm_s\right\rangle=\left\{\left|\frac{1}{2}\frac{1}{2}\right\rangle,\left|\frac{1}{2}-\frac{1}{2}\right\rangle\right\}, 
-$$
+$$(sp-oh-s1)
 
 which we often call spin up and down, and we can write the state vectors as $|\uparrow\rangle$ and $|\downarrow\rangle$. 
 
@@ -35,7 +35,7 @@ $$
 a \\
 b
 \end{array}\right)=a \chi_{+}+b \chi_{-}
-$$
+$$(sp-oh-ch)
 
 In contrast to an electron in a harmonic potential, where we needed to add an anharmonicity to obtain a good two-level system for a qubit, we see that the spin of a single particle already defines a very nice two-level system that is potentially usable for quantum information processing! 
 
@@ -46,18 +46,18 @@ In contrast to an electron in a harmonic potential, where we needed to add an an
 Now we can use relatively simple algebra – we have two basis states, therefore our spin-1/2 Hilbert space is two-dimensional, and  operators are $2\times 2$ matrices. Since our spin states are eigenstates of the operators $S^2$ and $S_z$ , we can work them out simply by calculating their eigenvalues for $\left|0\right\rangle$ and $\left|1\right\rangle$:
 
 $$
-S^2\left|0\right\rangle=\hbar^2\ s(s=1)=\frac{3}{4}\hbar^2\left|0\right\rangle,\\
+S^2\left|0\right\rangle=\hbar^2\ s(s+1)\left|0\right\rangle=\frac{3}{4}\hbar^2\left|0\right\rangle,\\
 
 S^2\left|1\right\rangle=\frac{3}{4}\hbar^2\left|1\right\rangle\\
 
-S_z\left|0\right\rangle=\frac{\hbar}{2}\left|0\right\rangle, 		S^2\left|1\right\rangle=\frac{\hbar}{2}\left|1\right\rangle
-$$
+S_z\left|0\right\rangle=\frac{\hbar}{2}\left|0\right\rangle, 		S_z\left|1\right\rangle=-\frac{\hbar}{2}\left|1\right\rangle
+$$(sp-oh-a1)
 
 And we get 
 
 $$
 S^2=\frac{3}{4}\hbar^2\left(\begin{matrix}1&0\\0&1\\\end{matrix}\right),	S_z=\frac{\hbar}{2}\left(\begin{matrix}1&0\\0&-1\\\end{matrix}\right)
-$$
+$$(sp-oh-a2)
 
 For the spin ladder operators, and the other projection operators we obtain in a similar way:
 
@@ -69,13 +69,13 @@ $$
 0 & 0 \\
 1 & 0
 \end{array}\right)
-$$
+$$(sp-oh-a3)
 
 Since $S_{ \pm}=S_x \pm i S_y$, we have $S_x=(1 / 2)\left(S_{+}+S_{-}\right)$ and $S_y=(1 / 2 i)\left(S_{+}-S_{-}\right)$, and with this we obtain
 
 $$
 \mathrm{S}_x=\frac{\hbar}{2}\left(\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right), \quad \mathrm{S}_y=\frac{\hbar}{2}\left(\begin{array}{cc}0 & -i \\ i & 0\end{array}\right)
-$$
+$$(sp-oh-a4)
 
 <!-- [ex: Griffith example 4.2 & see text below!] -->
 
@@ -87,7 +87,7 @@ It turns out that the S_i matrices are so fundamental in quantum mechanics that 
 
 $$
 \sigma_x=\left(\begin{matrix}0&1\\1&0\\\end{matrix}\right), 		\sigma_y=\left(\begin{matrix}0&-i\\i&0\\\end{matrix}\right), 	\sigma_x=\left(\begin{matrix}1&0\\0&-1\\\end{matrix}\right)
-$$
+$$(sp-oh-a5)
 
 The spin operator (vectorial here) can then be written as $\vec{S}=\left(\hbar/2\right)\vec\sigma$ with $\vec\sigma=\left(\sigma_x,\sigma_y,\sigma_z\right)$.
 
@@ -175,7 +175,7 @@ R_x(\theta) & \equiv e^{-i \frac{\theta}{2} \sigma_x} \\
 R_y(\theta) & \equiv e^{-i \frac{\theta}{2} \sigma_y} \\
 R_z(\theta) & \equiv e^{-i \frac{\theta}{2} \sigma_z}
 \end{aligned}
-$$
+$$(sp-oh-pr)
 
 In general, like the Euler formula, if an operator satisfies $A^2=I$ then we have $e^{i \theta A}=\cos (\theta) I+i \sin (\theta) A$.
 
@@ -196,7 +196,7 @@ e^{-i \theta / 2} & 0 \\
 0 & e^{i \theta / 2}
 \end{array}\right]
 \end{aligned}
-$$
+$$(sp-oh-pr2)
 
 <!-- from http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf -->
 

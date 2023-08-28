@@ -36,19 +36,19 @@ We now show how we can encode qubits in the polarization of light, for instance 
 
 $$
 \vec{E}=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=\ E_0\left( E_H\left(\begin{matrix}1\\0\\\end{matrix}\right)+E_V\left(\begin{matrix}0\\1\\\end{matrix}\right) \right)
-$$
+$$(b-qr-01)
 
 Here we have absorbed the electric-field units into $E_0$, and $E_H$ and $E_V$ are dimensionless complex coefficients.
 
 Now to the quantum state, the Psi ket-vector. By analogy, the dimensionless polarization vector is simply our qubit state vector, with the basis states H and V, where we assume normalization $|E|=1$:
 
-$$\left|\Psi\right\rangle=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=E_H\left|H\right\rangle+E_V\left|V\right\rangle$$
+$$\left|\Psi\right\rangle=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=E_H\left|H\right\rangle+E_V\left|V\right\rangle$$(b-qr-02)
 
 $E_H$ and $E_V$ are truly quantum amplitudes, where the squared amplitude gives the probability to measure the specific state. This is very similar to polarization in optics, where we often can not measure directly the electric field, but detectors measure the intensity, which is $I=\vec{E}^2=\vec{E}\cdot \vec{E}$. This can again be written in the bra-ket notation where  $\left\langle E\right|$ is the complex transpose of ket $\left|E\right\rangle$, with this we can mathematically correct calculate quantum state overlaps, as an example, we can express the normalization condition like this:
 
 $$\left\langle\Psi | \Psi\right\rangle=\left(\begin{matrix}
 E_x^*,\, E_y^*\end{matrix}\right)
-\cdot\left(\begin{matrix}E_x \\E_y\end{matrix}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1$$
+\cdot\left(\begin{matrix}E_x \\E_y\end{matrix}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1$$(b-qr-03)
 
 ```{figure} figures/basics/polarization.png
 ---
@@ -75,7 +75,7 @@ $$
 |\langle D \mid H\rangle|^2&
 = \left| \frac{1}{\sqrt{2}}(\langle H \mid+\langle V|) \, |H\rangle\right|^ 2=\frac{1}{2}
 \end{align*}
-$$
+$$(b-qr-04)
 
 Quantum mechanics (like any other theories) is based on a number of postulates, one postulate of quantum mechanics is, that if we measure the detection state $|\psi_{meas}\rangle$, then the state of the system will be in that state. 
 
@@ -92,13 +92,13 @@ The other bases, in fact quantum superpositions of the HV-basis, are the DA basi
 
 $$
 |D/A\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-|V\rangle)
-$$
+$$(b-qr-1)
 
 which corresponds to diagonal/antidiagonal linear polarization and 
 
 $$
 |R/L\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-i |V\rangle)
-$$
+$$(b-qr-2)
 
 which corresponds to right/left circular polarization.
 

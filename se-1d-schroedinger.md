@@ -23,7 +23,7 @@ We want to describe quantum behaviour of particles, which usually are not in fre
 
 For example, an electron in a hydrogen atom is mainly bound to the positively charged proton core by the Coulomb force, which can be written by the potential energy 
 
-$$V\left(r\right)=-\frac{e^2}{4\pi\epsilon_0r}$$
+$$V\left(r\right)=-\frac{e^2}{4\pi\epsilon_0r}$$(se-1d-cp)
 
 This energy is negative, which means attractive for all radial distances, and strongest close to $r=0$. 
 
@@ -33,7 +33,7 @@ We have seen before that the second-derivative term of the Schrödinger equation
 
 $$
 i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\left(x\right)\Psi. 
-$$
+$$(se-1d-se)
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -75,7 +75,7 @@ This is the method of separation of variables, we try to write $\Psi$ as
 
 $$
 \Psi\left(x,t\right)=\psi(x)\phi(t)
-$$
+$$(se-1d-sv1)
 
 Let’s put this back into the Schrodinger equation, we obtain for the derivatives 
 
@@ -83,37 +83,37 @@ $$
 \frac{\partial\Psi}{\partial t}=\psi\frac{d\phi}{dt}
 \\
 \frac{\partial^2\Psi}{\partial x^2}=\frac{d^2\psi}{dx^2}\phi
-$$
+$$(se-1d-sv2)
 
 With this the Schrödinger equation becomes 
 
 $$
 i\hbar\psi\frac{d\phi}{dt}=-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}\phi+V\psi\phi
-$$
+$$(se-1d-sv3)
 
 Dividing by $\psi\phi$ gives
 
 $$
 i\hbar\frac{1}{\phi}\frac{d\phi}{dt}=-\frac{\hbar^2}{2m}\frac{1}{\psi}\frac{d^2\psi}{dx^2}+V
-$$
+$$(se-1d-sv4)
 
 On the left side is a function of only $t$, and the right side a function of only $x$ – both need therefore to be constant! We now set both sides equal to a constant $E$, and we end up with two ordinary differential equations: 
 
 $$
 \frac{d\phi}{dt}=-\frac{iE}{\hbar}\phi
-$$
+$$(se-1d-sv5)
 
 and 
 
 $$
 -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V\psi=E\psi.
-$$
+$$(se-1d-sv6)
 
 The first is independent on V and can be simply solved by integration, giving: 
 
 $$
 \phi\left(t\right)=e^{-\frac{iEt}{\hbar}}
-$$
+$$(se-1d-sv7)
 
 This is an oscillation, therefore $\phi$ is also called the "wiggle factor".
 
@@ -129,13 +129,13 @@ Even though the wave function is time-dependent
 
 $$
 \Psi\left(x,t\right)=\psi\left(x\right)e^{-iEt/\hbar}
-$$
+$$(se-1d-p1)
 
 the probability density is not: 
 
 $$
 \left|\Psi\left(x,t\right)\right|^2=\Psi^\ast\Psi=\psi^\ast e^{+iEt/\hbar}\psi e^{-iEt/\hbar}=\left|\psi\left(x\right)\right|^2
-$$
+$$(se-1d-p2)
 
 We call such solutions “stationary” states. This also means as we will see later, that the expectation value of any dynamical value such as position and momentum are time independent – this sounds reasonable for a large number of systems. For instance for a particle at rest, the expectation value of the position $x$ is constant, and momentum $p=0$ – nothing moves.
 
@@ -144,19 +144,19 @@ Now we discuss what $E$ means. In classical mechanics, the total energy of a sys
 
 $$
 H(x, p)=\frac{p^2}{2 m}+V(x)
-$$
+$$(se-1d-p3)
 
 Using a procedure that physicists call “canonical replacement” and which will be proven to be reasonable, we can derive from this a Hamiltonian “operator” that acts on wave functions:
 
 $$
 \hat{H}=-\frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2}+V(x)
-$$
+$$(se-1d-p4)
 
 The eigenvalues of this operator is the energy of the system for the specific wavefunction, and we are back to the Schrödinger equation:
 
 $$
 \hat{H} \psi=E \psi
-$$
+$$(se-1d-p5)
 
 :::{note}
 Show that this makes sense with a de Broglie wave above!
@@ -172,7 +172,7 @@ Let us look at the position. We assume that we have a particle with a wavefuncti
 
 $$
 \langle x\rangle=\int_{+\infty}^{-\infty} x|\Psi(x, t)|^2 \mathrm{~d} x
-$$
+$$(se-1d-ev1)
 
 If we have many copies of the same system and measure repeatedly the position, the position average will be this expectation value.
 
@@ -180,13 +180,13 @@ Similarly, if we have a wave function of the momentum observable $\tilde{\Psi}(p
 
 $$
 \langle p\rangle=\int_{-\infty}^{+\infty} p|\tilde{\Psi}(p, t)|^2 \mathrm{~d} p
-$$
+$$(se-1d-ev2)
 
 The momentum and position expectation values are related by a classical relationship
 
 $$
 \langle p\rangle=m \frac{\mathrm{d}\langle\mathbf{x}\rangle}{\mathrm{d} t}
-$$
+$$(se-1d-ev3)
 
 For $x$ and $$ above it was not obvious, but this contains clear signs of an operator – the differential operator. 
 
@@ -194,19 +194,19 @@ The position and momentum operators are in the position basis:
 
 $$
 \hat{x}=x,\quad\hat{p}=-i\hbar\frac{\partial}{\partial x}
-$$
+$$(se-1d-ev4)
 
 and we can calculate their expectation values e.g. like this: 
 
 $$
 \langle p\rangle=\int_{-\infty}^{\infty} \Psi^*(x, t)\left(-i \hbar \frac{\partial}{\partial x}\right) \Psi(x, t) d x
-$$
+$$(se-1d-ev5)
 
 The linear algebra becomes complete if we realize that for an operator $\hat{Q}$ $\langle Q\rangle$ is shorthand for 
 
 $$
 \langle Q\rangle \equiv \langle\Psi|Q|\Psi\rangle = \int dx\,\Psi^\ast Q \Psi
-$$
+$$(se-1d-ev6)
 
 Where in the last step we have again shown the integral over the dependent variable $x$.
 

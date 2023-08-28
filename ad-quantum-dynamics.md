@@ -28,15 +28,15 @@ We discuss - of course - qubits, that is a quantum system with two energy levels
 
 We first define the orthonormal eigenstates of the unperturbed Hamiltonian:
 
-$$\hat{H}_0 \psi_a=E_a \psi_a, \quad \text { and } \quad \hat{H}_0 \psi_b=E_b \psi_b$$
+$$\hat{H}_0 \psi_a=E_a \psi_a, \quad \text { and } \quad \hat{H}_0 \psi_b=E_b \psi_b$$(ad-qd-1)
 
 and any state can be expressed as a superposition of these:
 
-$$\Psi(0)=c_a \psi_a+c_b \psi_b$$
+$$\Psi(0)=c_a \psi_a+c_b \psi_b$$(ad-qd-2)
 
 We know already how the state evolves in time
 
-$$\Psi(t)=c_a(t) \psi_a e^{-i E_a t / \hbar}+c_b(t) \psi_b e^{-i E_b t / \hbar}$$
+$$\Psi(t)=c_a(t) \psi_a e^{-i E_a t / \hbar}+c_b(t) \psi_b e^{-i E_b t / \hbar}$$(ad-qd-3)
 
 In absence of a perturbation the two constants $c_i$ are time-independent and the state will *wiggle* with the two eigen-energies.
 
@@ -44,11 +44,11 @@ In absence of a perturbation the two constants $c_i$ are time-independent and th
 
 We now assume that we are in a particular states, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation:
 
-$$\hat{H} \Psi=i \hbar \frac{\partial \Psi}{\partial t}, \quad \text { where } \quad \hat{H}=\hat{H}_0+\hat{H}^{\prime}(t)$$
+$$\hat{H} \Psi=i \hbar \frac{\partial \Psi}{\partial t}, \quad \text { where } \quad \hat{H}=\hat{H}_0+\hat{H}^{\prime}(t)$$(ad-qd-4)
 
 We use the matrix elements 
 
-$$H_{i j}^{\prime} \equiv\left\langle\psi_i\left|\hat{H}^{\prime}\right| \psi_j\right\rangle$$
+$$H_{i j}^{\prime} \equiv\left\langle\psi_i\left|\hat{H}^{\prime}\right| \psi_j\right\rangle$$(ad-qd-5)
 
 where we additionally assume that $H_{aa}'=H_{bb}'=0$, which is reasonable since we usually wish to make transitions between the states and not just change the unperturbed states.
 
@@ -78,19 +78,19 @@ This clearly shows that it is an approximation, since $c_a$ remains at 1 and nor
 Now we assume a sinusoidal perturbation, for instance in real space $\hat{H}^{\prime}(\mathbf{r}, t)=V(\mathbf{r}) \cos (\omega t)$, such that the we get
 
 $$H_{a b}^{\prime}=V_{a b} \cos (\omega t)
-\quad \textrm{with} \quad V_{a b} \equiv\left\langle\psi_a|V| \psi_b\right\rangle$$
+\quad \textrm{with} \quad V_{a b} \equiv\left\langle\psi_a|V| \psi_b\right\rangle$$(ad-qd-7)
 
 We calculate Eq. {eq}`pt-1st-res` and obtain
 
-$$c_b(t)\approx -\frac{V_{b a}}{2 \hbar}\left[\frac{e^{i\left(\omega_0+\omega\right) t}-1}{\omega_0+\omega}+\frac{e^{i\left(\omega_0-\omega\right) t}-1}{\omega_0-\omega}\right]$$
+$$c_b(t)\approx -\frac{V_{b a}}{2 \hbar}\left[\frac{e^{i\left(\omega_0+\omega\right) t}-1}{\omega_0+\omega}+\frac{e^{i\left(\omega_0-\omega\right) t}-1}{\omega_0-\omega}\right]$$(ad-qd-8)
 
 Experimentally, one often works with driving frequencies $\omega$ close to the transition frequency $\omega_0$. In this case, we can neglect the second term in brackets which is called the *rotating wave approximation*, and we obtain:
 
-$$c_b(t)=-i \frac{V_{b a}}{\hbar} \frac{\sin \left[\left(\omega_0-\omega\right) t / 2\right]}{\omega_0-\omega} e^{i\left(\omega_0-\omega\right) t / 2}$$
+$$c_b(t)=-i \frac{V_{b a}}{\hbar} \frac{\sin \left[\left(\omega_0-\omega\right) t / 2\right]}{\omega_0-\omega} e^{i\left(\omega_0-\omega\right) t / 2}$$(ad-qd-9)
 
 From this we calculate the transition probability
 
-$$P_{a \rightarrow b}(t)=\left|c_b(t)\right|^2 \approx \frac{\left|V_{a b}\right|^2}{\hbar^2} \frac{\sin ^2\left[\left(\omega_0-\omega\right) t / 2\right]}{\left(\omega_0-\omega\right)^2}$$
+$$P_{a \rightarrow b}(t)=\left|c_b(t)\right|^2 \approx \frac{\left|V_{a b}\right|^2}{\hbar^2} \frac{\sin ^2\left[\left(\omega_0-\omega\right) t / 2\right]}{\left(\omega_0-\omega\right)^2}$$(ad-qd-10)
 
 `[slide]`
 
@@ -129,11 +129,11 @@ Excited-state probability as a function of time.
 
 In the figure, the maximum excited-state probability reaches 
 
-$$\left[\frac{\left|V_{a b}\right|}{\hbar\left(\omega_0-\omega\right)}\right]^2$$
+$$\left[\frac{\left|V_{a b}\right|}{\hbar\left(\omega_0-\omega\right)}\right]^2$$(ad-qd-11)
 
 at times 
 
-$$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$
+$$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$(ad-qd-12)
 
 ## Rabi oscillations
 
@@ -141,11 +141,11 @@ $$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$
 
 Rabi noticed that if you make the rotating wave approximation at the beginning of the calculation, Eq. {eq}`pt-1st` can be solved exactly, and we obtain
 
-$$c_b(t)=-\frac{i}{2 \hbar \omega_r} V_{b a} e^{i\left(\omega_0-\omega\right) t / 2} \sin \left(\omega_r t\right)$$
+$$c_b(t)=-\frac{i}{2 \hbar \omega_r} V_{b a} e^{i\left(\omega_0-\omega\right) t / 2} \sin \left(\omega_r t\right)$$(ad-qd-13)
 
 and a similar expresswion for $c_a$, and with the Rabi frequency
 
-$$\omega_r \equiv \frac{1}{2} \sqrt{\left(\omega-\omega_0\right)^2+\left(\left|V_{a b}\right| / \hbar\right)^2}$$
+$$\omega_r \equiv \frac{1}{2} \sqrt{\left(\omega-\omega_0\right)^2+\left(\left|V_{a b}\right| / \hbar\right)^2}$$(ad-qd-14)
 
 This result is properly normalized, the transition probability doesn't exceed one and is also suited for strong drive. This effect is the work horse for qubit manipulation, but up to now we haven't clearly defined *how* we make the perturbation, which we will do now.
 
@@ -158,17 +158,17 @@ This result is properly normalized, the transition probability doesn't exceed on
 The atom or electron wavefunction is usually very small compared to the wavelengths of optical and even more microwave radiation. Therefore, we can ignore the spatial dependency. Additionally, physicists like to only discuss one frequency or wavelength, and then talk about *quasi-monochromatic* radiation. Perfect monochromatic waves cannot exist as you might guess from the Heisenberg uncertainty principle between energy and time.
 The electric field is simply oscillatory, if we assume linear polarization along the $z$-axis we have:
 
-$$\vec{E}=E_0 \cos (\omega t) \vec{z}$$
+$$\vec{E}=E_0 \cos (\omega t) \vec{z}$$(ad-qd-15)
 
 In principle, in electromagnetic radiation, the electric field is always accompanied by a magnetic field, but often one can neglect the one or the other - here we discuss only the electric field.
 
 Now an electron in an electric field experiences an potential and therefore has an energy 
 
-$$U=-q\int_C \vec{E}\cdot d\vec{l}$$
+$$U=-q\int_C \vec{E}\cdot d\vec{l}$$(ad-qd-16)
 
 where $C$ is an arbitrary path e.g. from the origin, and $q$ the electron charge. We now assume that the electron will move instantaneously with the field. With this, the interaction Hamiltonian becomes:
 
-$$H^{\prime}=-q E_0 z \cos (\omega t)$$
+$$H^{\prime}=-q E_0 z \cos (\omega t)$$(ad-qd-17)
 
 This is exactly what we used above for inducing Rabi oscillations!
 
