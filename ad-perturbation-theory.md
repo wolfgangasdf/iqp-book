@@ -109,7 +109,7 @@ So, the first correction term to the energy is simply the expectation value of t
 
 `[slide]`
 
-Now we want to find $|\psi_n^{(1)}\rangle$. For this, it is useful to know properties of the correction states $\psi_n^{(i)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
+Now we want to find $|\psi_n^{(1)}\rangle$. For this, it is useful to know properties of the correction states $|\psi_n^{(i)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
 
 It is reasonable to assume that $\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle=1$, but we know already that also $\langle \psi_n|\psi_n\rangle=1$ must hold. Let's impose normalization up to first order:
 
@@ -162,7 +162,7 @@ $$
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
 $$(ad-pt-10)
 
-And we multiply from left with $\langle\psi_k^{(0)}$
+And we multiply from left with $\langle\psi_k^{(0)}|$
 
 $$
 \sum_{m\neq n}

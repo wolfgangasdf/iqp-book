@@ -373,7 +373,7 @@ As a side remark, we can again construct highly excited quantum states that mimi
 
 `[slide]`
 
-Often, the states $|\Psi_n\rangle$ are written as $|n\rangle$, and are called *number states* or Fock states. This is because the same system can be excited multiple times! We need to know how the ladder operators act on arbitrary number states, we obtain:
+Often, the states $|\Psi_n\rangle$ are written as $|n\rangle$, and are called *number states* or Fock states, which live in special Hilbert space called Fock space. They are called number states because the same system can be excited multiple times. We need to know how the ladder operators act on arbitrary number states, we obtain:
 
 $$
 \begin{aligned}

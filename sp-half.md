@@ -97,7 +97,11 @@ The Pauli matrices $\sigma$ form the basis of unitary operators on spin states. 
 
 `[slide]`
 
-Spin is about rotation. Rotation of what? We mean rotations in qubit space. If we take the arbitrary qubit $\psi\rangle=\alpha |0\rangle+\beta|1\rangle$, we have two complex coefficients and therefore 4 real numbers. We can, however, remove one because a global phase is irrelevant for all observable quantities. Therefore we have a 3 dimensional parameter space, which can be visualized in 3 dimensions! Due to normalization $|\alpha|^2+|\beta|^2=1$, (pure) quantum states reside on the sphere with radius 1:
+The Pauli matrices can be used to *rotate* a qubit in qubit space - how can this qubit space be visualized? If we take the arbitrary qubit $\psi\rangle=\alpha |0\rangle+\beta|1\rangle$, we have two complex coefficients and therefore 4 real numbers. We can, however, remove one real number because the global phase of a quantum state is irrelevant for all observable quantities. Therefore we end up with a 3-dimensional parameter space, which can be visualized in 3 dimensions! Now, due to normalization $|\alpha|^2+|\beta|^2=1$, (pure) quantum states reside on a sphere with radius 1, and can also be parametrized by two angles with $0 \leq \theta \leq \pi$ and $0 \leq \phi \leq 2 \pi$:
+
+$$
+|\psi\rangle=\cos \frac{\theta}{2}|0\rangle+e^{i \phi} \sin \frac{\theta}{2}|1\rangle
+$$
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -121,12 +125,10 @@ arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA
 def pol2cart(r, theta, phi):
     theta=pi/2+theta
     return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
-
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')
 ax.set_aspect("equal")
 ax.view_init(elev=10, azim=20, roll=0)
-
 rr=1.5
 ax.add_artist(Arrow3D([-rr, rr], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
 ax.add_artist(Arrow3D([0, 0], [-rr, rr], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
@@ -134,25 +136,25 @@ ax.add_artist(Arrow3D([0, 0], [0, 0], [-rr, rr], **(arrow_prop_dict | dict(color
 ax.text3D(rr,-0.2,0.0,"$S_x$", fontsize=15)
 ax.text3D(0,rr,0.1,"$S_y$", fontsize=15)
 ax.text3D(rr,0.2,rr,"$S_z$", fontsize=15)
-
 thax=linspace(-pi,pi,50);
 fiax=linspace(0,2*pi,50)
-
 for fi in linspace(0,2*pi,10):
     c1=pol2cart(1,thax,fi)
     ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
-
 for th in linspace(-pi,pi,10):
     c1=pol2cart(1,th,fiax)
     ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
-
 c1=pol2cart(1,-pi/4,pi/3)
 ax.add_artist(Arrow3D([0,c1[0]],[0,c1[1]],[0,c1[2]], **(arrow_prop_dict | dict(color="r"))))
 ax.text3D(0.0,c1[0],c1[2],r"$\psi$", fontsize=20, color='r')
-ax.plot([c1[0],c1[0]], [0,c1[1]], [0,0], color="k")
-ax.plot([0,c1[0]], [c1[1],c1[1]], [0,0], color="k")
+ax.plot([0,c1[0]], [0,c1[1]], [0,0], color="k")
 ax.plot([c1[0],c1[0]], [c1[1],c1[1]], [0,c1[2]], color="k")
-
+c1=pol2cart(0.7,0,linspace(0,pi/3,10))
+ax.plot(c1[0], c1[1], c1[2], color="orange", alpha=1)
+ax.text3D(0,0.1,0.8,r"$\theta $", fontsize=20, color="black")
+c1=pol2cart(0.7,linspace(-pi/2,-pi/4,10),pi/3)
+ax.plot(c1[0], c1[1], c1[2], color="orange", alpha=1)
+ax.text3D(0.2,0.2,-0.3,r"$\phi $", fontsize=20, color="black")
 ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
 plt.show()
 
@@ -161,13 +163,10 @@ glue("sp-bloch-sphere", fig, display=False)
 
 (sp-bloch-sphere)=
 ```{glue:figure} sp-bloch-sphere
-The qubit Bloch sphere with a particular qubit vector.
+The qubit Bloch sphere with a particular qubit state, indicated by the so-called Blochvector.
 ```
 
-There is a deeper connection between Pauli matrices and rotations. You can quite easily convince yourselves using series expansion that we can construct from the Pauli matrices rotation matrices for vectors, but equally for qubit quantum states.
-
-
-Coming back to the rotations, 
+There is a deeper connection between Pauli matrices and rotations. If we exponentiate the Pauli matrices in the following way, we obtain rotation operators or matrices: 
 
 $$
 \begin{aligned}
@@ -179,7 +178,7 @@ $$(sp-oh-pr)
 
 In general, like the Euler formula, if an operator satisfies $A^2=I$ then we have $e^{i \theta A}=\cos (\theta) I+i \sin (\theta) A$.
 
-Therefore we can obtain well-known rotation matrices:
+With this we can calculate the rotation operators explicitly, and you might recognize 2D rotation matrices, since each rotates in a 2D plane!
 
 $$
 \begin{aligned}
@@ -198,7 +197,7 @@ e^{-i \theta / 2} & 0 \\
 \end{aligned}
 $$(sp-oh-pr2)
 
-<!-- from http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf -->
+<!-- also useful: http://www.vcpc.univie.ac.at/~ian/hotlist/qc/talks/bloch-sphere-rotations.pdf but we haven't introduced the density operator, to make observables invariant under unitary transformations one needs to do R.rho.R^dag - this is not needed for pure states. -->
 
 We suggest to use the [qutip](https://qutip.org/docs/latest/guide/guide-bloch.html) or probably even better the [qiskit](https://qiskit.org/documentation/stubs/qiskit.visualization.plot_bloch_multivector.html) Bloch sphere functions. Play around with Pauli rotations!
 
