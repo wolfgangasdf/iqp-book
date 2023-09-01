@@ -104,32 +104,8 @@ glue("b-polarization", fig, display=False)
 Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
 ```
 
-
-## Quantum measurements & probabilities
+## Polarization bases
 `[slide]`
-
-Let’s consider one example, where $E_H=E_V=1/\sqrt{2}$. If we have a detector which only detects a certain polarization, with chance 1/2 we detect one $H$ photon and same for $V$.
-Formally, we can describe quantum measurements like this: the probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is $|\langle\psi_{meas}|\psi\rangle|^2$. By repeating the measurement many times, we can derive the detection probabilities of the states, for instance:
-
-$$
-\begin{align*}
-\left|\left\langle\Psi_{\text {detector }} \mid \Psi_{\text {photon }}\right\rangle\right|^2&
-\\
-|\langle V \mid H\rangle|^2&=0
-\\
-|\langle D \mid H\rangle|^2&
-= \left| \frac{1}{\sqrt{2}}(\langle H \mid+\langle V|) \, |H\rangle\right|^ 2=\frac{1}{2}
-\end{align*}
-$$(b-qr-04)
-
-Quantum mechanics (like any other theories) is based on a number of postulates, one postulate of quantum mechanics is, that if we measure the detection state $|\psi_{meas}\rangle$, then the state of the system will be in that state. 
-
-
-## Bases & quantum superpositions
-`[slide]`
-
-With this, we can easily calculate the probability of a detector that detects a different polarization. For instance, having again $|\psi\rangle = 1/\sqrt{2}(1,1)$, if we rotate the detector by 45 degrees so it detects only
-$|D\rangle = 1/\sqrt{2}(1,1)$ photons, it would click every time, and $|A\rangle = 1/\sqrt{2}(1,-1)$ would never detect anything. This is because $|\psi\rangle$ is actually diagonally polarized.
 
 We say that $H$ and $V$ polarizations form a basis, there are two orthogonal basis vectors because our state space is two-dimensional here (the quantum state is described by a 2-element vector). 
 
@@ -145,7 +121,9 @@ $$
 |R/L\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-i |V\rangle)
 $$(b-qr-2)
 
-which corresponds to right/left circular polarization.
+which corresponds to right/left circular polarization. 
+
+In the figure we show the qubit state vectors for $H/V$ and $D/A$, and we can easily see that both are mutually orthogonal. We cannot straight-forwardly draw the basis vectors of the circular polarization basis, therefore we have omitted them. Later we will see a 3-dimensional representation of qubit state vectors where also complex relative phases can be visualized.
 
 
 ```{code-cell} ipython3
@@ -201,26 +179,84 @@ $H$, $V$, $D$ and $A$ polarization vectors.
 ```
 
 
+## From polarizers to quantum measurements
+`[slide]`
+
+We now show that a polarizer in combination with a photo detector does quantum measurements in polarization space. Let us assume that we have a horizontally polarized incident laser beam. The transmission of this beam through a polarizer depends on the relative angle between them, in fact, only the polarization component of the light that is parallel to the polarizer orientation is transmitted. With the polarizer angle $\alpha$ with respect to the horizontal polarization orientation we have the situation shown in the figure:
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+fig, ax = plt.subplots(figsize=(4,3))
+ax.set_aspect("equal")
+a=pi/4;x=1/cos(a)
+ax.arrow(0,0,x,0, linewidth=3, head_width=0.05, color='black')
+ax.plot([-0.3,1],[-0.3,1],':',color="orange", linewidth=3)
+ax.plot([cos(pi/4),x],[sin(pi/4),0],':',color="grey", linewidth=3)
+ax.plot([cos(pi/4),0],[sin(pi/4),0],'-',color="blue", linewidth=5)
+ax.text(x+0.2,0.0,"$E_H$",fontsize=20)
+ax.text(0.2,0.05,r"$\alpha$",fontsize=20)
+ax.axis("off")
+
+glue("b-proj", fig, display=False)
+```
+
+(b-proj)=
+```{glue:figure} b-proj
+Projection of horizontal polarization onto a polarizer with angle $\alpha$ (dotted line), which lets only the field indicated by the blue line pass through. 
+```
+
+The transmitted intensity can be calculated just by the inner product of the polarizer unit vector and the incident polarization:
+
+$$I=\left|\left(\cos\alpha\;\sin\alpha\right)\cdot
+\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)\right|^2=
+\cos^2(\alpha)
+$$(b-malus)
+
+which is known as Malus law in optics. Now, for a single photon and since everything is normalized here, this dimensionless transmitted intensity directly corresponds to the propability that this photon is transmitted. Therefore, we can say that the combination of the polarizer and the detector does a quantum measurement on the incident quantum state!
+
+In the bra-ket formalism, we can describe quantum measurements like the following, note that later, you will learn a more rigorous approach. The probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is 
+
+$$
+P_{click}=\left|\left\langle\Psi_{\text {detector }} \mid \Psi\right\rangle\right|^2
+$$(b-qm)
+
+By repeating the measurement many times, we can derive the detection probabilities of the states. For instance, we obtain $|\langle V \mid H\rangle|^2=0$ because state and detector are orthogonal, or 
+
+$$|\langle D \mid H\rangle|^2
+= \left| \frac{1}{\sqrt{2}}(\langle H \mid+\langle V|) \, |H\rangle\right|^ 2=\frac{1}{2}
+$$(b-qr-04)
+
+if the detector is oriented with 45 degree with respect to the incident polarization. In this case, the detector will click with 50% probability.
+
+In our polarization example here it is quite obvious, that after the measurement polarizer, if the photon has passed through, it is polarized along the detector polarization. This is in fact a useful postulate of quantum mechanics, that after a successful measurement of $|\psi_{meas}\rangle$, the state of the system will be in that same state. 
+
+
+
 ## Quantum measurements and normalization
 
 `[slide]`
 
-With this, we can already explain a first quantum experiment that highlights the meaning of quantum superpositions: 
+With this, we can already explain a suprising experiment, which you can easily do by using 3 polarizers. 
 
-A linear polarizer transmits light only completely of a certain orientation of the linear polarization, indicated by the angle alpha – which can be written as the jones vector $(\sin\alpha,\cos\alpha)$. 
+We start with a horizontal polarizer, therefore with the blue polarization shown in the figure. Now, if you place a vertical polarizer after this, no light is transmitted because $|\langle V \mid H\rangle|^2=0$ - as shown on the left in the figure.
 
-We can think of this as a quantum measurement, with a state vector $|\psi_{meas}\rangle=(\sin\alpha,\cos\alpha)$. 
+If you, however, place an additional polarizer oriented at an angle of 45 degrees before the $V$ polarizer, you will observe transmission of light! In the quantum formalism we have two polarizers after the first, and in the first step where $D$ is the diagonal polarizer in the middle a photon transmission probability of:
 
-The probability to measure this state for horizontally polarized input light state $|H\rangle=(1,0)$ is as we had above $\sin^2(\alpha)$. 
+$$|\langle D \mid H\rangle|^2
+= \left| \frac{1}{\sqrt{2}}(\langle H \mid+\langle V|) \, |H\rangle\right|^ 2=\frac{1}{2}
+$$(b-qr-3p1)
 
-For $\alpha=\pi/2$, vertical polarization, this is zero. 
+, and the transmitted photon will be in the $D$ state. Now, under the condition that the photon is transmitted or the quantum measurement was successful, we have a similar situation at the last $V$ polarizer:
 
-Now we place a 3rd polarizer oriented at an angle $\pi/4$ in between the two polarizers, what is the transmission up to this point? It is 0.5 as $\sin^2(\pi/4)=0.5$. Now, the transmission of this light through the 3rd polarizer is again 50% of this, we obtain 0.25 total transmission. This might be seen surprising, but in terms of Jones vectors it is probably clear.
+$$|\langle V \mid D\rangle|^2
+= \left| \langle V \mid \frac{1}{\sqrt{2}}(| H \rangle+| V\rangle) \right|^ 2=\frac{1}{2}
+$$(b-qr-3p2)
 
-Now to a quantum description:
-According to the rules of quantum mechanics, if the “measurement” of the middle polarizer is successful, the state after the middle polarizer is $(\sin(\pi/4),\cos(\pi/4)$, but this happens only with 50% chance. The last polarizer does the same, where we with a probability of in total 0.25 obtain the state.
-
-This highlights the importance of quantum superpositions, which probably seem very natural for the polarization of light, but is in fact the cornerstone of quantum mechanics. In IQP we will see that quantum superpositions are also possible for matter systems, like electrons and other fundamental particles, and also for composite systems like electronic – photonic excitations or lattice vibrations.
+Also here the chance of a successful measurement is 50% - and we obtain in total $0.5\cdot0.5=0.25$ or 25% total transmission!
 
 
 ```{code-cell} ipython3

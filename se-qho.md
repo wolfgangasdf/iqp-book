@@ -107,7 +107,7 @@ $$
 $$(se-qho-lo3)
 
 :::{note}
-Show this!
+Show this! Also note: This is called a *canonical* commutation relation because it is of great fundamental importance. $\hat{x}$ and $\hat{p}$ are conjugate variables with non-zero commutator, which always leads to an uncertainty relation as we have discussed before.
 :::
 
 we obtain $\hat{a}_{-} \hat{a}_{+}=\frac{1}{\hbar \omega} \hat{H}+\frac{1}{2}$, or written differently
