@@ -109,16 +109,24 @@ Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
 
 We say that $H$ and $V$ polarizations form a basis, there are two orthogonal basis vectors because our state space is two-dimensional here (the quantum state is described by a 2-element vector). 
 
+$$
+|H\rangle=\left(\begin{matrix}1\\0\\\end{matrix}\right)
+\quad\text{and}\quad
+|V\rangle=\left(\begin{matrix}0\\1\\\end{matrix}\right)
+$$(b-qr-1)
+
 The other bases, in fact quantum superpositions of the HV-basis, are the DA basis 
 
 $$
-|D/A\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-|V\rangle)
+|D/A\rangle=\frac{1}{\sqrt{2}}(|H\rangle\pm|V\rangle)
+=\frac{1}{\sqrt{2}}\left(\begin{matrix}1\\\pm1\\\end{matrix}\right)
 $$(b-qr-1)
 
 which corresponds to diagonal/antidiagonal linear polarization and 
 
 $$
-|R/L\rangle=\frac{1}{\sqrt{2}}(|H\rangle+/-i |V\rangle)
+|R/L\rangle=\frac{1}{\sqrt{2}}(|H\rangle\pm i |V\rangle)
+=\frac{1}{\sqrt{2}}\left(\begin{matrix}1\\\pm i\\\end{matrix}\right)
 $$(b-qr-2)
 
 which corresponds to right/left circular polarization. 
@@ -177,6 +185,22 @@ glue("b-pbas", fig, display=False)
 ```{glue:figure} b-pbas
 $H$, $V$, $D$ and $A$ polarization vectors.
 ```
+
+A note: As you will see in quantum information, the bases are truly equivalent - but one has to fix which basis is which. Traditionally, the basis which is in polarization space the $H/V$ basis is called the computational basis and denoted by 0 and 1:
+
+$$
+|H\rangle\equiv |0\rangle\quad
+|V\rangle\equiv |1\rangle
+$$(b-b-0)
+
+The diagonal - antidiagonal basis is called the Hadamard basis since we can obtain it by applying a Hadamard operation on states in the computational basis:
+
+$$
+|D\rangle\equiv |+\rangle\quad
+|A\rangle\equiv |-\rangle
+$$(b-b-1)
+
+The circular polarization basis is less often used in quantum information but can be called the $|\pm i\rangle$ imaginary basis.
 
 
 ## From polarizers to quantum measurements
