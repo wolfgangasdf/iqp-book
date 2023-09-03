@@ -12,7 +12,7 @@ kernelspec:
 
 # The quantum harmonic oscillator
 
-In this section we discuss a slightly different potential than the square-well potential: the quantum harmonic oscillator. This is a key model system of quantum mechanics, introducing also the concepts of excitations and ladder operators. The same equations appear at many places in physics including even quantum optics!
+In this section we discuss a slightly different potential than the square-well potential: the quadratic or harmonic potential. This is a key model system of quantum mechanics, where we also introduce the concepts of excitations and ladder operators. It is extremely important because harmonic potential appear at many places in physics including even quantum optics!
 
 
 ## Harmonic potentials
@@ -22,10 +22,11 @@ In this section we discuss a slightly different potential than the square-well p
 
 The harmonic oscillator is as it is in classical mechanics, one of the most important systems in quantum mechanics – because it appears everywhere in nature, and it is simple enough to solve it analytically and highlights many of the basic concepts and methods of quantum mechanics. It appears everywhere in nature because nearly any potential landscape can be approximated by a harmonic oscillator, from optical systems over molecular vibrations to the dynamics of nuclear particles. 
 
-The paradigm for a classical one-dimensional harmonic oscillator is a mass m attached to a spring of force constant k. The motion is governed by Hooke’s law, $F=-kx=m\ddot{x}$ (ignoring friction), and the solution is $x(t)=A\sin(\omega t)+B\cos(\omega t)$, where $k\equiv m\omega^2$ is the (angular) frequency of the oscillation. 
+The paradigm for a classical one-dimensional harmonic oscillator is a mass $m$ at position $x$ attached to a spring of force constant $k$. The motion, we ignore friction, is governed by Hooke’s law, $F=-kx=m\ddot{x}$, and the solution is $x(t)=A\sin(\omega t)+B\cos(\omega t)$, where $k\equiv m\omega^2$ is the (angular) frequency of the oscillation. 
 
-The potential energy has therefore a parabolic shape $V(x)=kx^2/2$.
-Note that in nature there is no perfect harmonic oscillator — Hooke’s law does only approximately apply, and there are often many technical issues, e.g. a spring breaks if it is extended too far. But practically any potential is approximately parabolic in the neighbourhood of a local minimum – this can be seen from a Taylor expansion of any potential around a minimum:
+We can express the force of the spring in a potential function depending on the spring extension $x$, and we find a parabolic shape of the potential energy $V(x)=kx^2/2$.
+
+Note that in nature, there is no perfect harmonic oscillator — Hooke’s law does only approximately apply, and there are often many technical issues, e.g. a spring breaks if it is extended too far. But practically any potential is approximately parabolic in the neighbourhood of a local minimum – this can be seen from a Taylor expansion of any potential around a minimum:
 
 $$
 V(x)=V\left(x_0\right)+V^{\prime}\left(x_0\right)\left(x-x_0\right)+\frac{1}{2} V^{\prime \prime}\left(x_0\right)\left(x-x_0\right)^2+\cdots
@@ -69,26 +70,26 @@ $$
 V(x)=\frac{1}{2}m\omega^2x^2
 $$(se-qho-v2)
 
-where we have eliminated the spring constant using the relation between spring constant, mass, and frequency:
+Here we have eliminated the spring constant using the relation between spring constant, mass, and frequency:
 
 $$
 \omega \equiv \sqrt{\frac{k}{m}}
 $$(se-qho-v3)
  
-We can again split off the time dependence and we obtain for the time-independent Schrödinger equation: 
+We can again split off the time dependent part and we obtain for the time-independent Schrödinger equation: 
 
 $$
 -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+\frac{1}{2}m\omega^2x^2\psi=E\psi 
 $$(se-qho-v4)
 
 
-Solving this differential equation means finding the Eigenfunctions $\Psi$ and corresponding energies $E$. This can be done by looking up the solution for this particular differential equation. We will use another approach (Griffiths 2.3.1) and introduce a very important algebraic technique involving so-called ladder or creation and annihilation operators - which create and annihilate quantum excitations in quantum systems.
+Solving this differential equation means finding the Eigenfunctions $\Psi$ and corresponding energies $E$. This can be done by looking up the solution for this particular differential equation in a mathematics book. We will use another approach that is also done by Griffiths (section 2.3.1) and introduce a very important algebraic technique: The so-called ladder or creation and annihilation operators - which create and annihilate quantum excitations in quantum systems.
 
 ## Ladder operators
 
 `[slide]`
 
-We can write the Schrodinger equation $H\psi=E\psi$ using the momentum operator as
+We can write the Schrödinger equation $H\psi=E\psi$ using the momentum operator as
 
 $$
 H=\frac{1}{2m}\left[p^2+(m\omega x)^2\right]
@@ -100,17 +101,22 @@ $$
 a_{ \pm} \equiv \frac{1}{\sqrt{2 \hbar m \omega}}(\mp i p+m \omega x)
 $$(se-qho-lo2)
 
-With the commutation relation
+These are the so-called ladder operators, we will see soon why.
+
+For the position and momentum operator we have the commutation relation
 
 $$
 [\hat{x}, \hat{p}]=i \hbar
 $$(se-qho-lo3)
 
 :::{note}
-Show this! Also note: This is called a *canonical* commutation relation because it is of great fundamental importance. $\hat{x}$ and $\hat{p}$ are conjugate variables with non-zero commutator, which always leads to an uncertainty relation as we have discussed before.
+Show this!
 :::
 
-we obtain $\hat{a}_{-} \hat{a}_{+}=\frac{1}{\hbar \omega} \hat{H}+\frac{1}{2}$, or written differently
+This is called a *canonical* commutation relation because it is of great fundamental importance. $\hat{x}$ and $\hat{p}$ are conjugate variables with non-zero commutator, which always leads to an uncertainty relation as we have discussed before.
+
+
+With this commutation relation, we obtain $\hat{a}_{-} \hat{a}_{+}=\frac{1}{\hbar \omega} \hat{H}+\frac{1}{2}$, or written differently
 
 $$
 H=\hbar \omega\left(\hat{a}_{+} \hat{a}_{-}+1 / 2\right)
@@ -120,7 +126,7 @@ $$(se-qho-lo4)
 Exercise: show that $[a_-,a_+]=1$
 :::
 
-Up to now, this was just rewriting the Schrodinger equation, now we will see that the ladder operators allow us to find the solutions.
+This is great! We have a Schrödinger equation that depends in a very simple form on operators, this must be useful. Now we will see that the ladder operators allow us to find the solutions.
 
 `[slide]`
 
@@ -132,7 +138,7 @@ $$
 H\left(a_{+}|\psi\rangle\right)=(E+\hbar \omega)\left(a_{+}|\psi\rangle\right)
 $$(se-qho-lo5)
 
-where apparently $a_{+}$ has added $\hbar\omega$ to the energy of the system!
+where, apparently, $a_{+}$ has added $\hbar\omega$ to the energy of the system!
 
 Similarly, we find that
 
@@ -142,7 +148,9 @@ $$(se-qho-lo6)
 
 So, $a_-$ lowers the energy of the system by $\hbar\omega$!
 
-Therefore, $a_\pm$ are called "ladder operators", because they allow us to climb up and down in energy; $a_+$ is the raising operator, and $a_-$ is the lowering operator. As you can show, the hermitian conjugate of $a_-$ is $a_+$ and vice versa - therefore you often also read simply $a$ for $a_-$ and $a^\dagger$ for $a_+$.
+Therefore, $a_\pm$ are called "ladder operators", because they allow us to climb up and down in energy; $a_+$ is the raising operator, and $a_-$ is the lowering operator. As you can show, the hermitian conjugate of $a_-$ is $a_+$ and vice versa - therefore you often also read simply $a$ for $a_-$ and $a^\dagger$ for $a_+$. 
+
+In the figure we show the action of the ladder operators, raising and lowering the energy of the system. Note you might already here see an important difference to the square well potential, here the energy levels are evenly spaces, while in the square well the energy scaled with the square of the state number.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -203,13 +211,17 @@ $$(se-qho-gs1)
 
 The energy of the ground state $\Psi_0$ is $E_0=\frac{1}{2}\hbar\omega$ which can be easily be seen from the Schrödinger equation.
 
-Now we can finally calculate an explicit wavefunction, working out $a_{-}\left|\psi_0\right\rangle=0$ results in the simple differential equation $\frac{d \psi_0}{d x}=-\frac{m \omega}{\hbar} x \psi_0$ which can be solved by integration:
+Now we can finally calculate an explicit wavefunction, working out $a_{-}\left|\psi_0\right\rangle=0$ results in the simple differential equation 
+
+$$\frac{d \psi_0}{d x}=-\frac{m \omega}{\hbar} x \psi_0$$(se-qho-gs1a)
+
+which can be solved by integration:
 
 $$
 \psi_0(x)=\left(\frac{m \omega}{\pi \hbar}\right)^{1 / 4} e^{-\frac{m \omega}{2 \hbar} x^2}
 $$(se-qho-gs2)
 
-This is a simple Gaussian distribution, meaning that in the quantum ground state the probability to find the particle is highest at $x=0$ - this might still be intuitively explainable by classical thoughts - the particle is at rest.
+This is a simple Gaussian distribution as shown in the figure, meaning that in the quantum ground state the probability to find the particle is highest at $x=0$ - this might still be intuitively explainable by classical thoughts - the particle is at rest. But you might remember that in quantum mechanics, a localized particle has a large momentum uncertainty so this is certainly not really at rest.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -255,14 +267,18 @@ $$
 E_n=\left(n+\frac{1}{2}\right) \hbar \omega
 $$(se-qho-es2)
 
-The momentum operator in $a^\dagger$ basically leads to a spatial derivative of the previous state - resuklting in the so-called Hermite functions 
+This is very interesting and non-classical, and one of the most profound results of quantum mechanics: Even in case of no excitations, there is a non-zero energy in the system given by the $1/2$ term - in quantum mechanics, nothing can have zero energy.
+
+The momentum operator in $a^\dagger$ basically leads to a spatial derivative of the previous state - resulting in the so-called Hermite functions $H_n$ with which the wave function becomes
 
 $$
 \psi_n(x) = \frac{1}{\sqrt{2^n\,n!}}  \left(\frac{m\omega}{\pi \hbar}\right)^{1/4}  e^{
 - \frac{m\omega x^2}{2 \hbar}} H_n\left(\sqrt{\frac{m\omega}{\hbar}} x \right), \qquad n = 0,1,2,\ldots.
 $$(se-qho-es3)
 
-which look like this: 
+In the first figure we show the first few solutions, but offsetted for better visibility - all wave functions oscillate around zero. 
+
+In the second figure we show the  probability density of the same wave functions. We see different solutions with even and odd symmetry around $x=0$. This is very different to the classical case, it looks like quantum interference patterns here - classically, the probability density would always be highest at the turning points, which is here not the case.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -382,6 +398,8 @@ a|n\rangle & =\sqrt{n}|n-1\rangle
 \end{aligned}
 $$(se-qho-ns1)
 
+You might realize that this is pretty exciting: We can work with ladder operators and number states, for instance calculating eigenvalues or checking what is the ground state, without knowing exact solutions for the spatial wavefunction!
+
 Another important operator in Fock space is the number operator:
 
 $$
@@ -413,12 +431,13 @@ Assume that we want to use the number states $|0\rangle$ and $|1\rangle$ to enco
 
 But, since the spacing between all levels of a harmonic oscillator is equal, we will make the transition from 0 to 1, but immediately also from 1 to 2 and so on - we cannot selectively address transitions.
 
-Therefore, in order to implement a qubit, we actually need to use an anharmonic oscillator as shown here with a cubic term added to the Hamiltonian: 
+Therefore, in order to implement a qubit, we actually need to use an anharmonic oscillator as shown here with a cubic term added to the Hamiltonian
 
 $$
 H=\frac{\hat{p}^2}{2 m}+\frac{1}{2} \omega^2 x^2+\lambda x^4
 $$(se-qho-ah1)
 
+As shown in the figure, this lifts the so-called degeneracy of the energy levels, and we can make selective transitions between the states!
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]

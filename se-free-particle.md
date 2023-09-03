@@ -86,7 +86,7 @@ $$
 i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}
 $$(se-fp-se)
 
-will be such an equation – this is the Schrodinger equation for a "quantum wave function" $\Psi$ describing a free particle moving in one dimension.
+will be such an equation – this is the Schrödinger equation for a "quantum wave function" $\Psi$ describing a free particle moving in one dimension.
 
 Note that the main goal of physics research is to develop models to describe nature, and not to explain "why" something is like it is - of course it is most satisfying when we can explain "why" something is - but often this is just in relation to our models. So, please accept this equation for now - we will see it works often extremely well!
 

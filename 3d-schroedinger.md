@@ -18,7 +18,7 @@ In this section, we turn to 3 dimensions and first solve the Schrödinger equati
 
 `[slide]`
 
-It is now time to extend our formulation of the Schrodinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the Hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
+It is now time to extend our formulation of the Schrödinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the Hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
 
 In classical mechanics in 3 dimensions, we simply add up the kinetic energies for the 3 spatial simensions. We do the same in quantum mechanics, the Hamilton operator was in 1D
 
