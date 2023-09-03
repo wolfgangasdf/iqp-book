@@ -29,7 +29,7 @@ This energy is negative, which means attractive for all radial distances, and st
 
 As you can imagine, this is not the end of the story, other forces, including the Pauli exclusion principle which we discuss later, and the so-called strong force will lead to a repulsive force for very small distances, but we can ignore this for now. 
 
-We have seen before that the second-derivative term of the Schrödinger equation is simply the kinetic energy of the particle, therefore it is not too crazy to simply add the potential energy to it. The one-dimensional Schrodinger equation including a one-dimensional position-dependent potential $V(x)$ becomes: 
+We have seen before that the second-derivative term of the Schrödinger equation is simply the kinetic energy of the particle, therefore it is not too crazy to simply add the potential energy to it. The one-dimensional Schrödinger equation including a one-dimensional position-dependent potential $V(x)$ becomes: 
 
 $$
 i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\left(x\right)\Psi. 
@@ -77,12 +77,14 @@ $$
 \Psi\left(x,t\right)=\psi(x)\phi(t)
 $$(se-1d-sv1)
 
-Let’s put this back into the Schrodinger equation, we obtain for the derivatives 
+Let’s put this back into the Schrödinger equation, we obtain for the derivatives 
 
 $$
-\frac{\partial\Psi}{\partial t}=\psi\frac{d\phi}{dt}
+\begin{align}
+\frac{\partial\Psi}{\partial t}&=\psi\frac{d\phi}{dt}
 \\
-\frac{\partial^2\Psi}{\partial x^2}=\frac{d^2\psi}{dx^2}\phi
+\frac{\partial^2\Psi}{\partial x^2}&=\frac{d^2\psi}{dx^2}\phi
+\end{align}
 $$(se-1d-sv2)
 
 With this the Schrödinger equation becomes 
@@ -117,21 +119,25 @@ $$(se-1d-sv7)
 
 This is an oscillation, therefore $\phi$ is also called the "wiggle factor".
 
-The second equation is the time-independent Schrodinger equation, and can only be solved when we know $V(x)$.
+The second equation is the time-independent Schrödinger equation, and can only be solved when we know $V(x)$.
 
 <!-- Quick check exercises: Gr 2.1a show that E must be real. Gr 2.2 Show that E must be positive.  [MB thinks last one is too hard] -->
 
-## Probability densities
+## Probability density and Hamiltonian
 
 `[slide]`
 
-Even though the wave function is time-dependent
+As already discussed for the case of light, now for position-space, the probability to find a particle at position $x$ is determined by the *probability density* 
+
+$$\left|\Psi\left(x,t\right)\right|^2$$(se-1d-prob)
+
+As we have seen, the wave function of a particle is time-dependent
 
 $$
 \Psi\left(x,t\right)=\psi\left(x\right)e^{-iEt/\hbar}
 $$(se-1d-p1)
 
-the probability density is not: 
+But in the case here, and in many other cases, the probability density is not: 
 
 $$
 \left|\Psi\left(x,t\right)\right|^2=\Psi^\ast\Psi=\psi^\ast e^{+iEt/\hbar}\psi e^{-iEt/\hbar}=\left|\psi\left(x\right)\right|^2
@@ -140,7 +146,7 @@ $$(se-1d-p2)
 We call such solutions “stationary” states. This also means as we will see later, that the expectation value of any dynamical value such as position and momentum are time independent – this sounds reasonable for a large number of systems. For instance for a particle at rest, the expectation value of the position $x$ is constant, and momentum $p=0$ – nothing moves.
 
 <!-- [G eq. 2.10] -->
-Now we discuss what $E$ means. In classical mechanics, the total energy of a system is given by the sum of kinetic and potential energy:
+Now we discuss what the appearance of the energy $E$ in the Schrödinger equation means. In classical mechanics, the total energy of a system is given by the sum of kinetic and potential energy:
 
 $$
 H(x, p)=\frac{p^2}{2 m}+V(x)
@@ -168,7 +174,7 @@ Show that this makes sense with a de Broglie wave above!
 <!-- Ph3.5.  -->
 As we have seen before, the outcome of a measurement in QM is a random variable, and we call the average value of this the expectation value. It can be determined by measuring an ensemble of identically prepared systems, or repeating the experiment many times.
 
-Let us look at the position. We assume that we have a particle with a wavefunction $\Psi(x,t)$, which is the probability amplitude of the position observable and $|\Psi(x,t)|^2*dx$ is the probability of finding the particle between $x$ and $x+dx$. The position expectation value is therefore
+Let us look at the position. We assume that we have a particle with a wavefunction $\Psi(x,t)$, which is the probability amplitude of the position observable and $|\Psi(x,t)|^2\cdot dx$ is the probability of finding the particle between $x$ and $x+dx$. The position expectation value is therefore
 
 $$
 \langle x\rangle=\int_{+\infty}^{-\infty} x|\Psi(x, t)|^2 \mathrm{~d} x
@@ -188,7 +194,7 @@ $$
 \langle p\rangle=m \frac{\mathrm{d}\langle\mathbf{x}\rangle}{\mathrm{d} t}
 $$(se-1d-ev3)
 
-For $x$ and $$ above it was not obvious, but this contains clear signs of an operator – the differential operator. 
+For $x$ above it was not obvious, but this contains clear signs of an operator – a differential operator. 
 
 The position and momentum operators are in the position basis: 
 
@@ -196,7 +202,7 @@ $$
 \hat{x}=x,\quad\hat{p}=-i\hbar\frac{\partial}{\partial x}
 $$(se-1d-ev4)
 
-and we can calculate their expectation values e.g. like this: 
+And we can calculate their expectation values e.g. like this: 
 
 $$
 \langle p\rangle=\int_{-\infty}^{\infty} \Psi^*(x, t)\left(-i \hbar \frac{\partial}{\partial x}\right) \Psi(x, t) d x
@@ -208,7 +214,8 @@ $$
 \langle Q\rangle \equiv \langle\Psi|Q|\Psi\rangle = \int dx\,\Psi^\ast Q \Psi
 $$(se-1d-ev6)
 
-Where in the last step we have again shown the integral over the dependent variable $x$.
+Where in the last step we have have used the recipe that a *sandwich* of quantum states that calculates the expectation value of an operator, is don by integrating over the dependent variable $x$. This procedure might seem a bit ad-hoc right now, but you will see that it works.
+
 
 
 

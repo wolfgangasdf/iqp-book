@@ -31,6 +31,15 @@ Which particles are useful for quantum technologies depends on our ability to is
 
 You might object that protons and neutrons are fundamental particles, since they consist of quarks. Yes, also composite systems show quantum behaviour and can often be treated as if they were a "single" particles, as long as we don't *look inside* the composite system, for which we would need high energies as we will see. For instance, for all normal-energy experiments, the nucleus of an atom can be considered as a single entity - only in large particle accellerators the interior of the nucleus can be investigated.
 
+```{figure} figures/basics/atom.pdf
+---
+name: b-atom
+scale: 50%
+---
+The constituents of an atom.
+```
+
+
 Therefore, understanding how fundamental particles behave quantum mechanically can be directly translated for understanding of composite systems. Nowadays we can control the quantum state of billions of electrons forming supercurrents in superconducting qubits, and control crystal lattice vibrations of millions of atoms. We have seen quantum interference of molecules with thousand of atoms, and we are working towards quantum control of nanometer-sized objects.
 
 ```{figure} figures/basics/nanobeam.png
@@ -38,7 +47,7 @@ Therefore, understanding how fundamental particles behave quantum mechanically c
 name: nanobeam
 scale: 50%
 ---
-A so-called optomechanical nanobeam resonator, where a mechanical breathing mode has shown clear quantum behaviour. The top panel shows a computer simulation of such a mode, the bottom panel an electron microscope picture. Image credit: [Gröblacher lab](https://groeblacherlab.tudelft.nl/)
+A so-called optomechanical nanobeam resonator, where a mechanical breathing mode has shown clear quantum behaviour, despite it consists of a very large number of atoms, the diameter of the nanobeam is a few 100 nano meters. The top panel shows a computer simulation of such a mode, the bottom panel an electron microscope picture. Image credit: [Gröblacher lab](https://groeblacherlab.tudelft.nl/)
 ```
 
 

@@ -19,7 +19,7 @@ We want to start by giving a simple overview how easy it can be to encode a qubi
 
 `[slide]`
 
-Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which you might know.
+Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which might be familiar to you.
 
 :::{margin}
 ```{figure} figures/basics/erwin.png
@@ -32,7 +32,7 @@ The Schrödinger equation with $\psi$ on his bust in Vienna.
 
 The state of a qubit is written in the ket notation often as $\left|\psi\right\rangle$, psi is traditionally the greek letter used for the quantum wave function of a particle. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a degree of freedom of a physical system.
 
-We now show how we can encode qubits in the polarization of light, for instance of a laser pointer beam. In this case, the polarization is fully defined by the horizontal H and a vertical V electric field amplitude, and we have with the known basis vectors: 
+We now show how we can encode qubits in the polarization of light, for instance of a laser pointer beam. For such a light field, where light travels into a particular direction, the polarization is fully defined in the transverse plane by the horizontal H and a vertical V electric field amplitude, and we have with the known basis vectors: 
 
 $$
 \vec{E}=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=\ E_0\left( E_H\left(\begin{matrix}1\\0\\\end{matrix}\right)+E_V\left(\begin{matrix}0\\1\\\end{matrix}\right) \right)
@@ -186,7 +186,7 @@ glue("b-pbas", fig, display=False)
 $H$, $V$, $D$ and $A$ polarization vectors.
 ```
 
-A note: As you will see in quantum information, the bases are truly equivalent - but one has to fix which basis is which. Traditionally, the basis which is in polarization space the $H/V$ basis is called the computational basis and denoted by 0 and 1:
+A note: As you will see in quantum information, the bases are truly equivalent - but one has to choose which basis is which. Traditionally, the basis which is in polarization space the $H/V$ basis is called the computational basis in quantum information and it is denoted by the 0 and 1 ket vector:
 
 $$
 |H\rangle\equiv |0\rangle\quad
@@ -242,7 +242,7 @@ $$(b-malus)
 
 which is known as Malus law in optics. Now, for a single photon and since everything is normalized here, this dimensionless transmitted intensity directly corresponds to the propability that this photon is transmitted. Therefore, we can say that the combination of the polarizer and the detector does a quantum measurement on the incident quantum state!
 
-In the bra-ket formalism, we can describe quantum measurements like the following, note that later, you will learn a more rigorous approach. The probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is 
+In the bra-ket formalism, we can describe quantum measurements, the probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is 
 
 $$
 P_{click}=\left|\left\langle\Psi_{\text {detector }} \mid \Psi\right\rangle\right|^2
@@ -256,7 +256,7 @@ $$(b-qr-04)
 
 if the detector is oriented with 45 degree with respect to the incident polarization. In this case, the detector will click with 50% probability.
 
-In our polarization example here it is quite obvious, that after the measurement polarizer, if the photon has passed through, it is polarized along the detector polarization. This is in fact a useful postulate of quantum mechanics, that after a successful measurement of $|\psi_{meas}\rangle$, the state of the system will be in that same state. 
+In our polarization example here it is quite obvious, that after the measurement polarizer, if the photon has passed through, it is polarized along the detector polarization. This is in fact a useful postulate of quantum mechanics, that after a successful measurement of $|\psi_{meas}\rangle$, the state of the system will be in that particular state!
 
 
 
@@ -274,7 +274,7 @@ $$|\langle D \mid H\rangle|^2
 = \left| \frac{1}{\sqrt{2}}(\langle H \mid+\langle V|) \, |H\rangle\right|^ 2=\frac{1}{2}
 $$(b-qr-3p1)
 
-, and the transmitted photon will be in the $D$ state. Now, under the condition that the photon is transmitted or the quantum measurement was successful, we have a similar situation at the last $V$ polarizer:
+and the transmitted photon will be in the $D$ state. Now, under the condition that the photon is transmitted or the quantum measurement was successful, we have a similar situation at the last $V$ polarizer:
 
 $$|\langle V \mid D\rangle|^2
 = \left| \langle V \mid \frac{1}{\sqrt{2}}(| H \rangle+| V\rangle) \right|^ 2=\frac{1}{2}

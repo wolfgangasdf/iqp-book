@@ -4,7 +4,8 @@
 
 ### idea
 * the script/book contains everything - text close to what said in video, and equations and plots needed for slides.
-* record video based on script, then make slides, and put video of me on the slides and record slideshow and combine into final video.
+* make slides before video, making slides checks the storyline.
+* record video based on script, and put video of me on the slides and record slideshow and combine into final video.
 * "playing" the slideshow while seeing my video is super easy, if there are changes have to do again in any case.
 
 ### record video 
@@ -48,7 +49,9 @@ e.g. with kdenlive https://kdenlive.org/ :
 * project->render, render to file
 
 
-## building the book
+## the iqp-book
+
+It is made using [Jupyter Book](https://jupyterbook.org/). I wonder if not everything would be easier with the several decades old [texmacs](https://www.texmacs.org/)...
 
 ### install stuff in addition to anaconda
 conda install is heavily broken, use pip!

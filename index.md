@@ -1,6 +1,6 @@
 # Introduction
 
-*Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the Leiden/Delft MSc programme Quantum Information Science and Technology QIST.
+*Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the Leiden/Delft MSc programme Quantum Information Science and Technology QIST. It is not a complete quantum mechanics course but meant as a brief recap, or overview - hopefully toughing upon all necessary topics needed for QIST.
 
 The script here is very talkative because it's also the script for the videos. The teaching method might change in future, so this might change, too.
 

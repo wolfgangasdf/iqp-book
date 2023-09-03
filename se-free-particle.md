@@ -10,7 +10,7 @@ kernelspec:
     name: python3
 ---
 
-# Free particle
+# A free quantum particle
 
 In this section, we introduce the concept of a wave and a wave function for particles, derive a differential equation describing the dynamics of such waves, and investigate how such wavefunctions should look alike if they should describe particles.
 
@@ -70,7 +70,7 @@ If we multiply these uncertainties we obtain $\Delta x\Delta p\approx h$, theref
 
 Two notes: first, this is the maximum precision so we better write $\Delta x\Delta p\ge\ h$, and second, the precise numeric value on the right-hand side depends on the specific waveform of our wavefunction.
 
-The condition for the wavepacket to describe a moving quantum particle is that the group velocity of the packet is equal to the velocity of a particle with mass $m$ and momentum $p\ =\hbar k$.
+We will come back to the Heisenberg uncertainty principle later in this course.
 
 ## The Schrödinger equation
 
@@ -78,6 +78,7 @@ The condition for the wavepacket to describe a moving quantum particle is that t
 `[slide]`
 
 In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find $d\omega/dk\ =\hbar k/m$, which by integrating results in the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a wave equation that obeys this dispersion relation. 
+<!-- TODO: not very clear -->
 
 The skilled eye will see that the equation  
 
@@ -95,7 +96,11 @@ $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is called a plane wave moving 
 <!-- Quick question: verify that real functions Acos(k x – w t) and Asin(k x – w t) are not solutions – remind yourselves of Euler’s formula. -->
 <!-- Ph problem 2.3 -->
 
-## Possible wavefunctions
+:::{note}
+Plot the plane wave amplitude and phase in 2 dimensions for specific wave vector and frequency, and think about its properties!
+:::
+
+## Plane-wave superpositions and wavepackets
 
 `[slide]`
 
@@ -105,11 +110,11 @@ Since $\Psi$ appears only linearly (no powers) in the differential equation, we 
 Quick question: confirm that $\Psi(x,t)=A_1 e^{i(k_1x-\omega_1 t)}+A_2 e^{i(k_2x-\omega_2 t)}$ is also a solution. 
 :::
 
-The most general solution of our one-dimensional Schrödinger equation is a superposition of complex-exponential waves with many angular frequencies and wavenumbers: 
+It turns out that our plane waves form a complete orthogonal basis to describe, in our case, one-dimensional functions, but this also holds for 3 dimensions. Therefore, the most general solution of our one-dimensional Schrödinger equation is a superposition of complex-exponential waves with many angular frequencies and wavenumbers: 
 
 $$\Psi\left(x,t\right)=\ \sum_{n=1}^{\infty}{A_n(k_n)e^{i\left(k_nx-\omega_nt\right)}}$$(se-fp-wf)
 
-where $\hbar\omega_n=\frac{\hbar^2k_n^2}{2m}$. If $A_n(k_n)$ is such that the sum involves only a narrow range of wave numbers around a positive value $k$, this superposition yields a wave packet moving in the positive $x$ direction with a group velocity $\hbar k/m$. In free space, such a wave packet describes a quantum particle moving at velocity $\hbar k/m$, preserving shape during propagation, but the position and momentum uncertainties are in agreement with the Heisenberg uncertainty principle as explained before.
+where $\hbar\omega_n=\frac{\hbar^2k_n^2}{2m}$. If $A_n(k_n)$ is such that the sum involves only a narrow range of wave numbers around a positive value $k$, this superposition yields a **wave packet** moving in the positive $x$ direction (group) velocity $v=\hbar k/m$, preserving shape during propagation. The position and momentum uncertainties are in agreement with the Heisenberg uncertainty principle at all times as explained before.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]

@@ -19,9 +19,9 @@ In this section, we briefly outline the key experimental observations more than 
 
 `[slide]`
 
-Light has already long ago, since Newton, been postulated to consist of light particles but in a wrong way. More often it was thought to consist of electromagnetic waves since interference effects are evident even in every-day physics, think of the color of soap bubbles. In 1900, Max Planck published a theory of black-body radiation – this is about thermal radiation in equilibrium with a perfectly absorbing body – despite not black, the sun is to a good degree such a black body. The spectra of black body ratiation could not be explained with classical light waves only - as shown in the figure classical models predict a divergence of the emission towards short wavelengths. 
+Already long ago, since Newton, light has been postulated to consist of light particles. But, more often light was thought to consist of electromagnetic waves since interference effects are evident even in every-day physics, think of the color of soap bubbles. In 1900, Max Planck published a theory of black-body radiation. It was known that hot materials such as a glowing piece of metal emit light, and in a so-called *black body*, thermal radiation is in equilibrium with the body. Our sun is such a black body, and it is quite easy to measure the spectrum of the sun, that is the color- or frequency dependent intensity. These spectra of black body ratiation could not be explained with classical light waves - as shown in the figure, the classical *Rayleigh-Jeans* model predicts a divergence of the intensity towards short wavelengths which is clearly in contradiction to the yellow color of the sun. 
 
-Only after Planck and others assumed that atoms emit and absorb discrete quanta of radiation, this issue was solved and the models resulted in the observed spectra, for instance from the sun. The quanta or photons have an energy $E=hf$, where $f$ is the frequency of the radiation and $h$ is a fundamental constant of nature, the Planck constant with a value of $h=6.626\cdot 10^{-34}\,\mathrm{J s}$.
+Only after Planck and others assumed that atoms emit and absorb discrete quanta of radiation, this issue was solved and the models resulted in the observed spectra. These quanta or photons have an energy $E=hf$, where $f$ is the frequency of the radiation and $h$ is a fundamental constant of nature, the Planck constant with a value of $h=6.626\cdot 10^{-34}\,\mathrm{J s}$.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -53,7 +53,7 @@ glue("b-planck", fig, display=False)
 
 (b-planck)=
 ```{glue:figure} b-planck
-Optical spectra of blackbody radiators for different temerpatures, comparing the non-quantum Rayleigh-Jeans model to the Planck model.
+Optical spectra of blackbody radiators for different temperatures, comparing the non-quantum Rayleigh-Jeans model to the Planck model.
 ```
 
 
@@ -102,7 +102,7 @@ Let us look at some numbers, for instance for a candle. A candle emits 1 *candel
 Nowadays we have access to arrayed cameras which have a noise level low enough to observe the absorption of single photons. This allows us to repeat known wave-optical experiments but see photons arriving one by one, if the light source is weak enough. 
 Let's look at a classical interference experiment, the double-slit experiment. Here, a coherent laser source impinges on two narrow slits and far away an interference pattern can be observed:
 
-We show in an exercise how this pattern can be calculated – for now it is enough to realize that the Huygens elementary waves emerging from the two slits have a path length difference that is proportional to $x$ and as a function of $x$, interference changes between destructive and constructive, therefore the wavy pattern visible on the right appears with intensity $I=E^2=\sin^2(c x)$ where $c$ depends on the parameters of the experiment.
+We show in an exercise how this pattern can be calculated – for now it is enough to realize that the Huygens elementary waves emerging from the two slits have a path length difference that is proportional to $x$ and, as a function of $x$, interference changes between destructive and constructive, therefore the wavy pattern visible on the right appears!
 
 Note that this is a wave-optical interference experiment and works in principle equally well for water waves.
 
@@ -133,6 +133,9 @@ def ds(th,lam,b,d):
 yds=ds(y/xs,0.2,0.1,2)
 ax.plot(xs+0.2+yds,y,color="darkorange") 
 ax.fill_betweenx(y, xs+0.2+yds,xs+0.2,color="orange") 
+ax.plot([0,xs],[-1,1.2],':',color="gray")
+ax.plot([0,xs],[1,1.2],':',color="gray")
+ax.text(xs,4.1,"x",fontsize=15)
 ax.set_xlim([-3,13])
 ax.set_ylim([-5,5])
 ax.axis("off")
@@ -150,9 +153,11 @@ In the double-slit experiment, a coherent wave is incident from the left, excite
 
 `[slide]`
 
-Now we use our single-photon sensitive camera for detection. We see that each photon is detected at one specific position – but this position is largely random, however, if we wait and collect enough data we see that the probability follows the intensity distribution: $P(x)$ is like the intensity before $I(x)$ – which is the square of the electric field – as we see later, we can see the dimensionless and normalized $E(x)$ as the quantum wavefunction of photons – $\psi(x)$!
-Note that the interference pattern disappears if one of the two slits is blocked – therefore the “photon” wave must have gone through both slits at once.
-The double slit experiment with single-photon detection shows (i) quantum superpositions, that waves from one slit and the other perform quantum interferences, and (ii) that the wavefunction of a photon is truly non-local, it is nonzero for different positions. This sounds trivial here but becomes very fundamental if we take the particle aspect seriously – quantum nature is “nonlocal”, in contrast to our everyday experience of the “classical world”.
+Now we use our single-photon sensitive camera for detection. We see that each photon is detected at one specific position, most clear on the right for $N=100$ photons. The individual position of the detected photons appears largely random, however, if we wait and collect more photons we see that the probability follows the intensity distribution from the classical experiment before!
+
+We see that the probability distribution to detect a photon at a position $x$, $P(x)$, has the same shape as the intensity $I(x)$ before. The intensity is the square of the electric field $E(x)$, and analogous, the photon detection probability distribution is the square of the the quantum wavefunction of photons – $\psi(x)$, as you will see later in more detail.
+
+It is also important to realize that, as in the classical case, the interference pattern disappears if one of the two slits is blocked – therefore the *photon wave* must have gone through both slits at once. The double slit experiment with single-photon detection shows (i) quantum superpositions, that waves from one slit and the other perform quantum interferences, and (ii) that the wavefunction of a photon is truly non-local, it is nonzero for different positions. This sounds trivial here but becomes very fundamental if we take the particle aspect seriously – quantum nature is “nonlocal”, in contrast to our everyday experience of the “classical world”. This coexistence of wave and particle properties is called *wave-particle duality*.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -202,27 +207,27 @@ glue("b-dssp", fig, display=False)
 
 (b-dssp)=
 ```{glue:figure} b-dssp
-If we use a single-photon sensitive camera, we can see the build-up of the interference pattern - before being detected at a particular position, each photon's wavepacket must have passed both slits, otherwise the interference pattern would not be visible.
+If we use a single-photon sensitive camera, we can see the build-up of the interference pattern - but before being detected at a particular position, each photon's wavepacket must have passed both slits, otherwise the interference pattern would not be visible.
 ```
 
 `[slide]`
 
-At the beginning of the 20th century, it was not clear that such interference doesn’t happen also for objects that people call particles. Nowadays, electron diffraction is observed regularly in transmission electron microscopes, neutrons are diffracted in crystals, and in dedicated experiments physicists have observed interference of buckeyballs (C60), many different molecules up to around 15000 atoms. 
+At the beginning of the 20th century, it was not clear that such interference doesn’t happen also for objects that people call particles. Nowadays, electron diffraction is observed regularly in transmission electron microscopes, neutrons are diffracted in crystals, and in dedicated experiments physicists have observed interference of buckeyballs (C60), and many different molecules up to around 2000 atoms. 
 
-It is the theory of quantum mechanics that allows description of all these exciting experiments. There is a world-wide effort in increasing the size and mass of such “massive quantum superpositions” – we will see that the bigger the system gets, the harder is to exclude known reasons why we don’t see quantum interference – but currently the question why I find myself never in a spatial quantum superposition is not fully answered. The reason might lie that we don’t know how gravity acts in the quantum domain – we don’t have a quantum theory of gravity yet.
+It is the theory of quantum mechanics that allows description of all these exciting experiments. There is a world-wide effort in increasing the size and mass of such “massive quantum superpositions” – we will see that the bigger the system gets, the harder it is to exclude known reasons why we don’t see quantum interference. We have good theories and models explaining why I find myself never in a spatial quantum superposition, but for smaller massive particles say of one micro meter, the case is less clear. The reason might lie in the fact that we don’t know how gravity acts in the quantum domain – we don’t have a quantum theory of gravity yet.
 
 ```{figure} figures/basics/fein2019.png
 ---
 name: macromolecule-interference
 ---
-Double-slit like interference of a macromolecule. This experiment done in M. Arndt's group in Vienna has around 2000 atoms and a mass of more than 25,000 Da - and it behaves quantum mechanically if everything is controlled very carefully. Image from [Fein et al., Nat. Phys. 15, 1242 (2019)](https://doi.org/10.1038/s41567-019-0663-9).
+Double-slit like interference of a macromolecule. This experiment done in M. Arndt's group in Vienna uses molecules consisting of around 2000 atoms and a mass of more than 25,000 Da - and it behaves beautifully quantum mechanically if everything is controlled very carefully. Image from [Fein et al., Nat. Phys. 15, 1242 (2019)](https://doi.org/10.1038/s41567-019-0663-9).
 ```
 
 ## Atomic emission lines
 
 `[slide]`
 
-Another strong indication that electrons also have wave character came from observing emission from molecular gasses and atomic vapour such as sodium. Physicists observe narrow bright “lines” and not a continuous emission spectrum as expected from black body radiation. Now, it turns out that these emission frequencies can be explained by assuming that the electron is described by a wave where allowed energies correspond waves with particular radii such that the electron wave repeats itself after one round trip., in the Born picture one calculates simply for which electron energies one obtains constructively interfering orbits of the electron and finds good agreement to experimental data.
+Another strong indication that electrons also have wave character came from observing emission from molecular gasses and atomic vapour such as sodium. Physicists observe narrow bright “lines” and not a continuous emission spectrum as expected from black body radiation. Now, it turns out that these emission frequencies can be explained by assuming that the electron is described by a wave circling around the atom nucleus, and that allowed energies correspond to waves with particular radii such that the electron wave repeats itself after one round trip: The so-called Bohr model. With this simple and as you will later see very crude picture, one finds good agreement to experimental data!
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -288,7 +293,7 @@ If electrons are waves around the core of an atom, only particular wavelengths l
 
 The underlying physics of all these phenomena will be explained in this course. Moreover, we will also show that quantum mechanics is needed to understand why atoms are stable in the first place, why the electron *does not fall* into the atomic nucleus.
 
-## The two "quantizations"
+## The two quantizations
 
 `[slide]`
 
@@ -298,7 +303,7 @@ The **first quantization** is the realization that we have to describe objects w
 
 But how do we get the quantum into light waves?
 
-This is described by the **second quantization**, where wave fields become (again) quantized, for instance, by deriving a model where a light wave field can be excited with a single photon. Note, currently we think that the 2nd quantization is essential to build quantum machines which can do something really exciting - but this is still not fully known.
+This is described by the **second quantization**, where wave fields become (again) quantized, for instance, by deriving a model where a light wave field can be excited with a single photon. Note, currently we think that the 2nd quantization is essential to build quantum machines which can do something really exciting.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
