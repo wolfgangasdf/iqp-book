@@ -25,7 +25,7 @@ As an interesting side note, in principle one can do universal quantum computati
 ## Fundamental particles and composite systems
 `[slide]`
 
-For quantum technologies, very important is the understanding of the quantum behaviour of fundamental particles, how they can be controlled on the quantum level. In this course, we will study the quantum behaviour of free electrons and other massive particles like neutrons and protons, electrons bound in potential wells and atoms like the hydrogen atom, the angular momentum degree of freedom, and in particular the “spin” of electrons and other fundamental particles.
+For quantum technologies, very important is the understanding of the quantum behaviour of fundamental particles, how they can be controlled on the quantum level. In this course, we will study the quantum behaviour of free electrons and other massive particles like neutrons and protons, electrons bound in potential wells and atoms like the hydrogen atom - those are shown in the figure. Besdides that we will study the angular momentum degree of freedom, and in particular the “spin” of electrons and other fundamental particles.
 
 Which particles are useful for quantum technologies depends on our ability to isolate them from the environment, and the ability to control quantum states, but to figure this out, first their behaviour on the quantum level must be understood. 
 

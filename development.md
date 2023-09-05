@@ -6,38 +6,39 @@
 * the script/book contains everything - text close to what said in video, and equations and plots needed for slides.
 * make slides before video, making slides checks the storyline.
 * record video based on script, and put video of me on the slides and record slideshow and combine into final video.
-* "playing" the slideshow while seeing my video is super easy, if there are changes have to do again in any case.
 
 ### record video 
-use macbook on eye height, bluetooth mouse to scroll (read from top of screen). best greenscreen behind but not needed
-
-use macbook cam, but better microphones (stereo!) if possible!
+* use macbook pro on eye height, bluetooth mouse to scroll (read from top of screen). best greenscreen but not needed
+* macbook pro m1 microphones & camera is sufficient at 1-2m distance
+* make sure the audio is strong enough (system prefs)
 
 #### DONT FORGET
 * make introduction, "in this video..."
-* probably add to script same but with "in this section"...
-* if something won't fit on the slide, anticipate another slide, say "now we have a look at..."
-* directly make slides from script afterwards, remember 
-order etc!
-* script should contain everything needed. on slides, use bullet points and not text, of course.
+* never say left/right figure, on slides it's different.
 
-### overlay video with obs
+### overlay video with OBS
 https://obsproject.com/
 
-Open powerpoint, present to window, start presentation. can even use rather small window, resolution retina enough!
+Powerpoint: 
+* preferences, slideshow -> disable navigation things, use right-click instead
+* present normally (in-window has no presenter view). right-click -> "use presenter view" even without 2nd screen, slideshow is on hidden window.
 
-Now in obs: 
-* obs: DnD video of me to sources
+Now in OBS: 
+* settings -> video
+  * video base: 1920x1080 (16:9) since slides are in 16:9
+  * output: select mp4 format...
+* DnD video of me to sources
     opt+cmd -> crop, resize, move to correct position
 * video -> filters
   * either clever background removal [install this](https://github.com/royshil/obs-backgroundremoval)
   * or with green screen: chroma key, works out of the box.
-* audio:
-    * settings -> enable "monitor and output" for the video
+* audio settings:
+    * video: enable "monitor and output", also amplify if needed (upper end of green)
     * disable audio recording/output for screen capture & mic (click speaker->red)
 * add source: macos window capture -> powerpoint  presentation, resize and order to background
     * decide if capture cursor or not.
-* start recording, restart video playback (bug that needed?), switch to powerpoint presentation, click through...
+    * filters -> crop/pad, top/bottom 90/90 (from macbook screen to 16:9)
+* start recording, restart video playback (bug that needed?), switch to powerpoint presenter view, click through...
 
 
 ### cut final video

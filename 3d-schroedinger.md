@@ -10,15 +10,15 @@ kernelspec:
     name: python3
 ---
 
-# Quantum mechanics in 3D
+# The Schrödinger equation in 3D
 
-In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary radially-symmetric potentials. We will see that restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
+In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary radially-symmetric potentials. We will see that certain restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
 
 ## The Schrödinger equation in 3D
 
 `[slide]`
 
-It is now time to extend our formulation of the Schrödinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the Hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
+It is now time to extend our formulation of the Schrödinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
 
 In classical mechanics in 3 dimensions, we simply add up the kinetic energies for the 3 spatial simensions. We do the same in quantum mechanics, the Hamilton operator was in 1D
 
@@ -32,13 +32,13 @@ $$
 H=-\frac{\hbar}{2m}\ \left(\frac{\partial^2}{\ \partial x^2}+\frac{\partial^2}{\partial y^2\ }+\frac{\partial^2}{\ \partial z^2}\right)+V(x,y,z)
 $$(3d-s-2)
 
-The expression in brackets has a name, it is called the Laplace operator Delta since it is so useful in physics. This operator is the square of the nabla operator $\nabla$, sometimes called *del*, which is a vector containing the first derivaties:
+The expression in brackets has a name, it is called the Laplace operator $\Delta$ since it is so useful in physics. This operator is the square of the nabla operator $\Delta=\nabla^2$, $\nabla$ is sometimes also called *del*, which is a vector containing the first derivaties:
 
 $$
 \nabla=\left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}  \right)
 $$(3d-s-3)
 
-The nabla operator is ues to calculate the gradient of a scalar field or the divergence of a vector field.
+The nabla operator is used many times in physics, for instance to calculate the gradient of a scalar field or the divergence of a vector field.
 
 With this, we can write the Hamilton operator in 3D even shorter:
 
@@ -50,15 +50,15 @@ $$(3d-s-4)
 
 `[slide]`
 
-Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates, where we can use this identity for the square of the nabla operator:
+Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates - since this coordinate system better represents the radial symmetry of our potential. The spherical coordinates are the radius $r$, the polar angle $\theta$ and the azimuthal angle $\phi$. We first look up the square of the nabla operator in spherical coordinates:
 
 $$
 \nabla^2=\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)
 $$(3d-s-5)
 
-It is actually quite easy to convince yourself that this is how it needs to be - for instance if the operator is applied to a function that is varying only as a function of the azimuthal angle $\phi$. The same change as a function of cartesian distance appears to be much faster in spherical coordinates if the object is further away, and since the Laplacian should give us kinetic energy which doesn't depend on coordinate system choices, we need to divide by $r^2$ in the last term.
+It is actually quite easy to convince yourself that this is how it needs to be - for instance if the operator is applied to a function that is varying only as a function of the azimuthal angle $\phi$. The same change appears to be faster if the object is further away, and since the Laplacian should give us kinetic energy which does not depend on the chosen coordinate system, we need to divide by $r^2$ in the last term.
 
-The time independent Schrödinger equation then becomes
+The time-independent Schrödinger equation then becomes
 
 $$
 -\frac{\hbar}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=0
@@ -89,7 +89,7 @@ $$
 $$(3d-s-9)
 
 
-We see that the first term in curly brackets only depends on the radial coordinate $r$, while the second term only on the angular coordinates $\theta$ and $\phi$. Therefore, both parts must be individually constant and their negatives, we choose as the constant for the left part $\ell(\ell+1)$, therefore $-\ell(\ell+1)$ for the right part. We will see later why we choose this.
+We see that the first term in curly brackets only depends on the radial coordinate $r$, while the second term only on the angular coordinates $\theta$ and $\phi$. Therefore, both parts must be individually constant and add up to zero, so the negative of each other. We choose as the constant for the left part $\ell(\ell+1)$, therefore $-\ell(\ell+1)$ for the right part. This is not restricting generality for now as $\ell$ can be any complex number.
 
 ## The azimuthal part
 
@@ -143,7 +143,7 @@ An azimuthal wave function that repeats itself after one round trip.
 
 `[slide]`
 
-One can also solve the polar part, where we don't show the derivation - see Griffiths Chapter 4.1 for more details. At the end, we obtain the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
+One can also solve the polar-azimuthal part, again by looking up or solving the polar differential equation yourselves, see Griffiths Chapter 4.1 for more details. At the end, the solutions turn out to be the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
 
 $$
 Y_{\ell}^m(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^m(\cos \theta)
@@ -151,10 +151,10 @@ $$(3d-s-12)
 
 where $P_{\ell}^m$ are the *associated Legendre polynomials*. In the derivation, $\ell$ appears as the $\ell$-th partial derivative, so $\ell$ must be a non-negative integer number.
 
-One also obtains a more strict condition on $m$ and we have:
+One also obtains a more strict condition on $m$ and we have in the end:
 
 $$
-\ell=0,1,\ldots\quad\text{and}\quad m=\ell,-\ell+1,\ldots,\ell
+\ell=0,1,\ldots\quad\text{and}\quad m=-\ell,-\ell+1,\ldots,\ell
 $$(3d-s-13)
 
 Later we will see that $\ell$ is associated with the total angular momentum of the state, and $m$ the projection of the angular momentum along a particular axis.
@@ -180,7 +180,7 @@ $$(3d-s-15)
 It is attractive so it counteracts the centrifugal term before - even more, if we study the effective potential with the $\ell$-term, if $\ell>0$, we see that for very small distances the effective potential results in a repulsive force - preventing the electron to fall into the core!
 
 
-## The Hydrogen atom
+## The hydrogen atom
 
 `[slide]`
 
@@ -190,7 +190,7 @@ $$
 E_n=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right] \frac{1}{n^2}=\frac{E_1}{n^2}, \quad n=1,2,3, \ldots
 $$(3d-s-16)
  
-which is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the Hydrogen atom:
+which is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the hydrogen atom:
 
 $$
 a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{m_e e^2}=0.529 \times 10^{-10} \mathrm{~m}
@@ -218,7 +218,7 @@ $$
 \ell=0,\ldots,n-1
 $$(3d-s-19)
 
-Finally, we can derive a single equation describing the wavefunction of the electron in the Hydrogen atom (where $L$ are the associated Laguerre polynomials):
+Finally, we can derive a single equation describing the wavefunction of the electron in the hydrogen atom (where $L$ are the associated Laguerre polynomials):
 
 $$
 \psi_{n \ell m}=\sqrt{\left(\frac{2}{n a}\right)^3 \frac{(n-\ell-1) !}{2 n(n+\ell) !}} e^{-r / n a}\left(\frac{2 r}{n a}\right)^{\ell}\left[L_{n-\ell-1}^{2 \ell+1}(2 r / n a)\right] Y_{\ell}^m(\theta, \phi)

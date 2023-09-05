@@ -177,7 +177,7 @@ Quantum mechanics predicts that this simply can't be done - and this agrees very
 <!-- [G4.3.2] -->
 `[slide]`
 
-Now we want to derive the eigenfunctions of the orbital angular momentum operators, in particular again for the electron of the Hydrogen atom. We first write the operators in spherical coordinates, we had $\mathbf{L}=-i \hbar(\mathbf{r} \times \boldsymbol{\nabla})$ with nabla operator in spherical coordinates:
+Now we want to derive the eigenfunctions of the orbital angular momentum operators, in particular again for the electron of the hydrogen atom. We first write the operators in spherical coordinates, we had $\mathbf{L}=-i \hbar(\mathbf{r} \times \boldsymbol{\nabla})$ with nabla operator in spherical coordinates:
 
 $$
 \nabla=\hat{r} \frac{\partial}{\partial r}+\hat{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}+\hat{\phi} \frac{1}{r \sin \theta} \frac{\partial}{\partial \phi}

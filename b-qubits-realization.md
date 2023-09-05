@@ -38,17 +38,17 @@ $$
 \vec{E}=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=\ E_0\left( E_H\left(\begin{matrix}1\\0\\\end{matrix}\right)+E_V\left(\begin{matrix}0\\1\\\end{matrix}\right) \right)
 $$(b-qr-01)
 
-Here we have absorbed the electric-field units into $E_0$, and $E_H$ and $E_V$ are dimensionless complex coefficients.
+Here we have absorbed the electric-field units into $E_0$, and $E_H$ and $E_V$ are dimensionless coefficients. This is shown in the figure, but note that in general these coefficients can be complex.
 
 Now to the quantum state, the Psi ket-vector. By analogy, the dimensionless polarization vector is simply our qubit state vector, with the basis states H and V, where we assume normalization $|E|=1$:
 
 $$\left|\Psi\right\rangle=\left(\begin{matrix}E_H\\E_V\\\end{matrix}\right)=E_H\left|H\right\rangle+E_V\left|V\right\rangle$$(b-qr-02)
 
-$E_H$ and $E_V$ are truly quantum amplitudes, where the squared amplitude gives the probability to measure the specific state. This is very similar to polarization in optics, where we often can not measure directly the electric field, but detectors measure the intensity, which is $I=\vec{E}^2=\vec{E}\cdot \vec{E}$. This can again be written in the bra-ket notation where  $\left\langle E\right|$ is the complex transpose of ket $\left|E\right\rangle$, with this we can mathematically correct calculate quantum state overlaps, as an example, we can express the normalization condition like this:
+$E_H$ and $E_V$ are truly quantum amplitudes, where the squared amplitude gives the probability to measure the specific state. This is very similar to polarization in optics, where we often can not measure directly the electric field, but detectors measure the intensity, which is $I=\vec{E}^2=\vec{E}\cdot \vec{E}$. This can again be written in the bra-ket notation where  $\left\langle \Psi\right|$ is the complex transpose of ket $\left|\Psi\right\rangle$, with this we can mathematically correct calculate quantum state overlaps, as an example, we can express the normalization condition like this:
 
 $$\left\langle\Psi | \Psi\right\rangle=\left(\begin{matrix}
-E_x^*,\, E_y^*\end{matrix}\right)
-\cdot\left(\begin{matrix}E_x \\E_y\end{matrix}\right)=E_x^* E_x+E_y^* E_y=\left|E_x\right|^2+\left|E_y\right|^2=1$$(b-qr-03)
+E_H^*\; E_V^*\end{matrix}\right)
+\cdot\left(\begin{matrix}E_H \\E_V\end{matrix}\right)=E_H^* E_H+E_V^* E_V=\left|E_H\right|^2+\left|E_V\right|^2=1$$(b-qr-03)
 
 
 
@@ -242,7 +242,7 @@ $$(b-malus)
 
 which is known as Malus law in optics. Now, for a single photon and since everything is normalized here, this dimensionless transmitted intensity directly corresponds to the propability that this photon is transmitted. Therefore, we can say that the combination of the polarizer and the detector does a quantum measurement on the incident quantum state!
 
-In the bra-ket formalism, we can describe quantum measurements, the probability that a detector that detects state $|\psi_{meas}\rangle$ clicks for a state $|\psi\rangle$ is 
+In the bra-ket formalism, we can describe quantum measurements, the probability that a detector that detects state $|\psi_{\text{detector}}\rangle$ clicks for a state $|\psi\rangle$ is 
 
 $$
 P_{click}=\left|\left\langle\Psi_{\text {detector }} \mid \Psi\right\rangle\right|^2
@@ -256,7 +256,7 @@ $$(b-qr-04)
 
 if the detector is oriented with 45 degree with respect to the incident polarization. In this case, the detector will click with 50% probability.
 
-In our polarization example here it is quite obvious, that after the measurement polarizer, if the photon has passed through, it is polarized along the detector polarization. This is in fact a useful postulate of quantum mechanics, that after a successful measurement of $|\psi_{meas}\rangle$, the state of the system will be in that particular state!
+In our polarization example here it is quite obvious, that after the measurement polarizer, if the photon has passed through, it is polarized along the detector polarization. This is in fact a useful postulate of quantum mechanics, that after a successful measurement of $|\psi_{\text{detector}}\rangle$, the state of the system will be in that particular state!
 
 
 

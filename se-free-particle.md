@@ -158,5 +158,5 @@ The real-space (left) and wavevector-space (right) wavepacket envelope of a spat
 The figure shows two examples of a wavefunction, one more narrow and one wider in real space - we see what the Heisenberg uncertainty principle implies: If a wavepacket is more localized in real space, it is wider in momentum space. This is because there are fewer oscillations in the narrower wavepacket, therefore the frequency or momentum of the wave is less good defined. This is what the frequency spectrum shows us.
 
 :::{note}
-Think where and why the [Heisenberg microscope](https://en.wikipedia.org/wiki/Heisenberg%27s_microscope) does falls short in explaining the essence of the Heisenberg uncertainty relation!
+Think where and why the [Heisenberg microscope](https://en.wikipedia.org/wiki/Heisenberg%27s_microscope) falls short in explaining the essence of the Heisenberg uncertainty relation!
 :::
