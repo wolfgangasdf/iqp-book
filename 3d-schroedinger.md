@@ -12,7 +12,7 @@ kernelspec:
 
 # The Schrödinger equation in 3D
 
-In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary radially-symmetric potentials. We will see that certain restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
+In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary rotation-symmetric or spherically symmetric potentials, potentials which depend only on the radial coordinate. We will see that certain restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
 
 ## The Schrödinger equation in 3D
 
@@ -50,7 +50,74 @@ $$(3d-s-4)
 
 `[slide]`
 
-Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates - since this coordinate system better represents the radial symmetry of our potential. The spherical coordinates are the radius $r$, the polar angle $\theta$ and the azimuthal angle $\phi$. We first look up the square of the nabla operator in spherical coordinates:
+Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates - since this coordinate system better represents the spherical symmetry of our potential. The spherical coordinates are the radius $r$, the polar angle $\theta$ and the azimuthal angle $\phi$, as indicated in the figure. 
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+# 3d arrows, omg - https://stackoverflow.com/a/74122407
+from matplotlib.patches import FancyArrowPatch
+from mpl_toolkits.mplot3d import proj3d
+class Arrow3D(FancyArrowPatch):
+    def __init__(self, xs, ys, zs, *args, **kwargs):
+        super().__init__((0,0), (0,0), *args, **kwargs)
+        self._verts3d = xs, ys, zs
+    def do_3d_projection(self, renderer=None):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        return min(zs)
+arrow_prop_dict = dict(mutation_scale=20, linewidth=3, arrowstyle='-|>', shrinkA=0, shrinkB=0)
+def pol2cart(r, theta, phi):
+    theta=pi/2+theta
+    return [r * sin(theta) * cos(phi),r * sin(theta) * sin(phi),r * cos(theta)]
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+ax.set_aspect("equal")
+ax.set_axis_off()
+ax.view_init(elev=10, azim=20, roll=0)
+rr=1.5
+ax.add_artist(Arrow3D([-rr, rr], [0, 0], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
+ax.add_artist(Arrow3D([0, 0], [-rr, rr], [0, 0], **(arrow_prop_dict | dict(color="0.2"))))
+ax.add_artist(Arrow3D([0, 0], [0, 0], [-rr, rr], **(arrow_prop_dict | dict(color="0.2"))))
+ax.text3D(rr,-0.2,0.0,"$x$", fontsize=15)
+ax.text3D(0,rr,0.1,"$y$", fontsize=15)
+ax.text3D(rr,0.2,rr,"$z$", fontsize=15)
+thax=linspace(-pi,pi,50);
+fiax=linspace(0,2*pi,50)
+for fi in linspace(0,2*pi,10):
+    c1=pol2cart(1,thax,fi)
+    ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
+for th in linspace(-pi,pi,10):
+    c1=pol2cart(1,th,fiax)
+    ax.plot(c1[0], c1[1], c1[2], color="0.5", alpha=0.5)
+c1=pol2cart(1,-pi/4,pi/3)
+ax.add_artist(Arrow3D([0,c1[0]],[0,c1[1]],[0,c1[2]], **(arrow_prop_dict | dict(color="r"))))
+ax.text3D(0,0.25+c1[0],0.25+c1[2],r"$\vec{r}(r,\theta,\phi)$", fontsize=20, color='r')
+ax.plot([0,c1[0]], [0,c1[1]], [0,0], color="k")
+ax.plot([c1[0],c1[0]], [c1[1],c1[1]], [0,c1[2]], color="k")
+c1=pol2cart(0.7,0,linspace(0,pi/3,10))
+ax.plot(c1[0], c1[1], c1[2], color="orange", alpha=1)
+ax.text3D(0,0.1,0.8,r"$\theta $", fontsize=20, color="black")
+c1=pol2cart(0.7,linspace(-pi/2,-pi/4,10),pi/3)
+ax.plot(c1[0], c1[1], c1[2], color="orange", alpha=1)
+ax.text3D(0.2,0.2,-0.3,r"$\phi $", fontsize=20, color="black")
+ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
+plt.show()
+
+glue("3d-sphc", fig, display=False)
+```
+
+(3d-sphc)=
+```{glue:figure} 3d-sphc
+The qubit Bloch sphere with a particular qubit state, indicated by the so-called Blochvector.
+```
+
+
+We first look up the square of the nabla operator in spherical coordinates:
 
 $$
 \nabla^2=\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)
@@ -107,7 +174,7 @@ $$
 \frac{d^2 \Phi}{d \phi^2}=-m^2 \Phi \Rightarrow \Phi(\phi)=e^{i m \phi}
 $$(3d-s-11)
  
-Due to the periodicity of the azimuthal coordinate $\phi=\phi+2\pi$, we obtain that $m$ must be an integer number $0, \pm1, \ldots$ With this, we have found our first **quantum number** describing our system! Note, we have only assumed that the potential is centrosymmetric, and already a quantum number appears!
+Due to the periodicity of the azimuthal coordinate $\phi=\phi+2\pi$, we obtain that $m$ must be an integer number $m=0, \pm1, \ldots$ With this, we have found our first **quantum number** describing our system! Note, we have only assumed that the potential is rotationally symmetric, and already a quantum number appears!
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -163,10 +230,10 @@ Later we will see that $\ell$ is associated with the total angular momentum of t
 
 `[slide]`
 
-In order to solve the radial part, we can get insight even before assuming a specific radial centrosymmetric potential. We can simplify this by changing variables with $u(r) \equiv r R(r)$, then we are left with this differential equation: 
+In order to solve the radial part, we can get insight even before assuming a specific radial potential. We can simplify this by changing variables with $u(r) \equiv r R(r)$, then we are left with this differential equation: 
 
 $$
--\frac{\hbar^2}{2m}\ \ \frac{d^2u}{dr^2}+\left[V+\frac{\hbar^2}{2m}\ \frac{l\left(l+1\right)}{r^2}\ \ \right]u=Eu\ 
+-\frac{\hbar^2}{2m}\ \ \frac{d^2u}{dr^2}+\left[V+\frac{\hbar^2}{2m}\ \frac{\ell\left(\ell+1\right)}{r^2}\ \ \right]u=Eu\ 
 $$(3d-s-14)
 
 This is a again a 1D Schrödinger equation, with a radial-position dependent term added to the potential term. This term decreases quickly with radial distance, and it increases with larger $\ell$ or angular momentum - this means this term accellerates the quantum particle outwards, it is also called the centrifugal term. Together with $V$ the term in brackets is called the effective potential. 
@@ -184,48 +251,42 @@ It is attractive so it counteracts the centrifugal term before - even more, if w
 
 `[slide]`
 
-We do not derive the solution of the radial differential equation here, please have a look at Griffiths 4.2 for details. The resulting energies are
+We do not derive the solution of the radial differential equation here, please have a look at Griffiths 4.2 for details. The resulting eigenvalues or energies are
 
 $$
 E_n=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right] \frac{1}{n^2}=\frac{E_1}{n^2}, \quad n=1,2,3, \ldots
 $$(3d-s-16)
- 
-which is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the hydrogen atom:
 
-$$
-a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{m_e e^2}=0.529 \times 10^{-10} \mathrm{~m}
-$$(3d-s-17)
-
-And $E_1$ is a measure of the binding energy of the electron, also called the Rydberg energy:
-
-$$
-E_1=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right]=-13.6\,\mathrm{eV}
-$$(3d-s-18)
-
-```{figure} figures/schroedinger/hydrogen.png
----
-name: se-hydrogen
----
-Possible states for different angular momentum quantum number $\ell$.
-```
-<!-- TODO: redo G4.6 and do I understand it? -->
-
-`[slide]`
-
-We also get a new quantum number $n$ - this describes the energy $E$ which therefore does not depend on $\ell$ or $m$! However, we also get a new restriction on $\ell$:
+These energies are described by a new quantum number $n$ - which describes the energy $E$. The energy does, probably surprisingly, not depend on the other quantum numbers $\ell$ or $m$ - we will see towards the end of this course that there are corrections, but for now only $n$ determines the energy of the electron. We get, however, by properties of the differential equation, a new restriction on $\ell$:
 
 $$
 \ell=0,\ldots,n-1
 $$(3d-s-19)
 
-Finally, we can derive a single equation describing the wavefunction of the electron in the hydrogen atom (where $L$ are the associated Laguerre polynomials):
+The formula for energy means that there is an infinite number of states with negative energy - therefore states where the electron is bound to the nucleus. However, the energies approach $0$ for $n\rightarrow\infty$, therefore an electron in a highly excited state is only weakly bound to the core.
+
+The energy formula is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the hydrogen atom:
+
+$$
+a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{m_e e^2}=0.529 \times 10^{-10} \mathrm{~m}
+$$(3d-s-17)
+
+Further, $E_1$ is a measure of the binding energy of the electron, because it is very important, it is also called the *Rydberg energy*:
+
+$$
+E_1=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right]=-13.6\,\mathrm{eV}
+$$(3d-s-18)
+
+Finally, we can write down a single equation describing the wavefunction of the electron in the hydrogen atom (where $L$ are the associated Laguerre polynomials):
 
 $$
 \psi_{n \ell m}=\sqrt{\left(\frac{2}{n a}\right)^3 \frac{(n-\ell-1) !}{2 n(n+\ell) !}} e^{-r / n a}\left(\frac{2 r}{n a}\right)^{\ell}\left[L_{n-\ell-1}^{2 \ell+1}(2 r / n a)\right] Y_{\ell}^m(\theta, \phi)
 $$(3d-s-20)
 
-The figure shows the energy levels, showing the bound states, and the spacing becomes increasingly small for higher states. For now, the different $\ell$ states are degenerate - you might already guess that this will change if we dive deeper into interactions.
-
+We see that
+* the radial coordinate is re-scaled by the radial quantum number $n$ and the Bohr radius $a$
+* there is a nice separation into radial and angular part
+* The Laguerre polynomials and the normalization factor combines both degrees of freedom
 
 Now, we visualize this and comment on a few properties.
 
@@ -239,13 +300,11 @@ Here we show plots of $|\psi|$ - the norm or square root of the probability dens
 ---
 name: h-wavefunctions
 ---
-Picture of hydrogen wavefunctions, credits to [Qijing Zheng](http://staff.ustc.edu.cn/~zqj/posts/Hydrogen-Wavefunction/). Note that $\ell=l$ here.
+Picture of hydrogen wavefunctions, credits to [Qijing Zheng](http://staff.ustc.edu.cn/~zqj/posts/Hydrogen-Wavefunction/).
 ```
 
 
-
-
-We see that $n$ determines the number of radial nodes which is $n-1$ for $\ell=0$. We also see a rich angular structure, which is key for the directionality of chemical bonds and the formation of molecules.
+We see that the quantum number $n$ determines the number of radial nodes which is $n-1$ for $\ell=0$. For $\ell > 0$, there appears a rich angular structure, which is key for the directionality of chemical bonds and the formation of molecules.
 
 <!-- For exercises: Griffiths problems 4.4, 4.7, 4.9, 4.11 -->
 

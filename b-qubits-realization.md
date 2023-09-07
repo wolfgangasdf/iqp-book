@@ -120,7 +120,7 @@ The other bases, in fact quantum superpositions of the HV-basis, are the DA basi
 $$
 |D/A\rangle=\frac{1}{\sqrt{2}}(|H\rangle\pm|V\rangle)
 =\frac{1}{\sqrt{2}}\left(\begin{matrix}1\\\pm1\\\end{matrix}\right)
-$$(b-qr-1)
+$$(b-qr-1a)
 
 which corresponds to diagonal/antidiagonal linear polarization and 
 

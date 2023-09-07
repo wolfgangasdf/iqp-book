@@ -12,14 +12,14 @@ kernelspec:
 
 # Angular momentum
 
-In this section we discuss the quantum analog of the orbital angular momentum - which will turn out to be equally important in quantum mechanics as it is in celestial mechanics for the orbiting and rotating motion of our earth around the sun.
+We had already mentioned that the quantum number $\ell$ which we found is related to the orbital angular momentum - in this section we discuss this deeper. The quantum analog of the orbital angular momentum will turn out to be equally important in quantum mechanics as the classical version is in celestial mechanics for the orbiting and rotating motion of our earth around the sun.
 
 
 ## Classical angular momentum
 
 `[slide]`
 
-Symmetries in physics lead to conservation laws - for instance, translation symmetry leads to linea momentum conservation - this is the reason why the velocity of a moving body remains constant if no forces act on it. 
+Symmetries in physics lead to conservation laws - for instance, translation symmetry leads to linear momentum conservation - this is the reason why the velocity of a moving body remains constant if no forces act on it. 
 
 Similarly, if a system is rotationally symmetric like a bicycle wheel, the angular momentum is conserved. What is this classical angular momentum? In physics this is explained in classical mechanics courses, here a summary.
 
@@ -28,12 +28,12 @@ For a point mass, the angular momentum is defined by
 $$L=r\times p
 $$(3d-am-1)
 
-where the vector $L$ is the angular momentum, $r$ the position of the mass, and $p$ the linear momentum equal to mass times velocity: $p=mv$. Of course the mass would not follow a circular path - therefore we assume that it is connected to the coordinate system origin by a string:
+Here, the vector $L$ is the angular momentum, $r$ the position of the mass, and $p$ the linear momentum equal to mass times velocity: $p=mv$. Of course the mass would not follow a circular path - therefore we assume that it is connected to the coordinate system origin by a string:
 
 ```{figure} figures/schroedinger/classical-angular-momentum.png
 ---
 name: classical-am
-scale: 50%
+scale: 40%
 ---
 Classical angular momentum.
 ```
@@ -41,19 +41,22 @@ Classical angular momentum.
 The angular momentum is an extensive quantity, so for a composite system and not a point-like particle, it is the sum of the AM of the constituents of the body.
 
 
-## Angular momentum algebra
+## Quantum angular momentum
 
 `[slide]`
 
-We can use again canonical quantization, where the classical quantities are replaced by operators.
+How about the angular momentum of the electron in the quantum case? How does it depend on the quantum numbers that appeared while solving the hydrogen atom problem?
+
+To start, we can use again canonical quantization, where the classical quantities are replaced by operators.
 
 So we have $\hat{L}=\hat{r}\times\hat{p}$, where $\hat{p}=-i\hbar\nabla$ for the (linear) momentum operator using nabla.
 
-We now want to figure out what quantum mechanical momenta are allowed. Similar to the procedure we used for finding solutions and eigenvalues for the 3D Schrödinger equation, we now do the following:
+We now want to figure out what quantum mechanical angular momenta are allowed. Similar to the procedure we used for finding solutions and eigenvalues for the quantum harmonic oscillator, we now do the following:
 
 1. We derive the commutation relations which are more complex because we have 3 components ($x,y,z$) of the AM operator.
-2. We again derive ladder operators which increase or decrease the angular momentum, and derive the commutation relations thereof.
-3. We find the lowest angular momentum state, and then figure out which eigenvalues are allowed.
+2. We derive ladder operators which increase or decrease the angular momentum, and derive the commutation relations of these operators.
+3. We find the highest-energy angular momentum state, and use ladder operators to find all possible eigenstates and energies. By purely algebraic means we therefore find all possible eigenvalues
+4. We find the eigenfunctions, which will allow for comparison to the hydrogen atom.
 
 `[slide]`
 
@@ -81,11 +84,56 @@ This means we can measure those quantities with arbitrary precision at the same 
 
 The ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$. 
 
-We start by defining $\hbar\ell$ as the highest angular momentum state $L_z f_t=\hbar \ell f_t$, then we can calculate the eigenvalue of $L^2$ using the ladder operator algebra and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1)\lambda f_t$. 
+`[slide]`
+
+Similar to the quantum harmonic oscillator, we start by defining $\hbar\ell$ as the highest angular momentum state $L_z f_t=\hbar \ell f_t$, then we can calculate the eigenvalue of $L^2$ using the ladder operator algebra and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1)\lambda f_t$. 
 
 Now we do the same with bottom rung of angular momentum states, and we find that it must have $m=-\ell$. 
 
-So, the eigenstates of $L_z$ are $m\hbar$ where $m$ goes from $-\ell$ to $\ell$ in $N$ integer steps, or $\ell=\ell+N$. Therefore $\ell=N/2$ which means that $\ell$ is either integer or half-integer!
+So, the eigenstates of $L_z$ are $m\hbar$ where $m$ goes from $-\ell$ to $\ell$ in $N$ integer steps. These states are shown in the figure for $\ell=3$, with the $L_z$ eigenvalues, action of the ladder operators, and eigenfunctions $f$.
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+hbar=1
+m=1
+omega=1
+nmax = 7
+def energy(n):
+    return hbar*omega*(1/2+n)
+fig, ax = plt.subplots(figsize=(4,3))
+x = linspace(-5, 5, 500)
+sa=["$f_b$","$L_-^2f$","$L_-f$","$f$","$L_+f$","$L_+^2f$","$f_t$"]
+lz=["$-3\hbar$","$-2\hbar$","$-1\hbar$","$0\hbar$","$1\hbar$","$2\hbar$","$3\hbar$"]
+for n in range(nmax):
+    scale=0.5
+    ax.plot(x, ones(size(x))*energy(n), color='0.5')
+    ax.text(0, 0.2+energy(n), sa[n])
+    ax.text(-2, 0.2+energy(n), lz[n])
+    if n<nmax-1:
+        ax.arrow(-3,energy(n), 0, 0.8*energy(0), width=0.1, length_includes_head=False, color='r' )
+        ax.text(-4, 0.2+energy(n), "$L_+$")
+        ax.arrow(2,energy(n+1), 0, -0.8*energy(0), width=0.1, length_includes_head=False, color='b' )
+        ax.text(2.5, 0.2+energy(n), "$L_-$")
+ax.set_xticks([])
+ax.set_yticks([])
+ax.set_ylim([0,8])
+ax.set_axis_off()
+fig.legend(loc='outside right')
+
+glue("3d-amladder", fig, display=False)
+```
+
+(3d-amladder)=
+```{glue:figure} 3d-amladder
+Ladder of orbital angular momentum ladder states, indicated is the $L_z$ eigenvalue in $\hbar$ and the raised and lowered eigenfunctions. 
+```
+
+
+But, this also implies $\ell=-\ell+N$ or $\ell=N/2$ which means that $\ell$ is either integer or half-integer.
 
 We summarize:
 
@@ -96,7 +144,7 @@ L_z f_{\ell}^m&=\hbar m f_{\ell}^m\\
 m&=-\ell,-\ell+1, \ldots, \ell-1, \ell
 \end{align*}$$(3d-am-5)
 
-Exciting, half-integer values are possible -prob we will come back to this.
+Exciting, half-integer values are possible - we will come back to this.
 
 
 ## Quantum angular momentum example
@@ -197,5 +245,11 @@ $$(3d-am-8)
 
 Now you might see that we have already seen these equations, and we know that the eigenfunctions are the spherical harmonics $Y_l^m$!
 
+This is amazing - without assuming anything about the system,s he pherical harmonics are found to be the eigenfunctions of quantum angular momentum, now it is clear that the quantum numbers $\ell$ and $m$ indeed describe the angular momentum of the electron. 
+
 But you might notice that before, by the method of separation of variables, only integer values for $\ell$ were allowed - and now, using the algebraic theory of angular momentum operators, also half-integer values are possible. This is a crucial result - the algebraic theory of angular momentum leads to the concept of half-integer angular momentum which will turn out to be the "spin", discussed in the following lectures.
+
+:::{admonition} Workgroup assignment
+Please solve Griffith problem 4.1 & 4.2 yourselves!
+:::
 

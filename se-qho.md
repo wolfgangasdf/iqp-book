@@ -484,4 +484,7 @@ glue("qho-anharmonic", fig, display=False)
 The first three energies of an anharmonic quantum oscillator - now state-selective transitions are possible. 
 ```
 
+:::{admonition} Workgroup assignment
+Please solve Griffith problem 1.5, 1.8 & 1.16 yourselves!
+:::
 
