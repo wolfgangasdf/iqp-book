@@ -36,6 +36,8 @@ sphinx:
     - sphinx_proof
     - sphinx_exercise
     - sphinx.ext.imgconverter
+    - sphinx.ext.mathjax
+    - sphinx-mathjax-offline
     # - sphinx_togglebutton
 
 parse:

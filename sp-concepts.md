@@ -12,20 +12,22 @@ kernelspec:
 
 # Spin: concepts
 
-In this section, we discuss the quantum version of spinning rotation: the spin - and show that it is a crucial quantum number that discriminates different fundamental particles of nature.
+In this section, we discuss the quantum version of spinning rotation: the spin - and show that it is a crucial quantum property that discriminates different fundamental particles of nature.
 
 
 ## Classical spin
 
 `[slide]`
 
-Classically, a body can show an orbiting motion and a spinning rotation, like the earth orbits once a year around the sun and spins every day around the earth center. If we place the origin of our coordinate system at the center of the sun, it is clear from the classical-mechanics law $L=r \times p$ that the orbital angular momentum of the earth is nonzero and in our case points upwards, to the north. 
+Classically, a body can show an orbiting motion and a spinning rotation, like the earth orbits once a year around the sun and spins every day around the north-south axis. 
+The classical-mechanics law for orbital angular momentum is $L=r \times p$, that is the cross-product between the position vector of the orbiting mass $r$, and the linear momentum $p$ of that mass. One often places the origin of the coordinate system at a position of high symmetry, for the case of the earth to the center of the sun. In this case, the orbital angular momentum of the earth is nonzero and points upwards, to the north. 
 
-The spinning rotation leads to a spin angular momentum around the center of mass of the spinning body, which is calculated using the same equation $L=r \times p$ for all constituents that make op the earth. Approximately, the SAM does not contribute to $L$ measured around the origin, but it is clear that both have the same origin and the distinction is largely semantically. Also, a point-like particle cannot have a spin angular momentum classically, because $r$ is zero if measured from the center of mass of the particle.
+A spinning rotation leads to a spin angular momentum around the center of mass of the spinning body, which is calculated using the same equation $S=r \times p$ for all constituents that make op the spinning body, such as the earth. Approximately, the spin angular momentum $S$ does not contribute to $L$ measured around the origin, but it is clear that both have the same origin and the distinction is largely semantically in classical mechanics. Also, classically, a point-like particle cannot have a spin angular momentum, because $r$ is zero if measured from the center of mass of the particle. Finally, of course, the orbital and spin angular momentum can have any value in classical mechanics.
 
 ```{figure} figures/spin/spin-classical.png
 ---
 name: spin-classical
+scale: 50%
 ---
 Classically, the spin angular momentum is identical to the orbital angular momentum measured around the center of mass of the spinning, and possibly orbiting, body.
 ```
@@ -36,45 +38,64 @@ Classically, the spin angular momentum is identical to the orbital angular momen
 
 `[slide]`
 
-In quantum mechanics, however, the case is very different, and there is a fundamental difference between orbital and spin angular momentum. First, for the OAM, we remember that we had seen that quantum particles can have a certain OAM determined by the AM quantum number $\ell$ - and that this corresponds to an angular momentum of magnitude $L=\hbar\sqrt{l\left(l+1\right)}$. Now, if we measure for instance the $z$-component of the OAM using the operator $L_z$, we obtain $L_z=\hbar m_l$ where $m_l$ is one of $2\ell+1$ values between $-\ell$ and $+\ell$. 
+In quantum mechanics, the case is very different, and there is a fundamental difference between orbital and spin angular momentum. First, for the orbital angular momentum (OAM), we remember that we had seen that quantum particles can only have discrete values of angular momentum determined by the angular momentum quantum number $\ell$ - which corresponds to an angular momentum of magnitude $L=\hbar\sqrt{l\left(l+1\right)}$. 
 
-Remember that this can only be done for $L$ and $L_z$, but not for $L_z$ and $L_x$ or $L_y$ - they are not well-defined simultaneously. 
+We had seen that we cannot attribute exact values to all cartesian components of the angular momentum $L_i$ at the same time, due to the uncertainty principle. However, we had seen that we can calculate exact values for the length $L$ or squared length $L^2$ and one cartesian component, where traditionally the $z$-component $L_z$ is chosen. This leads to the eigenvalue $L_z=\hbar m_\ell$ where $m_\ell$ is one of the $2\ell+1$ values between $-\ell$ and $+\ell$. 
 
-Now, it is one of the most profound discoveries in quantum mechanics that fundamental particles in nature seem to have a spin angular momentum, despite they are considered to be “point like” if their position is measured. Note: if we measure e.g. the position of the electron in the hydrogen atom many, many times, we will of course reproduce the spatial wavefunction probability distribution which we have seen before – but as far as we know, the electron should be considered a point-like particle if its position is measured. This is fascinating and very different to a classical world, you will get used to it. 
+Remember that the appearance of angular momentum did simply happen by writing the Schrödinger equation in spherical coordinates. In principle, also for a linearly moving particle one can calculate the angular momenta - but they would change very rapidly. Therefore, the discussion of angular momenta makes only sense for localized particles such as the electron in the hydrogen atom. 
+
+This is different for the spin angular momentum, since it is an intrinsic property of particles, also valid if the particle is moving in a particular direction!
+
+It is one of the most profound discoveries in quantum mechanics that fundamental particles in nature seem to have a spin angular momentum, despite they are considered to be very much “point like” if their position is measured. Remember that the the de Broglie picture attributes a quantum wave to the electron, and that the electron wavefunctions of the hydrogen atom determine the probability to find an electron at a particular position. But, if we measure the position of an electron, we find experimentally that it seems to be very much point-like - to date no substructure of the electron has been discovered. 
 
 The spin is so important in quantum mechanics because of a number of reasons, but probably above all because all known fundamental particles (electron, photon, quarks, gluons and a few more) have a nonzero spin - except for the recently discovered Higgs boson, which was confirmed experimentally in 2013 – it has zero spin.
 
-## Spin operators and commutation relations
+## Spin commutation relations and eigenvalues 
 
 `[slide]`
 
-We now state the algebraic quantum theory of spin by exact analogy to the derivation of the quantum orbital angular momentum. Instead of $L$ we use $S$, and instead of $m_l$ we use $m_s$. Note that the subscript is sometimes omitted, it should be clear from the context. The operator commutation relations we write now shorter using the Levi-Civita symbols $\epsilon_{klm}$. $\epsilon_{klm}$ is $+1$ if $k,l,m$ are cyclic like $1,2,3$ or $2,3,1$, and $-1$ if anti-cyclic, and zero otherwise.
+We now write down the algebraic quantum theory of the spin by exact analogy to the derivation of the quantum orbital angular momentum. Instead of $L$ we use the letter $S$, and instead of $m_\ell$ we use $m_s$. Note that the subscript to $m$ is often omitted, it should be clear from the context. We now rewrite the operator commutation relations in a shorter way using the Levi-Civita symbol $\varepsilon_{klm}$. $\varepsilon_{klm}$ is $+1$ if $k,l,m$ are cyclic like $1,2,3$ or $2,3,1$, and $-1$ if anti-cyclic, and zero otherwise.
 
 $$
-\left[S_k, S_l\right]=i \hbar S_m \epsilon_{k l m}
+\varepsilon_{ijk} = \begin{cases}
+         +1 & \text{if } (i,j,k) \text{ is } (1,2,3), (2,3,1), \text{ or } (3,1,2), \\
+         -1 & \text{if } (i,j,k) \text{ is } (3,2,1), (1,3,2), \text{ or } (2,1,3), \\
+    \;\;\,0 & \text{if } i = j, \text{ or } j = k, \text{ or } k = i
+\end{cases}
+$$(levi)
+
+With this the commutation relations are 
+
+$$
+\left[S_k, S_l\right]=i \hbar S_m \varepsilon_{k l m}
 $$(sp-c-cr)
  
-Again, the cartesian spin components do not commute and cannot be simultaneously known  due to the uncertainty principle. On the other hand, $\left[S^2,S_i\right]=0$, so the spin vector length commutes with each of the individual components and can be known and measured simultaneously with arbitrary precision. 
+Again, since the cartesian spin components do not commute they cannot be simultaneously known perfectly due to the uncertainty principle. On the other hand, $\left[S^2,S_i\right]=0$, so the spin vector length commutes with each of the individual components and can be known and measured simultaneously with arbitrary precision. 
 
-## Spin eigenvectors and eigenvalues 
-
-`[slide]`
 
 We introduce the spin quantum number $s$ and the quantum number of $S_z$, $m_s$ and obtain as before for the OAM:
 
 $$
-\begin{matrix}S^2\left|s,m_s\right\rangle=\hbar^2s\left(s+1\right)\left|s,m_s\right\rangle:&&S_z\left|sm_s\right\rangle=\hbar m\left|sm_s\right\rangle\\\end{matrix}
+\begin{align}
+S^2\left|s,m_s\right\rangle&=\hbar^2s\left(s+1\right)\left|s,m_s\right\rangle\\
+S_z\left|s,m_s\right\rangle&=\hbar m\left|s,m_s\right\rangle\\\end{align}
 $$(sp-c-s2)
 
-In contrast to the OAM, we do not know the eigenfunctions and it does not make sense to restrict ourselves to integer $s$ and $m_s$, which was needed for the OAM with the spherical harmonic eigenfunctions to make sense (single valued). Therefore also half-integer values are allowed as resulted from the algebraic theory of AM before: 
+In contrast to the OAM, we do not know the eigenfunctions and it does not make sense to restrict ourselves to integer $s$ and $m_s$, which was needed for the OAM to make sense with the spherical harmonic eigenfunctions. Therefore here, also half-integer values are allowed as resulted from the algebraic theory of angular momentum in the previous section: 
 
 $$
-\begin{matrix}s=0,\frac{1}{2},1,\frac{3}{2},\ldots;&&m_s=-s,-s+1,\ldots,s-1,s\\\end{matrix}
+\begin{align}s&=0,\frac{1}{2},1,\frac{3}{2},\ldots\\
+m_s&=-s,-s+1,\ldots,s-1,s
+\end{align}
 $$(sp-c-s)
 
-Experimentalists have measured $s$ (you will see later how) for all elementary particles and found that every elementary particle has a specific spin $s$ – as mentioned above only the recently discovered Higgs boson has zero spin. But, classification of particles by their spin is also very useful for composite particles like a proton that consists of several quarks and gluons – but the case is very complicated if done exactly, and still subject to research. 
+Experimentalists have measured $s$ (you will see later how) for all elementary particles and found that every elementary particle has a specific spin $s$. But, classification of particles by their spin is also very useful for composite particles like a proton that consists of several quarks and gluons – but the case is quite complicated if done exactly, and still subject to research. 
 
-The so-called standard model particle physics is shown here, where we see the quarks building up the nuclei with spin $1/2$, the lightweight particles, leptons also with spin $1/2$, exchange particles with integer spin, usually $1$ except for the Higgs boson which has zero spin. Missing is the graviton, the exchange particle of gravity, we don't know yet if it really exists - we don't have a clear model of quantum gravity yet nor do we know if this model exists, but if it does, the graviton might have spin $2$.
+## The standard model of particle physics
+
+`[slide]`
+
+The so-called standard model particle physics is shown in the figure, where we see the quarks building up the nuclei with spin $1/2$, the lightweight particles, leptons, also with spin $1/2$, exchange particles with integer spin, usually $1$ except for the Higgs boson which has zero spin. Missing is the graviton, the exchange particle of gravity, we don't know yet if it really exists - since we do not have a theory of quantum gravity yet, nor do we know if such theory exists. But if it does exist, the graviton might have spin $2$.
 
 For our daily interactions with nature, but also for quantum information science, two spins are in particular important: $s=1$, for the photon, the quantum particle of light, and $s=1/2$, which is the spin of the electron, protons, and neutrons – key constituents of matter. 
 

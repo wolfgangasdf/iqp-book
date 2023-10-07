@@ -52,7 +52,7 @@ e.g. with kdenlive https://kdenlive.org/ :
 
 ## the iqp-book
 
-It is made using [Jupyter Book](https://jupyterbook.org/). I wonder if not everything would be easier with the several decades old [texmacs](https://www.texmacs.org/)...
+It is made using [Jupyter Book](https://jupyterbook.org/).
 
 ### install stuff in addition to anaconda
 conda install is heavily broken, use pip!
@@ -61,6 +61,7 @@ pip install -U jupyter-book
 pip install -U sphinx-proof
 pip install -U sphinx-exercise
 pip install -U sphinx-autobuild
+pip install -U sphinx-mathjax-offline
 ```
 ### build and develop
 

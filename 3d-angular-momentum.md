@@ -82,15 +82,18 @@ $$(3d-am-4)
 
 This means we can measure those quantities with arbitrary precision at the same time!
 
-The ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$. 
+% changed 20230924
+Therefore, let us find now the eingenvalues of $L^2$ and one component, where traditionally, $L_z$ is chosen. We assume that $f$ is an eigenfunction with eigenvalue $m$: $L_z f=\hbar m f$.
+
+For $L_z$, one can show that the ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$. 
 
 `[slide]`
 
-Similar to the quantum harmonic oscillator, we start by defining $\hbar\ell$ as the highest angular momentum state $L_z f_t=\hbar \ell f_t$, then we can calculate the eigenvalue of $L^2$ using the ladder operator algebra and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1)\lambda f_t$. 
+Similar to the quantum harmonic oscillator, we start by defining $f_t$ as the highest angular momentum state $L_z f_t=\hbar \ell f_t$, then we can calculate the eigenvalue of $L^2$ using the ladder operator algebra and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1)\lambda f_t$. 
 
 Now we do the same with bottom rung of angular momentum states, and we find that it must have $m=-\ell$. 
 
-So, the eigenstates of $L_z$ are $m\hbar$ where $m$ goes from $-\ell$ to $\ell$ in $N$ integer steps. These states are shown in the figure for $\ell=3$, with the $L_z$ eigenvalues, action of the ladder operators, and eigenfunctions $f$.
+So, the eigenvalues of $L_z$ are $m\hbar$ where $m$ goes from $-\ell$ to $\ell$ in $N$ integer steps. These states are shown in the figure for $\ell=3$, with the $L_z$ eigenvalues, action of the ladder operators, and eigenfunctions $f$.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -231,23 +234,23 @@ $$
 \nabla=\hat{r} \frac{\partial}{\partial r}+\hat{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}+\hat{\phi} \frac{1}{r \sin \theta} \frac{\partial}{\partial \phi}
 $$(3d-am-6)
 
-We write down the eigenvalue equations where we know already the eigenvalues, first for $L^2$:
+We write down the eigenvalue equations where we know already the eigenvalues, first for $L^2$ where the eigenvalue is $\hbar^2 \ell(\ell+1)$:
 
 $$
 L^2 f_{\ell}^m=-\hbar^2\left[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{\sin ^2 \theta} \frac{\partial^2}{\partial \phi^2}\right] f_{\ell}^m=\hbar^2 \ell(\ell+1) f_{\ell}^m
 $$(3d-am-7)
 
-and for $L_z$:
+and for $L_z$ with eigenvalue $\hbar m$:
 
 $$
 L_z f_{\ell}^m=-i \hbar \frac{\partial}{\partial \phi} f_{\ell}^m=\hbar m f_{\ell}^m
 $$(3d-am-8)
 
-Now you might see that we have already seen these equations, and we know that the eigenfunctions are the spherical harmonics $Y_l^m$!
+You might see that we have already seen these differential equations, and we know that the eigenfunctions are the spherical harmonics $Y_l^m$!
 
-This is amazing - without assuming anything about the system,s he pherical harmonics are found to be the eigenfunctions of quantum angular momentum, now it is clear that the quantum numbers $\ell$ and $m$ indeed describe the angular momentum of the electron. 
+This is amazing - without assuming anything about the system, the spherical harmonics are found to be the eigenfunctions of the quantum angular momentum operators, now it is probably clear that the quantum numbers $\ell$ and $m$ indeed must properly describe the angular momentum of the electron. 
 
-But you might notice that before, by the method of separation of variables, only integer values for $\ell$ were allowed - and now, using the algebraic theory of angular momentum operators, also half-integer values are possible. This is a crucial result - the algebraic theory of angular momentum leads to the concept of half-integer angular momentum which will turn out to be the "spin", discussed in the following lectures.
+As we have mentioned before, here, using the algebraic theory of angular momentum operators, we have found that also half-integer values for $\ell$ are allowed eigenvalues of the differential equations. Before, where we were trying to find explicit solutions for the electron wave function using the method of separation of variables, we found only integer values for $\ell$. This is a crucial result - the algebraic theory of angular momentum leads to the concept of half-integer angular momentum which will turn out to be the "spin", discussed in the following lectures.
 
 :::{admonition} Workgroup assignment
 Please solve Griffith problem 4.1 & 4.2 yourselves!
