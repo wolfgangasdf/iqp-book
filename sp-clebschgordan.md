@@ -13,7 +13,7 @@ kernelspec:
 # Angular momentum coupling
 
 <!-- G 4.4.3 -->
-In this section we investigate what happens if two angular momenta couple, for instance of two electrons - we will find that contrary to the classical case which is rather boring, quantum angular momenta couple in a very peculiar way!
+In this section we investigate what happens if two angular momenta couple quantum-mechanically, for instance of two electrons - we will find that contrary to the classical case which is rather boring, quantum angular momenta couple in a very peculiar way!
 
 
 ## Coupling of two angular momenta
@@ -22,16 +22,17 @@ In this section we investigate what happens if two angular momenta couple, for i
 
 Most physical systems consist of more than one particle, and as mentioned before they usually have nonzero spin – we now study the consequences of this. 
 
-Even in the hydrogen atom, we have for instance the spin of the nucleus and the spin of the bound electron, or the orbital angular momentum of the electron and the spin of the electron – and they all couple. This changes the energy levels of atoms and ions and knowledge thereof is important for quantum technologies. But also for instance in chemistry, it is important to understand how the angular momenta of two electrons of two different atoms interact as this will determine the chemical reactions. 
-
-This interaction is called angular momentum coupling – and it becomes very interesting in quantum mechanics. 
+Even in the hydrogen atom, we have for instance the spin of the nucleus and the spin of the bound electron, or the orbital angular momentum of the electron and the spin of the electron – and they all couple. This changes the energy levels of atoms and ions and knowledge thereof is important for quantum technologies. But also for instance in chemistry, it is important to understand how the angular momenta of two electrons of two different atoms interact as this will determine chemical reactions. 
 
 We start with two particles, with the spins $s_1$ and $s_2$ and the $z$-components $m_1$ and $m_2$, their states are $\left|s_1m_1\right\rangle$ and $\left|s_2m_2\right\rangle$. 
 
-Without doing anything new, the state of the composite system can be written as $\left|s_1s_2m_1m_2\right\rangle$, and the squares of the total spin of particle 1 and 2, as well as the $z$-component can be calculated as before. Note that e.g. the operator $S^{(1)^2}$ acts only on particle one. We obtain:
+Without doing anything new, the state of the composite system can be written as $\left|s_1s_2m_1m_2\right\rangle$, and the squares of the total spin of particle 1 and 2, as well as the $z$-component can be calculated as before. Note that e.g. the operator $\left(S^{(1)}\right)^2$ acts only on particle one. We obtain:
 
 $$
-\begin{align}S^{(1)^2}\left|s_1s_2m_1m_2\right\rangle&=s_1\left(s_1+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\S^{(2)^2}\left|s_1s_2m_1m_2\right\rangle&=s_2\left(s_2+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\S_z^{\left(1\right)}\left|s_1s_2m_1m_2\right\rangle&=m_1\hbar\left|s_1s_2m_1m_2\right\rangle\\S_z^{\left(2\right)}\left|s_1s_2m_1m_2\right\rangle&=m_2\hbar\left|s_1s_2m_1m_2\right\rangle\\\end{align}
+\begin{align}\left(S^{(1)}\right)^2\left|s_1s_2m_1m_2\right\rangle&=s_1\left(s_1+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\
+\left(S^{(2)}\right)^2\left|s_1s_2m_1m_2\right\rangle&=s_2\left(s_2+1\right)\hbar^2\left|s_1s_2m_1m_2\right\rangle\\
+S_z^{\left(1\right)}\left|s_1s_2m_1m_2\right\rangle&=m_1\hbar\left|s_1s_2m_1m_2\right\rangle\\
+S_z^{\left(2\right)}\left|s_1s_2m_1m_2\right\rangle&=m_2\hbar\left|s_1s_2m_1m_2\right\rangle\\\end{align}
 $$(sp-cg-ops)
 
 We now ask ourselves the seemingly simple question, what is the total angular momentum $\vec{S}=\vec{S}^{\left(1\right)}+\vec{S}^{\left(2\right)}$ and the total z-component $S_z=S_z^{\left(1\right)}+S_z^{\left(2\right)}$ of it of the composite system.
@@ -49,13 +50,13 @@ $$
 \end{align*}
 $$(sp-cg-sz)
 
-So, $m=m_1+m_2$ is just the sum. But $s$ is more complex, therefore we discuss the simplest example. 
+So, $m=m_1+m_2$ is just the sum. But the total spin $S$ and its eigenvalues $s$ are more complex, we need to discuss a specific example. 
 
 ## Two spin-1/2 particles
 
 `[slide]`
 
-We consider two s=1/2 spins, for instance the proton and the electron of the ground-state of the hydrogen atom. For all possible spin orientations we calculate first $m$:
+We consider two $s=1/2$ spins, for instance the proton and the electron of the ground-state of the hydrogen atom, or two electrons. For all possible spin orientations we calculate first $m$:
 
 $$
 \begin{align*}
@@ -66,7 +67,7 @@ $$
 \end{align*}
 $$(sp-cg-m)
 
-This is weird, since $m$ runs from -1 to +1, $s$ should be equal to 1. But there are two $m$=0 states, we probably have to approach the problem from a different angle. The problem is that the 4 states are eigenstates of $S_z$ but not of $S^2$. For calculation of this operator we fist write it out:
+This is a bit weird, since $m$ runs from -1 to +1, $s$ should be equal to 1. But there are two $m=0$ states, we probably have to approach the problem from a different angle. The problem is that the 4 states are eigenstates of $S_z$ but not of $S^2$. For calculation of this operator we fist write it out:
 
 $$
 \begin{gather*}
@@ -81,20 +82,20 @@ $$
 \vec{S}^2|\uparrow \downarrow\rangle=\vec{S}^2|\downarrow \uparrow\rangle=\hbar^2(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)
 $$(sp-cg-s2a)
 
-As we hypothesized before, these states are not eigenstates of $S^2$ - but the superposition on the right hand side gives a hint - we try this again and we obtain:
+As we hypothesized before, $|\uparrow \downarrow\rangle$ is not an eigenstate of $S^2$ - but the superposition on the right hand side gives a hint - let us try superposition states:
 
 $$\begin{align*}
 \vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)&=2 \hbar^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle+|\downarrow \uparrow\rangle)\\
 \vec{S}^2 \frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)&=0(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)
 \end{align*}$$(sp-cg-es)
 
-So both are indeed eigenstates of $S^2$!
+So these two superposition states are both eigenstates of $S^2$!
 
 `[slide]`
 
 Another approach is to use the ladder operators, for instance starting with the undoubtedly highest spin state $|\uparrow\uparrow\rangle = |1,1\rangle$ and applying $S_-$ results in the same superposition states.
 
-To conclude: We have 3 states with $s=1$, the so-called triplet states
+To conclude: We have 3 states with $s=1$, the so-called **triplet states**
 
 $$
 \left\{\begin{aligned}
@@ -104,7 +105,7 @@ $$
 \end{aligned}\right\} \quad s=1
 $$(sp-cg-t)
 
-and one singlet states with $s=0$
+and one **singlet state** with $s=0$
 
 $$
 \left\{|00\rangle=\frac{1}{\sqrt{2}}(|\uparrow \downarrow\rangle-|\downarrow \uparrow\rangle)\right\} \quad s=0
@@ -128,8 +129,11 @@ $$
 |s m\rangle=\sum_{m_1+m_2=m} C_{m_1 m_2 m}^{s_1 s_2 s}\left|s_1 s_2 m_1 m_2\right\rangle
 $$(sp-cg-cg)
 
-where $C_{m_1 m_2 m}^{s_1 s_2 s}$ are the so-called Clebsch Gordan coefficients. These values are tabulated, a very useful table is on [wikipedia](https://en.wikipedia.org/wiki/Table_of_Clebsch%E2%80%93Gordan_coefficients).
+where $C_{m_1 m_2 m}^{s_1 s_2 s}$ are the so-called Clebsch Gordan coefficients. You know now how to calculate these coefficients - but luckily these values are tabulated, a very useful table is on [wikipedia](https://en.wikipedia.org/wiki/Table_of_Clebsch%E2%80%93Gordan_coefficients).
 
+:::{admonition} Workgroup assignment
+Please solve Griffith problems 4.30, 4.35 & 4.37 yourselves!
+:::
 
 
 
