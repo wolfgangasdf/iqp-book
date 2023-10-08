@@ -21,7 +21,7 @@ Now we have all ingredients to understand the building blocks of matter - atoms.
 
 We won’t discuss molecules in detail – they are also very important – but the principles are similar to atoms. We also do not discuss the atomic core – a whole lot of quantumness is going on there, but surprisingly only knowledge of the number of protons, which is the atomic number $Z$, is sufficient to understand atoms.
 
-Atoms are neutral, so an atom with atomic number $Z$ has also $Z$ electrons. These individual electrons in an atom can be described by the 3 quantum numbers $(n,l,m)$ that we obtained before, the principal energy quantum number $n$ – often called “shell”, the total angular momentum quantum number $\ell$ called “subshell”, and the $z$-projection of the AM $m$. 
+Atoms are neutral, so an atom with atomic number $Z$ has also $Z$ electrons. These individual electrons in an atom can be described by the 3 quantum numbers $(n,l,m)$ that we obtained before, the principal energy quantum number $n$ – often called “shell”, the total angular momentum quantum number $\ell$ called “subshell”, and the $z$-projection of the angular momentum $m$. 
 
 If electrons were bosons, they would all relax into the lowest-energy state (1,0,0) – but they are fermions, and as we have seen before they cannot occupy the same state. This is why for an atom with multiple electrons, they occupy different quantum states. How does this work?
 
@@ -39,6 +39,8 @@ The *term symbol* is written as $^{2(S+1)}L_J$. Here, $2(S+1)$ is the spin multi
 
 Why do we need both? If we think about the two $(2p)^2$ electroncs, they could be either in the triplet or singlet state - the term symbol will clarify this.
 
+The table shows the first few elements, where the shells are filled up ordinarily.
+
 | Z | element | configuration | term symbol | 
 |---|---|---|---|
 | 1 | H | $(1s)$ | $^2S_{1/2}$ |
@@ -49,12 +51,12 @@ Why do we need both? If we think about the two $(2p)^2$ electroncs, they could b
 | 6 | C | $(He)(2s)^2(2p)^2$ | $^3P_{0}$ |
 
 
-How the electrons for a particular atom take find their lowest-energy configuration could be very complicated due to the electron-electron interactions, but it turns out to be pretty simple for most atoms and can be described by 3 rules, so-called **Hund’s rules**. 
+But for more electrons, the lowest-energy configuration can be more complicated due to electron-electron interactions, but it turns out to be pretty simple for most atoms and can be described by 3 rules, so-called **Hund’s rules**. 
 
-To mention one, the first rule is that the configuration with the highest spin multiplicity 2S+1 which is also equal to the number of unpaired electrons plus one, has the lowest energy. 
+To mention one, the first rule is that the configuration with lowest energy has the highest spin multiplicity 2S+1 - or number of unpaired electrons, electrons which don't have a partner in the same shell with the opposite spin.
 
-For example, 3 electrons in the $p$ subshell will be in the $\uparrow\uparrow\uparrow$ spin state. Only if a fourth electron is added, it has to go into the down state and we obtain $\uparrow\downarrow\uparrow\uparrow$. Remember this simply as the “bus seat rule”! The reason for this rule is a bit beyond this course.
-Look up the rules in [wikipedia](https://en.wikipedia.org/wiki/Hund%27s_rules)
+This means that, for example, the 3 electrons in the $p$ subshell will be in the $\uparrow\uparrow\uparrow$ spin state. Only if a fourth electron is added, it has to go into the spin-down state resulting in $\uparrow\downarrow\uparrow\uparrow$. Remember this simply as the “bus seat rule” - the bus fills up with individually travelling people such that everyone has two places. The reason for this rule is a bit beyond this course.
+You can look all rules in [wikipedia](https://en.wikipedia.org/wiki/Hund%27s_rules)
 
 `[slide]`
 

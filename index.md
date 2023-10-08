@@ -1,10 +1,12 @@
 # Introduction
 
-*Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the Leiden/Delft MSc programme Quantum Information Science and Technology QIST. It is not a complete quantum mechanics course but meant as a brief recap, or overview - hopefully toughing upon all necessary topics needed for QIST.
+*Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the **Leiden/Delft MSc programme Quantum Information Science and Technology QIST**.
 
-The script here is very talkative because it's also the script for the videos. The teaching method might change in future, so this might change, too.
-
-To gain most from this course, do the brightspace quizzes, exercise assignments (do it yourselves or in a group!), collect questions for the workgroup sessions, and read a bit in Griffiths.
+To gain most from this course:
+* watch the videos and read this book
+* do the brightspace quizzes
+* solve the exercise assignments (alone or in a group, don't look at solutions unless you are really stuck!)
+* during all this, collect questions for the workgroup sessions, and possibly read a bit more in Griffiths.
 
 <!-- make deeper but https://github.com/executablebooks/jupyter-book/issues/1131 -->
 ```{tableofcontents}
@@ -21,8 +23,7 @@ We assume that you are familiar with:
 
 ## Notational conventions
 
-* We often leave out the arrow on top of vectors. Which variable is a vector or a scalar should be clear from the context.
-* We also often leave out the hat on operators - the same applies, if one gets used to it there is no ambiguity.
+* We often leave out the arrow on top of vectors. Whether a variable is a vector or a scalar should be clear from the context. The same holds for the hat on operators.
 
 ## What is missing?
 
@@ -36,11 +37,11 @@ We assume that you are familiar with:
 
 ## Comments and contributing
 
-Please send comments, it seems there is also some button on the pages but I don't know this yet.
+Everything is welcome!
 
 ## Acknowledgements
 
-Large parts are based on the excellent book by **Griffiths, Introduction to Quantum Mechanics**, 3rd edition. Small parts are based on **Phillips, Introduction to quantum mechanics**.
+Large parts are based on the excellent book **Griffiths, Introduction to Quantum Mechanics, 3rd edition**. Small parts are based on **Phillips, Introduction to quantum mechanics**.
 
 These notes were made using [Jupyter Book](https://jupyterbook.org/), based on Peter Bruin's script for [Mathematics for Quantum Physics](https://pub.math.leidenuniv.nl/~bruinpj/MQP/) which in turn is partially based on the [Jupyter
 Book demo](https://idemalab.tudelft.nl/jupyterbookdemo/) by Timon

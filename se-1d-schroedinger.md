@@ -56,11 +56,11 @@ ax.set_yticks([0])
 ax.text(-0.8,0.1,"⊕",fontsize=30)
 ax.text(5,0.1,"⊖",fontsize=30)
 
-glue("se-coloumb", fig, display=False)
+glue("se-coulomb", fig, display=False)
 ```
 
-(se-coloumb)=
-```{glue:figure} se-coloumb
+(se-coulomb)=
+```{glue:figure} se-coulomb
 The Coloumb potential of the electron in the field of a positive charge (nucleus) at the origin.
 ```
 
