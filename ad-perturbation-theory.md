@@ -160,34 +160,37 @@ $$
 \left(H_0-E_n^{(0)}\right)c_m^{(n)}
 |\psi_m^{(0)}\rangle = 
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
-\\
+$$(ad-pt-10a)
+
+where we can evaluate $H_0$ and obtain
+$$
 \sum_{m\neq n}
 \left(E_m^{(0)}-E_n^{(0)}\right)c_m^{(n)}
 |\psi_m^{(0)}\rangle = 
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
-$$(ad-pt-10)
+$$(ad-pt-10b)
 
-And we multiply from left with $\langle\psi_k^{(0)}|$
+Finally we multiply from left with $\langle\psi_k^{(0)}|$
 
 $$
 \sum_{m\neq n}
 \left(E_m^{(0)}-E_n^{(0)}\right)c_m^{(n)}
 \langle\psi_k^{(0)}|\psi_m^{(0)}\rangle = 
 -\langle\psi_k^{(0)}|H'|\psi_n^{(0)}\rangle + 
-E_n^{(1)} \langle\psi_k^{(0)}\psi_n^{(0)}\rangle
+E_n^{(1)} \langle\psi_k^{(0)}|\psi_n^{(0)}\rangle
 $$(ad-pt-11)
 
 `[slide]`
 
-The left hand side is zero for $k = n$ and we obtain again the Expression for the first-order Energy correction.
+Let's examine this. For $k = n$, the left hand side is zero and we obtain again the expression for the first-order Energy correction.
 
-For $k \neq n$ we obtain
+For $k \neq n$ only the $m=k$ term of the sum is nonzero, and the rightmost term is zero, and we obtain
 
 $$
 \left(E_k^{(0)}-E_n^{(0)} \right)c_k^{(n)}=-\langle\psi_k^{(0)}|H'|\psi_n^{(0)}\rangle
 $$(ad-pt-12)
 
-or after renaming the index $k$ and rearranging
+or after renaming the index $k$ to $m$, and rearranging
 
 $$
 c_m^{(n)}=\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}
@@ -199,13 +202,12 @@ $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
 $$(ad-pt-14)
 
-`[slide]`
-
 Some observations:
 
-* This only works if the energy spectrum of the unperturbed system is *nondegenerate, if the denominator is never 0. We come later to the degenerate perturbation theory
+* This only works if the energy spectrum of the unperturbed system is *nondegenerate*, if the denominator is never 0. We come later to the degenerate perturbation theory
 * We see that the perturbation requires potentially all unperturbed neigenstates to describe the perturbed system! 
-* From the denominator we see that if the energies of the eigenstates lie closer in energy, the perturbation has a larger effect - since noise is a kind of perturbation, for qubits a spectrum with significant spacing can be advantageous.
+* From the denominator we see that if the energies of the eigenstates lie closer in energy, the perturbation has a larger effect - since noise is a kind of perturbation, for qubits a spectrum with significant energy spacing can be advantageous.
+
 
 ## 1st order perturbation theory: example
 
@@ -226,17 +228,19 @@ $$(ad-pt-15)
 
 We know from before the wavefunction for the unperturbed case. 
 
+$$\psi_n^{(0)}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)$$(ad-pt-swup)
+
 Now we first find the first-order corrections to the energies of the eigenstates:
 
 $$
-\psi_n^{(0)}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)
-\\
 E_n^1=\left\langle\psi_n^{(0)}\left|H^{\prime}\right| \psi_n^{(0)}\right\rangle=\frac{2}{a} \alpha \int_0^a \sin ^2\left(\frac{n \pi}{a} x\right) \delta\left(x-\frac{a}{2}\right) d x \\
 $$(ad-pt-16)
 
-Remember that the Poisson brackets can be taken literally 0 it is an integral over all parameters, in this case position. I will continue to use the ket notation although if one could often simply use the real-space wavefunction.
+Remember that the Poisson brackets can be taken literally as an integral over all parameters, in this case position. We will continue to use the ket notation although one could also use the real-space wavefunction - since we have explicit expressions for it.
 
 `[slide]`
+
+We obtain as the first-order correction to the energy
 
 $$
 E_n^{(1)}=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{a} \frac{a}{2}\right)=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{2}\right)=\left\{\begin{array}{cc}
@@ -245,10 +249,8 @@ E_n^{(1)}=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{a} \frac{a}{2}\right)=\fr
 \end{array}\right\}
 $$(ad-pt-17)
 
+This means that if $n$ is even, there is no perturbation. Remember that the wavefunctions for even $n$ have a node in the center - they simply don't *feel* the perturbation in our approximation! The unperturbed wavefunctions are again shown in the Figure.
 
-* We calculate the overlap integral with the unperturbed wavefunctions in a straight-forward way. 
-* The argument sine function results in zero if n is even - meaning the energies are not perturbed. Looking at the unperturbed eigenfunctions, this makes a lot of sense - if the probability of the particle to be in the center is zero, our perturbation should not modify the energy levels!
-* Only for odd $n$, we get a higher energy of the solution since the the wavefunction is non-zero in the middle for odd solutions - the particle feels the raised potantial in the middle.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -256,33 +258,32 @@ $$(ad-pt-17)
 from matplotlib import pyplot as plt
 from myst_nb import glue
 from numpy import *
-
 fig, ax = plt.subplots(figsize=(4,3))
-
 x = linspace(0, 1, 500)
-
 a=1
-for n in range(6):
-    y=sqrt(2/a)*sin(n*pi/a*x) + 3*n # offset curves
-    ax.plot(x, y)
-
+for n in range(1,6):
+    y=sqrt(2/a)*sin(n*pi/a*x) + 3*(n-1) # offset curves
+    ax.plot(x, y, label="$\psi_" + str(n) + "^{(0)}(x)$")
 ax.set_xlabel('$x/a$')
 ax.set_ylabel('$\psi_n^{(0)}(x)$')
-ax.set_ylim(-1,18)
+ax.set_ylim(-1,15)
+ax.set_yticks([0])
+fig.legend(loc='outside right')
 
 glue("potential-well-wavefunctions2", fig, display=False)
 ```
 
 (potential-well-wavefunctions2)=
 ```{glue:figure} potential-well-wavefunctions2
-The unperturbed wavefunctions of an infinite-well potential
+The first wavefunctions of the unperturbed infinite square well potential. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
 ```
 
 
+For odd $n$, we obtain a slightly higher energy, which can be explained that the wavefunction *feels* the raised potantial in the middle.
 
 `[slide]`
 
-Now we want to find the 1st-order correction to the wavefunction for the ground state with $n=1$. Before, we derived for this the equation:
+Now we want to find explicitly the 1st-order correction to the wavefunction for the ground state with $n=1$. Before, we derived for this the equation:
 
 $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
@@ -296,9 +297,9 @@ $$
 =\frac{2 \alpha}{a} \sin \left(\frac{m \pi}{2}\right) \sin \left(\frac{\pi}{2}\right)=\frac{2 \alpha}{a} \sin \left(\frac{m \pi}{2}\right)
 $$(ad-pt-19)
 
-This is nearly the same result as above, it is zero for even $m$.
+This is nearly the same result as above, it is zero for even $m$, these solutions don't *feel* the perturbation.
 
-We know the denominator from some weeks ago, we have called the mass of the particle $m_0$ to avoid confusion:
+We know the denominator from before, here we have renamed the mass of the particle to $m_0$ to avoid confusion:
 
 $$
 E_1^{(0)}-E_m^{(0)}=\frac{\pi^2 \hbar^2}{2 m_0 a^2}\left(1-m^2\right)
@@ -313,7 +314,8 @@ $$
 \frac{2 \alpha}{a} \frac{2 m_0 a^2}{\pi^2 \hbar^2}\left[\frac{-1}{1-9} \left|\psi_3^{(0)}\right\rangle+\frac{1}{1-25} \left|\psi_5^{(0)}\right\rangle+\frac{-1}{1-49} \left|\psi_7^{(0)}\right\rangle+\ldots\right]
 $$(ad-pt-21)
 
-We see that the contribution of higher states reduces quadratically, which might also be used as an approximation. If you remember the shape of the odd wavefunctions, some have a maximum and some a minimum in the center - the result of the alternating sign of the corrections is that the central maximum of the $n=1$ wavefunction gets a small dip in the center where the potential hump is introduced. 
+We see that the contribution of higher states decreases quadratically, luckily. If you remember the shape of the odd wavefunctions, some have a maximum and some a minimum in the center - therefore the alternating sign of the correction terms is not surprising. The result is that the central maximum of the $n=1$ wavefunction gets a small dip in the center where the potential hump is introduced, as shown in the Figure. For this calculation, states up to $m=20$ have been taken into account.
+
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]

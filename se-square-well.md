@@ -139,7 +139,7 @@ for n in range(1,6):
     y=sqrt(2/a)*sin(n*pi/a*x) + 3*(n-1) # offset curves
     ax.plot(x, y, label="$\psi_" + str(n) + "(x)$")
 ax.set_xlabel('$x/a$')
-ax.set_ylabel('$\psi_n^{(0)}(x)$')
+ax.set_ylabel('$\psi_n(x)$')
 ax.set_ylim(-1,15)
 ax.set_yticks([0])
 fig.legend(loc='outside right')
