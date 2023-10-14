@@ -20,7 +20,7 @@ In this section, we discuss the quantum version of spinning rotation: the spin -
 `[slide]`
 
 Classically, a body can show an orbiting motion and a spinning rotation, like the earth orbits once a year around the sun and spins every day around the north-south axis. 
-The classical-mechanics law for orbital angular momentum is $L=r \times p$, that is the cross-product between the position vector of the orbiting mass $r$, and the linear momentum $p$ of that mass. One often places the origin of the coordinate system at a position of high symmetry, for the case of the earth to the center of the sun. In this case, the orbital angular momentum of the earth is nonzero and points upwards, to the north. 
+The classical-mechanics law for orbital angular momentum is $L=r \times p$, that is the cross-product between the position vector of the orbiting mass $r$, and the linear momentum $p$ of that mass. One often places the origin of the coordinate system at a position of high symmetry, for the case of the earth to the center of the sun. In this case, the orbital angular momentum of the earth is nonzero and points upwards, to the north, as shown in the figure. 
 
 A spinning rotation leads to a spin angular momentum around the center of mass of the spinning body, which is calculated using the same equation $S=r \times p$ for all constituents that make op the spinning body, such as the earth. Approximately, the spin angular momentum $S$ does not contribute to $L$ measured around the origin, but it is clear that both have the same origin and the distinction is largely semantically in classical mechanics. Also, classically, a point-like particle cannot have a spin angular momentum, because $r$ is zero if measured from the center of mass of the particle. Finally, of course, the orbital and spin angular momentum can have any value in classical mechanics.
 
@@ -38,7 +38,7 @@ Classically, the spin angular momentum is identical to the orbital angular momen
 
 `[slide]`
 
-In quantum mechanics, the case is very different, and there is a fundamental difference between orbital and spin angular momentum. First, for the orbital angular momentum (OAM), we remember that we had seen that quantum particles can only have discrete values of angular momentum determined by the angular momentum quantum number $\ell$ - which corresponds to an angular momentum of magnitude $L=\hbar\sqrt{l\left(l+1\right)}$. 
+In quantum mechanics, the case is very different, and there is a fundamental difference between orbital and spin angular momentum. First, for the orbital angular momentum (OAM), we remember that we had seen that quantum particles can only have discrete values of angular momentum determined by the angular momentum quantum number $\ell$ - which corresponds to an angular momentum of magnitude $L=\hbar\sqrt{\ell\left(\ell+1\right)}$. 
 
 We had seen that we cannot attribute exact values to all cartesian components of the angular momentum $L_i$ at the same time, due to the uncertainty principle. However, we had seen that we can calculate exact values for the length $L$ or squared length $L^2$ and one cartesian component, where traditionally the $z$-component $L_z$ is chosen. This leads to the eigenvalue $L_z=\hbar m_\ell$ where $m_\ell$ is one of the $2\ell+1$ values between $-\ell$ and $+\ell$. 
 
@@ -57,10 +57,10 @@ The spin is so important in quantum mechanics because of a number of reasons, bu
 We now write down the algebraic quantum theory of the spin by exact analogy to the derivation of the quantum orbital angular momentum. Instead of $L$ we use the letter $S$, and instead of $m_\ell$ we use $m_s$. Note that the subscript to $m$ is often omitted, it should be clear from the context. We now rewrite the operator commutation relations in a shorter way using the Levi-Civita symbol $\varepsilon_{klm}$. $\varepsilon_{klm}$ is $+1$ if $k,l,m$ are cyclic like $1,2,3$ or $2,3,1$, and $-1$ if anti-cyclic, and zero otherwise.
 
 $$
-\varepsilon_{ijk} = \begin{cases}
-         +1 & \text{if } (i,j,k) \text{ is } (1,2,3), (2,3,1), \text{ or } (3,1,2), \\
-         -1 & \text{if } (i,j,k) \text{ is } (3,2,1), (1,3,2), \text{ or } (2,1,3), \\
-    \;\;\,0 & \text{if } i = j, \text{ or } j = k, \text{ or } k = i
+\varepsilon_{klm} = \begin{cases}
+         +1 & \text{if } (k,l,m) \text{ is } (1,2,3), (2,3,1), \text{ or } (3,1,2), \\
+         -1 & \text{if } (k,l,m) \text{ is } (3,2,1), (1,3,2), \text{ or } (2,1,3), \\
+    \;\;\,0 & \text{if } k = l, \text{ or } l = m, \text{ or } k = m
 \end{cases}
 $$(levi)
 
@@ -73,7 +73,7 @@ $$(sp-c-cr)
 Again, since the cartesian spin components do not commute they cannot be simultaneously known perfectly due to the uncertainty principle. On the other hand, $\left[S^2,S_i\right]=0$, so the spin vector length commutes with each of the individual components and can be known and measured simultaneously with arbitrary precision. 
 
 
-We introduce the spin quantum number $s$ and the quantum number of $S_z$, $m_s$ and obtain as before for the OAM:
+We introduce the spin quantum number $s$ and the quantum number of $S_z$, $m_s$ and obtain as before for the orbital angular momentum:
 
 $$
 \begin{align}
@@ -81,7 +81,7 @@ S^2\left|s,m_s\right\rangle&=\hbar^2s\left(s+1\right)\left|s,m_s\right\rangle\\
 S_z\left|s,m_s\right\rangle&=\hbar m\left|s,m_s\right\rangle\\\end{align}
 $$(sp-c-s2)
 
-In contrast to the OAM, we do not know the eigenfunctions and it does not make sense to restrict ourselves to integer $s$ and $m_s$, which was needed for the OAM to make sense with the spherical harmonic eigenfunctions. Therefore here, also half-integer values are allowed as resulted from the algebraic theory of angular momentum in the previous section: 
+In contrast to the orbital angular momentum, we do not know the eigenfunctions and it does not make sense to restrict ourselves to integer $s$ and $m_s$, which was needed for the orbital angular momentum to make sense with the spherical harmonics eigenfunctions. Therefore here, also half-integer values are allowed as resulted from the algebraic theory of angular momentum in the previous section: 
 
 $$
 \begin{align}s&=0,\frac{1}{2},1,\frac{3}{2},\ldots\\

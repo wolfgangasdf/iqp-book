@@ -90,7 +90,7 @@ Convince yourselves that the ladder operator matrices do what they should do! Al
 It turns out that the $S_i$ matrices are so useful and fundamental in quantum mechanics that, after pulling out the factor $\hbar/2$, they get another name, the spin Pauli matrices $\sigma_i$:
 
 $$
-\sigma_x=\left(\begin{matrix}0&1\\1&0\\\end{matrix}\right), 		\sigma_y=\left(\begin{matrix}0&-i\\i&0\\\end{matrix}\right), 	\sigma_x=\left(\begin{matrix}1&0\\0&-1\\\end{matrix}\right)
+\sigma_x=\left(\begin{matrix}0&1\\1&0\\\end{matrix}\right), 		\sigma_y=\left(\begin{matrix}0&-i\\i&0\\\end{matrix}\right), 	\sigma_z=\left(\begin{matrix}1&0\\0&-1\\\end{matrix}\right)
 $$(sp-oh-a5)
 
 The spin operator (vectorial here) can then be written as $\vec{S}=\left(\hbar/2\right)\vec\sigma$ with $\vec\sigma=\left(\sigma_x,\sigma_y,\sigma_z\right)$.
@@ -101,11 +101,13 @@ The Pauli matrices $\sigma_i$ form the basis of unitary operators on spin states
 
 `[slide]`
 
-We now briefly want to mention how such a qubit can be visualized. If we take the arbitrary qubit $|\psi\rangle=\alpha |0\rangle+\beta|1\rangle$, we have two complex coefficients and therefore 4 real numbers. We can, however, remove one real number because the global phase of a quantum state is irrelevant for all observable quantities. Therefore we end up with a 3-dimensional parameter space, which can be visualized in 3 dimensions! Now, due to normalization $|\alpha|^2+|\beta|^2=1$, (pure) quantum states reside on a sphere with radius 1 - the so-called *Bloch sphere*. A qubit state can therefore also be parametrized by two angles $\theta$, the polar angle and $\phi$, the azimuthal angle with $0 \leq \theta \leq \pi$ and $0 \leq \phi \leq 2 \pi$:
+We now briefly want to mention how such a qubit can be visualized. If we take the arbitrary qubit $|\psi\rangle=\alpha |0\rangle+\beta|1\rangle$, we have two complex coefficients and therefore 4 real numbers. We can, however, remove one real number because the global phase of a quantum state is irrelevant for all observable quantities. Therefore we end up with a 3-dimensional parameter space, which can be visualized in 3 dimensions! Now, due to normalization $|\alpha|^2+|\beta|^2=1$, (pure) quantum states reside on a sphere with radius 1 - the so-called *Bloch sphere* shown in the figure. A qubit state can therefore also be parametrized by two angles $\theta$, the polar angle and $\phi$, the azimuthal angle with $0 \leq \theta \leq \pi$ and $0 \leq \phi \leq 2 \pi$:
 
 $$
 |\psi\rangle=\cos \frac{\theta}{2}|0\rangle+e^{i \phi} \sin \frac{\theta}{2}|1\rangle
 $$
+
+On the Bloch sphere, $|0\rangle$ is on the north pole, and $|1\rangle$ on the south pole, and every point on the surface describes a quantum superposition of these basis states.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]

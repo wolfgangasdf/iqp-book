@@ -25,10 +25,10 @@ Similarly, if a system is rotationally symmetric like a bicycle wheel, the angul
 
 For a point mass, the angular momentum is defined by
 
-$$L=r\times p
+$$\vec{L}=\vec{r}\times \vec{p}
 $$(3d-am-1)
 
-Here, the vector $L$ is the angular momentum, $r$ the position of the mass, and $p$ the linear momentum equal to mass times velocity: $p=mv$. Of course the mass would not follow a circular path - therefore we assume that it is connected to the coordinate system origin by a string:
+Here, the vector $\vec{L}$ is the angular momentum, $\vec{r}$ the position of the mass, and $\vec{p}$ the linear momentum equal to mass times velocity: $\vec{p}=m\vec{v}$. Of course the mass would not follow a circular path - therefore we assume that it is connected to the coordinate system origin by a string:
 
 ```{figure} figures/schroedinger/classical-angular-momentum.png
 ---
@@ -38,7 +38,7 @@ scale: 40%
 Classical angular momentum.
 ```
 
-The angular momentum is an extensive quantity, so for a composite system and not a point-like particle, it is the sum of the AM of the constituents of the body.
+The angular momentum is an extensive quantity, so for a composite system and not a point-like particle, it is the sum of the angular momenta of the constituents of the body.
 
 
 ## Quantum angular momentum
@@ -53,7 +53,7 @@ So we have $\hat{L}=\hat{r}\times\hat{p}$, where $\hat{p}=-i\hbar\nabla$ for the
 
 We now want to figure out what quantum mechanical angular momenta are allowed. Similar to the procedure we used for finding solutions and eigenvalues for the quantum harmonic oscillator, we now do the following:
 
-1. We derive the commutation relations which are more complex because we have 3 components ($x,y,z$) of the AM operator.
+1. We derive the commutation relations which are more complex because we have 3 components ($x,y,z$) of the angular momentum operator.
 2. We derive ladder operators which increase or decrease the angular momentum, and derive the commutation relations of these operators.
 3. We find the highest-energy angular momentum state, and use ladder operators to find all possible eigenstates and energies. By purely algebraic means we therefore find all possible eigenvalues
 4. We find the eigenfunctions, which will allow for comparison to the hydrogen atom.
@@ -89,7 +89,9 @@ For $L_z$, one can show that the ladder operators are $L_{ \pm} \equiv L_x \pm i
 
 `[slide]`
 
-Similar to the quantum harmonic oscillator, we start by defining $f_t$ as the highest angular momentum state $L_z f_t=\hbar \ell f_t$, then we can calculate the eigenvalue of $L^2$ using the ladder operator algebra and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1)\lambda f_t$. 
+Similar to the quantum harmonic oscillator, we start by defining $f_t$ as the highest angular momentum state. We assume that $\hbar\ell$ is the highest eigenvalue of $L_z$, of that top state, the reason will become clear later. We therefore have $L_z f_t=\hbar \ell f_t$. 
+
+For $L^2$, the eigenvalue equation is $L^2 f_t=\lambda f_t$ for a yet unknown eigenvalue $\lambda$. Using the ladder operator algebra and we find an expression for $\lambda$ and we obtain $L^2 f_t=\hbar^2 \ell(\ell+1) f_t$. We have found the eigenvalue of $L^2$ in terms of the maximum eigenvalue of $L_z$ which is $\ell$.
 
 Now we do the same with bottom rung of angular momentum states, and we find that it must have $m=-\ell$. 
 
@@ -138,7 +140,7 @@ Ladder of orbital angular momentum ladder states, indicated is the $L_z$ eigenva
 
 But, this also implies $\ell=-\ell+N$ or $\ell=N/2$ which means that $\ell$ is either integer or half-integer.
 
-We summarize:
+We summarize now with the eigenfunctions $f_{\ell}^m$:
 
 $$\begin{align*}
 L^2 f_{\ell}^m&=\hbar^2 \ell(\ell+1) f_{\ell}^m\\
@@ -147,7 +149,7 @@ L_z f_{\ell}^m&=\hbar m f_{\ell}^m\\
 m&=-\ell,-\ell+1, \ldots, \ell-1, \ell
 \end{align*}$$(3d-am-5)
 
-Exciting, half-integer values are possible - we will come back to this.
+Exciting, half-integer values are possible - we will come back to this. But for the hydrogen atom, remember that particular properties of the spherical harmonics require that $\ell$ is integer.
 
 
 ## Quantum angular momentum example
@@ -228,10 +230,10 @@ Quantum mechanics predicts that this simply can't be done - and this agrees very
 <!-- [G4.3.2] -->
 `[slide]`
 
-Now we want to derive the eigenfunctions of the orbital angular momentum operators, in particular again for the electron of the hydrogen atom. We first write the operators in spherical coordinates, we had $\mathbf{L}=-i \hbar(\mathbf{r} \times \boldsymbol{\nabla})$ with nabla operator in spherical coordinates:
+Now we want to derive the eigenfunctions of the orbital angular momentum operators, in particular again for the electron of the hydrogen atom. We first write the operators in spherical coordinates, we had $\vec{L}=-i \hbar(\vec{r} \times \vec{\nabla})$ with nabla operator in spherical coordinates, where the hat indicates unit coordinates:
 
 $$
-\nabla=\hat{r} \frac{\partial}{\partial r}+\hat{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}+\hat{\phi} \frac{1}{r \sin \theta} \frac{\partial}{\partial \phi}
+\vec{\nabla}=\hat{r} \frac{\partial}{\partial r}+\hat{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}+\hat{\phi} \frac{1}{r \sin \theta} \frac{\partial}{\partial \phi}
 $$(3d-am-6)
 
 We write down the eigenvalue equations where we know already the eigenvalues, first for $L^2$ where the eigenvalue is $\hbar^2 \ell(\ell+1)$:
@@ -246,7 +248,7 @@ $$
 L_z f_{\ell}^m=-i \hbar \frac{\partial}{\partial \phi} f_{\ell}^m=\hbar m f_{\ell}^m
 $$(3d-am-8)
 
-You might see that we have already seen these differential equations, and we know that the eigenfunctions are the spherical harmonics $Y_l^m$!
+You might see that we have already seen these differential equations, and we know that the eigenfunctions are the spherical harmonics $Y_\ell^m$!
 
 This is amazing - without assuming anything about the system, the spherical harmonics are found to be the eigenfunctions of the quantum angular momentum operators, now it is probably clear that the quantum numbers $\ell$ and $m$ indeed must properly describe the angular momentum of the electron. 
 

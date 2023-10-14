@@ -113,7 +113,7 @@ glue("3d-sphc", fig, display=False)
 
 (3d-sphc)=
 ```{glue:figure} 3d-sphc
-The qubit Bloch sphere with a particular qubit state, indicated by the so-called Blochvector.
+The spherical coordinate system where a position is defined by the radius $r$ and two angles $\theta$ and $\phi$.
 ```
 
 
@@ -130,35 +130,35 @@ The time-independent Schrödinger equation then becomes
 $$
 -\frac{\hbar}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=0
 $$(3d-s-6)
- 
-Now, we show how you can solve this equation.
+
+We see terms with derivatives of the radial, polar, and azimuthal coordinates, and relatively simple prefactors involving different coordinates. Now, we show how you can solve this equation.
 
 ## Separation of variables
 
 `[slide]`
 
-What we saw before that the method of separation of variables can be used to split a wavefunction up in a time-dependant and a spatial part. We use a similar approach for the 3D Schrödinger equation, we start looking for solutions that separate in a radial part $R$ and angular part $Y$:
+What we saw before that the method of separation of variables can be used to split a wavefunction up in a time-dependant and a spatial part. We use a similar approach for the 3D Schrödinger equation, we start looking for solutions that factorize in a radial part $R$ and angular part $Y$ in the following way:
 
 $$
 \psi\left(r,\theta,\phi\right)=R\left(r\right)Y\left(\theta,\phi\right)
 $$(3d-s-7)
 
-We now insert this back into the Schrödinger equation, and make use of the fact that partial derivatives only act on the individual parts
+We now insert this back into the Schrödinger equation, and make use of the fact that partial derivatives only act on the corresponding parts
 
 $$
 -\frac{\hbar^2}{2 m}\left[\frac{Y}{r^2} \frac{d}{d r}\left(r^2 \frac{d R}{d r}\right)+\frac{R}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{R}{r^2 \sin ^2 \theta} \frac{\partial^2 Y}{\partial \phi^2}\right]+V R Y=E R Y
 $$(3d-s-8)
 
-We now divide by $YR$ and multiply with $-2 m r^2 / \hbar^2$  and obtain
+We now divide by $YR$, multiply with $-2 m r^2 / \hbar^2$ and regroup the terms so we obtain the equation
 
 $$
 \left\{\frac{1}{R} \frac{d}{d r}\left(r^2 \frac{d R}{d r}\right)-\frac{2 m r^2}{\hbar^2}[V(r)-E]\right\}+\frac{1}{Y}\left\{\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{1}{\sin ^2 \theta} \frac{\partial^2 Y}{\partial \phi^2}\right\}=0
 $$(3d-s-9)
 
 
-We see that the first term in curly brackets only depends on the radial coordinate $r$, while the second term only on the angular coordinates $\theta$ and $\phi$. Therefore, both parts must be individually constant and add up to zero, so the negative of each other. We choose as the constant for the left part $\ell(\ell+1)$, therefore $-\ell(\ell+1)$ for the right part. This is not restricting generality for now as $\ell$ can be any complex number.
+We see that the first term in curly brackets only depends on the radial coordinate $r$, while the second term only on the angular coordinates $\theta$ and $\phi$. Therefore, both parts must be individually constant and add up to zero, so they need to be the negative of each other. Without restricting generality, we choose as the constant for the left part $\ell(\ell+1)$, and $-\ell(\ell+1)$ for the right part. This does not restrict generality as $\ell$ can be any complex number.
 
-## The azimuthal part
+## The angular part
 
 `[slide]`
 
@@ -168,13 +168,13 @@ $$
 \left\{\frac{1}{\Theta}\left[\sin \theta \frac{d}{d \theta}\left(\sin \theta \frac{d \Theta}{d \theta}\right)\right]+\ell(\ell+1) \sin ^2 \theta\right\}+\frac{1}{\Phi} \frac{d^2 \Phi}{d \phi^2}=0
 $$(3d-s-10)
 
-Same procedure as before - now we call the constant describing the rightmost term $m^2$, this right part is so easy that we can directly solve it:
+We again see two parts, the left term in brackets depends only on the polar angle, and the right term depends only on the azimuthal angle. Now we use the same procedure as before - now we call the constant describing the rightmost term $m^2$, this equation is so simple that we can directly solve it:
 
 $$
 \frac{d^2 \Phi}{d \phi^2}=-m^2 \Phi \Rightarrow \Phi(\phi)=e^{i m \phi}
 $$(3d-s-11)
  
-Due to the periodicity of the azimuthal coordinate $\phi=\phi+2\pi$, we obtain that $m$ must be an integer number $m=0, \pm1, \ldots$ With this, we have found our first **quantum number** describing our system! Note, we have only assumed that the potential is rotationally symmetric, and already a quantum number appears!
+Due to the periodicity of the azimuthal coordinate $\phi=\phi+2\pi$, we obtain that $m$ must be an integer number $m=0, \pm1, \ldots$ With this, we have found our first **quantum number** describing our system! Note, we have only assumed that the potential is rotationally symmetric, and already a quantum number appears! An cartoon of the azimuthal part of the wavefunction for $m=6$ is shown in the figure.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -210,7 +210,7 @@ An azimuthal wave function that repeats itself after one round trip.
 
 `[slide]`
 
-One can also solve the polar-azimuthal part, again by looking up or solving the polar differential equation yourselves, see Griffiths Chapter 4.1 for more details. At the end, the solutions turn out to be the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
+One can also solve the whole polar-azimuthal part, again by looking up or solving the polar differential equation yourselves, see Griffiths Chapter 4.1 for more details. At the end, the solutions turn out to be the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
 
 $$
 Y_{\ell}^m(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^m(\cos \theta)
@@ -224,21 +224,21 @@ $$
 \ell=0,1,\ldots\quad\text{and}\quad m=-\ell,-\ell+1,\ldots,\ell
 $$(3d-s-13)
 
-Later we will see that $\ell$ is associated with the total angular momentum of the state, and $m$ the projection of the angular momentum along a particular axis.
+Later we will see that $\ell$ is associated with the total angular momentum of the state, and $m$ the projection of the angular momentum along a particular axis, the $z$-axis in our case here.
 
 ## The radial part
 
 `[slide]`
 
-In order to solve the radial part, we can get insight even before assuming a specific radial potential. We can simplify this by changing variables with $u(r) \equiv r R(r)$, then we are left with this differential equation: 
+In order to solve the radial part, we can get insight even before assuming a specific radial potential. We can simplify the radial part by changing variables with $u(r) \equiv r R(r)$, then we are left with this differential equation: 
 
 $$
 -\frac{\hbar^2}{2m}\ \ \frac{d^2u}{dr^2}+\left[V+\frac{\hbar^2}{2m}\ \frac{\ell\left(\ell+1\right)}{r^2}\ \ \right]u=Eu\ 
 $$(3d-s-14)
 
-This is a again a 1D Schrödinger equation, with a radial-position dependent term added to the potential term. This term decreases quickly with radial distance, and it increases with larger $\ell$ or angular momentum - this means this term accellerates the quantum particle outwards, it is also called the centrifugal term. Together with $V$ the term in brackets is called the effective potential. 
+This is a again a 1D Schrödinger equation, with a radial-position dependent term added to the potential term in square brackets. This term decreases quickly with radial distance, and it increases with larger $\ell$ or angular momentum - this means this term accellerates the quantum particle outwards, it is also called the centrifugal term. Together with $V$ the term in brackets is called the effective potential. 
 
-To finally solve this equation and with this the full Schrödinger equation, we finally need to plug in a particular potential $V$. We aim to calculate the electronic energy states of the simplest atom, the hydrogen atom. In this case, $V$ is given by the Coulomb potential that describes the electrostatic attraction of the electron to the nucleus, therefore it is negative:
+To finally solve this equation and with this the full Schrödinger equation, we need to plug in a particular potential $V$. Here, we aim to calculate the electronic energy states of the simplest atom, the hydrogen atom. In this case, $V$ is given by the Coulomb potential that describes the electrostatic attraction of the electron to the nucleus that consists of a single positive charge, the proton - therefore the potential is purely attractive, or negative:
 
 $$
 V=\ -\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}\ 
@@ -277,6 +277,10 @@ $$
 E_1=-\left[\frac{m_e}{2 \hbar^2}\left(\frac{e^2}{4 \pi \epsilon_0}\right)^2\right]=-13.6\,\mathrm{eV}
 $$(3d-s-18)
 
+The unit electron volt or eV is a very useful energy unit in quantum mechanics and has more natural values of order 1 compared to Joule - the conversion is
+
+$$1\, \mathrm{eV} = 1.6022\times10^{-19}\, \mathrm{J}$$(3d-ev)
+
 Finally, we can write down a single equation describing the wavefunction of the electron in the hydrogen atom (where $L$ are the associated Laguerre polynomials):
 
 $$
@@ -285,7 +289,7 @@ $$(3d-s-20)
 
 We see that
 * the radial coordinate is re-scaled by the radial quantum number $n$ and the Bohr radius $a$
-* there is a nice separation into radial and angular part
+* there is a nice separation into radial and angular parts
 * The Laguerre polynomials and the normalization factor combines both degrees of freedom
 
 Now, we visualize this and comment on a few properties.

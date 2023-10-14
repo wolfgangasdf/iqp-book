@@ -25,7 +25,7 @@ We have discussed different degrees of freedom of fundamental quantum particles,
 
 Let us discuss now two particles where all these degrees of freedom are summarized by the subscript $a$ and $b$ for particles a and b. We assume that they are noninteracting so the joint wavefunction is again described by $\psi\left(r_1,r_2\right)=\psi_a\left(r_1\right)\psi_b\left(r_2\right)$.
 
-Note that the wavefunction with subscript $a$ and $b$ also describes the position of the particles, the variables $r_1$ and $r_2$ indicate for which positions we *evaluate* the wavefunction.
+Note that the wavefunction with subscript $a$ and $b$ also describes the position of the particles, the variables $r_1$ and $r_2$ indicate for which positions we *evaluate* the wavefunction. You can probably better think of this as a *two-point wavefunction* which happens to contain two particles.
 
 Now, the probability of finding particle a in the volume element $dr_1$ and b in $dr_2$ is given by $|\psi(r_1,r_2)|^2 dr_1 dr_2$.
 
@@ -123,22 +123,43 @@ We calculate this expectation value first for two distinguishable particles
 
 $$\Psi\left(r_{1},r_2\right)=\psi_a\left(r_1)\ \psi_b(r_2\right)$$(tp-ef-2)
 
+We can work out the following identities:
+
+$$
+\left\langle r_1^2\right\rangle = \left\langle r^2\right\rangle_a,\quad 
+\left\langle r_2^2\right\rangle = \left\langle r^2\right\rangle_b,\quad 
+\left\langle r_1 r_2\right\rangle = 
+\left\langle r\right\rangle_a
+\left\langle r\right\rangle_b
+$$(tp-d-id)
+
 We obtain:
 
 $$\left\langle\left(r_1-r_2\right)^2\right\rangle_d=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b$$(tp-ef-3)
 
-Instead, if we calculate it for the either bosonic or fermionic indistinguishable particle wavefunction
+Instead, if we calculate it for the either bosonic or fermionic **indistinguishable** particle wavefunction
 
 $$\psi_\pm\left(r_1,r_2\right)=A\left[\psi_a\left(r_1\right)\psi_b\left(r_2\right)\pm\psi_b\left(r_1\right)\psi_a\left(r_2\right)\right]$$(tp-ef-4)
 
-We obtain
+We first can calculate the identities
 
-$$\left\langle\left(r_1-r_2\right)^2\right\rangle_{ \pm}=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b \mp 2\left|\langle r\rangle_{a b}\right|^2$$(tp-ef-5)
+$$
+\left\langle r_1^2\right\rangle=
+\left\langle r_2^2\right\rangle=
+\frac{1}{2}\left(\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b\right)
+,\quad
+\left\langle r_1 r_2\right\rangle=
+\langle r\rangle_a\langle r\rangle_b \pm \left|\langle r\rangle_{a b}\right|^2
+$$(tp-id-id)
 
-with the wave function overlap between the particles given by
+and with the wave function overlap between the particles given by
 
 $$\langle r\rangle_{a b} = 
 \int r \psi_a\left(r\right)^* \psi_b\left(r\right) dr$$(tp-ef-6)
+
+we obtain
+
+$$\left\langle\left(r_1-r_2\right)^2\right\rangle_{ \pm}=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b \mp 2\left|\langle r\rangle_{a b}\right|^2$$(tp-ef-5)
 
 
 We observe:

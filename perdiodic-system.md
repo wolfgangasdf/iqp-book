@@ -21,7 +21,7 @@ Now we have all ingredients to understand the building blocks of matter - atoms.
 
 We won’t discuss molecules in detail – they are also very important – but the principles are similar to atoms. We also do not discuss the atomic core – a whole lot of quantumness is going on there, but surprisingly only knowledge of the number of protons, which is the atomic number $Z$, is sufficient to understand atoms.
 
-Atoms are neutral, so an atom with atomic number $Z$ has also $Z$ electrons. These individual electrons in an atom can be described by the 3 quantum numbers $(n,l,m)$ that we obtained before, the principal energy quantum number $n$ – often called “shell”, the total angular momentum quantum number $\ell$ called “subshell”, and the $z$-projection of the angular momentum $m$. 
+Atoms are neutral, so an atom with atomic number $Z$ has also $Z$ electrons. These individual electrons in an atom can be described by the 3 quantum numbers $(n,\ell,m)$ that we obtained before, the principal energy quantum number $n$ – often called “shell”, the total angular momentum quantum number $\ell$ called “subshell”, and the $z$-projection of the angular momentum $m$. 
 
 If electrons were bosons, they would all relax into the lowest-energy state (1,0,0) – but they are fermions, and as we have seen before they cannot occupy the same state. This is why for an atom with multiple electrons, they occupy different quantum states. How does this work?
 
@@ -53,7 +53,7 @@ The table shows the first few elements, where the shells are filled up ordinaril
 
 But for more electrons, the lowest-energy configuration can be more complicated due to electron-electron interactions, but it turns out to be pretty simple for most atoms and can be described by 3 rules, so-called **Hund’s rules**. 
 
-To mention one, the first rule is that the configuration with lowest energy has the highest spin multiplicity 2S+1 - or number of unpaired electrons, electrons which don't have a partner in the same shell with the opposite spin.
+To mention one, the first rule is that the configuration with lowest energy has the highest spin multiplicity $2S+1$ - or number of unpaired electrons, electrons which don't have a partner in the same shell with the opposite spin.
 
 This means that, for example, the 3 electrons in the $p$ subshell will be in the $\uparrow\uparrow\uparrow$ spin state. Only if a fourth electron is added, it has to go into the spin-down state resulting in $\uparrow\downarrow\uparrow\uparrow$. Remember this simply as the “bus seat rule” - the bus fills up with individually travelling people such that everyone has two places. The reason for this rule is a bit beyond this course.
 You can look all rules in [wikipedia](https://en.wikipedia.org/wiki/Hund%27s_rules)

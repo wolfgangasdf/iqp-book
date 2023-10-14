@@ -34,19 +34,19 @@ Where $\mu_B$ is the **Bohr magneton**, which relates the spin (but also orbital
 
 $$\mu_B \equiv \frac{e \hbar}{2 m}=5.788 \times 10^{-5} \mathrm{eV} / \mathrm{T}$$(sp-b-3)
 
-Now, $g_e$ or often written as $g_s$ for the spin is the Landé g-factor, which for a classical spinning charged ball or orbital motion would be $1$, but for the electron spin it is $g_e=2$. Derivation requires relativistic Dirac theory, and is irrelevant here.
+Now, $g_e$ or often written as $g_s$ for the spin is the Landé g-factor, which for a classical spinning charged ball or orbital motion would be $1$, but for the electron spin it is $g_e\approx-2$. Derivation requires relativistic Dirac theory, and is irrelevant here.
 
  Now, we place the electron with its magnetic dipole moment in a magnetic field $\vec{B}$. We can obtain the Hamiltonian of this system by using the energy of the magnetic moment in the magnetic field $-\vec{\mu}\cdot\vec{B}$, and replacing the moment by the spin operator:
 
 $H=-\gamma\vec{B}\cdot\vec{S}$
 
-This interaction changes the energy for the spin parallel or antiparallel to $\vec{B}$ - this is called the **Zeeman effect**:
+This interaction changes the energy for the spin parallel or antiparallel to $\vec{B}$ - this is called the **Zeeman effect** as shown in the figure. 
 
 ```{figure} figures/spin/zeeman.png
 ---
 name: sp-zeeman
 ---
-Zeeman splitting: The parallel and anti-parallel dipole moment orientation with respect to an external magnetic field leads to an energy splitting of the spin states (right).
+Zeeman splitting: The parallel and anti-parallel magnetic moment orientation with respect to an external magnetic field leads to an energy splitting of the spin states (right).
 ```
 
 
@@ -54,7 +54,7 @@ Zeeman splitting: The parallel and anti-parallel dipole moment orientation with 
 
 `[slide]`
 
-What happens for an arbitrarily aligned magnetic moment? As shown in the figure, we consider a spin magnetic moment, and the mmagnetic field aligned along the $z$ axis. Classically, this leads to a torque acting on the dipole $\vec{\mu}\times\vec{B}$, which tries to line up the dipole moment parallel to the field, just like a compass needle. In the absence of dissipation, also classically, the magnetic moment would rotate around the field forever as indicated in the figure.
+What happens for an arbitrarily aligned magnetic moment? As shown in the figure, we consider a spin magnetic moment, and the magnetic field aligned along the $z$ axis. Classically, this leads to a torque acting on the dipole $\vec{\mu}\times\vec{B}$, which tries to line up the dipole moment parallel to the field, just like a compass needle. In the absence of dissipation, also classically, the magnetic moment would rotate around the field forever as indicated in the figure.
 
 Quantum mechanically, for instance for a single electron, only particular orientations are allowed with respect to the quantization axis $z$ here. We have already seen that the magnetic field splits the energy of spin-up and down states - this implies a different "wiggle factor" that we found before! Now, If you simply calculate what this means for, for instance for the $x$-component $\langle S_x\rangle$, you will find an oscillation. This is worked out in more detail in Griffiths example 4.3 – please have a look!
 

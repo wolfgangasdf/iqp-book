@@ -11,6 +11,7 @@
 * use macbook pro on eye height, bluetooth mouse to scroll (read from top of screen). best greenscreen but not needed
 * macbook pro m1 microphones & camera is sufficient at 1-2m distance
 * make sure the audio is strong enough (system prefs)
+* with quicktime: float on top, check 3x that recording in progress, it's super confusing.
 
 #### DONT FORGET
 * make introduction, "in this video..."
