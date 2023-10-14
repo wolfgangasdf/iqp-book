@@ -111,23 +111,28 @@ So, the first correction term to the energy is simply the expectation value of t
 
 Now we want to find $|\psi_n^{(1)}\rangle$. For this, it is useful to know properties of the correction states $|\psi_n^{(i)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
 
-It is reasonable to assume that $\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle=1$, but we know already that also $\langle \psi_n|\psi_n\rangle=1$ must hold. Let's impose normalization up to first order:
+It is reasonable to assume that $\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle=1$, but we know already that also $\langle \psi_n|\psi_n\rangle=1$ must hold. Let's impose normalization up to first order, we must have:
 
-$$
-\left(\langle \psi_n^{(0)}|+\lambda \langle \psi_n^{(1)}|\right)
-\left(|\psi_n^{(0)}\rangle+\lambda |\psi_n^{(1)}\rangle\right)=1
-\\
-\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle
+$$\left(\langle \psi_n^{(0)}|+\lambda \langle \psi_n^{(1)}|\right)
+\left(|\psi_n^{(0)}\rangle+\lambda |\psi_n^{(1)}\rangle\right)=1$$(ad-pt-7a)
+
+By evaluating this we get a second-order term which we ignore: 
+
+$$\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle
 +\lambda \langle \psi_n^{(0)}|\psi_n^{(1)}\rangle
 +\lambda \langle \psi_n^{(1)}|\psi_n^{(0)}\rangle
 +\cancel{\lambda^2 \langle \psi_n^{(1)}|\psi_n^{(1)}\rangle}
 =1
-\\
+$$(ad-pt-7b)
+
+The first term is equal to one and after dividing by $\lambda$ we obtain
+
+$$
 \langle \psi_n^{(0)}|\psi_n^{(1)}\rangle+
 \langle \psi_n^{(1)}|\psi_n^{(0)}\rangle=0
-$$(ad-pt-7)
+$$(ad-pt-7c)
 
-We can assume that the terms are real since in time-independent quantum mechanics the global phase can be set to 1, therefore we find that the zeroth and first order eigenstate are orthogonal: $\langle \psi_n^{(0)}|\psi_n^{(1)}\rangle$. Note that this is an unusual normalization and you might say this leads to errors - yes, but we check simply for normalization in the end.
+We can assume that the terms are real since in time-independent quantum mechanics the global phase can be set to 1, therefore this equation means that the zeroth and first order eigenstates are orthogonal: $\langle \psi_n^{(0)}|\psi_n^{(1)}\rangle=0$. Note that this is an unusual way of using normalization and you might say this leads to errors - this is true, but we are also only calculating approximate solutions!
 
 ## First-order eigenstates
 
