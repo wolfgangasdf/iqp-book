@@ -23,13 +23,13 @@ It is now time to extend our formulation of the Schrödinger equation to 3 dimen
 In classical mechanics in 3 dimensions, we simply add up the kinetic energies for the 3 spatial simensions. We do the same in quantum mechanics, the Hamilton operator was in 1D
 
 $$
-H=-\frac{\hbar}{2m}\ \frac{\partial^2}{\ \partial x^2}+V(x)
+H=-\frac{\hbar^2}{2m}\ \frac{\partial^2}{\ \partial x^2}+V(x)
 $$(3d-s-1)
 
 In 3D, we need to add up the kinetic energies for all 3 dimensions: 
 
 $$
-H=-\frac{\hbar}{2m}\ \left(\frac{\partial^2}{\ \partial x^2}+\frac{\partial^2}{\partial y^2\ }+\frac{\partial^2}{\ \partial z^2}\right)+V(x,y,z)
+H=-\frac{\hbar^2}{2m}\ \left(\frac{\partial^2}{\ \partial x^2}+\frac{\partial^2}{\partial y^2\ }+\frac{\partial^2}{\ \partial z^2}\right)+V(x,y,z)
 $$(3d-s-2)
 
 The expression in brackets has a name, it is called the Laplace operator $\Delta$ since it is so useful in physics. This operator is the square of the nabla operator $\Delta=\nabla^2$, $\nabla$ is sometimes also called *del*, which is a vector containing the first derivaties:
@@ -43,7 +43,7 @@ The nabla operator is used many times in physics, for instance to calculate the 
 With this, we can write the Hamilton operator in 3D even shorter:
 
 $$
- H=-\frac{\hbar}{2m}\ \nabla^2+V.
+ H=-\frac{\hbar^2}{2m}\ \nabla^2+V
 $$(3d-s-4)
 
 ## The Schrödinger equation in spherical coordinates
@@ -128,7 +128,7 @@ It is actually quite easy to convince yourself that this is how it needs to be -
 The time-independent Schrödinger equation then becomes
 
 $$
--\frac{\hbar}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=0
+-\frac{\hbar^2}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=0
 $$(3d-s-6)
 
 We see terms with derivatives of the radial, polar, and azimuthal coordinates, and relatively simple prefactors involving different coordinates. Now, we show how you can solve this equation.
