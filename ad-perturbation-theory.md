@@ -12,13 +12,13 @@ kernelspec:
 
 # Perturbation theory
 
-In this section we introduce a powerful method, perturbation theory, to obtain an approximation to what happens to a quantum system if we add a small perturbation - for instance if the the square-well potential is not really flat at the bottom.
+In this section we introduce a powerful method, perturbation theory, to obtain an approximation to what happens to a quantum system if we add a small change, for instance a perturbation to the potential. This is important because we can only obtain analytical solutions for very simple quantum systems, but we would like to also be able to predict the quantum properties of more complex systems.
 
 ## A small perturbation & power series
 
 `[slide]`
 
-Let's assume that we have solved the Schrödinger equation for a particular Hamiltonian, for instance the infinite square well Hamiltonian that we now call $H_0$. As we have shown before, we have obtained a set of orthonormal eigenfunctions $\psi_n^{(0)}$ and energies or eigenvalues $E_n^{(0)}$. Now, there is a small time-indepentend perturbation of the system - for instance a small hump in the potential:
+Let us assume that we have solved the Schrödinger equation for a particular Hamiltonian - as an example we discuss a quantum particle in the infinite square well potential, we call the  original unperturbed Hamiltonian $H_0$. Earlier in this course, we have obtained for this case a set of orthonormal eigenfunctions $\psi_n^{(0)}$ with corresponding energies or eigenvalues $E_n^{(0)}$. Now, we add a small time-indepentend perturbation to the system - for instance a small hump at the middle of the potential as shown in the figure:
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -43,19 +43,19 @@ glue("potential-well-hump", fig, display=False)
 
 (potential-well-hump)=
 ```{glue:figure} potential-well-hump
-A potential with a hump.
+The infinite square well potential with a hump in the middle.
 ```
 
-We can write the Hamiltonian as a sum of the unperturbed one and the perturbation:
+We can write the Hamiltonian as a sum of the unperturbed Hamiltonian one and the perturbation:
 
 
 $$
 H=H_0+\lambda H'
 $$(pt-ham)
 
-$H'$ in Eq. {eq}`pt-ham` can for instance be the potential for the "hump".
+$H'$ describes the "hump", and $\lambda$ is a real constant which is assumed to be small.
 
-Now we write the eigenfunction, the wavefunction $\psi_n$ and its energy $E_n$ of a particular state $n$ as power series in $\lambda$ - If you don't remember these check the [wikipedia page](https://en.wikipedia.org/wiki/Power_series)!
+Now we write the eigenfunctions, the wavefunctions $\psi_n$ and their energies $E_n$ as power series in $\lambda$ - If you don't remember these check the [wikipedia page](https://en.wikipedia.org/wiki/Power_series)!
 
 $$
 E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots
@@ -65,7 +65,7 @@ $$
 \psi_n=\psi_n^{(0)}+\lambda \psi_n^{(1)}+\lambda^2 \psi_n^{(2)}+\ldots
 $$(ad-pt-2)
 
-We call for instance $E_n^{(1)}$ the first-order correction to the $n$th eigenvalue and so on. Since the perturbation is assumed to be small, the energies and eigenstates should be similar to the unperturbed case, and higher-order correction terms should become small. How do we determine these corrections?
+We call $E_n^{(1)}$ the *first-order correction* to the $n$th eigenvalue, and $\psi_n^{(1)}$ the first-order correction to the wavefunction, and so on. Since the perturbation is assumed to be small, the energies and eigenstates should be similar to the unperturbed case, and higher-order correction terms should become small. How do we calculate these corrections?
 
 ## First-order perturbation theory: energy
 
@@ -83,40 +83,38 @@ $$(ad-pt-3)
 
 We now collect terms in $\lambda$ according to the order that we want to calculate and obtain:
 
-For the zeroth order we get for the terms without $\lambda$: 
+For the zeroth order we collect the terms without $\lambda$ and obtain again our unperturbed Schrödinger equation 
 
 $$
 H_0|\psi_n^{(0)}\rangle=E_n^{(0)}|\psi_n^{(0)}\rangle
 $$(ad-pt-4)
 
-and for the first order, the terms with $\lambda$ are (after dividing by $\lambda$):
+For the first order, we collect terms linear in $\lambda$ and obtain after dividing by $\lambda$:
 
 $$
 H_0 |\psi_n^{(1)}\rangle + H'|\psi_n^{(0)}\rangle=E_n^{(0)}|\psi_n^{(1)}\rangle + E_n^{(1)}|\psi_n^{(0)}\rangle
 $$(pt-1storderseq)
 
-We multiply from left with $\langle\psi_n^{(0)}|$, note that $H_0$ is hermitian and can also be evaluated by acting to the left, and the first terms on the left and right hand side cancel. We obtain:
+We multiply this equation from left with $\langle\psi_n^{(0)}|$ and use the fact that we can evaluate eigenvalues also to the left or $\langle\psi_n^{(0)}|H_0=E_n^{(0)}$, then the first terms on the left and right hand side cancel. We obtain:
 
 $$
 E_n^{(1)}=\langle\psi_n^{(0)}|H'|\psi_n^{(0)}\rangle
 $$(ad-pt-5)
 
-So, the first correction term to the energy is simply the expectation value of the perturbation Hamiltonian for the unperturbed eigenstate! This is a very important equation in quantum mechanics.
-
-<!-- `G example 7.1+2 as exercise.` -->
+So, the first-order correction to the energy is simply the expectation value of the perturbation Hamiltonian for the unperturbed eigenstate! This is a very important equation in quantum mechanics.
 
 ## Normalisation
 
 `[slide]`
 
-Now we want to find $|\psi_n^{(1)}\rangle$. For this, it is useful to know properties of the correction states $|\psi_n^{(i)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
+Now we want to find the first-order correction to the wavefunction, $|\psi_n^{(1)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
 
-It is reasonable to assume that $\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle=1$, but we know already that also $\langle \psi_n|\psi_n\rangle=1$ must hold. Let's impose normalization up to first order, we must have:
+Our unperturbed states were normalized so we have $\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle=1$, but it is also reasonable to require also our full solutions of the perturbed system to be normalized, so $\langle \psi_n|\psi_n\rangle=1$. You might object that both cannot exactly be true, but we only want to calculate approximate solutions, so let's continue by imposing normalization up to first order, then it must hold:
 
 $$\left(\langle \psi_n^{(0)}|+\lambda \langle \psi_n^{(1)}|\right)
 \left(|\psi_n^{(0)}\rangle+\lambda |\psi_n^{(1)}\rangle\right)=1$$(ad-pt-7a)
 
-By evaluating this we get a second-order term which we ignore: 
+By evaluating this we get a second-order term in $\lambda$ which we ignore: 
 
 $$\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle
 +\lambda \langle \psi_n^{(0)}|\psi_n^{(1)}\rangle
@@ -125,14 +123,14 @@ $$\langle \psi_n^{(0)}|\psi_n^{(0)}\rangle
 =1
 $$(ad-pt-7b)
 
-The first term is equal to one and after dividing by $\lambda$ we obtain
+The first term is equal to $1$ and after dividing by $\lambda$ we obtain
 
 $$
 \langle \psi_n^{(0)}|\psi_n^{(1)}\rangle+
 \langle \psi_n^{(1)}|\psi_n^{(0)}\rangle=0
 $$(ad-pt-7c)
 
-We can assume that the terms are real since in time-independent quantum mechanics the global phase can be set to 1, therefore this equation means that the zeroth and first order eigenstates are orthogonal: $\langle \psi_n^{(0)}|\psi_n^{(1)}\rangle=0$. Note that this is an unusual way of using normalization and you might say this leads to errors - this is true, but we are also only calculating approximate solutions!
+We can assume that the terms are real since in time-independent quantum mechanics the global phase can be set to 1, therefore this equation means that the zeroth and first order eigenstates are orthogonal: $\langle \psi_n^{(0)}|\psi_n^{(1)}\rangle=0$. Note that this is an unusual way of using normalization and you might say this leads to errors - you are correct, but we are only want to obtain approximate solutions! In the end, success determines if a method is useful or not.
 
 ## First-order eigenstates
 
@@ -140,7 +138,7 @@ We can assume that the terms are real since in time-independent quantum mechanic
 
 We now need to play around with our equations to find an expression for $|\psi_n^{(1)}\rangle$, for the first order corrections! We use a trick that is often useful in quantum mechanics: we insert the identity and see what we can do with it.
 
-First we re-arrange Eq. {eq}`pt-1storderseq`: 
+First we re-arrange our first-order Schrödinger equation (Eq. {eq}`pt-1storderseq`) and obtain: 
 
 $$
 \left(H_0-E_n^{(0)}\right)|\psi_n^{(1)}\rangle = 
@@ -153,7 +151,7 @@ $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}c_m^{(n)}|\psi_m^{(0)}\rangle
 $$(ad-pt-9)
 
-We left out $m=n$ due to the normalization choice above. Now we insert this into the preceeding equation:
+We left out $m=n$ due to the normalization result above. Now we insert this into the Schrödinger equation and obtain:
 
 $$
 \sum_{m\neq n}
@@ -162,7 +160,8 @@ $$
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
 $$(ad-pt-10a)
 
-where we can evaluate $H_0$ and obtain
+We can evaluate $H_0$ and obtain
+
 $$
 \sum_{m\neq n}
 \left(E_m^{(0)}-E_n^{(0)}\right)c_m^{(n)}
@@ -170,7 +169,7 @@ $$
 -\left(H'-E_n^{(1)}\right)|\psi_n^{(0)}\rangle
 $$(ad-pt-10b)
 
-Finally we multiply from left with $\langle\psi_k^{(0)}|$
+Finally we multiply from left with $\langle\psi_k^{(0)}|$ and we get
 
 $$
 \sum_{m\neq n}
@@ -182,7 +181,7 @@ $$(ad-pt-11)
 
 `[slide]`
 
-Let's examine this. For $k = n$, the left hand side is zero and we obtain again the expression for the first-order Energy correction.
+Let's examine this. For $k = n$, the left hand side is zero and we obtain again the expression for the first-order energy correction.
 
 For $k \neq n$ only the $m=k$ term of the sum is nonzero, and the rightmost term is zero, and we obtain
 
@@ -204,9 +203,9 @@ $$(ad-pt-14)
 
 Some observations:
 
-* This only works if the energy spectrum of the unperturbed system is *nondegenerate*, if the denominator is never 0. We come later to the degenerate perturbation theory
-* We see that the perturbation requires potentially all unperturbed neigenstates to describe the perturbed system! 
-* From the denominator we see that if the energies of the eigenstates lie closer in energy, the perturbation has a larger effect - since noise is a kind of perturbation, for qubits a spectrum with significant energy spacing can be advantageous.
+* We see that perturbation theory requires potentially many - infinitely manny - unperturbed neigenstates to describe the perturbed system! But we will see that often, only a few states already give a good result.
+* The procedure only works if the energy spectrum of the unperturbed system is *nondegenerate*, if the denominator is not $0$ - otherwise the correction diverges which cannot be physical. Later we see that this is indeed not the case, we have to use degenerate perturbation theory.
+* From the denominator we see that, if the energies of the eigenstates lie close in energy, the perturbation has a larg effect. In quantum systems, noise can often be seen as a kind of perturbation. Therefore, for qubits, it can be advantageous to use quantum systems with a large energy spacing - the effect of perturbations is smaller than for systems with small energy spacing!
 
 
 ## 1st order perturbation theory: example
@@ -226,7 +225,7 @@ $$
 H'=\alpha \delta(x-a / 2)
 $$(ad-pt-15)
 
-We know from before the wavefunction for the unperturbed case. 
+We know from before the wavefunctions for the unperturbed case:
 
 $$\psi_n^{(0)}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)$$(ad-pt-swup)
 
@@ -249,7 +248,7 @@ E_n^{(1)}=\frac{2 \alpha}{a} \sin ^2\left(\frac{n \pi}{a} \frac{a}{2}\right)=\fr
 \end{array}\right\}
 $$(ad-pt-17)
 
-This means that if $n$ is even, there is no perturbation. Remember that the wavefunctions for even $n$ have a node in the center - they simply don't *feel* the perturbation in our approximation! The unperturbed wavefunctions are again shown in the Figure.
+This means that if $n$ is even, there is correction needed!. Remember that the wavefunctions for even $n$ have a node in the center - they simply don't *feel* the perturbation in the first-order perturbation theory! The unperturbed wavefunctions are again shown in the Figure.
 
 
 ```{code-cell} ipython3
@@ -289,7 +288,7 @@ $$
 |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
 $$(ad-pt-18)
 
-We need to calculate the numerator:
+We need to calculate the numerator and we obtain an integral, evaluation of this is simple because we can use the property of the delta function that it is only nonzero if its argument is zero, and that the integral over the delta function is $1$:
 
 $$
 \left\langle\psi_m^{(0)}\left|H^{\prime}\right| \psi_1^{(0)}\right\rangle=\frac{2 \alpha}{a} \int \sin \left(\frac{m \pi}{a} x\right) \delta\left(x-\frac{a}{2}\right) \sin \left(\frac{\pi}{a} x\right) d x
@@ -314,7 +313,7 @@ $$
 \frac{2 \alpha}{a} \frac{2 m_0 a^2}{\pi^2 \hbar^2}\left[\frac{-1}{1-9} \left|\psi_3^{(0)}\right\rangle+\frac{1}{1-25} \left|\psi_5^{(0)}\right\rangle+\frac{-1}{1-49} \left|\psi_7^{(0)}\right\rangle+\ldots\right]
 $$(ad-pt-21)
 
-We see that the contribution of higher states decreases quadratically, luckily. If you remember the shape of the odd wavefunctions, some have a maximum and some a minimum in the center - therefore the alternating sign of the correction terms is not surprising. The result is that the central maximum of the $n=1$ wavefunction gets a small dip in the center where the potential hump is introduced, as shown in the Figure. For this calculation, states up to $m=20$ have been taken into account.
+We see that the contribution of higher states decreases quadratically, so, luckily, we don't have to consider an infinite amount of states! If you remember the shape of the odd wavefunctions, some have a maximum and some a minimum in the center - therefore the alternating sign of the correction terms is not surprising. The result is that the central maximum of the $n=1$ wavefunction gets a small dip in the center where the potential hump is introduced, as shown in the Figure. For the result shown in the Figure, states up to $m=20$ have been taken into account.
 
 
 ```{code-cell} ipython3
@@ -365,7 +364,7 @@ The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculated up t
 
 The procedure for the second-order corrections is in principle similar to the first-order ones above, but now we will obtain double sums. 
 
-The energy correction is:
+For instance, the second-order energy correction given by
 
 $$
 E_n^{(2)}=\sum_{m \neq n} 
@@ -376,8 +375,8 @@ E_n^{(0)}-E_m^{(0)}
 }
 $$(ad-pt-22)
 
-Luckily, often the first-order corrections are sufficient to understand the behaviour of systems.
+We won't discuss this further - luckily, often the first-order corrections are sufficient to understand the effect of perturbations on the behaviour of quantum systems.
 
-The behaviour of quantum systems under perturbations is very important, for instance to determine how small changes affect physical, realistic qubits. As we will see later, it is also crucial to calculate the dynamics and discover coherent control schemes of qubits.
+The behaviour of quantum systems under perturbations is very important, for instance to determine how small changes affect physical, realistic qubits. As we will see later, it is also crucial to understand coherent control of physical qubits.
 
-But it is extremely hard to calculate quantum systems for arbitrary potentials and interactions. One important goal of quantum research and technology is to make a machine that can determine the ground state (and excited states) of quantum systems - of course including many "perturbations"!
+In general and for complex potentials and interactions, it is extremely hard to calculate the energies and states of quantum systems. One important goal of quantum research and technology is to develop machines, quantum simulators, that can do this in a short time.

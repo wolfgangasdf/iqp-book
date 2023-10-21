@@ -29,19 +29,27 @@ $$(ad-ptd-1)
 
 As an example we consider now a particle in a 2D infinite square well potential with $V(x,y)=0$ for $0\leq x \leq a$ $0\leq y \leq a$ otherwise $V(x,y)=\infty$.
 
-We know the solutions, they are 
+The solutions are simply superpositions, that is products, of two one-dimensional infinite square well solutions along $x$ and $y$, and they are 
 
 $$
 \psi_{n_x,n_y}^{(0)}=\frac{2}{a} \sin\left(\frac{n_x \pi x}{a}\right)\sin\left(\frac{n_y \pi y}{a}\right)\,,\,n_x,n_y\geq 1
 $$(ad-ptd-2)
 
-The ground state with $n_x=n_y=1$ is non-degenerate since it is only one state, but the first excited states $\psi_{1,2}^{(0)}$ and $\psi_{2,1}^{(0)}$ are degenerate since both have the energy
+with the energy
+
+$$
+E_{n_x,n_y}=\frac{\hbar^2 \pi^2}{2m_0 a^2}(n_x^2+n_y^2)
+$$(ad-ptd-2a)
+
+The ground state with quantum numbers $n_x=n_y=1$ is non-degenerate since it is only one state, but the first excited states $\psi_{1,2}^{(0)}$ and $\psi_{2,1}^{(0)}$ are degenerate since both have the energy
 
 $$
 E_{1,2}=E_{2,1}=\frac{\hbar^2 \pi^2}{2m_0 a^2}(1^2+2^2)
 $$(ad-ptd-3)
 
 `[slide]`
+
+We show the two solutions in the figure:
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -81,19 +89,19 @@ The two first excited wavefunctions of the 2d infinite square well potential. Th
 ```
 
 
-Now we add our perturbation, we use again a delta function, now placed off-center at one quarter in each direction, see {numref}`potential-well-2d`:
+Now we add our perturbation, we use again a delta function, now placed off-center at one quarter in each direction, indicated by the dashed line in the figure:
 
 $$
 H'=\lambda\,\delta(x-a/4)\,\delta(y-a/4)
 $$(ad-ptd-4)
 
-The increased potential at that position has as a consequence that "it is harder for the wavefunction to be there".
+Remember, the increased potential at the position of the perturbation has as the consequence that "it is harder for the wavefunction to be there".
 
 ## The perturbation couples states
 
 `[slide]`
 
-Now we define $\psi_a^{(0)}\equiv\psi_{1,2}^{(0)}$ and $\psi_b^{(0)}\equiv\psi_{2,1}^{(0)}$ also to emphasize the generic nature of our procedure. First we calculate the matrix elements 
+Now we redefine the two states $\psi_a^{(0)}\equiv\psi_{1,2}^{(0)}$ and $\psi_b^{(0)}\equiv\psi_{2,1}^{(0)}$ also to emphasize the generic nature of our procedure. First, we calculate the matrix elements of $H'$ by integrating now over two coordinates:
 
 $$
 H_{aa}'=\left\langle\psi_a^{(0)}\right|H'\left|\psi_a^{(0)}\right\rangle=
@@ -103,7 +111,7 @@ H_{aa}'=\left\langle\psi_a^{(0)}\right|H'\left|\psi_a^{(0)}\right\rangle=
 =\frac{2\lambda}{a^2}
 $$(ad-ptd-5)
 
-Also, since as we were afraid that these eigenvalues are degenerate, we obtain
+The same holds for $H_{aa}'$, so we have
 
 $$
 H_{bb}'=H_{aa}'
@@ -115,20 +123,22 @@ $$
 H_{ab}'=H_{ba}'=\frac{2\lambda}{a^2}
 $$(ad-ptd-7)
 
-which is non-zero! This implies coupling between the states. Similar to two coupled pendulums, we might already here expect that we get new eigenfunctions with different energies! If we use these states our previous non-degenerate perturbation theory procedure is applicable again. Instead of guessing the states, which often works, we give a formal procedure now.
+which are non-zero! Clearly the states are not eigenstates of the system, the fact that the off-dianonal elements are not zero implies coupling between the states $a$ and $b$. 
+Similar to two coupled but otherwise equal pendulums, we might already here expect that we get new eigenfunctions with different energies! In the case of two coupled pendulums the new eigenstates are in-phase and out of phase oscillations. 
+If we use these new states, we will now show that our previous non-degenerate perturbation theory procedure is applicable again. But, instead of guessing the states, which often works, we first give a formal procedure how to find new *good* quantum states.
 
 
 ## Finding good quantum states
 
 `[slide]`
 
-We go back to our power-series expansion up to first order from Eq. {eq}`pt-1storderseq` but with ommitted state number $n$:
+We go back to our power-series Schrödinger equation, up to first order, from Eq. {eq}`pt-1storderseq` but with ommitted state number $n$:
 
 $$
 H_0 |\psi^{(1)}\rangle + H'|\psi^{(0)}\rangle=E^{(0)}|\psi^{(1)}\rangle + E^{(1)}|\psi^{(0)}\rangle
 $$(ad-ptd-8)
 
-We multiply from left with one of our degenerate solutions $\langle\psi_a^{(0)}|$:
+As before, we multiply from left with one of our degenerate solutions $\langle\psi_a^{(0)}|$:
 
 $$
 \langle\psi_a^{(0)}|H_0 |\psi^{(1)}\rangle + \langle\psi_a^{(0)}|H'|\psi^{(0)}\rangle=E^{(0)}\langle\psi_a^{(0)}|\psi^{(1)}\rangle + E^{(1)}\langle\psi_a^{(0)}|\psi^{(0)}\rangle
@@ -154,7 +164,7 @@ $$
 \alpha H_{ba}' + \beta H_{bb}' = \beta E^{(1)}
 $$(ad-ptd-12)
 
-This is an eigenvalue problem
+These two equations describe the eigenvalue problem
 
 $$
 \left(\begin{array}{ll}
@@ -165,13 +175,24 @@ H_{b a}' & H_{b b}'
 =E^{(1)}\left(\begin{array}{l} \alpha \\ \beta \end{array}\right)
 $$(ad-ptd-13)
 
+Note that this procedure can be generalized to $n$-fold degeneracies, one basically just has to add all $n$ degenerate states to the superposition, and obtains an $n\times n$ matrix.
+
+
 ## The new quantum states
 
 `[slide]`
+By inserting our matrix elements from before we obtain:
 
-Note that this is quite easy to be generalized to $n$-fold degeneracies, one basically just has to add all $n$ degenerate states to the superposition, and obtains an $n\times n$ matrix!
+$$
+\frac{2\lambda}{a^2}\left(\begin{array}{ll}
+1 & 1 \\
+1 & 1
+\end{array}\right)
+\left(\begin{array}{l} \alpha \\ \beta\end{array}\right)
+=E^{(1)}\left(\begin{array}{l} \alpha \\ \beta \end{array}\right)
+$$(ad-ptd-13)
 
-You know how to solve this (the eigenvalues of a matrix full of $x$ are $\{0,2x\}$ and the eigenvectors are $(1,1)$ and $(1,-1)$), we obtain as the perturbed energies
+You know how to solve this, the eigenvalues of a matrix full of 1's are $0$ and $2$ and the eigenvectors are $(1,1)$ and $(1,-1)$). So we obtain as the perturbed energies
 
 $$
 E^{(1)}_+=\frac{4\lambda}{a^2}
@@ -185,10 +206,13 @@ $$
 \psi^{(0)}_\pm=\frac{1}{\sqrt{2}}\left(\psi^{(0)}_a \pm \psi^{(0)}_b \right)
 $$(ad-ptd-15)
 
+As we had anticipated before, they are superpositions of the unperturbed but degenerate eigenstates.
 
-## Visualizing the new quantum states
+## The new quantum states and solutions
 
 `[slide]`
+
+We plot the newly found states in the figure, the dashed line again indicates the position of our perturbation.
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -227,19 +251,15 @@ glue("potential-well-2d-pm", fig, display=False)
 The two new wavefunctions $\psi^{(0)}_+$ (left) and $\psi^{(0)}_-$ (right) lifting the degeneracy of first-order perturbation theory.
 ```
 
-It is clear that $\psi^{(0)}_+$ has the higher energy, since it has a much higher expectation value at the position of the perturbation, this increases the energy of that state.
+It is clear that $\psi^{(0)}_+$ must have a higher energy, since it has a higher expectation value at the position of the perturbation, and this increases the energy of that state.
 
-## Wrapping up
-
-`[slide]`
-
-We check if now our approach for degenerate perturbation theory works:
+We check if now our approach for degenerate perturbation theory works for the new states, and calculate the numerator:
 
 $$
 \langle\psi_+^{(0)}|H' |\psi^{(0)}_-\rangle = 0
 $$(ad-ptd-16)
 
-which is exactly what we need that the expression for the perturbed states does not blow up!
+This is exactly what we need such that the expression for the perturbed states does not blow up!
 
 $$
 \left|\psi_n^{(1)}\right\rangle=\sum_{m\neq n}\frac{\left\langle\psi_m^{(0)}\right|H'\left|\psi_n^{(0)}\right\rangle}{E_n^{(0)}-E_m^{(0)}}\left|\psi_m^{(0)}\right\rangle
@@ -248,5 +268,3 @@ $$(ad-ptd-17)
 Now we just have to re-formulate the sum and include our new states, this is a bit tedious and won't be done here. But in any case it is more important that we have seen that, naturally, energy degeneracies are (often) lifted under perturbations!
 
 <!-- PD said yes leave it with this. -->
-
-<!-- Example 7.3 & example 7.4 exercise etc. -->

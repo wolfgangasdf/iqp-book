@@ -26,7 +26,10 @@ The same also occurs for quantum wavefunctions also for massive particles - beca
 
 `[slide]`
 
-The WKB method named after Wentzel, Kramers and Brillouin is a very useful method to calculate localized (bound) states and tunneling through potential barriers. We want to calculate what happens to a quantum wave incident from the left for this case:
+The WKB method named after Wentzel, Kramers and Brillouin is a very useful method to calculate localized (bound) states and tunneling through potential barriers. We want to calculate what happens to a quantum wave incident from the left for the case shown in the figure.
+
+A quantum wave is incident on a potential barrier described by $V(x)$. For an incident quantum wave with energy $E$ and amplitude $A$, we want to calculate the coefficients for the reflected ($B$) and transmitted ($F$) wave.
+
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -61,12 +64,12 @@ glue("wkb-potential", fig, display=False)
 
 (wkb-potential)=
 ```{glue:figure} wkb-potential
-The setup for studying quantum tunneling. An incident quantum wave with energy $E$ and amplitude $A$ is reflected ($B$) and transmitted ($F$) by the potential $V(x)$.
+Quantum tunneling.
 ```
 
 `[slide]`
 
-Usually, the Schrödinger is written in a different form: 
+Usually, the Schrödinger is written in the following form: 
 
 $$\frac{d^2 \psi}{d x^2}=-\frac{p^2}{\hbar^2} \psi$$(ad-wkb-1)
 
@@ -74,9 +77,9 @@ where
 
 $$p(x) \equiv \sqrt{2 m[E-V(x)]}$$(ad-wkb-2)
 
-If $E\gt V(x)$, $p$ is real and we call this the classical region, in our case for $x<0$ and $x>a$. is the classical momentum for a particle with energy $E$ in the potential $V(x)$.
+If $E\gt V(x)$, $p$ is real and we call this the classical region, in our case for $x<0$ and $x>a$. $p$ is in this case the classical momentum for a particle with energy $E$ in the potential $V(x)$.
 
-We can express the complex function $psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffiths 9.1 for details). If we now make the approximation that the amplitude of $\psi$ changes slowly, we obtain with $C$ some real constant:
+We can express the complex wavefunction $\psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffiths 9.1 for details). If we now make the approximation that the amplitude of $\psi$ changes slowly, we obtain with $C$ some real constant:
 
 $$\psi(x) \approx \frac{C}{\sqrt{p(x)}} e^{ \pm \frac{i}{\hbar} \int p(x) d x}$$(ad-wkb-3)
 
@@ -92,7 +95,7 @@ The WKB method of obtaining wavefunctions is very powerful to calculate localize
 
 `[slide]`
 
-Now we return to our problem in {numref}`wkb-potential`. To the left of the barrier ($x<0$) everything is fine and we can write the wavefunction as a right and left propagating wave:
+Now we return to our problem in {numref}`wkb-potential`. We assume that the potential is slowly varying only for $0\leq x \leq a$, and we treat the hard steps at $x=0$ and $x=a$ by discussing the 3 cases separately. To the left of the barrier ($x<0$) everything is fine and we can write the wavefunction as a right and left propagating wave:
 
 $$\psi(x)=A e^{i k x}+B e^{-i k x}$$(ad-wkb-5)
 
@@ -100,11 +103,11 @@ And on the right we have only a right-propagating wave:
 
 $$\psi(x)=F e^{i k x}$$(ad-wkb-6)
 
-In the tunneling region which is classically forbidden for the particle, $p(x)$ is imaginary and it is useful to write 
+In the tunneling region which is classically forbidden for the particle, $p(x)$ is imaginary and it is useful to write the WKB expression slightly differently:
 
 $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{ \pm \frac{1}{\hbar} \int|p(x)| d x}$$(ad-wkb-7)
 
-Note that only $p^2$ appears in the Schrödinger equation, and you can test that taking the modulus of $p$ works. This describes an exxponentially increasing or decreasing function, which is non-oscillatory!
+This is allowed since only $p^2$ appears in the Schrödinger equation, and you can test that taking the modulus of $p$ works. This describes an exponentially increasing or decreasing function, which is non-oscillatory!
 
 `[slide]`
 
@@ -148,6 +151,7 @@ glue("wkb-wave", fig, display=False)
 
 (wkb-wave)=
 ```{glue:figure} wkb-wave
-Quantitative plot of the wave function for the tunneling problem, in the classically forbidden region it is exponentially decaying.
+Quantitative plot of the wave function for the tunneling problem.
 ```
-<!-- could calculate correctly, exercise? -->
+
+We see that, in the classically forbidden region, the probability density it is exponentially decaying, but also behind the barrier is a nonzero probability to find our quantum particle! This is quantum tunneling. If you calculate explicit tunneling probabilities, you will find that only for very thin barriers, on the order of the de Broglie wavelength, allow for significant tunneling.

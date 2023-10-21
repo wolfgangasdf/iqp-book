@@ -60,7 +60,7 @@ $$\dot{c}_a=-\frac{i}{\hbar} H_{a b}^{\prime} e^{-i \omega_0 t} c_b, \quad \dot{
 
 `[slide]`
 
-We start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$. We insert these at the RHS of Eq. {eq}`pt-1st` abnd obtain after integration:
+We start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$. We insert these at the right-hand side of Eq. {eq}`pt-1st` and obtain after integration:
 
 $$
 \begin{align}
@@ -69,7 +69,7 @@ $$
 \end{align}
 $$(pt-1st-res)
 
-This clearly shows that it is an approximation, since $c_a$ remains at 1 and normalization is violated. 
+This clearly shows that it is an approximation, since $c_a$ remains at 1 and normalization is therefore violated.
 
 ## Sinusoidal perturbation
 
@@ -139,15 +139,17 @@ $$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$(ad-qd-12)
 
 `[slide]`
 
-Rabi noticed that if you make the rotating wave approximation at the beginning of the calculation, Eq. {eq}`pt-1st` can be solved exactly, and we obtain
+Rabi noticed that if you make the rotating wave approximation at the beginning of the calculation, Eq. {eq}`pt-1st` can be solved exactly and we don't need to restrict ourselves to perturbative solutions, and we obtain
 
 $$c_b(t)=-\frac{i}{2 \hbar \omega_r} V_{b a} e^{i\left(\omega_0-\omega\right) t / 2} \sin \left(\omega_r t\right)$$(ad-qd-13)
 
-and a similar expresswion for $c_a$, and with the Rabi frequency
+We obtain a similar expresswion for $c_a$. Here we have used the Rabi frequency
 
 $$\omega_r \equiv \frac{1}{2} \sqrt{\left(\omega-\omega_0\right)^2+\left(\left|V_{a b}\right| / \hbar\right)^2}$$(ad-qd-14)
 
-This result is properly normalized, the transition probability doesn't exceed one and is also suited for strong drive. This effect is the work horse for qubit manipulation, but up to now we haven't clearly defined *how* we make the perturbation, which we will do now.
+This result is properly normalized, the transition probability does not exceed one and the solutions also describe a strong drive. This effect, the so-called Rabi oscillations, is the work horse for qubit manipulation. 
+
+However, up to now we haven't clearly defined *how* we realize the time-dependent perturbation, which we will do now.
 
 
 
@@ -155,8 +157,9 @@ This result is properly normalized, the transition probability doesn't exceed on
 
 `[slide]`
 
-The atom or electron wavefunction is usually very small compared to the wavelengths of optical and even more microwave radiation. Therefore, we can ignore the spatial dependency. Additionally, physicists like to only discuss one frequency or wavelength, and then talk about *quasi-monochromatic* radiation. Perfect monochromatic waves cannot exist as you might guess from the Heisenberg uncertainty principle between energy and time.
-The electric field is simply oscillatory, if we assume linear polarization along the $z$-axis we have:
+The atom or electron wavefunction is usually very small compared to the wavelengths of optical and even more microwave radiation. Therefore, we can often ignore the spatial dependency of a light wave or radio wave field. Additionally, physicists like to only discuss a single frequency or wavelength, and then talk about *quasi-monochromatic* radiation. We had seen before that perfect monochromatic waves cannot exist because of the Heisenberg uncertainty relation between energy and time.
+
+Therefore, at the location of the atom, the electric field is simply oscillatory, if we assume linear polarization along the $z$-axis we have:
 
 $$\vec{E}=E_0 \cos (\omega t) \vec{z}$$(ad-qd-15)
 
@@ -170,6 +173,6 @@ where $C$ is an arbitrary path e.g. from the origin, and $q$ the electron charge
 
 $$H^{\prime}=-q E_0 z \cos (\omega t)$$(ad-qd-17)
 
-This is exactly what we used above for inducing Rabi oscillations!
+This is exactly what we needed in the previous section for inducing Rabi oscillations! So, optical or microwave radiation can be used to coherently control qubits encoded into different energy levels of quantum systems.
 
 
