@@ -100,3 +100,9 @@ sphinx-autobuild -j auto . ./_build/html
 * Debug python code: Remove `remove-output` if you want to see the error, but better use an ipynb to make plots then copy over the code.
 * Pictures are either made with inline matplotlib or [IPE](https://github.com/otfried/ipe) (zoom in to export PNG high-res)!
 
+### PDF version of the book
+I tested the latex way, all is WIP: https://jupyterbook.org/en/stable/advanced/pdf.html.
+
+Do a `jupyter-book build . --builder pdflatex` and confirm all error messages... The book is in _build/latex/book.pdf, but not very nicely formatted out of the box, nor proper pdf bookmarks etc. ...
+
+

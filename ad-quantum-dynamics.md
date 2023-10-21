@@ -84,7 +84,7 @@ We calculate Eq. {eq}`pt-1st-res` and obtain
 
 $$c_b(t)\approx -\frac{V_{b a}}{2 \hbar}\left[\frac{e^{i\left(\omega_0+\omega\right) t}-1}{\omega_0+\omega}+\frac{e^{i\left(\omega_0-\omega\right) t}-1}{\omega_0-\omega}\right]$$(ad-qd-8)
 
-Experimentally, one often works with driving frequencies $\omega$ close to the transition frequency $\omega_0$. In this case, we can neglect the second term in brackets which is called the *rotating wave approximation*, and we obtain:
+Experimentally, one often works with driving frequencies $\omega$ close to the transition frequency $\omega_0$. In this case, we can neglect the first term in brackets since $\omega_0+\omega \gg \omega_0-\omega$. This approximation is called the *rotating wave approximation*, a very important concept. We obtain:
 
 $$c_b(t)=-i \frac{V_{b a}}{\hbar} \frac{\sin \left[\left(\omega_0-\omega\right) t / 2\right]}{\omega_0-\omega} e^{i\left(\omega_0-\omega\right) t / 2}$$(ad-qd-9)
 

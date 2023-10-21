@@ -11,7 +11,7 @@ kernelspec:
 ---
 
 
-# Tunneling and WKB theory
+# Tunnelling and WKB theory
 
 <!-- G9.2 -->
 In this section, we show how to calculate quantum tunneling, the passage of particles through a barrier that is not possible classically.
@@ -111,9 +111,11 @@ This is allowed since only $p^2$ appears in the Schrödinger equation, and you c
 
 `[slide]`
 
-In the tunneling region we therefore have
+In the tunneling region we therefore have in the barrier two possible contributions:
 
 $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{\frac{1}{\hbar} \int_0^x\left|p\left(x^{\prime}\right)\right| d x^{\prime}}+\frac{D}{\sqrt{|p(x)|}} e^{-\frac{1}{\hbar} \int_0^x\left|p\left(x^{\prime}\right)\right| d x^{\prime}}$$(ad-wkb-8)
+
+where the $C$ constant is of a term that is exponentially increasing, and $D$ the constant for an exponentially decreasing term.
 
 By enforcing continuity of the wavefunction, we can calculate from this the tunneling probability:
 

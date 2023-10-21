@@ -77,7 +77,7 @@ $$
 \left(H_0+\lambda H'\right) 
 \left(|\psi_n^{(0)}\rangle+\lambda |\psi_n^{(1)}\rangle+\ldots\right)
 =
-\left(E_n=E_n^{(0)}+\lambda E_n^{(1)}+\ldots\right)
+\left(E_n^{(0)}+\lambda E_n^{(1)}+\ldots\right)
 \left(|\psi_n^{(0)}\rangle+\lambda |\psi_n^{(1)}\rangle+\ldots\right)
 $$(ad-pt-3)
 
@@ -232,7 +232,7 @@ $$\psi_n^{(0)}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)$$(ad-pt
 Now we first find the first-order corrections to the energies of the eigenstates:
 
 $$
-E_n^1=\left\langle\psi_n^{(0)}\left|H^{\prime}\right| \psi_n^{(0)}\right\rangle=\frac{2}{a} \alpha \int_0^a \sin ^2\left(\frac{n \pi}{a} x\right) \delta\left(x-\frac{a}{2}\right) d x \\
+E_n^{(1)}=\left\langle\psi_n^{(0)}\left|H^{\prime}\right| \psi_n^{(0)}\right\rangle=\frac{2}{a} \alpha \int_0^a \sin ^2\left(\frac{n \pi}{a} x\right) \delta\left(x-\frac{a}{2}\right) d x \\
 $$(ad-pt-16)
 
 Remember that the Poisson brackets can be taken literally as an integral over all parameters, in this case position. We will continue to use the ket notation although one could also use the real-space wavefunction - since we have explicit expressions for it.

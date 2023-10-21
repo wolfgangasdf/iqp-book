@@ -27,7 +27,7 @@ $$
 \left|\psi_n^{(1)}\right\rangle=\sum_{m\neq n}\frac{\left\langle\psi_m^{(0)}\right|H'\left|\psi_n^{(0)}\right\rangle}{E_n^{(0)}-E_m^{(0)}}\left|\psi_m^{(0)}\right\rangle
 $$(ad-ptd-1)
 
-As an example we consider now a particle in a 2D infinite square well potential with $V(x,y)=0$ for $0\leq x \leq a$ $0\leq y \leq a$ otherwise $V(x,y)=\infty$.
+As an example we consider now a particle in a 2D infinite square well potential with $V(x,y)=0$ for $0\leq x \leq a$ and $0\leq y \leq a$, otherwise $V(x,y)=\infty$.
 
 The solutions are simply superpositions, that is products, of two one-dimensional infinite square well solutions along $x$ and $y$, and they are 
 
@@ -190,7 +190,7 @@ $$
 \end{array}\right)
 \left(\begin{array}{l} \alpha \\ \beta\end{array}\right)
 =E^{(1)}\left(\begin{array}{l} \alpha \\ \beta \end{array}\right)
-$$(ad-ptd-13)
+$$(ad-ptd-13b)
 
 You know how to solve this, the eigenvalues of a matrix full of 1's are $0$ and $2$ and the eigenvectors are $(1,1)$ and $(1,-1)$). So we obtain as the perturbed energies
 
@@ -242,6 +242,8 @@ ax1.set_xticks([]); ax1.set_yticks([]); ax1.set_zticks([])
 ax2.set_xticks([]); ax2.set_yticks([]); ax2.set_zticks([])
 ax1.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100)
 ax2.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100)
+ax1.text2D(0.02,0.03,r"$\psi^{(0)}_+$")
+ax2.text2D(0.02,0.03,r"$\psi^{(0)}_-$")
 
 glue("potential-well-2d-pm", fig, display=False)
 ```
