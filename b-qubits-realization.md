@@ -25,6 +25,7 @@ Many important aspects of quantum mechanics and qubits can be shown with the pol
 ```{figure} figures/basics/erwin.png
 ---
 name: erwin
+scale: 10%
 ---
 The Schrödinger equation with $\psi$ on his bust in Vienna.
 ```

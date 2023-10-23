@@ -103,6 +103,6 @@ sphinx-autobuild -j auto . ./_build/html
 ### PDF version of the book
 I tested the latex way, all is WIP: https://jupyterbook.org/en/stable/advanced/pdf.html.
 
-Do a `jupyter-book build . --builder pdflatex` and confirm all error messages... The book is in _build/latex/book.pdf, but not very nicely formatted out of the box, nor proper pdf bookmarks etc. ...
+Do a `jupyter-book build . --builder pdflatex` and ignore all error messages (`R`)... The book is in `_build/latex/iqp-book.pdf``, but missing pdf bookmarks etc. ...
 
 

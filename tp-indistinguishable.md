@@ -135,7 +135,7 @@ $$(tp-d-id)
 
 We obtain:
 
-$$\left\langle\left(r_1-r_2\right)^2\right\rangle_d=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b$$(tp-ef-3)
+$$\left\langle\left(r_1-r_2\right)^2\right\rangle=\left\langle r^2\right\rangle_a+\left\langle r^2\right\rangle_b-2\langle r\rangle_a\langle r\rangle_b$$(tp-ef-3)
 
 Instead, if we calculate it for the either bosonic or fermionic **indistinguishable** particle wavefunction
 
