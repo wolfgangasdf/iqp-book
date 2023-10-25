@@ -155,13 +155,13 @@ The first wavefunctions of an infinite-well potential. All wavefunctions oscilla
 Finally, the solution to the time-dependent Schrödinger equation are found by taking into account the time dependent solution:
 
 $$
-\Psi_n\left(x,t\right)=\sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x\right)}e^{-i\left(\frac{n^2\pi^2\hbar^2}{2ma^2}\right)t}
+\Psi_n\left(x,t\right)=\sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x\right)}e^{-i\left(\frac{n^2\pi^2\hbar}{2ma^2}\right)t}
 $$
 
 which means that the most general solution to the time-dependent Schrödinger equation is a linear combination of these states: 
 
 $$
-\Psi\left(x,t\right)=\sum_{n=1}^{\infty}{c_n\sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x\right)}e^{-i\left(\frac{n^2\pi^2\hbar^2}{2ma^2}\right)t}}
+\Psi\left(x,t\right)=\sum_{n=1}^{\infty}{c_n\sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x\right)}e^{-i\left(\frac{n^2\pi^2\hbar}{2ma^2}\right)t}}
 $$
 
 These wave functions $\Psi_n(x,t)$ form a complete set, which means that all possible $\Psi(x,0)$ can be expressed by choosing appropriate coefficients $c_n$.

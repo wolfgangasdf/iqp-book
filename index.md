@@ -3,7 +3,7 @@
 *Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the **Leiden/Delft MSc programme Quantum Information Science and Technology QIST**.
 
 To gain most from this course:
-* watch the videos and read this book
+* watch the videos and read this book. There is a PDF version: [iqp-book.pdf](https://quphotonics.org/qist/iqp/iqp-book/iqp-book.pdf).
 * do the brightspace quizzes
 * solve the exercise assignments (alone or in a group, don't look at solutions unless you are really stuck!)
 * during all this, collect questions for the workgroup sessions, and possibly read a bit more in Griffiths.
