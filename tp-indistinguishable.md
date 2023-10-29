@@ -243,6 +243,6 @@ We observe:
 * If the wavefunctions do overlap, then bosons are pulled together, and fermions pushed apart. We didn't use a potential for this, so it is not a real force - it is the consequence of the symmetrization requirement - nevertheless we call the virtual force the **exchange force**.
 
 :::{admonition} Workgroup assignment
-Please solve Griffith problem 5.4 ("orthogonal" means no wavefunction overlap), 5.6a & 5.7a yourselves!
+Please solve Griffith problem G P 5.4 (p. 203, "orthogonal" means no wavefunction overlap), 5.6a (p. 205) and 5.7a (p. 205) yourselves!
 :::
 

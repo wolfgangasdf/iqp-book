@@ -345,7 +345,7 @@ In the first quantization, a particle gets wave properties, and in the second qu
 ```
 
 :::{admonition} Workgroup assignment
-Please solve Griffith problem 1.1 & 1.3 yourselves!
+Please solve Griffith problem 1.1 (p. 13) and 1.3 (p. 14) yourselves!
 :::
 
 

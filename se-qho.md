@@ -485,6 +485,6 @@ The first three energies of an anharmonic quantum oscillator - now state-selecti
 ```
 
 :::{admonition} Workgroup assignment
-Please solve Griffith problem 1.5, 1.8 & 1.16 yourselves!
+Please solve Griffith problem 1.5 (p.16), 1.8 (p.18) and 1.16 (p. 22) yourselves!
 :::
 

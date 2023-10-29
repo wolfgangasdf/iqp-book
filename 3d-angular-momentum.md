@@ -255,6 +255,6 @@ This is amazing - without assuming anything about the system, the spherical harm
 As we have mentioned before, here, using the algebraic theory of angular momentum operators, we have found that also half-integer values for $\ell$ are allowed eigenvalues of the differential equations. Before, where we were trying to find explicit solutions for the electron wave function using the method of separation of variables, we found only integer values for $\ell$. This is a crucial result - the algebraic theory of angular momentum leads to the concept of half-integer angular momentum which will turn out to be the "spin", discussed in the following lectures.
 
 :::{admonition} Workgroup assignment
-Please solve Griffith problem 4.1 & 4.2 yourselves!
+Please solve Griffith problem 4.1 and 4.2 (p. 132) yourselves!
 :::
 

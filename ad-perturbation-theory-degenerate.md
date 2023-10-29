@@ -270,3 +270,7 @@ $$(ad-ptd-17)
 Now we just have to re-formulate the sum and include our new states, this is a bit tedious and won't be done here. But in any case it is more important that we have seen that, naturally, energy degeneracies are (often) lifted under perturbations!
 
 <!-- PD said yes leave it with this. -->
+
+:::{admonition} Workgroup assignment
+Please solve Griffith problem 7.3 (p. 284) and exercise 7.2 (p. 287) yourselves!
+:::

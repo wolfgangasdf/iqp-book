@@ -176,3 +176,6 @@ $$H^{\prime}=-q E_0 z \cos (\omega t)$$(ad-qd-17)
 This is exactly what we needed in the previous section for inducing Rabi oscillations! So, optical or microwave radiation can be used to coherently control qubits encoded into different energy levels of quantum systems.
 
 
+:::{admonition} Workgroup assignment
+Please solve Griffith problem 7.19 (p.303), 7.23 (p.305, assume e.g. |L|=hbar), 9.1 (p.357), and 11.8 (p.408) yourselves!
+:::
