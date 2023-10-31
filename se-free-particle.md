@@ -91,7 +91,7 @@ will be such an equation – this is the Schrödinger equation for a "quantum wa
 Note that the main goal of physics research is to develop models to describe nature, and not to explain "why" something is like it is - of course it is most satisfying when we can explain "why" something is - but often this is just in relation to our models. So, please accept this equation for now - we will see it works often extremely well!
 
 One solution to this wave equation is 
-$\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is called a plane wave moving in the $x$ direction. The momentum $k$ is obviously well defined, and we see that the wave has a non-vanishing amplitude all over space – therefore Heisenberg uncertainty is preserved: $\Delta k=0$ and $\Delta x=\infty$. The momentum is $p\ =\hbar k$ and energy $E=p^2/m=\hbar\omega$.
+$\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is called a plane wave moving in the $x$ direction. The wavevector $k$ and with this the momentum $p\ =\hbar k$ is well defined, and we see that the wave has a non-vanishing amplitude all over space – therefore Heisenberg uncertainty is preserved: $\Delta k=\Delta p=0$ and $\Delta x=\infty$. The energy is $E=p^2/m=\hbar\omega$.
 
 <!-- Quick question: verify that real functions Acos(k x – w t) and Asin(k x – w t) are not solutions – remind yourselves of Euler’s formula. -->
 <!-- Ph problem 2.3 -->

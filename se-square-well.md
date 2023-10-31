@@ -61,7 +61,7 @@ The infinite square potential well.
 Inside the well the potential energy is zero such that the time independent Schrödinger equation reads: 
 
 $$
--\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi\quad or\quad  \frac{d^2\psi}{dx^2}=-k^2\psi\quad \text{where } k\equiv\sqrt{2mE}/\hbar
+-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi\quad \text{or}\quad  \frac{d^2\psi}{dx^2}=-k^2\psi\quad \text{where } k\equiv\sqrt{2mE}/\hbar
 $$(se-sw-2)
 
 This equation is the classical harmonic oscillator equation describing for instance a mass on a spring. The general solution is:

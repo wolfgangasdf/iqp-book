@@ -41,3 +41,7 @@ chapters:
     - file: ad-perturbation-theory-apps
     - file: ad-wkb
     - file: ad-quantum-dynamics
+  - file: appendix
+    sections:
+    - file: development
+    - file: formula-sheet

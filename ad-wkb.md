@@ -79,11 +79,11 @@ $$p(x) \equiv \sqrt{2 m[E-V(x)]}$$(ad-wkb-2)
 
 If $E\gt V(x)$, $p$ is real and we call this the classical region, in our case for $x<0$ and $x>a$. $p$ is in this case the classical momentum for a particle with energy $E$ in the potential $V(x)$.
 
-We can express the complex wavefunction $\psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffiths 9.1 for details). If we now make the approximation that the amplitude of $\psi$ changes slowly, we obtain with $C$ some real constant:
+We can express the complex wavefunction $\psi$ as $\psi(x)=A(x) e^{i \phi(x)}$ where $A(x)$ and $\phi(x)$ are real functions. We plug this into the Schrödinger equation and solve it (see Griffiths 9.1 for details). If we now make the approximation that the amplitude $A$ of $\psi$ changes slowly (or more precisely that $A''/A$ is very small), we obtain with $C$ some real constant:
 
 $$\psi(x) \approx \frac{C}{\sqrt{p(x)}} e^{ \pm \frac{i}{\hbar} \int p(x) d x}$$(ad-wkb-3)
 
-The probability amplitude is 
+Both positive and negative exponents are solutions, and we have written it with an indefinite integral for now. The probability amplitude is 
 
 $$|\psi(x)|^2 \approx \frac{|C|^2}{p(x)}$$(ad-wkb-4)
 
@@ -103,15 +103,15 @@ And on the right we have only a right-propagating wave:
 
 $$\psi(x)=F e^{i k x}$$(ad-wkb-6)
 
-In the tunneling region which is classically forbidden for the particle, $p(x)$ is imaginary and it is useful to write the WKB expression slightly differently:
+In the tunneling region which is classically forbidden for the particle, $p(x)$ is imaginary and therefore the wavefunction is real! It is useful to write the WKB expression slightly differently:
 
 $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{ \pm \frac{1}{\hbar} \int|p(x)| d x}$$(ad-wkb-7)
 
-This is allowed since only $p^2$ appears in the Schrödinger equation, and you can test that taking the modulus of $p$ works. This describes an exponentially increasing or decreasing function, which is non-oscillatory!
+Taking the modulus of $p$ is allowed since only $p^2$ appears in the Schrödinger equation. This describes an exponentially increasing or decreasing function, which in strong contrast to the plane wave is non-oscillatory!
 
 `[slide]`
 
-In the tunneling region we therefore have in the barrier two possible contributions:
+In the tunneling region we therefore have in the barrier the two possible contributions:
 
 $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{\frac{1}{\hbar} \int_0^x\left|p\left(x^{\prime}\right)\right| d x^{\prime}}+\frac{D}{\sqrt{|p(x)|}} e^{-\frac{1}{\hbar} \int_0^x\left|p\left(x^{\prime}\right)\right| d x^{\prime}}$$(ad-wkb-8)
 
