@@ -13,19 +13,17 @@ kernelspec:
 
 # Formula sheet
 
+Basic quantum states, e.g. photon polarization: 
+
 $$
 |H\rangle=\left(\begin{matrix}1\\0\\\end{matrix}\right)
 \quad\text{and}\quad
 |V\rangle=\left(\begin{matrix}0\\1\\\end{matrix}\right)
-$$
-
-$$
+\quad;\quad
 P_{click}=\left|\left\langle\Psi_{\text {detector }} \mid \Psi\right\rangle\right|^2
 $$
 
-De Broglie: $\lambda=\frac{h}{p}$. 
-
-Classical mechanics: Velocity and momentum: $v\ =\ p/m$, Kinetic energy: $E=p^2/m$
+Classical mechanics velocity and momentum: $v\ =\ p/m$, Kinetic energy: $E=p^2/m$, de Broglie wavelength: $\lambda=\frac{h}{p}$. 
 
 Plane wave $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, $p\ =\hbar k$
 
@@ -34,13 +32,9 @@ Schrödinger:
 
 $$
 \nabla=\left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}  \right)
-$$
-
-$$
- H=-\frac{\hbar^2}{2m}\ \nabla^2+V
-$$
-
-$$
+\quad ; \quad
+H=-\frac{\hbar^2}{2m}\ \nabla^2+V
+\quad ; \quad
 H \psi=E \psi
 $$
 
@@ -71,19 +65,20 @@ $$
 Ladder operators:
 
 $$
-\begin{aligned}
-a^{\dagger}|n\rangle & =\sqrt{n+1}|n+1\rangle \\
-a|n\rangle & =\sqrt{n}|n-1\rangle
-\end{aligned}
+a^{\dagger}|n\rangle =\sqrt{n+1}|n+1\rangle
+\quad ; \quad
+a|n\rangle =\sqrt{n}|n-1\rangle
 $$
 
 Pauli:
 
 $$
 \sigma_x=\left(\begin{matrix}0&1\\1&0\\\end{matrix}\right), 		\sigma_y=\left(\begin{matrix}0&-i\\i&0\\\end{matrix}\right), 	\sigma_z=\left(\begin{matrix}1&0\\0&-1\\\end{matrix}\right)
+; \quad
+\vec{S}=\left(\hbar/2\right)\vec\sigma
+; \quad
+\vec\sigma=\left(\sigma_x,\sigma_y,\sigma_z\right)
 $$
-
-$\vec{S}=\left(\hbar/2\right)\vec\sigma$ with $\vec\sigma=\left(\sigma_x,\sigma_y,\sigma_z\right)$.
 
 1st order non-degenerate perturbation theory:
 
@@ -100,9 +95,7 @@ Useful integrals:
 
 $$
 \int_{-\infty}^{\infty}  e^{-a(x+b)^2}\,dx= \sqrt{\frac{\pi}{a}}
-$$
-
-$$
+\quad ; \quad
 \int_{-\infty}^{\infty} x^n e^{-a x^2} d x=\sqrt{\pi} a^{-(n+1) / 2} 2^{-n} \frac{n !}{(n / 2) !}
 $$
 
