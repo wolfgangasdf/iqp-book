@@ -13,17 +13,19 @@ kernelspec:
 
 # Formula sheet
 
-Basic quantum states, e.g. photon polarization: 
+Basic qubit quantum states, e.g. photon polarization or spin: 
 
 $$
-|H\rangle=\left(\begin{matrix}1\\0\\\end{matrix}\right)
-\quad\text{and}\quad
-|V\rangle=\left(\begin{matrix}0\\1\\\end{matrix}\right)
-\quad;\quad
-P_{click}=\left|\left\langle\Psi_{\text {detector }} \mid \Psi\right\rangle\right|^2
+\left\{|0\rangle,|1\rangle\right\},\;
+\left\{|H\rangle,|V\rangle\right\},\;
+\left\{|\uparrow\rangle,|\downarrow\rangle\right\},\;
+\left\{\left(\begin{matrix}1\\0\\\end{matrix}\right),
+\left(\begin{matrix}0\\1\\\end{matrix}\right)\right\}
 $$
 
-Classical mechanics velocity and momentum: $v\ =\ p/m$, Kinetic energy: $E=p^2/m$, de Broglie wavelength: $\lambda=\frac{h}{p}$. 
+$$ P_{click}=\left|\left\langle\Psi_{\text {detector }} \mid \Psi\right\rangle\right|^2$$
+
+Classical mechanics velocity and momentum: $v\ =\ p/m$, Kinetic energy: $E=p^2/2m$, de Broglie wavelength: $\lambda=\frac{h}{p}$. 
 
 Plane wave $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, $p\ =\hbar k$
 
