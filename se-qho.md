@@ -113,7 +113,7 @@ $$(se-qho-lo3)
 Show this!
 :::
 
-This is called a *canonical* commutation relation because it is of great fundamental importance. $\hat{x}$ and $\hat{p}$ are conjugate variables with non-zero commutator, which always leads to an uncertainty relation as we have discussed before.
+This is called a *canonical* commutation relation because it is of great fundamental importance. $\hat{x}$ and $\hat{p}$ are conjugate variables with non-zero commutator, which always leads to an uncertainty relation: it apparently matters if you first measure the position, and then the momentum of a particle or the other way around!
 
 
 With this commutation relation, we obtain $\hat{a}_{-} \hat{a}_{+}=\frac{1}{\hbar \omega} \hat{H}+\frac{1}{2}$, or written differently

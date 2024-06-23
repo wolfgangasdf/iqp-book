@@ -70,7 +70,21 @@ If we multiply these uncertainties we obtain $\Delta x\Delta p\approx h$, theref
 
 Two notes: first, this is the maximum precision so we better write $\Delta x\Delta p\ge\ h$, and second, the precise numeric value on the right-hand side depends on the specific waveform of our wavefunction.
 
-We will come back to the Heisenberg uncertainty principle later in this course.
+% TODO new
+We can also use this example of wave packets to explore another uncertainty relation: Energy and time. This is more involved as there is no *time* operator, but we can discuss the case for a Gaussian wave packet of light, travelling at the speed of light. We obtain
+
+$$
+\begin{split}
+\Delta p & = \frac{h\,\Delta f}{c}=\frac{\Delta E}{c}\\
+\Delta x & = c\, \Delta t
+\end{split}
+$$(se-ur-et1)
+
+which results in
+
+$$\Delta E\,\Delta t \ge \hbar$$(se-ur-et)
+
+
 
 ## The Schrödinger equation
 
