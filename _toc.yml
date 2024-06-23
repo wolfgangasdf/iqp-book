@@ -13,6 +13,7 @@ chapters:
     - file: b-qubits-realization
     - file: b-degrees-of-freedom
     - file: b-evidence-for-qm
+    - file: b-postulates
   - file: se
     sections:
     - file: se-free-particle
