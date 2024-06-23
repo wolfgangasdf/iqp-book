@@ -265,6 +265,50 @@ $$(3d-s-19)
 
 The formula for energy means that there is an infinite number of states with negative energy - therefore states where the electron is bound to the nucleus. However, the energies approach $0$ for $n\rightarrow\infty$, therefore an electron in a highly excited state is only weakly bound to the core.
 
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+
+nmax = 6
+
+def efromx(x):
+    return -1/abs(x/3)
+
+def xfrome(e):
+    return -1/(e/3)
+
+def efromn(n):
+    return -7/(n*n)
+fig, ax = plt.subplots(figsize=(4,3))
+x = linspace(-xfrome(efromn(nmax)), xfrome(efromn(nmax)), 500)
+ax.plot(x,efromx(x), color='orange')
+ax.text(3, -5, "Coulomb potential", color='orange')
+ax.arrow(0,-9, 5, 0, width=0.07, length_includes_head=False, color='0.5' )
+ax.text(3, -8, "distance from core", color='0.5')
+ax.arrow(0,-10, 0, 11, width=0.07, length_includes_head=False, color='0.5' )
+ax.text(0.5, 0.5, "energy", color='0.5')
+ax.text(-8, -2, "states")
+for n in range(1,nmax):
+    ee=efromn(n)
+    ax.plot([-xfrome(ee),xfrome(ee)],[ee,ee],'-k')
+    
+ax.set_ylim([-10,2])
+
+ax.axis('off')
+fig.legend(loc='outside right')
+
+glue("h-energies", fig, display=False)
+```
+% TODO new
+(h-energies)=
+```{glue:figure} h-energies
+Coulomb potential of the hydrogen atom showing a numnber of bound states. 
+```
+
+
 The energy formula is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the hydrogen atom:
 
 $$
