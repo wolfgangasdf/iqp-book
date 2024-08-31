@@ -241,8 +241,3 @@ $$\left\langle\left(x_1-x_2\right)^2\right\rangle_{ \pm}=\left\langle x^2\right\
 We observe:
 * If the wavefunctions don't overlap spatially, $\langle x\rangle_{a b}=0$ and it doesn't matter if the particles are bosons, fermions, or if we have (anti) symmetrizised their wavefunctions or not.
 * If the wavefunctions do overlap, then bosons are pulled together, and fermions pushed apart. We didn't use a potential for this, so it is not a real force - it is the consequence of the symmetrization requirement - nevertheless we call the virtual force the **exchange force**.
-
-:::{admonition} Workgroup assignment
-Please solve Griffith problem G P 5.4 (p. 203, "orthogonal" means no wavefunction overlap), 5.6a (p. 205) and 5.7a (p. 205) yourselves!
-:::
-

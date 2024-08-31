@@ -14,26 +14,31 @@ chapters:
     - file: b-degrees-of-freedom
     - file: b-evidence-for-qm
     - file: b-postulates
+    - file: b-exercise
   - file: se
     sections:
     - file: se-free-particle
     - file: se-1d-schroedinger
     - file: se-square-well
     - file: se-qho
+    - file: se-exercise
   - file: 3d
     sections:
     - file: 3d-schroedinger
     - file: 3d-angular-momentum
+    - file: 3d-exercise
   - file: sp
     sections:
     - file: sp-concepts
     - file: sp-half
     - file: sp-magnetic-field
     - file: sp-clebschgordan
+    - file: sp-exercise
   - file: tp
     sections:
     - file: tp-intro
     - file: tp-indistinguishable
+    - file: tp-exercise
   - file: perdiodic-system
   - file: ad
     sections:
@@ -46,3 +51,4 @@ chapters:
     sections:
     - file: development
     - file: formula-sheet
+    - file: solutions

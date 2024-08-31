@@ -76,7 +76,10 @@ pip install -U sphinx-proof
 pip install -U sphinx-exercise
 pip install -U sphinx-autobuild
 pip install -U sphinx-mathjax-offline
+pip install -U sphinx-exercise
+pip install -U sphinx-togglebutton
 ```
+
 ### build and develop
 
 The book sourcecode is in this folder, go into it.

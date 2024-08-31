@@ -130,12 +130,3 @@ $$
 $$(sp-cg-cg)
 
 where $C_{m_1 m_2 m}^{s_1 s_2 s}$ are the so-called Clebsch Gordan coefficients. You know now how to calculate these coefficients - but luckily these values are tabulated, a very useful table is on [wikipedia](https://en.wikipedia.org/wiki/Table_of_Clebsch%E2%80%93Gordan_coefficients).
-
-:::{admonition} Workgroup assignment
-Please solve Griffith problem 4.30 (p.171), 4.35 (p. 175) and 4.37 (p.180) yourselves!
-:::
-
-
-
-
-
