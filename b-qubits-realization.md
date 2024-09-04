@@ -105,6 +105,14 @@ glue("b-polarization", fig, display=False)
 Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
 ```
 
+:::{admonition} Note: light and wave equations
+:class: dropdown
+If you want to refresh your electromagnetic field knowledge, here some useful links:
+  * [wikipedia on electromagnetic radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)
+  * [wikipedia on Maxwell equations](https://en.wikipedia.org/wiki/Maxwell%27s_equations), note the section on derivation of the [wave equation for EM fields](https://en.wikipedia.org/wiki/Maxwell%27s_equations#Vacuum_equations,_electromagnetic_waves_and_speed_of_light)
+  * Also useful: a more general discussion of wave equations: [wave equation](https://en.wikipedia.org/wiki/Wave_equation)
+:::
+
 ## Polarization bases
 `[slide]`
 
