@@ -1,4 +1,4 @@
-# Introduction
+# Overview
 
 *Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the **Leiden/Delft MSc programme Quantum Information Science and Technology QIST**.
 
@@ -39,9 +39,11 @@ We assume that you are familiar with:
 
 Everything is welcome!
 
-## Acknowledgements
+# Acknowledgements
 
 Large parts are based on the excellent book **Griffiths, Introduction to Quantum Mechanics, 3rd edition**. Small parts are based on **Phillips, Introduction to quantum mechanics**.
+
+Amber Mozes, Milou van Nederveen, Jort Boxelaar, Mohammed Boky helped designing and implementing the course. Rohan Acharya prepared the exercises. Mohammed Boky was teaching assistant for the course.
 
 These notes were made using [Jupyter Book](https://jupyterbook.org/), based on Peter Bruin's script for [Mathematics for Quantum Physics](https://pub.math.leidenuniv.nl/~bruinpj/MQP/) which in turn is partially based on the [Jupyter
 Book demo](https://idemalab.tudelft.nl/jupyterbookdemo/) by Timon

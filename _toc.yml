@@ -45,8 +45,10 @@ chapters:
     - file: ad-perturbation-theory
     - file: ad-perturbation-theory-degenerate
     - file: ad-perturbation-theory-apps
+    - file: ad-perturbation-theory-exercise
     - file: ad-wkb
     - file: ad-quantum-dynamics
+    - file: ad-exercise
   - file: appendix
     sections:
     - file: development

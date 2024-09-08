@@ -22,3 +22,7 @@ kernelspec:
 [04-spin-solutions.pdf](../iqp-book-assets/04-spin-solutions.pdf)
 
 [05-twoparticles-solutions.pdf](../iqp-book-assets/05-twoparticles-solutions.pdf)
+
+[06-perturbation-theory-solutions.pdf](../iqp-book-assets/06-perturbation-theory-solutions.pdf)
+
+[07-advanced-solutions.pdf](../iqp-book-assets/07-advanced-solutions.pdf)

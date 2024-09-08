@@ -82,7 +82,7 @@ pip install -U sphinx-togglebutton
 
 ### build and develop
 
-The book sourcecode is in this folder, go into it.
+Go into the book sourcecode folder.
 
 This will use  `_config.yml` and  `_toc.yml` to generate conf.py:
 
