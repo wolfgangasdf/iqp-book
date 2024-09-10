@@ -344,8 +344,4 @@ glue("b-quant", fig, display=False)
 In the first quantization, a particle gets wave properties, and in the second quantization, a quantum wave can be exited a discrete number of times - corresponding again to particles.
 ```
 
-:::{admonition} Workgroup assignment
-Please solve Griffith problem 1.1 (p. 13) and 1.3 (p. 14) yourselves!
-:::
-
 

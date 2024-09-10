@@ -22,7 +22,7 @@ In this section, we introduce the concept of a wave and a wave function for part
 An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. 
 
 <!-- Ph 2.2.  -->
-With this as a starting point, we can already propose a wave equation for a freely moving particle if its speed is non-relativistic. We assume that the particle is moving at a velocity $v\ =\ p/m$ in the $x$ direction with mass $m$, momentum $p$ and energy $E=p^2/m$. 
+With this as a starting point, we can already propose a wave equation for a freely moving particle if its speed is non-relativistic. We assume that the particle is moving at a velocity $v\ =\ p/m$ in the $x$ direction with mass $m$, momentum $p$ and energy $E=p^2/2m$. 
 
 With this we can already describe the Heisenberg uncertainty principle:
 
@@ -84,15 +84,18 @@ which results in
 
 $$\Delta E\,\Delta t \ge \hbar$$(se-ur-et)
 
-
+:::{admonition} Note: Fourier transforms and uncertainty
+:class: dropdown
+If you like to dive deeper into Fourier transforms and the Heisenberg uncertainty principle, have a look here: 
+https://quantummechanics.ucsd.edu/ph130a/130_notes/node88.html
+:::
 
 ## The Schrödinger equation
 
 <!-- Additional: Philips 2.1 -->
 `[slide]`
 
-In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find $d\omega/dk\ =\hbar k/m$, which by integrating results in the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a wave equation that obeys this dispersion relation. 
-<!-- TODO: not very clear -->
+In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a differential equation that obeys this dispersion relation. 
 
 The skilled eye will see that the equation  
 
@@ -174,3 +177,4 @@ The figure shows two examples of a wavefunction, one more narrow and one wider i
 :::{note}
 Think where and why the [Heisenberg microscope](https://en.wikipedia.org/wiki/Heisenberg%27s_microscope) falls short in explaining the essence of the Heisenberg uncertainty relation!
 :::
+% quantum particles *have* no fixed x or p, independently if we measure it or not!

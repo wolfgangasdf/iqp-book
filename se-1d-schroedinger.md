@@ -177,7 +177,7 @@ As we have seen before, the outcome of a measurement in QM is a random variable,
 Let us look at the position. We assume that we have a particle with a wavefunction $\Psi(x,t)$, which is the probability amplitude of the position observable and $|\Psi(x,t)|^2\cdot dx$ is the probability of finding the particle between $x$ and $x+dx$. The position expectation value is therefore
 
 $$
-\langle x\rangle=\int_{+\infty}^{-\infty} x|\Psi(x, t)|^2 \mathrm{~d} x
+\langle x\rangle=\int_{-\infty}^{+\infty} x|\Psi(x, t)|^2 \mathrm{~d} x
 $$(se-1d-ev1)
 
 If we have many copies of the same system and measure repeatedly the position, the position average will be this expectation value.

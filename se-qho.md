@@ -60,6 +60,11 @@ glue("potential-taylor", fig, display=False)
 All potential minima can be approximated by a quadratic potential in the neighborhood of the minimum.
 ```
 
+:::{admonition} Note: classical harmonic oscillator
+:class: dropdown
+To refresh your knowledge, have a look here: https://en.wikipedia.org/wiki/Harmonic_oscillator
+:::
+
 ## A Schrödinger equation for the harmonic oscillator
 
 `[slide]`
@@ -380,8 +385,12 @@ glue("qho-probdens", fig, display=False)
 The probability density of the first few states of the quantum harmonic oscillator, vertically offsetted for better visibility.
 ```
 
-  
 Here we see a rather evenly distributed probability density. This is in strong contrast to the classical harmonic oscillator like a swing, where the probability is highest at the extremal turning points where the velocity is lowest. 
+
+:::{admonition} Classical probbility densities
+:class: dropdown
+Think about more differences concerning probability densities, like forbidden regions!
+:::
 
 As a side remark, we can again construct highly excited quantum states that mimic classical behaviour - but these are complex superpositions of many $\Psi_n$ eigenstates and are called coherent states.
 
@@ -431,7 +440,7 @@ Assume that we want to use the number states $|0\rangle$ and $|1\rangle$ to enco
 
 But, since the spacing between all levels of a harmonic oscillator is equal, we will make the transition from 0 to 1, but immediately also from 1 to 2 and so on - we cannot selectively address transitions.
 
-Therefore, in order to implement a qubit, we actually need to use an anharmonic oscillator as shown here with a cubic term added to the Hamiltonian
+Therefore, in order to implement a qubit, we actually need to use an anharmonic oscillator as shown here with a quartic term added to the Hamiltonian
 
 $$
 H=\frac{\hat{p}^2}{2 m}+\frac{1}{2} \omega^2 x^2+\lambda x^4
