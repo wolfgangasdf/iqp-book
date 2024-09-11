@@ -19,16 +19,15 @@ In this section, we introduce the concept of a wave and a wave function for part
 `[slide]`
 
 <!-- Ph 1.2.  -->
-An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. 
+An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. The wavelength relates to the wavenumber as $k=\ \frac{2\pi}{\lambda}$, with which we can rewrite the momentum and obtain $p=\hbar k$. 
+The wave can for instance be described by a plane wave $\Psi(\mathbf{r}, t)=\exp\left[i(\mathbf{k\cdot r}-i \omega t)\right]$ in 3D or $\Psi(x, t)=\exp\left[i(k x-i \omega t)\right]$ in one dimension.
 
 <!-- Ph 2.2.  -->
 With this as a starting point, we can already propose a wave equation for a freely moving particle if its speed is non-relativistic. We assume that the particle is moving at a velocity $v\ =\ p/m$ in the $x$ direction with mass $m$, momentum $p$ and energy $E=p^2/2m$. 
 
 With this we can already describe the Heisenberg uncertainty principle:
 
-The de Broglie wave can also be described with wavenumber $k=\ \frac{2\pi}{\lambda}$ and we can rewrite the momentum to be $p=\hbar k$. Now, a wave packet consisting of a range of wave numbers between $k-\Delta k$ and $k+\Delta k$ describes a particle with an uncertain in momentum: $\Delta p\approx\hbar\Delta k$. 
-
-The length of this wavepacket is a measure of the uncertainty in position, and it can be shown to be simply $\Delta x\approx\ 2\pi/\Delta k$. Note, the derivation of this requires a fourier transform! 
+A wave packet consisting of a range of wave numbers between $k-\Delta k$ and $k+\Delta k$ describes a particle with an uncertain in momentum: $\Delta p\approx\hbar\Delta k$. The length of this wavepacket is a measure of the uncertainty in position, and it can be shown to be simply $\Delta x\approx\ 2\pi/\Delta k$. Note, the derivation of this requires a fourier transform! 
 
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
@@ -107,14 +106,15 @@ will be such an equation – this is the Schrödinger equation for a "quantum wa
 
 Note that the main goal of physics research is to develop models to describe nature, and not to explain "why" something is like it is - of course it is most satisfying when we can explain "why" something is - but often this is just in relation to our models. So, please accept this equation for now - we will see it works often extremely well!
 
-One solution to this wave equation is 
-$\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is called a plane wave moving in the $x$ direction. The wavevector $k$ and with this the momentum $p\ =\hbar k$ is well defined, and we see that the wave has a non-vanishing amplitude all over space – therefore Heisenberg uncertainty is preserved: $\Delta k=\Delta p=0$ and $\Delta x=\infty$. The energy is $E=p^2/2m=\hbar\omega$.
+One solution to this wave equation is the plane wave mentioned before, which in the one-dimensional case is
+$\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is a plane wave moving in the $x$ direction. The wavevector $k$ and with this the momentum $p\ =\hbar k$ is well defined, and we see that the wave has a non-vanishing amplitude all over space – therefore Heisenberg uncertainty is preserved: $\Delta k=\Delta p=0$ and $\Delta x=\infty$. The energy is $E=p^2/2m=\hbar\omega$.
 
 <!-- Quick question: verify that real functions Acos(k x – w t) and Asin(k x – w t) are not solutions – remind yourselves of Euler’s formula. -->
 <!-- Ph problem 2.3 -->
 
-:::{note}
-Plot the plane wave amplitude and phase in 2 dimensions for specific wave vector and frequency, and think about its properties!
+:::{note} Plane waves
+1. Convince yourself that the plane wave is a solution of the Schrödinger equation.
+2. Plot the plane wave amplitude and phase in 2 dimensions for specific wave vector and frequency, and think about its properties! More information: https://en.wikipedia.org/wiki/Plane_wave
 :::
 
 ## Plane-wave superpositions and wavepackets
