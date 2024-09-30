@@ -72,7 +72,7 @@ $$
 \left[L_x, L_y\right]=i \hbar L_z ; \quad\left[L_y, L_z\right]=i \hbar L_x ; \quad\left[L_z, L_x\right]=i \hbar L_y
 $$(3d-am-3)
 
-Note that the indices can be permuted *cyclic*, so you have only to remember one. The non-vanishing commutator means that we never can measure all 3 components of the quantum orbital angular momentum at the same time with infinite precision! Remember that we had the same argument for position and momentum.
+Note that the indices can be permuted *cyclic*, so you have only to remember one. The non-vanishing commutator means that the 3 cartesian components of the quantum orbital angular momentum are simultaneously *not* well defined - or, that we never can measure all 3 components at the same time with infinite precision! Remember that we had the same argument for position and momentum.
 
 However, the square of the total angular momentum $L^2 \equiv L_x^2+L_y^2+L_z^2$ does commute with the cartesian components:
 
@@ -80,7 +80,7 @@ $$
 \left[L^2, L_x\right]=0, \quad\left[L^2, L_y\right]=0, \quad\left[L^2, L_z\right]=0
 $$(3d-am-4)
 
-This means we can measure those quantities with arbitrary precision at the same time!
+This means that $L^2$ and any of the cartesian components are simultaneoualy well defined or can be measured precisely.
 
 % changed 20230924
 Therefore, let us find now the eingenvalues of $L^2$ and one component, where traditionally, $L_z$ is chosen. We assume that $f$ is an eigenfunction with eigenvalue $m$: $L_z f=\hbar m f$.

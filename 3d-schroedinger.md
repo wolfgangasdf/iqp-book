@@ -325,6 +325,11 @@ The unit electron volt or eV is a very useful energy unit in quantum mechanics a
 
 $$1\, \mathrm{eV} = 1.6022\times10^{-19}\, \mathrm{J}$$(3d-ev)
 
+:::{admonition} Note: electronvolt
+:class: dropdown
+The unit electronvolt is very useful to express energies corresponding to visible-light photons, 1.8 eV for red up to 3.1 eV for blue photons. But you can also express different quantities with it using other fundamental constants, see [wikipedia](https://en.wikipedia.org/wiki/Electronvolt).
+:::
+
 Finally, we can write down a single equation describing the wavefunction of the electron in the hydrogen atom (where $L$ are the associated Laguerre polynomials):
 
 $$
