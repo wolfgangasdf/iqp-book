@@ -35,7 +35,7 @@ Now, if interactions between electrons could be neglected, all electrons in the 
 
 Here we show a table of the first few elements, and how their electronic state is characterized. The *electron configuration* is indicated by $(n\ell)^N$ - meaning $N$ electrons in shell $n$, subshell $\ell$. $\ell$ is written as letters with $s,p,d,f,\ldots$ for $\ell=0,1,2,3$.
 
-The *term symbol* is written as $^{2(S+1)}L_J$. Here, $2(S+1)$ is the spin multiplicity - how many different spin configurations are possible (remember $m=-s\ldots s$). $J$ is the total angular momentum quantum number for the electrons in the atom – as we have seen before in angular momentum coupling it ranges from $|L-S|$ to $L+S$. Finally, $L$ is the total orbital angular momentum quantum number denoted by $S,P,D,F,\ldots$
+The *term symbol* is written as $^{2S+1}L_J$. Here, $S$ is the sum of all $m_s$ values for each electron, and $L$ is the sum of all $m_\ell$ values, denoted by $S,P,D,F,\ldots$. $2S+1$ is then the spin multiplicity - how many different spin configurations are possible (remember $m=-s\ldots s$). $J$ is the total angular momentum quantum number for the electrons in the atom – as we have seen before in angular momentum coupling it can have values from $|L-S|$ to $L+S$. The particular value depend on several boundary conditions and we won't explore this further here.
 
 Why do we need both? If we think about the two $(2p)^2$ electroncs, they could be either in the triplet or singlet state - the term symbol will clarify this.
 
@@ -51,7 +51,7 @@ The table shows the first few elements, where the shells are filled up ordinaril
 | 6 | C | $(He)(2s)^2(2p)^2$ | $^3P_{0}$ |
 
 
-But for more electrons, the lowest-energy configuration can be more complicated due to electron-electron interactions, but it turns out to be pretty simple for most atoms and can be described by 3 rules, so-called **Hund’s rules**. 
+For more electrons, the lowest-energy configuration can be more complicated due to electron-electron interactions, but it turns out to be pretty simple for most atoms and can be described by 3 rules, so-called **Hund’s rules**. 
 
 To mention one, the first rule is that the configuration with lowest energy has the highest spin multiplicity $2S+1$ - or number of unpaired electrons, electrons which don't have a partner in the same shell with the opposite spin.
 

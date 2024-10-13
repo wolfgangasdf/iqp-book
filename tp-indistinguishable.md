@@ -176,11 +176,15 @@ $$\begin{align*}\psi_+\left(x_1,x_1\right)&=\frac{1}{\sqrt2}\left[\psi_a\left(x_
 
 The latter has a factor $\sqrt{2}$ which becomes 2 in probability! Apparently, the chance of finding both particles at the same position is twice as high for indistinguishable particles compared to distinguishable particles! 
 
-Another way of looking at this is the following: For distinguishable bosons with internal state $+$ or $-$, we can discriminate the states $\left|++\right\rangle$, $\left|+-\right\rangle$, $\left|-+\right\rangle$, $\left|--\right\rangle$. 
-
-If the particles are not distinguishable, $\left|+-\right\rangle$ and $\left|-+\right\rangle$ are the same state, therefore 2 of the 3 possible states are equal - compared to 2 of 4 if they are distinguishable. 
-
 All this might seem like magic because we have started with a different state – but in fact the state space for identical particles must be either in the symmetric or antisymmetric state – one can call this the symmetrization postulate or theorem.
+
+Another way of looking at this is to consider the statistics of measuring two particles with internal states $+$ and $-$ and collecting statistics how often a particular state combination is measured. We assume the particles are interacting with an environment and that all possible two-particle states have equal probability.
+
+For two distinguishable particles $a$ and $b$ we can discriminate the four states $\left|+_a+_b\right\rangle$, $\left|+_a-_b\right\rangle$, $\left|-_a+_b\right\rangle$, $\left|-_a-_b\right\rangle$. From measurements we therefore obtain that the probability of obtaining both particles in the $+$ state is $1/4$, also $1/4$ for both in the $-$ state, and a probability of $1/2$ for obtaining one particle in the $+$ state and the other in the $-$ state.
+
+Now we discuss indistinguishable, where we now need to discriminate bosons and fermions. If the particles are indistinguishable bosons, the two-particle system only has 3 states $\left|++\right\rangle$, $\left|--\right\rangle$, and $\left|+-\right\rangle$ - because the latter is the same as $\left|-+\right\rangle$. We therefore measure these 3 different possibilities, twice $+$, twice $-$, and one $+$ and one $-$, with equal probability of $1/3$.
+
+Finally, if the particles are indistinguishable fermions, no two particles can be in the same state and therefore we only can measure $+$ for one particle and $-$ for the other - with unity probability.
 
 <!-- [exercise: QuantumNotes.pdf 7.2.2]
 see also Jos Thijssen - LECTURE NOTES STATISTICAL PHYSICS TN2624.pdf but too hard -->
