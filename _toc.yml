@@ -31,6 +31,7 @@ chapters:
     sections:
     - file: sp-concepts
     - file: sp-half
+    - file: sp-density-matrix
     - file: sp-magnetic-field
     - file: sp-clebschgordan
     - file: sp-exercise
