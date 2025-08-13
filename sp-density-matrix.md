@@ -12,7 +12,7 @@ kernelspec:
 
 # Density Matrix
 
-In this section, we introduce the concept of the density matrix formalism, which is an essential part of how we practically handle (ie. attempt to protect and manipulate) the sensitive quantum information as an ensemble of quantum states.
+In this section, we introduce the density matrix formalism, which is an essential part of how we practically handle (ie. attempt to protect and manipulate) the sensitive quantum information as an ensemble of quantum states.
 
 ## Motivation
 
@@ -109,9 +109,7 @@ $$
 
 Purity is defined independent of the measurement basis, unlike coherence.
 
-Thus, coherence and purity together provide insight into the "quantumness" of a state:  
-- Coherence captures phase relationships (off-diagonal terms).
-- Purity captures how close the state is to being pure (versus mixed).
+Thus, coherence and purity together provide insight into the "quantumness" of a state, coherence captures phase relationships and purity captures how close the state is to being pure.
 
 <!-- Do we want to describe Mixed States on a Bloch Sphere? -->
 
