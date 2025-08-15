@@ -173,13 +173,14 @@ The qubit Bloch sphere with a particular qubit state, indicated by the so-called
 ```
 
 Simple projection tells us that the coordinates of the point on the Bloch sphere where the (pure) quantum state lies is:
+
 $$
 (x, y, z) = (\cos\,\phi \sin\,\theta, \sin\,\phi \sin\,\theta, \cos\,\theta)
 $$
 
 Now, as an exercise, let us calculate the expectation values of a general quantum state for $\sigma_x, \sigma_y, \sigma_z$.
 
-First, writing the quantum state $\ket{\psi}$ in the matrix form:
+First, we write the quantum state $\ket{\psi}$ in the matrix form:
 
 $$
 \ket{\psi} = \begin{bmatrix}
@@ -188,7 +189,7 @@ e^{i \phi} \sin \frac{\theta}{2}
 \end{bmatrix}
 $$
 
-Now calculating $\langle \sigma_x \rangle$:
+Now we calculate $\langle \sigma_x \rangle$:
 
 $$
 \begin{aligned}

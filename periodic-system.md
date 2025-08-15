@@ -10,7 +10,7 @@ kernelspec:
     name: python3
 ---
 
-# The periodic table of elements
+# Periodic table of elements
 
 ## The electronic structure of atoms
 

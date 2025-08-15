@@ -223,13 +223,10 @@ So far, we have seen the "Schrodinger Representation" of quantum mechanics, wher
 $$
 \psi_S(t) = U(t)\, \psi_S(0), \quad \hat{A}_S(t) = \hat{A}_S
 $$
-where,
-$$
-U(t) = e^{-\frac{i}{\hbar} \hat{H} t}
-$$
-is the time evolution operator.
 
-However, since we know that the time dependent part of the wavefunction comes only from the unitary operator (as described by the Schrodinger equation), we can also choose to define the operators to be time dependent while the wavefunction is stationary. This is called the "Heisenberg Representation".
+where, $ U(t) = e^{-\frac{i}{\hbar} \hat{H} t}$ is the time evolution operator.
+
+Since we know that the time dependent part of the wavefunction comes only from the time evolution operator (as described by the Schrodinger equation), we can also choose to define the operators to be time dependent while the wavefunction is static. This is called the "Heisenberg Representation".
 
 $$
 \psi_H(t) = \psi_H(0) \equiv \psi_H
@@ -244,24 +241,27 @@ The time-evolution operator $U(t)$ is the same as in the Schrödinger picture.
 Both of these representations are equivalent, and there is no physical difference when using one or the other. To see this explicitly, let us calculate the expectation value of the operator in both representations.
 
 In the Schrödinger picture:
+
 $$
-\begin{aligned}
-\langle \hat{A} \rangle_S(t)
-&= \bra{\psi_S(t)} \hat{A}_S \ket{\psi_S(t)} \\[4pt]
-&= \bra{\psi_S(0)} U^\dagger(t) \, \hat{A}_S \, U(t) \ket{\psi_S(0)}
-\end{aligned}
+\langle \hat{A} \rangle_S(t) = \bra{\psi_S(t)} \hat{A}_S \ket{\psi_S(t)}
 $$
 
-In the Heisenberg picture, $\ket{\psi_H} \equiv \ket{\psi_S(0)}$ and $\hat{A}_H(t) = U^\dagger(t) \hat{A}_S U(t)$, so:
 $$
-\begin{aligned}
-\langle \hat{A} \rangle_H(t)
-&= \bra{\psi_H} \hat{A}_H(t) \ket{\psi_H} \\[4pt]
-&= \bra{\psi_S(0)} U^\dagger(t) \, \hat{A}_S \, U(t) \ket{\psi_S(0)}
-\end{aligned}
+\langle \hat{A} \rangle_S(t) = \bra{\psi_S(0)} U^\dagger(t) \, \hat{A}_S \, U(t) \ket{\psi_S(0)}
+$$
+
+In the Heisenberg picture, we defined $\ket{\psi_H} \equiv \ket{\psi_S(0)}$ and $\hat{A}_H(t) = U^\dagger(t) \hat{A}_S U(t)$, which gives us:
+
+$$
+\langle \hat{A} \rangle_H(t) = \bra{\psi_H} \hat{A}_H(t) \ket{\psi_H}
+$$
+
+$$
+\langle \hat{A} \rangle_H(t) = \bra{\psi_S(0)} U^\dagger(t) \, \hat{A}_S \, U(t) \ket{\psi_S(0)}
 $$
 
 Thus:
+
 $$
 \langle \hat{A} \rangle_S(t) = \langle \hat{A} \rangle_H(t)
 $$

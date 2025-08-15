@@ -100,6 +100,7 @@ The off-diagonal elements of the density matrix quantify the degree of coherence
 ### Purity
 
 Purity is a measure of how mixed a state is, and it is given by:
+
 $$
 \text{Purity} = \text{Tr}(\rho^2)
 $$  
