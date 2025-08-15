@@ -40,18 +40,20 @@ chapters:
     - file: tp-intro
     - file: tp-indistinguishable
     - file: tp-exercise
-  - file: perdiodic-system
+  - file: pt
+    sections:
+    - file: pt-intro
+    - file: pt-degenerate
+    - file: pt-apps
+    - file: pt-exercise
   - file: ad
     sections:
-    - file: ad-perturbation-theory
-    - file: ad-perturbation-theory-degenerate
-    - file: ad-perturbation-theory-apps
-    - file: ad-perturbation-theory-exercise
     - file: ad-wkb
     - file: ad-quantum-dynamics
     - file: ad-exercise
   - file: appendix
     sections:
     - file: development
+    - file: periodic-system
     - file: formula-sheet
     - file: solutions
