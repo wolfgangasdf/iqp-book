@@ -38,6 +38,11 @@ $$
 \rho = \sum_i p_i \ket{\psi_i}\bra{\psi_i}
 $$
 
+:::{note}
+Can you think of why the density matrix uses outer products instead of inner products? \
+Hint: Read the sections below
+::: 
+
 <!-- Reference: https://www.youtube.com/watch?v=xC5PvbbU-TI&t=58s -->
 
 ## Pure and Mixed States
@@ -79,6 +84,14 @@ $$
 \end{bmatrix}
 $$
 
+:::{note}
+As an exercise, try to calculate the density matrix of the pure state $\ket{+}$ in the Z basis and see how it differs from the maximally mixed state described above. The $\ket{+}$ state is defined as:
+
+$$
+\ket{+} = \frac{1}{\sqrt{2}} (\ket{0}+\ket{1})
+$$
+:::
+
 Let us now define what coherence and purity mean, and analyse a few differences between the pure and mixed states.
 
 ### Coherence
@@ -87,15 +100,11 @@ Coherence describes the ability of a quantum system (like a qubit) to exist in a
 
 As we can see, there are no off-diagonal terms in the density matrix of the maximally mixed state, and thus no phase information in the Z basis. It behaves as a classical probabilistic mixture of $ \ket{0} $ and $ \ket{1} $, rather than a quantum superposition. 
 
-As an exercise, try to calculate the density matrix of the $\ket{+}$ state in the Z basis and see how it differs from the maximally mixed state. The $\ket{+}$ state is defined as:
-
-$$
-\ket{+} = \frac{1}{\sqrt{2}} (\ket{0}+\ket{1})
-$$
-
 The off-diagonal elements of the density matrix quantify the degree of coherence in a particular basis. Their decay over time due to interactions with the environment is called decoherence.
 
-**Note**: Coherence is basis-dependent. The state $\ket{+}$ is incoherent in the X basis but coherent in the Z basis. So whether a state has off-diagonal elements (and hence coherence) depends on the measurement basis.
+:::{warning}
+Coherence is basis-dependent. The state $\ket{+}$ is incoherent in the X basis but coherent in the Z basis. So whether a state has off-diagonal elements (and hence coherence) depends on the measurement basis.
+:::
 
 ### Purity
 
@@ -142,3 +151,7 @@ $$
 $$
 
 which is the weighted average of the expectation values for each pure state in the ensemble, exactly as we would expect physically.
+
+:::{note}
+Exercise: Show that this solution solves the differential equation!
+::: 
