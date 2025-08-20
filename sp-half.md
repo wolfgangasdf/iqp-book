@@ -172,6 +172,8 @@ glue("sp-bloch-sphere", fig, display=False)
 The qubit Bloch sphere with a particular qubit state, indicated by the so-called Blochvector, and the polar and azimuthal angle is indicated.
 ```
 
+:::{note}
+
 Simple projection tells us that the coordinates of the point on the Bloch sphere where the (pure) quantum state lies is:
 
 $$
@@ -221,6 +223,8 @@ e^{i\phi}\sin\frac{\theta}{2} \\
 $$
 
 As we can see, this is exactly the X-coordinate of the quantum state on the Bloch Sphere! You can verify for yourself that this holds true for the Y and Z coordinates as well. This is not just a neat coincidence, the Bloch Vector is defined so that it's coordinates line up perfectly with the expectation values of these measurements.
+
+:::
 
 ## Pauli matrices and rotations
 
