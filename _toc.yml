@@ -55,5 +55,6 @@ chapters:
     sections:
     - file: development
     - file: periodic-system
+    - file: adv-app-of-pt
     - file: formula-sheet
     - file: solutions
