@@ -85,7 +85,7 @@ $$
 $$
 
 :::{note}
-As an exercise, try to calculate the density matrix of the pure state $\ket{+}$ in the Z basis and see how it differs from the maximally mixed state described above. The $\ket{+}$ state is defined as:
+As an exercise, try to calculate the density matrix of the pure state $\ket{+}$ and see how it differs from the maximally mixed state described above. The $\ket{+}$ state is defined in the Z basis as:
 
 $$
 \ket{+} = \frac{1}{\sqrt{2}} (\ket{0}+\ket{1})
@@ -153,5 +153,46 @@ $$
 which is the weighted average of the expectation values for each pure state in the ensemble, exactly as we would expect physically.
 
 :::{note}
-Exercise: Show that this solution solves the differential equation!
+**Example**\
+Let us measure the expectation value of the $\ket{+}$ state in the Z-basis using the density matrix formalism.
+
+We know that 
+
+$$
+\rho = \ket{+}\bra{+} = \frac{1}{2} \begin{bmatrix}
+1 & 1 \\
+1 & 1
+\end{bmatrix}
+$$
+
+$$
+\langle Z \rangle = \text{Tr}(\rho Z) = \text{Tr} \left( \frac{1}{2} \begin{bmatrix} 1 & 1 \\
+1 & 1
+\end{bmatrix}  \begin{bmatrix} 1 & 0 \\
+0 & -1
+\end{bmatrix} \right)
+$$
+
+Thus,
+
+$$
+\langle Z \rangle = \text{Tr} \left(\frac{1}{2} \begin{bmatrix} 1 & -1 \\
+1 & -1
+\end{bmatrix} \right) = 0
+$$
+
+In fact, if you want to calculate the probability of getting the $\ket{0}$ state on measuring the $\ket{+}$ state, you can calculate it as follows:
+
+$$
+p_{\ket{0}} = \text{Tr}(\rho \ket{0}\bra{0})
+$$
+
+This should give you a value of $\frac{1}{2}$, which is what we might expect.
+
+As an exercise, try to calculate the expectation value of the Pauli-X operator for the state:
+
+$$
+\ket{\psi} = \frac{1}{\sqrt{3}} (\ket{0}+\sqrt{2}\ket{1})
+$$
+
 ::: 
