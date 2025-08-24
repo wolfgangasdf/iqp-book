@@ -292,6 +292,7 @@ from matplotlib import pyplot as plt
 from myst_nb import glue
 from numpy import *
 from numpy.polynomial.hermite import hermval
+import math
 
 hbar=1
 m=1
@@ -315,7 +316,7 @@ x = linspace(-5, 5, 500)
 
 for n in range(nmax):
     scale=0.5
-    ax.plot(x, energy(n)+psi(n,x)*scale, label="$\psi_" + str(n) + "(x)$")
+    ax.plot(x, energy(n)+psi(n,x)*scale, label=r"$\psi_" + str(n) + "(x)$")
     ax.plot(x, ones(size(x))*energy(n), color='0.5')
 
 fudge=2.5
