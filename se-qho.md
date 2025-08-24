@@ -392,7 +392,7 @@ Here we see a rather evenly distributed probability density. This is in strong c
 Think about more differences concerning probability densities, like forbidden regions!
 :::
 
-As a side remark, we can again construct highly excited quantum states that mimic classical behaviour - but these are complex superpositions of many $\Psi_n$ eigenstates and are called coherent states.
+As a side remark, we can construct special quantum states that most closely resemble classical motion in the harmonic oscillator, which are called *coherent states*. They are minimum-uncertainty states ($\Delta x \, \Delta p = \hbar/2$) and can be expressed as superpositions of many energy eigenstates $\Psi_n$. While a full discussion lies beyond the scope of this book, coherent states have many important applications, especially in laser physics and quantum optics, and related concepts appear in condensed matter systems such as superconductivity.
 
 ## Number states and number operator 
 
@@ -427,6 +427,59 @@ Number states are different, they describe the excitations of a particular syste
 
 If we also want to make clear which particular internal state is meant, we use e.g. $|n_H\rangle$ - this would mean for instance $n$ photons with $H$ polarization. Make it always clear what you mean!
 :::
+
+## Two quantizations
+
+`[slide]`
+
+You will see in this course that *quantum* can mean different things, and it sometimes is also a matter of taste. Historically, two so-called "quantizations" happened:
+
+The **first quantization** is the realization that we have to describe objects with (quantum) waves which were previously assumed to be particles. This holds clearly for atoms, electrons, neutrons, protons and so on. But for light, there was never the need for a first quantization since it was already considered to be a wave since Maxwell! 
+
+But how do we get the quantum into light waves?
+
+This is described by the **second quantization**, where wave fields also become quantized, for instance, by deriving a model where an electromagnetic field can be excited with a single photon. At the heart of this quantization is the Quantum Harmonic Oscillator that we have just studied, and it plays a central role in Quantum Field Theory (QFT). A quantum field (like the electromagnetic field) can be described as an infinite collection of independent quantum harmonic oscillators! In this model, the creation and annihilation operators you've already seen can be used to add or remove discrete energy packets and each of these packets is a single photon! You may see the creation and annihilation operators in many more places - expressing fields, particle states, and even defining Hamiltonians.
+
+Currently, we think that the 2nd quantization is essential to build quantum machines which can bring about really exciting new technologies.
+
+```{code-cell} ipython3
+:tags: [hide-input, remove-output]
+
+from matplotlib import pyplot as plt
+from myst_nb import glue
+from numpy import *
+fig, ax = plt.subplots(figsize=(8,6))
+ax.set_aspect("equal")
+ax.add_patch(plt.Circle((0,0),0.3, color="orange"))
+ax.arrow(0.6,0,0.3,0, linewidth=3, head_width=0.05, color='black')
+x=linspace(-0.5, 0.5, 101)
+y=sin(x*50)*exp(-x**2/0.05)
+ax.plot(x+2,y)
+ax.arrow(3,1,0.3,0.5, linewidth=3, head_width=0.05, color='black')
+ax.arrow(3,0,0.3,0, linewidth=3, head_width=0.05, color='black')
+ax.arrow(3,-1,0.3,-0.5, linewidth=3, head_width=0.05, color='black')
+ax.text(1.5,0.5,"$\Psi$",fontsize=20)
+dx=4
+ax.plot(dx+x,y+2,color="tab:blue")
+ax.plot(dx+x,y,color="tab:blue")
+ax.plot(dx+x,y-2,color="tab:blue")
+ax.add_patch(plt.Circle((dx,2),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx-0.2,0),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx+0.2,0),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx+0.2,-2.2),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx-0.2,-2.2),0.15, color="orange",zorder=100))
+ax.add_patch(plt.Circle((dx,-1.8),0.15, color="orange",zorder=100))
+ax.text(0.2,0.5,"1st\nquantization")
+ax.text(2.3,0.5,"2nd\nquantization")
+ax.axis("off")
+
+glue("b-quant", fig, display=False)
+```
+
+(b-quant)=
+```{glue:figure} b-quant
+In the first quantization, a particle gains wave properties, and in the second quantization, a quantum wave (field) can be excited a discrete number of times - corresponding to particles.
+```
 
 ## The need for anharmonicity
 

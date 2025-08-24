@@ -216,6 +216,54 @@ $$(se-1d-ev6)
 
 Where in the last step we have have used the recipe that a *sandwich* of quantum states that calculates the expectation value of an operator, is don by integrating over the dependent variable $x$. This procedure might seem a bit ad-hoc right now, but you will see that it works.
 
+## Heisenberg representation
 
+So far, we have seen the "Schrodinger Representation" of quantum mechanics, where the wavefunction of the particle is defined as a function of time, while operators are time independent (unless they have explicit time dependence). As a notational convention for this section, we will add a subscript "S" to denote this representation.
 
+$$
+\psi_S(t) = U(t)\, \psi_S(0), \quad \hat{A}_S(t) = \hat{A}_S
+$$
 
+where, $ U(t) = e^{-\frac{i}{\hbar} \hat{H} t}$ is the time evolution operator.
+
+Since we know that the time dependent part of the wavefunction comes only from the time evolution operator (as described by the Schrodinger equation), we can also choose to define the operators to be time dependent while the wavefunction is static. This is called the "Heisenberg Representation".
+
+$$
+\psi_H(t) = \psi_H(0) \equiv \psi_H
+$$
+
+$$
+\hat{A}_H(t) = U^\dagger(t) \, \hat{A}_S \, U(t)
+$$
+
+The time-evolution operator $U(t)$ is the same as in the Schrödinger picture.
+
+Both of these representations are equivalent, and there is no physical difference when using one or the other. To see this explicitly, let us calculate the expectation value of the operator in both representations.
+
+In the Schrödinger picture:
+
+$$
+\langle \hat{A} \rangle_S(t) = \bra{\psi_S(t)} \hat{A}_S \ket{\psi_S(t)}
+$$
+
+$$
+\langle \hat{A} \rangle_S(t) = \bra{\psi_S(0)} U^\dagger(t) \, \hat{A}_S \, U(t) \ket{\psi_S(0)}
+$$
+
+In the Heisenberg picture, we defined $\ket{\psi_H} \equiv \ket{\psi_S(0)}$ and $\hat{A}_H(t) = U^\dagger(t) \hat{A}_S U(t)$, which gives us:
+
+$$
+\langle \hat{A} \rangle_H(t) = \bra{\psi_H} \hat{A}_H(t) \ket{\psi_H}
+$$
+
+$$
+\langle \hat{A} \rangle_H(t) = \bra{\psi_S(0)} U^\dagger(t) \, \hat{A}_S \, U(t) \ket{\psi_S(0)}
+$$
+
+Thus:
+
+$$
+\langle \hat{A} \rangle_S(t) = \langle \hat{A} \rangle_H(t)
+$$
+
+As you will see in later courses, the Heisenberg representation happens to be quite useful to obtain dynamical equations of operators themselves. These equations will appear similar to Hamilton's equations from classical mechanics, making it easier to transfer classical intuition into certain quantum problems.
