@@ -218,20 +218,21 @@ Where in the last step we have have used the recipe that a *sandwich* of quantum
 
 ## Heisenberg representation
 
-So far, we have seen the "Schrodinger Representation" of quantum mechanics, where the wavefunction of the particle is defined as a function of time, while operators are time independent (unless they have explicit time dependence). As a notational convention for this section, we will add a subscript "S" to denote this representation.
+So far, we have seen the "Schrödinger Representation" of quantum mechanics, where the wavefunction of the particle is defined as a function of time, while operators are time independent, unless they have explicit time dependence.
 
 $$
 \psi_S(t) = U(t)\, \psi_S(0), \quad \hat{A}_S(t) = \hat{A}_S
 $$
 
-where, $ U(t) = e^{-\frac{i}{\hbar} \hat{H} t}$ is the time evolution operator.
+where, $ U(t) = e^{-\frac{i}{\hbar} \hat{H} t}$ is the time evolution operator. We use here the convention that we will add a subscript "S" to denote the Schrödinger representation.
 
-Since we know that the time dependent part of the wavefunction comes only from the time evolution operator (as described by the Schrodinger equation), we can also choose to define the operators to be time dependent while the wavefunction is static. This is called the "Heisenberg Representation".
+Since we know that the time dependent part of the wavefunction comes only from the time evolution operator as described by the Schrödinger equation, we can also choose to define the operators to be time dependent while the wavefunction is static. This is called the "Heisenberg Representation":
 
 $$
 \psi_H(t) = \psi_H(0) \equiv \psi_H
 $$
 
+where operators are transformed into their time-dependent versions
 $$
 \hat{A}_H(t) = U^\dagger(t) \, \hat{A}_S \, U(t)
 $$

@@ -3,7 +3,7 @@
 
 title: Introduction to Quantum Physics
 author: Wolfgang Löffler
-copyright: "2024, no license yet"
+copyright: "2025, no license yet"
 # logo: figures/qist-iqp-small.gif
 
 # Force re-execution of notebooks on each build.
@@ -71,6 +71,6 @@ html:
     hypothesis: true  # Hypothesis for comments
   extra_footer: |
     <p>
-    All material Copyright © 2023 Wolfgang Löffler.<br>
+    All material Copyright © 2025 Wolfgang Löffler.<br>
     License: none yet.
     </p>

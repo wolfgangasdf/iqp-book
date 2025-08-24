@@ -85,20 +85,25 @@ pip install -U sphinx-togglebutton
 Go into the book sourcecode folder.
 
 This will use  `_config.yml` and  `_toc.yml` to generate conf.py:
-
 ```
 jupyter-book config sphinx .
 ```
+
 This makes the book in html and opens it:
 ```
 sphinx-build -j auto . ./_build/html -b html
 open ./_build/html/index.html
 ```
+
 This auto-builds:
 ```
 sphinx-autobuild -j auto . ./_build/html
 ```
 
+This builds from scratch and auto-builds:
+```
+rm -r _build || jupyter-book config sphinx . && sphinx-autobuild -j auto . ./_build/html 
+```
 
 ### important notes
 * The best editor with preview seems to be [vscode + myst plugin](https://github.com/executablebooks/myst-vs-code). 
@@ -117,8 +122,14 @@ sphinx-autobuild -j auto . ./_build/html
 * Pictures are either made with inline matplotlib or [IPE](https://github.com/otfried/ipe) (zoom in to export PNG high-res)!
 
 ### PDF version of the book
-I tested the latex way, all is WIP: https://jupyterbook.org/en/stable/advanced/pdf.html.
+All is very much work in progress: https://jupyterbook.org/en/stable/advanced/pdf.html.
 
+#### latex -> pdf
 Do a `jupyter-book build . --builder pdflatex` and ignore all error messages (`R`)... The book is in `_build/latex/iqp-book.pdf``, but missing pdf bookmarks etc. ...
 
-
+#### html -> pdf
+does not work.
+```
+pip install playwright
+jupyter-book build . --builder pdfhtml
+```
