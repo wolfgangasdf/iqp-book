@@ -17,7 +17,7 @@ In this section we discuss a slightly different potential than the square-well p
 
 ## Harmonic potentials
 
-`[slide]`
+{{slidetag}}
 <!-- [Sakurai 2.3] [Griffiths 2.3] -->
 
 The harmonic oscillator is as it is in classical mechanics, one of the most important systems in quantum mechanics – because it appears everywhere in nature, and it is simple enough to solve it analytically and highlights many of the basic concepts and methods of quantum mechanics. It appears everywhere in nature because nearly any potential landscape can be approximated by a harmonic oscillator, from optical systems over molecular vibrations to the dynamics of nuclear particles. 
@@ -67,7 +67,7 @@ To refresh your knowledge, have a look here: https://en.wikipedia.org/wiki/Harmo
 
 ## A Schrödinger equation for the harmonic oscillator
 
-`[slide]`
+{{slidetag}}
 
 For a one-dimensional harmonic oscillator, we need to solve the Schrödinger equation for the potential
 
@@ -92,7 +92,7 @@ Solving this differential equation means finding the Eigenfunctions $\Psi$ and c
 
 ## Ladder operators
 
-`[slide]`
+{{slidetag}}
 
 We can write the Schrödinger equation $H\psi=E\psi$ using the momentum operator as
 
@@ -133,7 +133,7 @@ Exercise: show that $[a_-,a_+]=1$
 
 This is great! We have a Schrödinger equation that depends in a very simple form on operators, this must be useful. Now we will see that the ladder operators allow us to find the solutions.
 
-`[slide]`
+{{slidetag}}
 
 We now assume that some wavefunction $|\psi\rangle$ satisfies the Schrödinger equation with energy $E$, that is $H|\psi\rangle=E|\psi\rangle$.
 
@@ -206,7 +206,7 @@ The first few energies of the quantum harmonic oscillator and the action of the 
 
 ## The ground state
 
-`[slide]`
+{{slidetag}}
 
 There has to be a catch, if we apply $a_-$ repeatedly we eventually will reach negative energies, which do not make sense - applying $a_-$ on the lowest-energy state which we call $\Psi_0$ should probably better result in "nothing":
 
@@ -258,7 +258,7 @@ The quantum ground state wavefunction of the harmonic oscillator.
 
 ## Excited states
 
-`[slide]`
+{{slidetag}}
 
 Having the ground state energy and wave function, we can now find all excited states and energies by repeatedly applying the raising or creation operator $a^\dagger$:
 
@@ -397,7 +397,7 @@ As a side remark, we can construct special quantum states that most closely rese
 
 ## Number states and number operator 
 
-`[slide]`
+{{slidetag}}
 
 Often, the states $|\Psi_n\rangle$ are written as $|n\rangle$, and are called *number states* or Fock states, which live in special Hilbert space called Fock space. They are called number states because the same system can be excited multiple times. We need to know how the ladder operators act on arbitrary number states, we obtain:
 
@@ -432,7 +432,7 @@ If we also want to make clear which particular internal state is meant, we use e
 
 ## The need for anharmonicity
 
-`[slide]`
+{{slidetag}}
 
 I hope that with the harmonic oscillator we could introduce the basics of quantum mechanics to you. The harmonic oscillator appears everywhere in nature because every potential minimum has a quadratic term in the Taylor expansion. 
 
@@ -497,7 +497,7 @@ The first three energies of an anharmonic quantum oscillator - now state-selecti
 
 ## Two quantizations
 
-`[slide]`
+{{slidetag}}
 
 You might have read that, historically, physicists talk about two so-called "quantizations" - now we can understand this.
 

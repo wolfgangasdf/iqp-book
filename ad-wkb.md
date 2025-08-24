@@ -16,7 +16,7 @@ kernelspec:
 <!-- G9.2 -->
 In this section, we show how to calculate quantum tunneling, the passage of particles through a barrier that is not possible classically.
 
-`[slide]`
+{{slidetag}}
 
 You might see quantum tunnelling every day! Many fingerprint sensors are based on *frustrated total internal reflection* of light, or your fingers on the outer side of a glass when seen through water - see [wikipedia](https://en.wikipedia.org/wiki/Total_internal_reflection#Frustrated_total_internal_reflection) for some nice examples.
 
@@ -24,7 +24,7 @@ The same also occurs for quantum wavefunctions also for massive particles - beca
 
 ## The WKB method
 
-`[slide]`
+{{slidetag}}
 
 The WKB method named after Wentzel, Kramers and Brillouin is a very useful method to calculate localized (bound) states and tunneling through potential barriers. We want to calculate what happens to a quantum wave incident from the left for the case shown in the figure.
 
@@ -67,7 +67,7 @@ glue("wkb-potential", fig, display=False)
 Quantum tunneling.
 ```
 
-`[slide]`
+{{slidetag}}
 
 Usually, the Schrödinger is written in the following form: 
 
@@ -93,7 +93,7 @@ The WKB method of obtaining wavefunctions is very powerful to calculate localize
 
 ## Tunneling
 
-`[slide]`
+{{slidetag}}
 
 Now we return to our problem in {numref}`wkb-potential`. We assume that the potential is slowly varying only for $0\leq x \leq a$, and we treat the hard steps at $x=0$ and $x=a$ by discussing the 3 cases separately. To the left of the barrier ($x<0$) everything is fine and we can write the wavefunction as a right and left propagating wave:
 
@@ -109,7 +109,7 @@ $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{ \pm \frac{1}{\hbar} \int|p(x)| d x
 
 Taking the modulus of $p$ is allowed since only $p^2$ appears in the Schrödinger equation. This describes an exponentially increasing or decreasing function, which in strong contrast to the plane wave is non-oscillatory!
 
-`[slide]`
+{{slidetag}}
 
 In the tunneling region we therefore have in the barrier the two possible contributions:
 

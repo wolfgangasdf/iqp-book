@@ -18,7 +18,7 @@ In this section we briefly introduce the Schrödinger equation for two particles
 
 ## The two particle Hamiltonian
 
-`[slide]`
+{{slidetag}}
 
 In the previous section we have seen that simple coupling of two particles with spins lead to surprising results in quantum mechanics. What about two-particle Schrödinger quantum dynamics in general? The state of a two-particle system can be described by a wavefunction that depends on the position of both particles: 
 
@@ -42,7 +42,7 @@ $$-\frac{\hbar^2}{2m_1}\nabla_1^2\psi-\frac{\hbar^2}{2m_2}\nabla_2^2\psi+V\left(
 
 ## Two-particle potentials and wavefunctions
 
-`[slide]`
+{{slidetag}}
 
 The potential term describes possible interactions between the particles. If we can write 
 

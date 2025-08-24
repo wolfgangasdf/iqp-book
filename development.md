@@ -16,26 +16,27 @@ kernelspec:
 ## video lectures
 
 ### idea
-* the script/book contains everything - text close to what said in video, and equations and plots needed for slides.
-* make slides before video, making slides checks the storyline.
-* record video based on script, and put video of me on the slides and record slideshow and combine into final video.
+* the script/book contains everything - text close to what said in video, and equations and plots needed for slides
+* make slides before video, making slides checks the storyline
+* record video based on script, and put video of me on the slides and record slideshow and combine into final video
 
 ### record video 
 * use macbook pro on eye height, bluetooth mouse to scroll (read from top of screen). best greenscreen but not needed
 * macbook pro m1 microphones & camera is sufficient at 1-2m distance
 * make sure the audio is strong enough (system prefs)
-* with quicktime: float on top, check 3x that recording in progress, it's super confusing.
+* with quicktime: float on top, check 3x that recording in progress, it's super confusing
 
 #### DONT FORGET
+* change `_config.yml` to show slidetags
 * make introduction, "in this video..."
-* never say left/right figure, on slides it's different.
+* never say left/right figure, on slides it's different
 
 ### overlay video with OBS
 https://obsproject.com/
 
 Powerpoint: 
 * preferences, slideshow -> disable navigation things, use right-click instead
-* present normally (in-window has no presenter view). right-click -> "use presenter view" even without 2nd screen, slideshow is on hidden window.
+* present normally (in-window has no presenter view). right-click -> "use presenter view" even without 2nd screen, the slideshow is on the hidden window
 
 Now in OBS: 
 * settings -> video
@@ -100,9 +101,9 @@ This auto-builds:
 sphinx-autobuild -j auto . ./_build/html
 ```
 
-This builds from scratch and auto-builds:
+This cleans up, to rebuild:
 ```
-rm -r _build || jupyter-book config sphinx . && sphinx-autobuild -j auto . ./_build/html 
+rm -r _build ; jupyter-book config sphinx .
 ```
 
 ### important notes

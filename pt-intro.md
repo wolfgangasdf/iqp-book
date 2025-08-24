@@ -16,7 +16,7 @@ In this section we introduce a powerful method, perturbation theory, to obtain a
 
 ## A small perturbation & power series
 
-`[slide]`
+{{slidetag}}
 
 Let us assume that we have solved the Schrödinger equation for a particular Hamiltonian - as an example we discuss a quantum particle in the infinite square well potential, we call the  original unperturbed Hamiltonian $H_0$. Earlier in this course, we have obtained for this case a set of orthonormal eigenfunctions $\psi_n^{(0)}$ with corresponding energies or eigenvalues $E_n^{(0)}$. Now, we add a small time-indepentend perturbation to the system - for instance a small hump at the middle of the potential as shown in the figure:
 
@@ -69,7 +69,7 @@ We call $E_n^{(1)}$ the *first-order correction* to the $n$th eigenvalue, and $\
 
 ## First-order perturbation theory: energy
 
-`[slide]`
+{{slidetag}}
 
 We plug in the power series into the Schrödinger equation and obtain:
 
@@ -105,7 +105,7 @@ So, the first-order correction to the energy is simply the expectation value of 
 
 ## Normalisation
 
-`[slide]`
+{{slidetag}}
 
 Now we want to find the first-order correction to the wavefunction, $|\psi_n^{(1)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
 
@@ -134,7 +134,7 @@ We can assume that the terms are real since in time-independent quantum mechanic
 
 ## First-order eigenstates
 
-`[slide]`
+{{slidetag}}
 
 We now need to play around with our equations to find an expression for $|\psi_n^{(1)}\rangle$, for the first order corrections! We use a trick that is often useful in quantum mechanics: we insert the identity and see what we can do with it.
 
@@ -179,7 +179,7 @@ $$
 E_n^{(1)} \langle\psi_k^{(0)}|\psi_n^{(0)}\rangle
 $$(ad-pt-11)
 
-`[slide]`
+{{slidetag}}
 
 Let's examine this. For $k = n$, the left hand side is zero and we obtain again the expression for the first-order energy correction.
 
@@ -210,7 +210,7 @@ Some observations:
 
 ## 1st order perturbation theory: example
 
-`[slide]`
+{{slidetag}}
 
 <!-- GProb7.1 -->
 
@@ -237,7 +237,7 @@ $$(ad-pt-16)
 
 Remember that the Poisson brackets can be taken literally as an integral over all parameters, in this case position. We will continue to use the ket notation although one could also use the real-space wavefunction - since we have explicit expressions for it.
 
-`[slide]`
+{{slidetag}}
 
 We obtain as the first-order correction to the energy
 
@@ -280,7 +280,7 @@ The first wavefunctions of the unperturbed infinite square well potential. All w
 
 For odd $n$, we obtain a slightly higher energy, which can be explained that the wavefunction *feels* the raised potantial in the middle.
 
-`[slide]`
+{{slidetag}}
 
 Now we want to find explicitly the 1st-order correction to the wavefunction for the ground state with $n=1$. Before, we derived for this the equation:
 
@@ -304,7 +304,7 @@ $$
 E_1^{(0)}-E_m^{(0)}=\frac{\pi^2 \hbar^2}{2 m_0 a^2}\left(1-m^2\right)
 $$(ad-pt-20)
 
-`[slide]`
+{{slidetag}}
 
 Now we can combine the results and obtain
 
@@ -360,7 +360,7 @@ The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculated up t
 
 ## Higher order corrections
 
-`[slide]`
+{{slidetag}}
 
 The procedure for the second-order corrections is in principle similar to the first-order ones above, but now we will obtain double sums. 
 

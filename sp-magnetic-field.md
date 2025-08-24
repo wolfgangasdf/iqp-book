@@ -18,7 +18,7 @@ In this section we investigate spins in an external magnetic field. This field s
 
 ## An electron in a magnetic field
 
-`[slide]`
+{{slidetag}}
 
 This section discusses a small aspect of electromagnetism, which in physics is tought in several courses on electrostatics and electrodynamics. We hope you see that only very few concepts are needed to understand the spin dynamics in a magnetic field!
 
@@ -52,7 +52,7 @@ Zeeman splitting: The parallel and anti-parallel magnetic moment orientation wit
 
 ## Larmor Precession
 
-`[slide]`
+{{slidetag}}
 
 What happens for an arbitrarily aligned magnetic moment? As shown in the figure, we consider a spin magnetic moment, and the magnetic field aligned along the $z$ axis. Classically, this leads to a torque acting on the dipole $\vec{\mu}\times\vec{B}$, which tries to line up the dipole moment parallel to the field, just like a compass needle. In the absence of dissipation, also classically, the magnetic moment would rotate around the field forever as indicated in the figure.
 
@@ -70,7 +70,7 @@ Larmor precession: A spin precesses around the magnetic field along $z$.
 
 ## The Stern-Gerlach experiment
 
-`[slide]`
+{{slidetag}}
 <!-- [Griffiths example 4.4] -->
 
 From magnetostatics in physics it was already known since a long time that a magnetic dipole in an *inhomogeneous* magnetic field experiences not only a torque, but also a net force. We assume here that the magnetic field varies along the $z$ direction, and consider only the $z$-component of the spin and its magnetic moment, $\mu_z$:

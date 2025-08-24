@@ -17,7 +17,7 @@ In this section, we briefly outline the key experimental observations more than 
 
 ## Black body radiation
 
-`[slide]`
+{{slidetag}}
 
 Already long ago, since Newton, light has been postulated to consist of light particles. But, more often light was thought to consist of electromagnetic waves since interference effects are evident even in every-day physics, think of the color of soap bubbles. In 1900, Max Planck published a theory of black-body radiation. It was known that hot materials such as a glowing piece of metal emit light, and in a so-called *black body*, thermal radiation is in equilibrium with the body. Our sun is such a black body, and it is quite easy to measure the spectrum of the sun, that is the color- or frequency dependent intensity. These spectra of black body ratiation could not be explained with classical light waves - as shown in the figure, the classical *Rayleigh-Jeans* model predicts a divergence of the intensity towards short wavelengths which is clearly in contradiction to the yellow color of the sun. 
 
@@ -58,7 +58,7 @@ Optical spectra of blackbody radiators for different temperatures, comparing the
 
 
 ## The energy of a photon
-`[slide]`
+{{slidetag}}
 
 Photons are particle-like quanta of electromagnetic radiation. In vacuum, they travel with speed $c$, another fundamental constant of nature. By using the property of any monochromatic (single-frequency) wave linking propagation speed to frequency and wavelength, $c=\lambda f$, $E=hc/\lambda$, and momentum $p=h/\lambda$. 
 
@@ -97,7 +97,7 @@ Let us look at some numbers, for instance for a candle. A candle emits 1 *candel
 
 ## Double slit interference
 
-`[slide]`
+{{slidetag}}
 
 Nowadays we have access to arrayed cameras which have a noise level low enough to observe the absorption of single photons. This allows us to repeat known wave-optical experiments but see photons arriving one by one, if the light source is weak enough. 
 Let's look at a classical interference experiment, the double-slit experiment. Here, a coherent laser source impinges on two narrow slits and far away an interference pattern can be observed:
@@ -151,7 +151,7 @@ In the double-slit experiment, a coherent wave is incident from the left, excite
 
 ## A single photon in a double slit
 
-`[slide]`
+{{slidetag}}
 
 Now we use our single-photon sensitive camera for detection. We see that each photon is detected at one specific position, most clear on the right for $N=100$ photons. The individual position of the detected photons appears largely random, however, if we wait and collect more photons we see that the probability follows the intensity distribution from the classical experiment before!
 
@@ -210,7 +210,7 @@ glue("b-dssp", fig, display=False)
 If we use a single-photon sensitive camera, we can see the build-up of the interference pattern - but before being detected at a particular position, each photon's wavepacket must have passed both slits, otherwise the interference pattern would not be visible.
 ```
 
-`[slide]`
+{{slidetag}}
 
 At the beginning of the 20th century, it was not clear that such interference doesn’t happen also for objects that people call particles. Nowadays, electron diffraction is observed regularly in transmission electron microscopes, neutrons are diffracted in crystals, and in dedicated experiments physicists have observed interference of buckeyballs (C60), and many different molecules up to around 2000 atoms. 
 
@@ -225,7 +225,7 @@ Double-slit like interference of a macromolecule. This experiment done in M. Arn
 
 ## Atomic emission lines
 
-`[slide]`
+{{slidetag}}
 
 Another strong indication that electrons also have wave character came from observing emission from molecular gasses and atomic vapour such as sodium. Physicists observe narrow bright “lines” and not a continuous emission spectrum as expected from black body radiation. Now, it turns out that these emission frequencies can be explained by assuming that the electron is described by a wave circling around the atom nucleus, and that allowed energies correspond to waves with particular radii such that the electron wave repeats itself after one round trip: The so-called Bohr model. With this simple and as you will later see very crude picture, one finds good agreement to experimental data!
 

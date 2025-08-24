@@ -20,7 +20,7 @@ However, perturbation theory is equally useful for prediction of the behaviour o
 
 ## Spin-orbit coupling
 
-`[slide]`
+{{slidetag}}
 
 As we discussed before, particles with spin have a magnetic moment $\vec{\mu}=\gamma\vec{S}$, and if there is a magnetic field it has an energy of $H=-\gamma\vec{B}\cdot\vec{S}$. Does this lead to corrections in hydrogen-like systems, even without external magnetic fields?
 
@@ -46,7 +46,7 @@ $$H_{so}^{\prime}=\left(\frac{e^2}{8 \pi \epsilon_0}\right) \frac{1}{m^2 c^2 r^3
 
 ## Quantum spin-orbit coupling
 
-`[slide]`
+{{slidetag}}
 
 In the presence of such interaction, you probably agree that the Hamiltonian $H$ no longer commutes with $\vec{L}$ and $\vec{S}$, and the spin and orbital angular momenta are not separately conserved.
 
@@ -67,7 +67,7 @@ Electronic energy levels of hydrogen with fine structure. From Griffiths.
 ```
 <!-- TODO replace also bad-->
 
-`[slide]`
+{{slidetag}}
 
 Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in the Appendix), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
 

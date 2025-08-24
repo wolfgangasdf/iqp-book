@@ -17,7 +17,7 @@ In this section, we discuss the quantum behaviour of particles that are localize
 
 ## The potential energy
 
-`[slide]`
+{{slidetag}}
 <!-- [Ph2.2] -->
 We want to describe quantum behaviour of particles, which usually are not in free space but bound by a certain potential – we need to add this to the Schrödinger equation, this is usually done by adding a potential energy that is dependent on position.
 
@@ -66,7 +66,7 @@ The Coloumb potential of the electron in the field of a positive charge (nucleus
 
 ## Separation of variables
 
-`[slide]`
+{{slidetag}}
 <!-- Gr 2.1. -->
 
 We still carry the time dependence of the wave function, how fast does it actually oscillate for a realistic particle? This is very fast and we often average over this in experiments (as we do for the E-field oscillations for light), how can we simplify the equation?
@@ -125,7 +125,7 @@ The second equation is the time-independent Schrödinger equation, and can only 
 
 ## Probability density and Hamiltonian
 
-`[slide]`
+{{slidetag}}
 
 As already discussed for the case of light, now for position-space, the probability to find a particle at position $x$ is determined by the *probability density* 
 
@@ -170,7 +170,7 @@ Show that this makes sense with a de Broglie wave above!
 
 ## Expectation values of operators
 
-`[slide]`
+{{slidetag}}
 <!-- Ph3.5.  -->
 As we have seen before, the outcome of a measurement in QM is a random variable, and we call the average value of this the expectation value. It can be determined by measuring an ensemble of identically prepared systems, or repeating the experiment many times.
 
