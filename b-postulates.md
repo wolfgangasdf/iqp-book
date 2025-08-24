@@ -17,6 +17,32 @@ kernelspec:
 
 A state is represented by a state vector $|\psi\rangle$. Mathematically, this state vector belongs to the Hilbert space $\mathcal{H}$, called the state space.
 
+- **For discrete degrees of freedom** (eg. a qubit or spin system):
+  $\mathcal{H}$ is finite-dimensional, e.g. $\mathbb{C}^2$.  
+  A typical state looks like:
+
+  $$
+  |\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad |\alpha|^2 + |\beta|^2 = 1.
+  $$
+
+  This might be familiar to most of you as this is how you define the state of qubits! However, apart from Chapter 4, we will mostly be working with systems involving continuous degrees of freedom.
+
+- **For continuous degrees of freedom** (eg. a particle in space):
+  $\mathcal{H} = L^2(\mathbb{R})$, the space of square-integrable wavefunctions.  
+  The state vector is written in the position basis:
+
+  $$
+  |\psi\rangle = \int_{-\infty}^{\infty} \psi(x)\,|x\rangle \, dx,
+  $$
+
+  where
+
+  $$
+  \psi(x) = \langle x|\psi\rangle
+  $$
+
+  is the wavefunction, which you will learn about more properly in the upcoming chapter. 
+
 **2. Measurement expectation values**
 
 This second postulate is also called the Born rule:

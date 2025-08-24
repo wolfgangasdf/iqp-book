@@ -95,7 +95,22 @@ Where we call the first case a *symmetric* wavefunction under particle exchange,
 
 This classifies the quantum behaviour of particles in a very fundamental way - particles with symmetric wavefunctions under particle exchange are called **bosons**, and with antisymmetric wavefunctions are **fermions**. From before, you might already know that bosons are also all particles with integer spin, and fermions with half-integer spin. This is a very important connection, the so-called *spin-statistics theorem* – but it can only be proven in relativistic quantum mechanics. One can try simpler explanations – you can have a read through the "suggestive bogus argument" on [wikipedia](https://en.wikipedia.org/wiki/Spin%E2%80%93statistics_theorem#Suggestive_bogus_argument).
 
-Note: We have only discussed 3 dimensions, for 2 dimensions such as appear in quantum hall systems, other exchange phases than $\pm1$ are allowed – this gives rise to anyons and potentially majorana quasi-particles.
+:::{admonition} Anyons and Topological Quantum Computing
+:class: dropdown
+
+So far we have discussed indistinguishable particles in 3D, where exchange symmetry allows only two possibilities. However, in 2D systems such as those that appear in the quantum hall effect, the situation is richer. When two particles are exchanged, the wavefunction is not restricted to pick up only a phase of $\pm 1$. Instead, it can acquire any phase $e^{i\theta}$, or even undergo a more general unitary transformation. Such quasiparticles are called **anyons**.
+
+In a special class of anyons which are called non-Abelian anyons, the order in which exchanges (called *braids*) are performed matters - giving rise to a kind of “quantum memory” stored in the system’s topology. This is precisely the principle behind **topological quantum computing**. Since the information stored depends only on the *topology* of the braids (not on microscopic details), it is inherently protected from many sources of noise and decoherence. 
+
+```{figure} figures/two-particles/anyons.png
+---
+name: anyon-braiding
+---
+Picture of anyon braiding, credits to [Hormozi, L.](https://repository.lib.fsu.edu/islandora/object/fsu%3A182026).
+```
+
+In short, the same exchange symmetry principles we saw for bosons and fermions in 3D extend in 2D to anyons, and these exotic particles open a potential route to building fault-tolerant quantum computers. However, it is important to note that non-Abelian anyons have not yet been conclusively realized in hardware, and remain an active area of research.
+:::
 
 ## The Pauli exclusion principle 
 
