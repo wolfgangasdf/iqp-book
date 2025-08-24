@@ -262,6 +262,7 @@ You might recognize the 2D vector rotation matrices, which makes sense, since ea
 For easy visualization of qubits on the Bloch sphere, and to investigate these rotations, we suggest to use the [qutip](https://qutip.org/docs/latest/guide/guide-bloch.html) or probably even better the [qiskit](https://qiskit.org/documentation/stubs/qiskit.visualization.plot_bloch_multivector.html) Bloch sphere functions. Play around with Pauli rotations!
 :::
 
+(sp-half-ex-meas)=
 :::{note}
 **Example: measurement of spin 1/2 states**
 <!-- Classic Griffiths dialogue section -->

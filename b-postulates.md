@@ -10,7 +10,8 @@ kernelspec:
     name: python3
 ---
 
-% TODO new section
+
+(b-postulates-xr)=
 # The postulates of quantum mechanics
 
 **1. The state of a system**

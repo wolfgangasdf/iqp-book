@@ -46,15 +46,15 @@ chapters:
     - file: pt-degenerate
     - file: pt-apps
     - file: pt-exercise
+    - file: pt-ext-apps
   - file: ad
     sections:
     - file: ad-wkb
     - file: ad-quantum-dynamics
+    - file: periodic-system
     - file: ad-exercise
   - file: appendix
     sections:
     - file: development
-    - file: periodic-system
-    - file: adv-app-of-pt
     - file: formula-sheet
     - file: solutions

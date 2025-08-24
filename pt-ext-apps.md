@@ -10,7 +10,7 @@ kernelspec:
     name: python3
 ---
 
-# Extended applications of perturbation theory
+# Advanced applications of perturbation theory
 
 In this section, we discuss some more applications of perturbation theory, which are beyond the scope of our course content. However, these are historically very relevant and have lead to great discoveries in physics!
 
