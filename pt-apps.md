@@ -69,7 +69,7 @@ Electronic energy levels of hydrogen with fine structure. From Griffiths.
 
 {{slidetag}}
 
-Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in the Appendix), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
+Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in the advanced section), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
 
 As mentioned before, the corrections are small, and often they are expressed in powers of the fine-structure constant $\alpha$ which consists of constants that appear in the expressions: 
 
@@ -89,4 +89,4 @@ scale: 50%
 Image credit: [link](https://commons.wikimedia.org/wiki/File:Hydrogen_fine_structure_energy_2.svg)
 ```
 
-Of course, everything is in excellent agreement with experiments! You have seen that looking deeper at a problem has lifted several degeneracies - where states with different quantum numbers that had the same energy, became split up in energy. Therefore the question is appropriate, do "true degeneracies" at all? Sometimes, if a system is very well under control, they indeed exist - but for the hydrogen atom there are more effects that probably also will lift the leftover $m_j$ degeneracy, which is discussed in the Appendix.
+Of course, everything is in excellent agreement with experiments! You have seen that looking deeper at a problem has lifted several degeneracies - where states with different quantum numbers that had the same energy, became split up in energy. Therefore the question is appropriate, do "true degeneracies" at all? Sometimes, if a system is very well under control, they indeed exist - but for the hydrogen atom there are more effects that probably also will lift the leftover $m_j$ degeneracy, which is discussed in the advanced section of this chapter.

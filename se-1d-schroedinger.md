@@ -233,6 +233,7 @@ $$
 $$
 
 where operators are transformed into their time-dependent versions
+
 $$
 \hat{A}_H(t) = U^\dagger(t) \, \hat{A}_S \, U(t)
 $$

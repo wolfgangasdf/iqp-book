@@ -11,14 +11,14 @@ kernelspec:
 ---
 
 
-# Tunnelling and WKB theory
+# Tunneling and WKB theory
 
 <!-- G9.2 -->
 In this section, we show how to calculate quantum tunneling, the passage of particles through a barrier that is not possible classically.
 
 {{slidetag}}
 
-You might see quantum tunnelling every day! Many fingerprint sensors are based on *frustrated total internal reflection* of light, or your fingers on the outer side of a glass when seen through water - see [wikipedia](https://en.wikipedia.org/wiki/Total_internal_reflection#Frustrated_total_internal_reflection) for some nice examples.
+You might see quantum tunneling every day! Many fingerprint sensors are based on *frustrated total internal reflection* of light, or your fingers on the outer side of a glass when seen through water - see [wikipedia](https://en.wikipedia.org/wiki/Total_internal_reflection#Frustrated_total_internal_reflection) for some nice examples.
 
 The same also occurs for quantum wavefunctions also for massive particles - because in the end, Maxwell's equations describing light results in a wave equation as is the Schrödinger equation.
 
@@ -69,7 +69,7 @@ Quantum tunneling.
 
 {{slidetag}}
 
-Usually, the Schrödinger is written in the following form: 
+Usually, the Schrödinger equation is written in the following form: 
 
 $$\frac{d^2 \psi}{d x^2}=-\frac{p^2}{\hbar^2} \psi$$(ad-wkb-1)
 
@@ -156,4 +156,15 @@ glue("wkb-wave", fig, display=False)
 Quantitative plot of the wave function for the tunneling problem.
 ```
 
-We see that, in the classically forbidden region, the probability density it is exponentially decaying, but also behind the barrier is a nonzero probability to find our quantum particle! This is quantum tunneling. If you calculate explicit tunneling probabilities, you will find that only for very thin barriers, on the order of the de Broglie wavelength, allow for significant tunneling.
+We see that, in the classically forbidden region, the probability density is exponentially decaying, but also behind the barrier is a nonzero probability to find our quantum particle! This is quantum tunneling. If you calculate explicit tunneling probabilities, you will find that only for very thin barriers, on the order of the de Broglie wavelength, allow for significant tunneling.
+
+:::{admonition} Quantum Tunneling and Fusion Reactions in Stars
+:class: dropdown
+
+In classical physics, two positively charged nuclei repel each other due to the Coulomb force. For example, in the Sun, protons would need kinetic energies on the order of hundreds of keV to overcome this repulsion. However, the typical thermal energy of protons in the Sun’s core (at $T \sim 1.5 \times 10^7\ \text{K}$) is only about 1 keV — far too small to classically overcome the barrier. If fusion were purely classical, nuclear reactions in stars would not occur at observable rates.
+
+However, quantum tunneling allows for the nuclei to cross the Coulomb barrier, even if its energy is below the barrier height. Despite the tiny tunneling probability, the huge number of protons in a star and the long timescales involved make nuclear fusion possible.
+
+Thus, *the Sun shines because of quantum tunneling* — it allows nuclear fusion to proceed at stellar core temperatures, powering stars for billions of years.
+
+:::

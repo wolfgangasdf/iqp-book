@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=xC5PvbbU-TI&t=58s
 
 Where does our description of quantum states using pure states fall short? We want to mention 3 examples:
 
-1. Quantum measurements. We have discussed quantum measurements in the section on the [postulates of quantum mechanics](b-postulates-xr), and for instance in the example of [measuring a spin in another basis](sp-half-ex-meas), the outcome often is probabilistic. After the measurement, we obtain different pure states $\ket{\psi_i}$ with certain probabilities. This cannot be described by a single pure state and we had to use a textual description of the complete outcomes. The dennsity matrix formalism can describe such outcomes in a very elegant way.
+1. Quantum measurements. We have discussed quantum measurements in the section on the [postulates of quantum mechanics](b-postulates-xr), and for instance in the example of [measuring a spin in another basis](sp-half-ex-meas), the outcome often is probabilistic. After the measurement, we obtain different pure states $\ket{\psi_i}$ with certain probabilities. This cannot be described by a single pure state and we had to use a textual description of the complete outcomes. The density matrix formalism can describe such outcomes in a very elegant way.
 
 2. Ensembles of quantum states. In order to obtain the required information about the probabilities of different outcomes of a quantum experiments, but also of larger quantum algorithms running on larger quantum computers, we can either perform the same experiment many times in parallel or sequentially repeat the experiment. The result is that we have an ensemble of resulting quantum states, so-called mixed states; pure states are often not suitable to describe these results. 
 
