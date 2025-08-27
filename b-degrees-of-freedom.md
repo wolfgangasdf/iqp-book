@@ -16,14 +16,14 @@ In this section we briefly discuss different degrees of freedom in which we can 
 
 
 ## Degrees of freedom of light
-`[slide]`
+{{slidetag}}
 
 To start, we continue with light, we have used the polarization as an example, what else? Frequency or wavelength, the time of light pulses or single photons, or the spatial structure are equally valid degrees of freedom in which we can encode information. In contrast to polarization of a light beam, which only has 2 orthogonal basis vectors, the others are what we call continuous degrees of freedom, therefore we would need to make a discrete and orthogonal basis. Examples are time “bins”, frequency bins, or spatial bins or modes. Important is that in the other cases, we do not only have two basis states, but we can have more – higher-dimensional (d) spaces.
 
 As an interesting side note, in principle one can do universal quantum computation with laser beams – but the amount of optical elements needed scales exponentially with the number of qubits, similar to classical simulation of a quantum computer. You will learn more in other courses, basically, it is the overall dimension of the state space (the vectors before!), or Hilbert space, that counts. This is $d^N$, where $d$ is the dimension of the single quantum state from before, and $N$ is the number of particles. We can think of a particle as an entity on which we can do measurements.
 
 ## Fundamental particles and composite systems
-`[slide]`
+{{slidetag}}
 
 For quantum technologies, very important is the understanding of the quantum behaviour of fundamental particles, how they can be controlled on the quantum level. In this course, we will study the quantum behaviour of free electrons and other massive particles like neutrons and protons, electrons bound in potential wells and atoms like the hydrogen atom - those are shown in the figure. Besdides that we will study the angular momentum degree of freedom, and in particular the “spin” of electrons and other fundamental particles.
 

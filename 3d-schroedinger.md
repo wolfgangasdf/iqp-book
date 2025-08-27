@@ -22,7 +22,7 @@ What matters is understanding the meaning of the quantum numbers *n, l and m* - 
 
 ## The Schrödinger equation in 3D
 
-`[slide]`
+{{slidetag}}
 
 It is now time to extend our formulation of the Schrödinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
 
@@ -54,7 +54,7 @@ $$(3d-s-4)
 
 ## The Schrödinger equation in spherical coordinates
 
-`[slide]`
+{{slidetag}}
 
 Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates - since this coordinate system better represents the spherical symmetry of our potential. The spherical coordinates are the radius $r$, the polar angle $\theta$ and the azimuthal angle $\phi$, as indicated in the figure. 
 
@@ -141,7 +141,7 @@ We see terms with derivatives of the radial, polar, and azimuthal coordinates, a
 
 ## Separation of variables
 
-`[slide]`
+{{slidetag}}
 
 What we saw before that the method of separation of variables can be used to split a wavefunction up in a time-dependant and a spatial part. We use a similar approach for the 3D Schrödinger equation, we start looking for solutions that factorize in a radial part $R$ and angular part $Y$ in the following way:
 
@@ -166,7 +166,7 @@ We see that the first term in curly brackets only depends on the radial coordina
 
 ## The angular part
 
-`[slide]`
+{{slidetag}}
 
 The angular part can be split up further again by separation of variables with $Y(\theta, \phi)=\Theta(\theta) \Phi(\phi)$ and we obtain:
 
@@ -214,7 +214,7 @@ glue("3d-aziwave", fig, display=False)
 An azimuthal wave function that repeats itself after one round trip.
 ```
 
-`[slide]`
+{{slidetag}}
 
 One can also solve the whole polar-azimuthal part, again by looking up or solving the polar differential equation yourselves, see Griffiths Chapter 4.1 for more details. At the end, the solutions turn out to be the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
 
@@ -234,7 +234,7 @@ Later we will see that $\ell$ is associated with the total angular momentum of t
 
 ## The radial part
 
-`[slide]`
+{{slidetag}}
 
 In order to solve the radial part, we can get insight even before assuming a specific radial potential. We can simplify the radial part by changing variables with $u(r) \equiv r R(r)$, then we are left with this differential equation: 
 
@@ -255,7 +255,7 @@ It is attractive so it counteracts the centrifugal term before - even more, if w
 
 ## The hydrogen atom
 
-`[slide]`
+{{slidetag}}
 
 We do not derive the solution of the radial differential equation here, please have a look at Griffiths 4.2 for details. The resulting eigenvalues or energies are
 
@@ -351,7 +351,7 @@ Now, we visualize this and comment on a few properties.
 
 ## Hydrogen wavefunctions
 
-`[slide]`
+{{slidetag}}
 
 Here we show plots of $|\psi|$ - the norm or square root of the probability density to find an electron at a certain position, and for different quantum numbers, for $n=0,1,2,3$. The plots are made in the $xy$-pane at $z=0$.
 

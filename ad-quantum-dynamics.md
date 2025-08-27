@@ -22,7 +22,7 @@ In this section, we show how to calculate the effect of a time-dependent perturb
 
 <!-- G11, P9.4 -->
 
-`[slide]`
+{{slidetag}}
 
 We discuss - of course - qubits, that is a quantum system with two energy levels. We have seen that, for instance, the electron spin in a magnetic field is such a system. Now, we apply a time-dependent perturbation, that is a change in the potential or Hamiltonian, and see what happens, using standard non-degenerate perturbation theory.
 
@@ -40,7 +40,7 @@ $$\Psi(t)=c_a(t) \psi_a e^{-i E_a t / \hbar}+c_b(t) \psi_b e^{-i E_b t / \hbar}$
 
 In absence of a perturbation the two constants $c_i$ are time-independent and the state will *wiggle* with the two eigen-energies.
 
-`[slide]`
+{{slidetag}}
 
 We now assume that we are in a particular states, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation:
 
@@ -58,7 +58,7 @@ $$\dot{c}_a=-\frac{i}{\hbar} H_{a b}^{\prime} e^{-i \omega_0 t} c_b, \quad \dot{
 
 ## First order perturbation
 
-`[slide]`
+{{slidetag}}
 
 We start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$. We insert these at the right-hand side of Eq. {eq}`pt-1st` and obtain after integration:
 
@@ -73,7 +73,7 @@ This clearly shows that it is an approximation, since $c_a$ remains at 1 and nor
 
 ## Sinusoidal perturbation
 
-`[slide]`
+{{slidetag}}
 
 Now we assume a sinusoidal perturbation, for instance in real space $\hat{H}^{\prime}(\mathbf{r}, t)=V(\mathbf{r}) \cos (\omega t)$, such that the we get
 
@@ -92,7 +92,7 @@ From this we calculate the transition probability
 
 $$P_{a \rightarrow b}(t)=\left|c_b(t)\right|^2 \approx \frac{\left|V_{a b}\right|^2}{\hbar^2} \frac{\sin ^2\left[\left(\omega_0-\omega\right) t / 2\right]}{\left(\omega_0-\omega\right)^2}$$(ad-qd-10)
 
-`[slide]`
+{{slidetag}}
 
 This is an oscillatory function of time! What does this mean?
 * After switching on the interaction, the probility to be in the upper state oscillates - and does not saturate as one might think classically.
@@ -137,7 +137,7 @@ $$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$(ad-qd-12)
 
 ## Rabi oscillations
 
-`[slide]`
+{{slidetag}}
 
 Rabi noticed that if you make the rotating wave approximation at the beginning of the calculation, Eq. {eq}`pt-1st` can be solved exactly and we don't need to restrict ourselves to perturbative solutions, and we obtain
 
@@ -155,7 +155,7 @@ However, up to now we haven't clearly defined *how* we realize the time-dependen
 
 ## Radiative transitions
 
-`[slide]`
+{{slidetag}}
 
 The atom or electron wavefunction is usually very small compared to the wavelengths of optical and even more microwave radiation. Therefore, we can often ignore the spatial dependency of a light wave or radio wave field. Additionally, physicists like to only discuss a single frequency or wavelength, and then talk about *quasi-monochromatic* radiation. We had seen before that perfect monochromatic waves cannot exist because of the Heisenberg uncertainty relation between energy and time.
 

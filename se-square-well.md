@@ -17,7 +17,7 @@ In this section, we discuss the square well potential, this appears often in qua
 
 ## A particle in a box
 
-`[slide]`
+{{slidetag}}
 <!-- Gr 2.2.  -->
 
 The square well potential is described by the following function: 
@@ -70,7 +70,7 @@ $$\psi\left(x\right)=A\sin{\left(kx\right)}+B\cos(kx)$$(se-sw-3)
 
 where $A$ and $B$ are constants. 
 
-`[slide]`
+{{slidetag}}
 
 These constants are fixed by the boundary conditions $\psi\left(0\right)=\psi\left(a\right)=0$ and general conditions on $\Psi$: Usually, both $\psi$ and $d\psi/dx$ must be continuous – the latter however does not apply here because the potential goes to infinity. 
 
@@ -91,7 +91,7 @@ $$(se-sw-4)
 
 We see that the energy for a particle in a box is quantized, it cannot have just any value!
 
-`[slide]`
+{{slidetag}}
 
 Now, we can find the value of $A$ by normalizing the wavefunction, since want to study the situation where we have a particle in our potential well: 
 
@@ -122,7 +122,7 @@ $$(se-sw-8)
 
 ## Particle in a box wavefunctions
 
-`[slide]`
+{{slidetag}}
 
 Here we show the first 5 wavefunctions of the square well. The particle in the state $n=1$ has the lowest energy and is therefore called the ground state, the other states we call excited states. They have $n-1$ nodes as visible in the figure, where we have vertically offsetted the curves - all oscillate around zero!
 

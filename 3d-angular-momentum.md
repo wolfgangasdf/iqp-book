@@ -17,7 +17,7 @@ We had already mentioned that the quantum number $\ell$ which we found is relate
 
 ## Classical angular momentum
 
-`[slide]`
+{{slidetag}}
 
 Symmetries in physics lead to conservation laws - for instance, translation symmetry leads to linear momentum conservation - this is the reason why the velocity of a moving body remains constant if no forces act on it. 
 
@@ -43,7 +43,7 @@ The angular momentum is an extensive quantity, so for a composite system and not
 
 ## Quantum angular momentum
 
-`[slide]`
+{{slidetag}}
 
 How about the angular momentum of the electron in the quantum case? How does it depend on the quantum numbers that appeared while solving the hydrogen atom problem?
 
@@ -58,7 +58,7 @@ We now want to figure out what quantum mechanical angular momenta are allowed. S
 3. We find the highest-energy angular momentum state, and use ladder operators to find all possible eigenstates and energies. By purely algebraic means we therefore find all possible eigenvalues
 4. We find the eigenfunctions, which will allow for comparison to the hydrogen atom.
 
-`[slide]`
+{{slidetag}}
 
 You can follow the derivations in Griffiths chapter 4.3, here only the results. We have 3 angular momentum operators along the 3 coordinates
 
@@ -87,7 +87,7 @@ Therefore, let us find now the eingenvalues of $L^2$ and one component, where tr
 
 For $L_z$, one can show that the ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$. 
 
-`[slide]`
+{{slidetag}}
 
 Similar to the quantum harmonic oscillator, we start by defining $f_t$ as the highest angular momentum state. We assume that $\hbar\ell$ is the highest eigenvalue of $L_z$, of that top state, the reason will become clear later. We therefore have $L_z f_t=\hbar \ell f_t$. 
 
@@ -154,7 +154,7 @@ Exciting, half-integer values are possible - we will come back to this. But for 
 
 ## Quantum angular momentum example
 
-`[slide]`
+{{slidetag}}
 
 We now discuss what the obtain relations imply for an example with $\ell=2$. First, we plot a 3D sphere with a radius of the length of $|L|=\sqrt{2(2+1)}\approx 2.45$ - classically $L$ could be oriented towards any point on this sphere.
 
@@ -228,7 +228,7 @@ Quantum mechanics predicts that this simply can't be done - and this agrees very
 ## Quantum angular momentum eigenfunctions
 
 <!-- [G4.3.2] -->
-`[slide]`
+{{slidetag}}
 
 Now we want to derive the eigenfunctions of the orbital angular momentum operators, in particular again for the electron of the hydrogen atom. We first write the operators in spherical coordinates, we had $\vec{L}=-i \hbar(\vec{r} \times \vec{\nabla})$ with nabla operator in spherical coordinates, where the hat indicates unit coordinates:
 

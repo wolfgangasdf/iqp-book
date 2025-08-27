@@ -18,7 +18,7 @@ In this section, we discuss the most common spin: $1/2$ - we show how this can b
 ## Spin 1/2 quantum states
 
 <!-- Griffiths 4.4.1 -->
-`[slide]`
+{{slidetag}}
 
 We now discuss $s=1/2$, for instance for an electron – once we have understood this case it is quite simple to work out the formalism for any other spin. As we have seen before, there are only two possible values for $m_s = \pm1/2$, and therefore there are just two eigenstates, now in the notation $\left|sm_s\right\rangle$:
 
@@ -41,7 +41,7 @@ In contrast to an electron in a harmonic potential, where we needed to add an an
 
 ## Spin 1/2 algebra
 
-`[slide]`
+{{slidetag}}
 
 Now we can use relatively simple algebra – we have two basis states, therefore our spin-1/2 Hilbert space is two-dimensional, and  operators are $2\times 2$ matrices. Since our spin states are eigenstates of the operators $S^2$ and $S_z$ , we can work them out simply by calculating their eigenvalues for $\left|0\right\rangle$ and $\left|1\right\rangle$:
 
@@ -85,7 +85,7 @@ Convince yourselves that the ladder operator matrices do what they should do! Al
 
 ## Pauli matrices
 
-`[slide]`
+{{slidetag}}
 
 It turns out that the $S_i$ matrices are so useful and fundamental in quantum mechanics that, after pulling out the factor $\hbar/2$, they get another name, the spin Pauli matrices $\sigma_i$:
 
@@ -99,7 +99,7 @@ The Pauli matrices $\sigma_i$ form the basis of unitary operators on spin states
 
 ## The Bloch sphere
 
-`[slide]`
+{{slidetag}}
 
 We now briefly want to mention how such a qubit can be visualized. If we take the arbitrary qubit $|\psi\rangle=\alpha |0\rangle+\beta|1\rangle$, we have two complex coefficients and therefore 4 real numbers. We can, however, remove one real number because the global phase of a quantum state is irrelevant for all observable quantities. Therefore we end up with a 3-dimensional parameter space, which can be visualized in 3 dimensions! Now, due to normalization $|\alpha|^2+|\beta|^2=1$, (pure) quantum states reside on a sphere with radius 1 - the so-called *Bloch sphere* shown in the figure. A qubit state can therefore also be parametrized by two angles $\theta$, the polar angle and $\phi$, the azimuthal angle with $0 \leq \theta \leq \pi$ and $0 \leq \phi \leq 2 \pi$:
 
@@ -228,7 +228,7 @@ As we can see, this is exactly the X-coordinate of the quantum state on the Bloc
 
 ## Pauli matrices and rotations
 
-`[slide]`
+{{slidetag}}
 
 You might know the Pauli matrices $\sigma_x, \sigma_y, \sigma_z$ from the single-qubit quantum logic gates, where they are usually called $X,Y,Z$ - You can easily convince yourselves that the Pauli matrices rotate a qubit state by 180 degrees on the Bloch sphere. For instance, $\sigma_x|0\rangle = |1\rangle$.
 How can we rotate around arbitrary angles? The Pauli matrices are called the generators of rotation, if we exponentiate the Pauli matrices in the following way, it turns out that we obtain arbitrary angle qubit rotation matrices: 

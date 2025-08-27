@@ -16,7 +16,7 @@ In this section, we introduce the concept of a wave and a wave function for part
 
 ## De Broglie & Heisenberg
 
-`[slide]`
+{{slidetag}}
 
 <!-- Ph 1.2.  -->
 An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. The wavelength relates to the wavenumber as $k=\ \frac{2\pi}{\lambda}$, with which we can rewrite the momentum and obtain $p=\hbar k$. 
@@ -92,7 +92,7 @@ https://quantummechanics.ucsd.edu/ph130a/130_notes/node88.html
 ## The Schrödinger equation
 
 <!-- Additional: Philips 2.1 -->
-`[slide]`
+{{slidetag}}
 
 In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a differential equation that obeys this dispersion relation. 
 
@@ -119,7 +119,7 @@ $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is a plane wave moving in the 
 
 ## Plane-wave superpositions and wavepackets
 
-`[slide]`
+{{slidetag}}
 
 Since $\Psi$ appears only linearly (no powers) in the differential equation, we say that the Schrödinger equation is linear in the wavefunction $\Psi$. As a consequence, any superposition of solutions for instance with a different wavelength or wavevector $k$, is also a solution. 
 

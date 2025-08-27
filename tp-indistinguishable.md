@@ -17,7 +17,7 @@ In this section, we study an in particular fascinating consequence of quantum me
 
 ## Bosons and Fermions
 
-`[slide]`
+{{slidetag}}
 
 <!-- [G5.1.1 is partially conceptually wrong and not very rigorous, use P10.1] -->
 
@@ -114,7 +114,7 @@ In short, the same exchange symmetry principles we saw for bosons and fermions i
 
 ## The Pauli exclusion principle 
 
-`[slide]`
+{{slidetag}}
 
 <!-- [part from G5.1.1, part from P10.2 but all very unclear, also wikipedia not much better. This is crap!] -->
 
@@ -179,7 +179,7 @@ This is the famous **Pauli exclusion principle** for fermions – no two fermion
 
 ## Bosons bunch
 
-`[slide]`
+{{slidetag}}
 
 Now we ask the question, has indistinguishability also an effect for bosons? We calculate the probability for finding both particles at the same location, for the non-entangled state of two distinguishable particles
 
@@ -206,7 +206,7 @@ see also Jos Thijssen - LECTURE NOTES STATISTICAL PHYSICS TN2624.pdf but too har
 
 ## The exchange force
 <!-- G5.1.2 -->
-`[slide]`
+{{slidetag}}
 
 Intuitively, if we trust in the Pauli exclusion principle, at least fermions must feel a "force" if they get closer. To investigate this, we calculate the expectation value of the squared distance between the particles:
 

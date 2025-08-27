@@ -18,7 +18,7 @@ In this section we investigate what happens if two angular momenta couple quantu
 
 ## Coupling of two angular momenta
 
-`[slide]`
+{{slidetag}}
 
 Most physical systems consist of more than one particle, and as mentioned before they usually have nonzero spin – we now study the consequences of this. 
 
@@ -37,7 +37,7 @@ $$(sp-cg-ops)
 
 We now ask ourselves the seemingly simple question, what is the total angular momentum $\vec{S}=\vec{S}^{\left(1\right)}+\vec{S}^{\left(2\right)}$ and the total z-component $S_z=S_z^{\left(1\right)}+S_z^{\left(2\right)}$ of it of the composite system.
 
-`[slide]`
+{{slidetag}}
 
 More specific, the question is: what are the possible net spins $s$ of the combined system, and the $z$-components $m$? 
 
@@ -54,7 +54,7 @@ So, $m=m_1+m_2$ is just the sum. But the total spin $S$ and its eigenvalues $s$ 
 
 ## Two spin-1/2 particles
 
-`[slide]`
+{{slidetag}}
 
 We consider two $s=1/2$ spins, for instance the proton and the electron of the ground-state of the hydrogen atom, or two electrons. For all possible spin orientations we calculate first $m$:
 
@@ -91,7 +91,7 @@ $$\begin{align*}
 
 So these two superposition states are both eigenstates of $S^2$!
 
-`[slide]`
+{{slidetag}}
 
 Another approach is to use the ladder operators, for instance starting with the undoubtedly highest spin state $|\uparrow\uparrow\rangle = |1,1\rangle$ and applying $S_-$ results in the same superposition states.
 
@@ -113,7 +113,7 @@ $$(sp-cg-s)
 
 ## Higher spins
 
-`[slide]`
+{{slidetag}}
 
 In general for higher spins $s_1$ and $s_2$, one can show (check Cohen-Tannoudji or so) that possible values for $s$ are 
 

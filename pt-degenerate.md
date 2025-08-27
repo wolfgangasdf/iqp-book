@@ -19,7 +19,7 @@ In this section we discuss an extension of perturbation theory for the case that
 
 ## Example: 2D infinite square well
 
-`[slide]`
+{{slidetag}}
 
 Often a quantum systems has degenerate eigenvalues or energies - this happens if different solutions of the Hamiltonian result in the same energy. Then our previous expression for the first-order correction to energy blows up:
 
@@ -47,7 +47,7 @@ $$
 E_{1,2}=E_{2,1}=\frac{\hbar^2 \pi^2}{2m_0 a^2}(1^2+2^2)
 $$(ad-ptd-3)
 
-`[slide]`
+{{slidetag}}
 
 We show the two solutions in the figure:
 
@@ -99,7 +99,7 @@ Remember, the increased potential at the position of the perturbation has as the
 
 ## The perturbation couples states
 
-`[slide]`
+{{slidetag}}
 
 Now we redefine the two states $\psi_a^{(0)}\equiv\psi_{1,2}^{(0)}$ and $\psi_b^{(0)}\equiv\psi_{2,1}^{(0)}$ also to emphasize the generic nature of our procedure. First, we calculate the matrix elements of $H'$ by integrating now over two coordinates:
 
@@ -130,7 +130,7 @@ If we use these new states, we will now show that our previous non-degenerate pe
 
 ## Finding good quantum states
 
-`[slide]`
+{{slidetag}}
 
 We go back to our power-series Schrödinger equation, up to first order, from Eq. {eq}`pt-1storderseq` but with ommitted state number $n$:
 
@@ -180,7 +180,7 @@ Note that this procedure can be generalized to $n$-fold degeneracies, one basica
 
 ## The new quantum states
 
-`[slide]`
+{{slidetag}}
 By inserting our matrix elements from before we obtain:
 
 $$
@@ -210,7 +210,7 @@ As we had anticipated before, they are superpositions of the unperturbed but deg
 
 ## The new quantum states and solutions
 
-`[slide]`
+{{slidetag}}
 
 We plot the newly found states in the figure, the dashed line again indicates the position of our perturbation.
 

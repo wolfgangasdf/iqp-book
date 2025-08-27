@@ -17,7 +17,7 @@ We want to start by giving a simple overview how easy it can be to encode a qubi
 
 ## Light's polarization
 
-`[slide]`
+{{slidetag}}
 
 Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which might be familiar to you.
 
@@ -114,7 +114,7 @@ If you want to refresh your electromagnetic field knowledge, here some useful li
 :::
 
 ## Polarization bases
-`[slide]`
+{{slidetag}}
 
 We say that $H$ and $V$ polarizations form a basis, there are two orthogonal basis vectors because our state space is two-dimensional here (the quantum state is described by a 2-element vector). 
 
@@ -213,7 +213,7 @@ The circular polarization basis is less often used in quantum information but ca
 
 
 ## From polarizers to quantum measurements
-`[slide]`
+{{slidetag}}
 
 We now show that a polarizer in combination with a photo detector does quantum measurements in polarization space. Let us assume that we have a horizontally polarized incident laser beam. The transmission of this beam through a polarizer depends on the relative angle between them, in fact, only the polarization component of the light that is parallel to the polarizer orientation is transmitted. With the polarizer angle $\alpha$ with respect to the horizontal polarization orientation we have the situation shown in the figure:
 
@@ -271,7 +271,7 @@ In our polarization example here it is quite obvious, that after the measurement
 
 ## Quantum measurements and normalization
 
-`[slide]`
+{{slidetag}}
 
 With this, we can already explain a suprising experiment, which you can easily do by using 3 polarizers. 
 

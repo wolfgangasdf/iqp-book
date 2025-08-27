@@ -50,10 +50,12 @@ parse:
     - colon_fence
     - dollarmath
     - linkify
-    # - substitution
-  # the following option is currently ignored due to a bug (see
-  # https://github.com/executablebooks/jupyter-book/issues/1738)
+    - substitution
   myst_dmath_double_inline: true
+  myst_substitutions:
+    slidetag: ''
+    # slidetag: '`[slide]`' # use this to see the slide tags!
+
 
 # Information about where the book exists on the web
 repository:
