@@ -42,7 +42,7 @@ A state is represented by a state vector $|\psi\rangle$. Mathematically, this st
   \psi(x) = \langle x|\psi\rangle
   $$
 
-  is the wavefunction, which you will learn about more properly in the upcoming chapter. 
+  is the wavefunction, which you will learn about properly in the upcoming chapter. 
 
 **2. Measurement expectation values**
 
