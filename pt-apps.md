@@ -69,7 +69,7 @@ Electronic energy levels of hydrogen with fine structure. From Griffiths.
 
 {{slidetag}}
 
-Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in the advanced section), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
+Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in Section [](pt-relativistic-corrs)), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
 
 As mentioned before, the corrections are small, and often they are expressed in powers of the fine-structure constant $\alpha$ which consists of constants that appear in the expressions: 
 

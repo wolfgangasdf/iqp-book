@@ -14,12 +14,6 @@ kernelspec:
 
 In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary rotation-symmetric or spherically symmetric potentials, potentials which depend only on the radial coordinate. We will see that certain restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
 
-:::{warning}
-For this section, you don’t need to worry about the explicit solutions of the Schrödinger equation in 3D, which involve functions such as the *Legendre or Laguerre polynomials*. 
-
-What matters is understanding the meaning of the quantum numbers *n, l and m* - how they (and their restrictions) are derived, and how to solve related problems. For practice, please refer to the exercises.
-:::
-
 ## The Schrödinger equation in 3D
 
 {{slidetag}}
@@ -347,7 +341,13 @@ We see that
 * there is a nice separation into radial and angular parts
 * The Laguerre polynomials and the normalization factor combines both degrees of freedom
 
-Now, we visualize this and comment on a few properties.
+:::{Note}
+:class: dropdown
+You don't need to memorize the explicit hydrogen atom solutions or precisely how you derive them, but it is useful to know the procedure - and that you can look it up here. More important is understanding the meaning of the quantum numbers $n$, $\ell$ and $m$ - their restrictions, how they are derived, and why they appear!
+:::
+
+
+Now, we visualize some solutions and comment on a few properties.
 
 ## Hydrogen wavefunctions
 

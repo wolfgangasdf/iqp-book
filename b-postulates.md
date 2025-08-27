@@ -14,13 +14,15 @@ kernelspec:
 (b-postulates-xr)=
 # The postulates of quantum mechanics
 
-**1. The state of a system**
+**1. The quantum state of a system**
 
 A state is represented by a state vector $|\psi\rangle$. Mathematically, this state vector belongs to the Hilbert space $\mathcal{H}$, called the state space.
 
-- **For discrete degrees of freedom** (eg. a qubit or spin system):
+It is useful to mention here that there are two different types of states, depending in which degrees of freedom they are encoded in:
+
+- **Discrete degrees of freedom**, for instance a qubit, a spin system or polarization:
   $\mathcal{H}$ is finite-dimensional, e.g. $\mathbb{C}^2$.  
-  A typical state looks like:
+  A typical _discrete state_ looks like:
 
   $$
   |\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad |\alpha|^2 + |\beta|^2 = 1.
@@ -28,7 +30,7 @@ A state is represented by a state vector $|\psi\rangle$. Mathematically, this st
 
   This might be familiar to most of you as this is how you define the state of qubits! However, apart from Chapter 4, we will mostly be working with systems involving continuous degrees of freedom.
 
-- **For continuous degrees of freedom** (eg. a particle in space):
+- **Continuous-variable degrees of freedom**, for instance the position of a particle:
   $\mathcal{H} = L^2(\mathbb{R})$, the space of square-integrable wavefunctions.  
   The state vector is written in the position basis:
 
@@ -42,9 +44,9 @@ A state is represented by a state vector $|\psi\rangle$. Mathematically, this st
   \psi(x) = \langle x|\psi\rangle
   $$
 
-  is the wavefunction, which you will learn about properly in the upcoming chapter. 
+  is the wavefunction, which we will use often in the following chapters. 
 
-**2. Measurement expectation values**
+**2. Measurements**
 
 This second postulate is also called the Born rule:
 Every measurable physical quantity A is described by a Hermitian operator $\hat{A}$ acting in the state space of $\mathcal{H}$. The expectation value to measure A given the state $|\psi\rangle$ is $\langle\psi|\hat{A}|\psi\rangle$ - and the probability is $|\langle\psi|\hat{A}|\psi\rangle|^2$. We don't need the modulus since eigenvalues of hermitian operators are real.

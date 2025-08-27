@@ -100,7 +100,7 @@ This classifies the quantum behaviour of particles in a very fundamental way - p
 
 So far we have discussed indistinguishable particles in 3D, where exchange symmetry allows only two possibilities. However, in 2D systems such as those that appear in the quantum hall effect, the situation is richer. When two particles are exchanged, the wavefunction is not restricted to pick up only a phase of $\pm 1$. Instead, it can acquire any phase $e^{i\theta}$, or even undergo a more general unitary transformation. Such quasiparticles are called **anyons**.
 
-In a special class of anyons which are called non-Abelian anyons, the order in which exchanges (called *braids*) are performed matters - giving rise to a kind of “quantum memory” stored in the system’s topology. This is precisely the principle behind **topological quantum computing**. Since the information stored depends only on the *topology* of the braids (not on microscopic details), it is inherently protected from many sources of noise and decoherence. 
+In a special class of anyons which are called non-Abelian anyons, the order in which exchanges (called *braids*) are performed matters - giving rise to a kind of “quantum memory” stored in the system’s topology. This is precisely the principle behind **topological quantum computing**. Since the information stored depends only on the *topology* of the braids and not on microscopic details, it is inherently protected from many sources of noise and decoherence. 
 
 ```{figure} figures/two-particles/anyons.png
 ---
