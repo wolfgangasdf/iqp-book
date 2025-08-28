@@ -341,7 +341,13 @@ We see that
 * there is a nice separation into radial and angular parts
 * The Laguerre polynomials and the normalization factor combines both degrees of freedom
 
-Now, we visualize this and comment on a few properties.
+:::{Note}
+:class: dropdown
+You don't need to memorize the explicit hydrogen atom solutions or precisely how you derive them, but it is useful to know the procedure - and that you can look it up here. More important is understanding the meaning of the quantum numbers $n$, $\ell$ and $m$ - their restrictions, how they are derived, and why they appear!
+:::
+
+
+Now, we visualize some solutions and comment on a few properties.
 
 ## Hydrogen wavefunctions
 

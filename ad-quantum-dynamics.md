@@ -42,25 +42,79 @@ In absence of a perturbation the two constants $c_i$ are time-independent and th
 
 {{slidetag}}
 
-We now assume that we are in a particular states, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation:
+We now assume that the system is in a particular state, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation.
 
 $$\hat{H} \Psi=i \hbar \frac{\partial \Psi}{\partial t}, \quad \text { where } \quad \hat{H}=\hat{H}_0+\hat{H}^{\prime}(t)$$(ad-qd-4)
 
-We use the matrix elements 
+First, we expand our state in the eigenbasis of $\hat H_0$:
 
-$$H_{i j}^{\prime} \equiv\left\langle\psi_i\left|\hat{H}^{\prime}\right| \psi_j\right\rangle$$(ad-qd-5)
+$$
+\Psi(t)=\sum_n c_n(t)\,\psi_n\,e^{-iE_n t/\hbar},\qquad
+\hat H_0\psi_n=E_n\psi_n.
+$$
 
-where we additionally assume that $H_{aa}'=H_{bb}'=0$, which is reasonable since we usually wish to make transitions between the states and not just change the unperturbed states.
+For the right-hand side of the Schrödinger equation, we differentiate $\Psi(t)$:
 
-We obtain for the time-derivatives of the coefficients (where we assume $E_b\gt E_a$)
+$$
+\frac{\partial\Psi}{\partial t}=\sum_n \dot c_n(t)\,\psi_n\,e^{-iE_n t/\hbar}
++ \sum_n c_n(t)\,\psi_n\left(-\frac{iE_n}{\hbar}\right)e^{-iE_n t/\hbar}
+$$
+
+$$
+i\hbar\frac{\partial\Psi}{\partial t}
+= i\hbar\sum_n \dot c_n\,\psi_n e^{-iE_n t/\hbar} + \sum_n c_n E_n\,\psi_n e^{-iE_n t/\hbar}
+$$
+
+For the left-hand side we obtain
+
+$$
+\hat H\Psi = (\hat H_0+\hat H')\sum_n c_n\psi_n e^{-iE_n t/\hbar}
+= \sum_n c_n E_n\psi_n e^{-iE_n t/\hbar} + \sum_n c_n e^{-iE_n t/\hbar}\,\hat H'\psi_n.
+$$
+
+Now we equate the left- and right-hand side. The terms with $E_n$ cancel and we get
+
+$$
+i\hbar\sum_n \dot c_n\,\psi_n e^{-iE_n t/\hbar}
+= \sum_n c_n e^{-iE_n t/\hbar}\,\hat H'\psi_n.
+$$
+
+Now we project onto a particular basis state $\psi_m$ and make use of their orthonormality $\langle\psi_m|\psi_n\rangle=\delta_{mn}$:
+
+$$
+i\hbar\,\dot c_m\,e^{-iE_m t/\hbar}
+= \sum_n c_n e^{-iE_n t/\hbar}\,\langle\psi_m|\hat H'|\psi_n\rangle.
+$$
+
+We now use the matrix elements 
+
+$$H_{m n}^{\prime} \equiv\left\langle\psi_m\left|\hat{H}^{\prime}\right| \psi_n\right\rangle,$$(ad-qd-5)
+
+where we additionally assume that $H_{mm}'=H_{nn}'=0$, which is reasonable because we apply a time-dependent drive to induce transitions between stationary states, and don't redefine the states as was done in time-independent perturbation theory.
+
+We multiply both sides by $e^{iE_m t/\hbar}$ and obtain
+
+$$
+i\hbar\,\dot c_m
+= \sum_n c_n\,H'_{mn}\,e^{-i(E_n-E_m)t/\hbar}
+$$
+
+or
+
+$$
+{\;\dot c_m = -\frac{i}{\hbar}\sum_n H'_{mn}\,c_n\,e^{-i\omega_{nm}t}\;},
+\; \text{ where }\; \omega_{nm}\equiv\frac{E_n-E_m}{\hbar}
+$$
+
+Thus, assuming that $E_b\gt E_a$, we have obtained the time-derivatives of the coefficients
 
 $$\dot{c}_a=-\frac{i}{\hbar} H_{a b}^{\prime} e^{-i \omega_0 t} c_b, \quad \dot{c}_b=-\frac{i}{\hbar} H_{b a}^{\prime} e^{i \omega_0 t} c_a,\quad \omega_0 \equiv \frac{E_b-E_a}{\hbar}$$(pt-1st)
 
-## First order perturbation
+:::{note}
 
 {{slidetag}}
 
-We start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$. We insert these at the right-hand side of Eq. {eq}`pt-1st` and obtain after integration:
+If we start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$, on inserting these at the right-hand side of Eq. {eq}`pt-1st`, we obtain after integration:
 
 $$
 \begin{align}
@@ -70,6 +124,7 @@ $$
 $$(pt-1st-res)
 
 This clearly shows that it is an approximation, since $c_a$ remains at 1 and normalization is therefore violated.
+:::
 
 ## Sinusoidal perturbation
 
@@ -95,7 +150,7 @@ $$P_{a \rightarrow b}(t)=\left|c_b(t)\right|^2 \approx \frac{\left|V_{a b}\right
 {{slidetag}}
 
 This is an oscillatory function of time! What does this mean?
-* After switching on the interaction, the probility to be in the upper state oscillates - and does not saturate as one might think classically.
+* After switching on the interaction, the probability to be in the upper state oscillates - and does not saturate as one might think classically.
 * After a specific time, the probability to be in the upper state is maximal - if we wish to make a transition to the upper state, we should switch our perturbation off at this time.
 * Since we work in first-order perturbation theory, the probability needs to remain small in any case, otherwise our assumption is not valid. It turns out, however, that we can make transitions with near-unity probability this way.
 
@@ -139,18 +194,25 @@ $$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$(ad-qd-12)
 
 {{slidetag}}
 
-Rabi noticed that if you make the rotating wave approximation at the beginning of the calculation, Eq. {eq}`pt-1st` can be solved exactly and we don't need to restrict ourselves to perturbative solutions, and we obtain
+So far, we have worked with approximate, perturbative, solutions for transitions between two quantum states under a time-dependent drive. However, there is a famous result by Rabi that goes beyond approximation: if we make the rotating wave approximation right from the beginning, Eq. {eq}`pt-1st` can actually be solved exactly! While a more detailed treatment is outside the scope of this course, we obtain these exact solutions:
 
 $$c_b(t)=-\frac{i}{2 \hbar \omega_r} V_{b a} e^{i\left(\omega_0-\omega\right) t / 2} \sin \left(\omega_r t\right)$$(ad-qd-13)
 
-We obtain a similar expresswion for $c_a$. Here we have used the Rabi frequency
+and a similar expression for $c_a$. Here we have used the Rabi frequency
 
 $$\omega_r \equiv \frac{1}{2} \sqrt{\left(\omega-\omega_0\right)^2+\left(\left|V_{a b}\right| / \hbar\right)^2}$$(ad-qd-14)
 
-This result is properly normalized, the transition probability does not exceed one and the solutions also describe a strong drive. This effect, the so-called Rabi oscillations, is the work horse for qubit manipulation. 
+This result is properly normalized, the transition probability does not exceed 1 and the solutions also describe a strong drive. This effect, the so-called Rabi oscillations, is the work horse for qubit manipulation. 
 
 However, up to now we haven't clearly defined *how* we realize the time-dependent perturbation, which we will do now.
 
+:::{note}
+Recap: What do Rabi oscillations mean intuitively?
+
+Imagine a qubit which can be in its ground state $|a\rangle$ or excited state $|b\rangle$. We shine light on it, or apply a microwave field, at a frequency $\omega$ that is close to the transition frequency $\omega_0$ between the two states.
+
+Instead of staying in one state, the system now *coherently* oscillates between the two states. This oscillation is what we call Rabi oscillations. The probability of being in the excited state $|b\rangle$ oscillates, and the rate of this oscillation is set by the Rabi frequency $\omega_r$.
+:::
 
 
 ## Radiative transitions

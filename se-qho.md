@@ -388,7 +388,7 @@ The probability density of the first few states of the quantum harmonic oscillat
 
 Here we see a rather evenly distributed probability density. This is in strong contrast to the classical harmonic oscillator like a swing, where the probability is highest at the extremal turning points where the velocity is lowest. 
 
-:::{admonition} Classical probbility densities
+:::{admonition} Classical probability densities
 :class: dropdown
 Think about more differences concerning probability densities, like forbidden regions!
 :::
