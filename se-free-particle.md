@@ -19,13 +19,24 @@ In this section, we introduce the concept of a wave and a wave function for part
 {{slidetag}}
 
 <!-- Ph 1.2.  -->
-An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. The wavelength relates to the wavenumber as $k=\ \frac{2\pi}{\lambda}$, with which we can rewrite the momentum and obtain $p=\hbar k$. 
+An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. $h$ is the Planck constant, and $p$ the momentum of the particle. The wavelength relates to the wavenumber as $k=\ \frac{2\pi}{\lambda}$, with which we can rewrite the momentum and obtain $p=\hbar k$. 
 The wave can for instance be described by a plane wave $\Psi(\mathbf{r}, t)=\exp\left[i(\mathbf{k\cdot r}-i \omega t)\right]$ in 3D or $\Psi(x, t)=\exp\left[i(k x-i \omega t)\right]$ in one dimension.
 
-<!-- Ph 2.2.  -->
-With this as a starting point, we can already propose a wave equation for a freely moving particle if its speed is non-relativistic. We assume that the particle is moving at a velocity $v\ =\ p/m$ in the $x$ direction with mass $m$, momentum $p$ and energy $E=p^2/2m$. 
+:::{admonition} De Broglie example
+:class: dropdown
+What is the de Broglie wavelength in nm of one buckminsterfullerene molecule (C60), moving at a speed of 100 m/s? The weight of the molecule is $1.196\times 10^{-24}\,\text{kg}$, and the Planck constant is $h=6.626\cdot 10^{-34}\,\mathrm{kg m^2 s^{-1}}$. Under which condition is this de Broglie wavelength comparable to the size of the molecule (around 1 nm)?
 
-With this we can already describe the Heisenberg uncertainty principle:
+:::{admonition} Solution
+:class: dropdown
+We need to calculate 
+
+$$\lambda=\frac{h}{p}=\frac{h}{m v}=\frac{6.626\cdot 10^{-34}\,\mathrm{kg\cdot m^2\cdot s^{-1}}}{1.196\times 10^{-24}\,\mathrm{kg}\cdot 100\,\mathrm{m\cdot s^{-1}}} = 0.00554\,\textrm{nm}$$
+
+This is much smaller than the size of 1 nm - but if the C60 moves at around half a meter per second, the de Broglie wavelength is around its size!
+:::
+
+
+With this we can already describe the Heisenberg uncertainty principle as we will show now.
 
 A wave packet consisting of a range of wave numbers between $k-\Delta k$ and $k+\Delta k$ describes a particle with an uncertain in momentum: $\Delta p\approx\hbar\Delta k$. The length of this wavepacket is a measure of the uncertainty in position, and it can be shown to be simply $\Delta x\approx\ 2\pi/\Delta k$. Note, the derivation of this requires a fourier transform! 
 
@@ -83,6 +94,10 @@ which results in
 
 $$\Delta E\,\Delta t \ge \hbar$$(se-ur-et)
 
+```{seealso}
+Further reading: Philips Chapter 1 & 2.1
+```
+
 :::{admonition} Note: Fourier transforms and uncertainty
 :class: dropdown
 If you like to dive deeper into Fourier transforms and the Heisenberg uncertainty principle, have a look here: 
@@ -94,15 +109,17 @@ https://quantummechanics.ucsd.edu/ph130a/130_notes/node88.html
 <!-- Additional: Philips 2.1 -->
 {{slidetag}}
 
-In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. From $E=\hbar\omega$ and previous equations we find the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a differential equation that obeys this dispersion relation. 
+In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. 
+We consider a freely moving particle at non-relativistic velocity $v\ =\ p/m$ in the $x$ direction, having mass $m$, momentum $p$ and classical mechanics tells us that the kinetic energy is $E=p^2/2m$. 
+Using $E=\hbar\omega$ and $p=\hbar k$, we find the dispersion relation $\omega\ =\hbar k^2/2m$. The task is to find a differential equation that obeys this dispersion relation. 
 
-The skilled eye will see that the equation  
+You can easily test that this is the case for this equation:
 
 $$
 i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}
 $$(se-fp-se)
 
-will be such an equation – this is the Schrödinger equation for a "quantum wave function" $\Psi$ describing a free particle moving in one dimension.
+This is the Schrödinger equation for a quantum wave function $\Psi$, describing a free particle moving in one dimension.
 
 Note that the main goal of physics research is to develop models to describe nature, and not to explain "why" something is like it is - of course it is most satisfying when we can explain "why" something is - but often this is just in relation to our models. So, please accept this equation for now - we will see it works often extremely well!
 
@@ -116,6 +133,10 @@ $\Psi\left(x,t\right)=Ae^{i(kx-\omega t)}$, which is a plane wave moving in the 
 1. Convince yourself that the plane wave is a solution of the Schrödinger equation.
 2. Plot the plane wave amplitude and phase in 2 dimensions for specific wave vector and frequency, and think about its properties! More information: https://en.wikipedia.org/wiki/Plane_wave
 :::
+
+```{seealso}
+Further reading: Philips Chapter 2.1
+```
 
 ## Plane-wave superpositions and wavepackets
 

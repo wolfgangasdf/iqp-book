@@ -15,6 +15,10 @@ kernelspec:
 <!-- Griffiths 4.4.2(but much better text in Ph8.2 -->
 In this section we investigate spins in an external magnetic field. This field splits the energy of the spin states which has enabled a crucial experiment proving that the quantum spin is correctly modelling nature: the Stern-Gerlach experiment.
 
+```{seealso}
+Further reading: Griffiths Chapter 4.4.2 and Phillips Chapter 8.2
+```
+
 
 ## An electron in a magnetic field
 

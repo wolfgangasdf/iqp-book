@@ -64,6 +64,10 @@ glue("se-coulomb", fig, display=False)
 The Coloumb potential of the electron in the field of a positive charge (nucleus) at the origin.
 ```
 
+```{seealso}
+Further reading: Philips Chapter 2.2
+```
+
 ## Separation of variables
 
 {{slidetag}}
@@ -123,6 +127,11 @@ The second equation is the time-independent Schrödinger equation, and can only 
 
 <!-- Quick check exercises: Gr 2.1a show that E must be real. Gr 2.2 Show that E must be positive.  [MB thinks last one is too hard] -->
 
+```{seealso}
+Further reading: Griffiths Chapter 2.1
+```
+
+
 ## Probability density and Hamiltonian
 
 {{slidetag}}
@@ -167,6 +176,10 @@ $$(se-1d-p5)
 :::{note}
 Show that this makes sense with a de Broglie wave above!
 :::
+
+```{seealso}
+Further reading: Griffiths Chapter 2.1 and Philips Chapter 2.2
+```
 
 ## Expectation values of operators
 
@@ -215,6 +228,10 @@ $$
 $$(se-1d-ev6)
 
 Where in the last step we have have used the recipe that a *sandwich* of quantum states that calculates the expectation value of an operator, is don by integrating over the dependent variable $x$. This procedure might seem a bit ad-hoc right now, but you will see that it works.
+
+```{seealso}
+Further reading: Philips Chapter 3.5
+```
 
 ## Heisenberg representation
 

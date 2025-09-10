@@ -14,6 +14,10 @@ kernelspec:
 
 In this section we introduce a powerful method, perturbation theory, to obtain an approximation to what happens to a quantum system if we add a small change, for instance a perturbation to the potential. This is important because we can only obtain analytical solutions for very simple quantum systems, but we would like to also be able to predict the quantum properties of more complex systems.
 
+```{seealso}
+Further reading: Griffiths Chapter 7.1
+```
+
 ## A small perturbation & power series
 
 {{slidetag}}

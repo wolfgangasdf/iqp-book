@@ -14,6 +14,10 @@ kernelspec:
 
 In this section we discuss a slightly different potential than the square-well potential: the quadratic or harmonic potential. This is a key model system of quantum mechanics, where we also introduce the concepts of excitations and ladder operators. It is extremely important because harmonic potential appear at many places in physics including even quantum optics!
 
+```{seealso}
+Further reading: Griffiths Chapter 2.3
+```
+
 
 ## Harmonic potentials
 

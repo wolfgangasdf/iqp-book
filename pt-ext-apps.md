@@ -14,6 +14,11 @@ kernelspec:
 
 In this section, we discuss some more applications of perturbation theory, which are beyond the scope of our course content. However, these are historically very relevant and have lead to great discoveries in physics!
 
+```{seealso}
+Further reading: Griffiths Chapters 7.3.1, 7.4 and 7.5
+```
+
+(pt-relativistic-corrs)=
 (pt-relativistic-corrs)=
 ## Relativistic corrections
 

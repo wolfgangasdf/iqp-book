@@ -16,6 +16,10 @@ kernelspec:
 
 In this section we discuss an extension of perturbation theory for the case that two quantum states have the same energy - this happens often in reality. We will see that in this case, the perturbation is mixing the states and new eigenstates appear.
 
+```{seealso}
+Further reading: Griffiths Chapter 7.2
+```
+
 
 ## Example: 2D infinite square well
 

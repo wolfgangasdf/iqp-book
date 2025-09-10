@@ -18,6 +18,10 @@ Historically and in most books, perturbation theory has been applied to calculat
 
 However, perturbation theory is equally useful for prediction of the behaviour of modern quantum systems that are used as qubits, therefore learning perturbation theory is useful for QIST! Anyway, in this course we will focus on the hydrogen atom.
 
+```{seealso}
+Further reading: Griffiths Chapter 7.3
+```
+
 ## Spin-orbit coupling
 
 {{slidetag}}

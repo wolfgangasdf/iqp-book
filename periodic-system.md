@@ -67,5 +67,8 @@ name: periodic-table
 The periodic table of elements in configuration space - the elements are behaving nicely! [Credit: wikipedia](https://en.wikipedia.org/wiki/Periodic_table#Electron_configuration_table)
 ```
 
+```{seealso}
+Further reading: Griffiths Chapter 5.2.2 and Phillips Chapter 11.1 & 11.2
+```
 
 

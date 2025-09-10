@@ -14,6 +14,10 @@ kernelspec:
 
 In this section, we turn to 3 dimensions and first solve the Schrödinger equation for arbitrary rotation-symmetric or spherically symmetric potentials, potentials which depend only on the radial coordinate. We will see that certain restrictions on possible wave functions appear automatically, which are parametrized by numbers which we will call quantum numbers. Finally, we discuss the specific case of the hydrogen atom.
 
+```{seealso}
+Further reading: Griffiths Chapter 4.1 & 4.2
+```
+
 ## The Schrödinger equation in 3D
 
 {{slidetag}}

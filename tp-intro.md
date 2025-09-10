@@ -15,6 +15,10 @@ kernelspec:
 <!-- [G 5.1] -->
 In this section we briefly introduce the Schrödinger equation for two particles, and what inter-particle interactions mean for the two-particle potential.
 
+```{seealso}
+Further reading: Griffiths Chapter 5.1
+```
+
 
 ## The two particle Hamiltonian
 

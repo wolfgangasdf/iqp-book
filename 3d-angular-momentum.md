@@ -14,6 +14,10 @@ kernelspec:
 
 We had already mentioned that the quantum number $\ell$ which we found is related to the orbital angular momentum - in this section we discuss this deeper. The quantum analog of the orbital angular momentum will turn out to be equally important in quantum mechanics as the classical version is in celestial mechanics for the orbiting and rotating motion of our earth around the sun.
 
+```{seealso}
+Further reading: Griffiths Chapter 4.3
+```
+
 
 ## Classical angular momentum
 

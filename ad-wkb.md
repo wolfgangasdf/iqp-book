@@ -22,6 +22,10 @@ You might see quantum tunneling every day! Many fingerprint sensors are based on
 
 The same also occurs for quantum wavefunctions also for massive particles - because in the end, Maxwell's equations describing light results in a wave equation as is the Schrödinger equation.
 
+```{seealso}
+Further reading: Griffiths Chapter 9
+```
+
 ## The WKB method
 
 {{slidetag}}
@@ -158,7 +162,7 @@ Quantitative plot of the wave function for the tunneling problem.
 
 We see that, in the classically forbidden region, the probability density is exponentially decaying, but also behind the barrier is a nonzero probability to find our quantum particle! This is quantum tunneling. If you calculate explicit tunneling probabilities, you will find that only for very thin barriers, on the order of the de Broglie wavelength, allow for significant tunneling.
 
-:::{admonition} Quantum Tunneling and Fusion Reactions in Stars
+:::{admonition} Quantum tunneling and fusion reactions in stars
 :class: dropdown
 
 In classical physics, two positively charged nuclei repel each other due to the Coulomb force. For example, in the Sun, protons would need kinetic energies on the order of hundreds of keV to overcome this repulsion. However, the typical thermal energy of protons in the Sun’s core (at $T \sim 1.5 \times 10^7\ \text{K}$) is only about 1 keV — far too small to classically overcome the barrier. If fusion were purely classical, nuclear reactions in stars would not occur at observable rates.

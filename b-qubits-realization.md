@@ -31,7 +31,7 @@ The Schrödinger equation with $\psi$ on his bust in Vienna.
 ```
 :::
 
-The state of a qubit is written in the ket notation often as $\left|\psi\right\rangle$, psi is traditionally the greek letter used for the quantum wave function of a particle. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a degree of freedom of a physical system.
+The state of a qubit is written in the ket notation often as $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$, psi is the greek letter that is traditionally  used for the quantum wave function of a particle, and $\alpha$ and $\beta$ are complex coefficients of the so-called computational basis states $\ket{0}$ and $\ket{1}$. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a degree of freedom of a physical system.
 
 We now show how we can encode qubits in the polarization of light, for instance of a laser pointer beam. For such a light field, where light travels into a particular direction, the polarization is fully defined in the transverse plane by the horizontal H and a vertical V electric field amplitude, and we have with the known basis vectors: 
 

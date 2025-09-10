@@ -13,9 +13,11 @@ kernelspec:
 # Quantum dynamics
 
 In this section, we show how to calculate the effect of a time-dependent perturbation, which is key for controlling qubits in the lab.
-
-
 <!-- exercise: G Problem 4.36 An electron is at rest in an oscillating magnetic field` -->
+
+```{seealso}
+Further reading: Griffiths Chapter 11
+```
 
 
 ## Time dependent perturbation theory 

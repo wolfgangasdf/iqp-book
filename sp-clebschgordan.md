@@ -15,6 +15,10 @@ kernelspec:
 <!-- G 4.4.3 -->
 In this section we investigate what happens if two angular momenta couple quantum-mechanically, for instance of two electrons - we will find that contrary to the classical case which is rather boring, quantum angular momenta couple in a very peculiar way!
 
+```{seealso}
+Further reading: Griffiths Chapter 4.4.3
+```
+
 
 ## Coupling of two angular momenta
 
