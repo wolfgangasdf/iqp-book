@@ -19,7 +19,6 @@ Further reading: Griffiths Chapters 7.3.1, 7.4 and 7.5
 ```
 
 (pt-relativistic-corrs)=
-(pt-relativistic-corrs)=
 ## Relativistic corrections
 
 {{slidetag}}
