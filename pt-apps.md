@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -24,7 +19,9 @@ Further reading: Griffiths Chapter 7.3
 
 ## Spin-orbit coupling
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 As we discussed before, particles with spin have a magnetic moment $\vec{\mu}=\gamma\vec{S}$, and if there is a magnetic field it has an energy of $H=-\gamma\vec{B}\cdot\vec{S}$. Does this lead to corrections in hydrogen-like systems, even without external magnetic fields?
 
@@ -33,7 +30,7 @@ In the rest frame of the proton, there is no magnetic field produced by the prot
 ```{figure} figures/perturbation-theory/soc-protonfield.png
 ---
 name: soc-protonfield
-scale: 50%
+width: 50%
 ---
 The hydrogen atom, from the perspective of the electron, the proton is orbiting around the electron and produces a magnetic field.
 ```
@@ -50,7 +47,9 @@ $$H_{so}^{\prime}=\left(\frac{e^2}{8 \pi \epsilon_0}\right) \frac{1}{m^2 c^2 r^3
 
 ## Quantum spin-orbit coupling
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 In the presence of such interaction, you probably agree that the Hamiltonian $H$ no longer commutes with $\vec{L}$ and $\vec{S}$, and the spin and orbital angular momenta are not separately conserved.
 
@@ -65,15 +64,17 @@ The most important outcome of this is that the energy of the electronic states i
 ```{figure} figures/perturbation-theory/h-finestructure.png
 ---
 name: h-finestructure
-scale: 50%
+width: 75%
 ---
 Electronic energy levels of hydrogen with fine structure. From Griffiths.
 ```
 <!-- TODO replace also bad-->
 
-{{slidetag}}
+:::{slidetag}
+:::
 
-Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in Section [](pt-relativistic-corrs)), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
+
+Historically, we now briefly discussed corrections which, along with relativistic corrections (discussed in Section [](#pt-relativistic-corrs)), collectively are called to result in the "fine structure" of the hydrogen atom. Spin-orbit coupling actually consists of a number of effects and we have only discussed one of them. It is are called "fine structure" because atomic emission lines were observed to split up in several lines if a spectrometer with increased resolution was used.
 
 As mentioned before, the corrections are small, and often they are expressed in powers of the fine-structure constant $\alpha$ which consists of constants that appear in the expressions: 
 
@@ -88,7 +89,7 @@ There is a very useful wikipedia page which sums up very well many decades of re
 ```{figure} figures/perturbation-theory/h-finestructure-wp.png
 ---
 name: h-finestructure-wp
-scale: 50%
+width: 75%
 ---
 Image credit: [link](https://commons.wikimedia.org/wiki/File:Hydrogen_fine_structure_energy_2.svg)
 ```

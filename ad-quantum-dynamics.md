@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -24,7 +19,9 @@ Further reading: Griffiths Chapter 11
 
 <!-- G11, P9.4 -->
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We discuss - of course - qubits, that is a quantum system with two energy levels. We have seen that, for instance, the electron spin in a magnetic field is such a system. Now, we apply a time-dependent perturbation, that is a change in the potential or Hamiltonian, and see what happens, using standard non-degenerate perturbation theory.
 
@@ -42,7 +39,9 @@ $$\Psi(t)=c_a(t) \psi_a e^{-i E_a t / \hbar}+c_b(t) \psi_b e^{-i E_b t / \hbar}$
 
 In absence of a perturbation the two constants $c_i$ are time-independent and the state will *wiggle* with the two eigen-energies.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We now assume that the system is in a particular state, this means that we know $c_i(t=0)$. Now we add a time-dependent perturbation $\hat{H}^{\prime}(t)$, and we plug the state in the time-dependent Schrödinger equation.
 
@@ -112,10 +111,10 @@ Thus, assuming that $E_b\gt E_a$, we have obtained the time-derivatives of the c
 
 $$\dot{c}_a=-\frac{i}{\hbar} H_{a b}^{\prime} e^{-i \omega_0 t} c_b, \quad \dot{c}_b=-\frac{i}{\hbar} H_{b a}^{\prime} e^{i \omega_0 t} c_a,\quad \omega_0 \equiv \frac{E_b-E_a}{\hbar}$$(pt-1st)
 
+:::{slidetag}
+:::
+
 :::{note}
-
-{{slidetag}}
-
 If we start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$, on inserting these at the right-hand side of Eq. {eq}`pt-1st`, we obtain after integration:
 
 $$
@@ -128,16 +127,19 @@ $$(pt-1st-res)
 This clearly shows that it is an approximation, since $c_a$ remains at 1 and normalization is therefore violated.
 :::
 
+
 ## Sinusoidal perturbation
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we assume a sinusoidal perturbation, for instance in real space $\hat{H}^{\prime}(\mathbf{r}, t)=V(\mathbf{r}) \cos (\omega t)$, such that the we get
 
 $$H_{a b}^{\prime}=V_{a b} \cos (\omega t)
 \quad \textrm{with} \quad V_{a b} \equiv\left\langle\psi_a|V| \psi_b\right\rangle$$(ad-qd-7)
 
-We calculate Eq. {eq}`pt-1st-res` and obtain
+We calculate Eq. [](#pt-1st-res) and obtain
 
 $$c_b(t)\approx -\frac{V_{b a}}{2 \hbar}\left[\frac{e^{i\left(\omega_0+\omega\right) t}-1}{\omega_0+\omega}+\frac{e^{i\left(\omega_0-\omega\right) t}-1}{\omega_0-\omega}\right]$$(ad-qd-8)
 
@@ -149,7 +151,9 @@ From this we calculate the transition probability
 
 $$P_{a \rightarrow b}(t)=\left|c_b(t)\right|^2 \approx \frac{\left|V_{a b}\right|^2}{\hbar^2} \frac{\sin ^2\left[\left(\omega_0-\omega\right) t / 2\right]}{\left(\omega_0-\omega\right)^2}$$(ad-qd-10)
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 This is an oscillatory function of time! What does this mean?
 * After switching on the interaction, the probability to be in the upper state oscillates - and does not saturate as one might think classically.
@@ -157,10 +161,11 @@ This is an oscillatory function of time! What does this mean?
 * Since we work in first-order perturbation theory, the probability needs to remain small in any case, otherwise our assumption is not valid. It turns out, however, that we can make transitions with near-unity probability this way.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: ad-rabipt
+:caption: Excited-state probability as a function of time.  
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(figsize=(7,3))
 ee=5
@@ -174,14 +179,7 @@ ax.set_xticks([0])
 ax.set_xticklabels(["0"])
 ax.plot(x,x*0+1,'--',color="0.5")
 ax.set_yticks([0])
-ax.set_yticklabels(["0"])
-
-glue("ad-rabipt", fig, display=False)
-```
-
-(ad-rabipt)=
-```{glue:figure} ad-rabipt
-Excited-state probability as a function of time.  
+ax.set_yticklabels(["0"]);
 ```
 
 In the figure, the maximum excited-state probability reaches 
@@ -194,7 +192,9 @@ $$t_N=\frac{(2N+1)\pi}{\left|\omega_0-\omega\right|}$$(ad-qd-12)
 
 ## Rabi oscillations
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 So far, we have worked with approximate, perturbative, solutions for transitions between two quantum states under a time-dependent drive. However, there is a famous result by Rabi that goes beyond approximation: if we make the rotating wave approximation right from the beginning, Eq. {eq}`pt-1st` can actually be solved exactly! While a more detailed treatment is outside the scope of this course, we obtain these exact solutions:
 
@@ -219,7 +219,9 @@ Instead of staying in one state, the system now *coherently* oscillates between 
 
 ## Radiative transitions
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The atom or electron wavefunction is usually very small compared to the wavelengths of optical and even more microwave radiation. Therefore, we can often ignore the spatial dependency of a light wave or radio wave field. Additionally, physicists like to only discuss a single frequency or wavelength, and then talk about *quasi-monochromatic* radiation. We had seen before that perfect monochromatic waves cannot exist because of the Heisenberg uncertainty relation between energy and time.
 

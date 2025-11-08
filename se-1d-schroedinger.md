@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -17,7 +12,9 @@ In this section, we discuss the quantum behaviour of particles that are localize
 
 ## The potential energy
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 <!-- [Ph2.2] -->
 We want to describe quantum behaviour of particles, which usually are not in free space but bound by a certain potential – we need to add this to the Schrödinger equation, this is usually done by adding a potential energy that is dependent on position.
 
@@ -36,10 +33,11 @@ i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\
 $$(se-1d-se)
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: se-coulomb
+:caption: The Coloumb potential of the electron in the field of a positive charge (nucleus) at the origin.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 fig, ax = plt.subplots(figsize=(4,3))
@@ -54,14 +52,7 @@ ax.set_ylabel('$V(r)$')
 ax.set_xticks([0])
 ax.set_yticks([0])
 ax.text(-0.8,0.1,"⊕",fontsize=30)
-ax.text(5,0.1,"⊖",fontsize=30)
-
-glue("se-coulomb", fig, display=False)
-```
-
-(se-coulomb)=
-```{glue:figure} se-coulomb
-The Coloumb potential of the electron in the field of a positive charge (nucleus) at the origin.
+ax.text(5,0.1,"⊖",fontsize=30);
 ```
 
 ```{seealso}
@@ -70,7 +61,9 @@ Further reading: Philips Chapter 2.2
 
 ## Separation of variables
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 <!-- Gr 2.1. -->
 
 We still carry the time dependence of the wave function, how fast does it actually oscillate for a realistic particle? This is very fast and we often average over this in experiments (as we do for the E-field oscillations for light), how can we simplify the equation?
@@ -134,7 +127,9 @@ Further reading: Griffiths Chapter 2.1
 
 ## Probability density and Hamiltonian
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 As already discussed for the case of light, now for position-space, the probability to find a particle at position $x$ is determined by the *probability density* 
 
@@ -183,7 +178,9 @@ Further reading: Griffiths Chapter 2.1 and Philips Chapter 2.2
 
 ## Expectation values of operators
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 <!-- Ph3.5.  -->
 As we have seen before, the outcome of a measurement in QM is a random variable, and we call the average value of this the expectation value. It can be determined by measuring an ensemble of identically prepared systems, or repeating the experiment many times.
 

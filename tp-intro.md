@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -22,7 +17,9 @@ Further reading: Griffiths Chapter 5.1
 
 ## The two particle Hamiltonian
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 In the previous section we have seen that simple coupling of two particles with spins lead to surprising results in quantum mechanics. What about two-particle Schrödinger quantum dynamics in general? The state of a two-particle system can be described by a wavefunction that depends on the position of both particles: 
 
@@ -46,7 +43,9 @@ $$-\frac{\hbar^2}{2m_1}\nabla_1^2\psi-\frac{\hbar^2}{2m_2}\nabla_2^2\psi+V\left(
 
 ## Two-particle potentials and wavefunctions
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The potential term describes possible interactions between the particles. If we can write 
 

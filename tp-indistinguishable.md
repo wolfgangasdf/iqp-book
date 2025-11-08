@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -21,7 +16,9 @@ Further reading: Griffiths Chapter 5.1.1 and 5.1.2
 
 ## Bosons and Fermions
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 <!-- [G5.1.1 is partially conceptually wrong and not very rigorous, use P10.1] -->
 
@@ -32,10 +29,11 @@ Let us discuss now two particles where all these degrees of freedom are summariz
 Note that the wavefunction with subscript $a$ and $b$ also describes the position of the particles, in the figure named $x_a$ and $x_b$. the variables $x_1$ and $x_2$ indicate for which positions we *evaluate* the wavefunction. You can probably better think of this as a *two-point wavefunction* which happens to contain two particles. The figure also shows this two-point wavefunction $\psi(x_1,x_2)$ - to visualize this, we need to use a 2D plot.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: ip-two
+:caption: Left: the wavefunctions of two indistinguishable particles at two different positions. Right: the joint wavefunction $\psi\left(x_1,x_2\right)=\psi_a\left(x_1\right)\psi_b\left(x_2\right)$.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(1,2,figsize=(8,3))
 x = linspace(0, 10, 101)
@@ -60,14 +58,7 @@ ax[1].set_yticks([xa, xb])
 ax[1].set_yticklabels([r"$x_a$", r"$x_b$"])
 ax[1].set_xlabel('$x_1$')
 ax[1].set_ylabel('$x_2$')
-ax[1].text(5,5,r"$\psi(x_1,x_2)$", color='w')
-
-glue("ip-two", fig, display=False)
-```
-
-(ip-two)=
-```{glue:figure} ip-two
-Left: the wavefunctions of two indistinguishable particles at two different positions. Right: the joint wavefunction $\psi\left(x_1,x_2\right)=\psi_a\left(x_1\right)\psi_b\left(x_2\right)$.
+ax[1].text(5,5,r"$\psi(x_1,x_2)$", color='w');
 ```
 
 Now, the probability of finding particle a in the volume element $dx_1$ and particle b in $dx_2$ is given by $|\psi(x_1,x_2)|^2 dx_1 dx_2$.
@@ -99,7 +90,7 @@ Where we call the first case a *symmetric* wavefunction under particle exchange,
 
 This classifies the quantum behaviour of particles in a very fundamental way - particles with symmetric wavefunctions under particle exchange are called **bosons**, and with antisymmetric wavefunctions are **fermions**. From before, you might already know that bosons are also all particles with integer spin, and fermions with half-integer spin. This is a very important connection, the so-called *spin-statistics theorem* – but it can only be proven in relativistic quantum mechanics. One can try simpler explanations – you can have a read through the "suggestive bogus argument" on [wikipedia](https://en.wikipedia.org/wiki/Spin%E2%80%93statistics_theorem#Suggestive_bogus_argument).
 
-:::{admonition} Anyons and Topological Quantum Computing
+:::{note} Anyons and Topological Quantum Computing
 :class: dropdown
 
 So far we have discussed indistinguishable particles in 3D, where exchange symmetry allows only two possibilities. However, in 2D systems such as those that appear in the quantum hall effect, the situation is richer. When two particles are exchanged, the wavefunction is not restricted to pick up only a phase of $\pm 1$. Instead, it can acquire any phase $e^{i\theta}$, or even undergo a more general unitary transformation. Such quasiparticles are called **anyons**.
@@ -118,7 +109,9 @@ In short, the same exchange symmetry principles we saw for bosons and fermions i
 
 ## The Pauli exclusion principle 
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 <!-- [part from G5.1.1, part from P10.2 but all very unclear, also wikipedia not much better. This is crap!] -->
 
@@ -127,11 +120,12 @@ Let us now go back and construct from scratch two-particle wavefunctions that ar
 $$\psi_\pm\left(x_1,x_2\right)=A\left[\psi_a\left(x_1\right)\psi_b\left(x_2\right)\pm\psi_b\left(x_1\right)\psi_a\left(x_2\right)\right]$$(tp-p-1)
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: ip-pm
+:caption: The symmetric and antisymmetric wavefunctions.
 
 from matplotlib import pyplot as plt
 import matplotlib as mpl
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(1,2,figsize=(8,3))
 x = linspace(0, 10, 101)
@@ -153,14 +147,7 @@ for i in [0,1]:
     ax[i].set_yticks([xa, xb])
     ax[i].set_yticklabels([r"$x_a$", r"$x_b$"])
     ax[i].set_xlabel('$x_1$')
-    ax[i].set_ylabel('$x_2$')
-
-glue("ip-pm", fig, display=False)
-```
-
-(ip-pm)=
-```{glue:figure} ip-pm
-The symmetric and antisymmetric wavefunctions.
+    ax[i].set_ylabel('$x_2$');
 ```
 
 From the plots in the figure you can easily check that indeed they behave as intended under particle exchange:
@@ -183,7 +170,9 @@ This is the famous **Pauli exclusion principle** for fermions – no two fermion
 
 ## Bosons bunch
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we ask the question, has indistinguishability also an effect for bosons? We calculate the probability for finding both particles at the same location, for the non-entangled state of two distinguishable particles
 
@@ -210,7 +199,9 @@ see also Jos Thijssen - LECTURE NOTES STATISTICAL PHYSICS TN2624.pdf but too har
 
 ## The exchange force
 <!-- G5.1.2 -->
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Intuitively, if we trust in the Pauli exclusion principle, at least fermions must feel a "force" if they get closer. To investigate this, we calculate the expectation value of the squared distance between the particles:
 

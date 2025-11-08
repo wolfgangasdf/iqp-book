@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -86,7 +81,6 @@ $$
 
 $$
 E_n^{(1)}=\langle\psi_n^{(0)}|H'|\psi_n^{(0)}\rangle,\quad |\psi_n^{(1)}\rangle=\sum_{m\neq n}\frac{\langle\psi_m^{(0)}|H'|\psi_n^{(0)}\rangle}{E_n^{(0)}-E_m^{(0)}}|\psi_m^{(0)}\rangle
-
 $$
 
 WKB:

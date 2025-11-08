@@ -1,0 +1,89 @@
+version: 1
+site:
+  template: book-theme # https://mystmd.org/guide/website-templates#template-site-myst-book-theme
+  nav: []
+  options:
+    folders: true
+    favicon: favicon.ico
+    logo: favicon.ico
+    logo_text: IQP Book
+  parts:
+    footer: |
+      Copyright © 2025 Wolfgang Löffler. License: none yet.
+project:
+  title: IQP Book
+  authors:
+    - name: Wolfgang Löffler
+  copyright: 2025, no license yet
+  github: wolfgangasdf/iqp-book
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: _build/exports/iqp-book.pdf
+    - format: tex
+    - format: typst
+  numbering:
+    title:
+      enabled: true
+    equations:
+      continue: true
+    figures:
+      continue: true
+    heading_1: true
+    heading_2: true
+    heading_3: true
+  plugins:
+    - slidetag.mjs
+  toc:
+    - file: index.md
+      # hidden: true # doesn't work
+    - file: b.md
+      children:
+        - file: b-qubits-realization.md
+        - file: b-degrees-of-freedom.md
+        - file: b-evidence-for-qm.md
+        - file: b-postulates.md
+        - file: b-exercise.md
+    - file: se.md
+      children:
+        - file: se-free-particle.md
+        - file: se-1d-schroedinger.md
+        - file: se-square-well.md
+        - file: se-qho.md
+        - file: se-exercise.md
+    - file: qm3d.md
+      children:
+        - file: qm3d-schroedinger.md
+        - file: qm3d-angular-momentum.md
+        - file: qm3d-exercise.md
+    - file: sp.md
+      children:
+        - file: sp-concepts.md
+        - file: sp-half.md
+        - file: sp-density-matrix.md
+        - file: sp-magnetic-field.md
+        - file: sp-clebschgordan.md
+        - file: sp-exercise.md
+    - file: tp.md
+      children:
+        - file: tp-intro.md
+        - file: tp-indistinguishable.md
+        - file: tp-exercise.md
+    - file: pt.md
+      children:
+        - file: pt-intro.md
+        - file: pt-degenerate.md
+        - file: pt-apps.md
+        - file: pt-exercise.md
+        - file: pt-ext-apps.md
+    - file: ad.md
+      children:
+        - file: ad-wkb.md
+        - file: ad-quantum-dynamics.md
+        - file: periodic-system.md
+        - file: ad-exercise.md
+    - file: appendix.md
+      children:
+        - file: development.md
+        - file: formula-sheet.md
+        - file: solutions.md

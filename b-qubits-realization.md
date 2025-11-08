@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -17,19 +12,10 @@ We want to start by giving a simple overview how easy it can be to encode a qubi
 
 ## Light's polarization
 
-{{slidetag}}
+:::{slidetag}
+:::
 
 Many important aspects of quantum mechanics and qubits can be shown with the polarization of light, which might be familiar to you.
-
-:::{margin}
-```{figure} figures/basics/erwin.png
----
-name: erwin
-scale: 10%
----
-The Schrödinger equation with $\psi$ on his bust in Vienna.
-```
-:::
 
 The state of a qubit is written in the ket notation often as $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$, psi is the greek letter that is traditionally  used for the quantum wave function of a particle, and $\alpha$ and $\beta$ are complex coefficients of the so-called computational basis states $\ket{0}$ and $\ket{1}$. However, the state of a qubit is a mathematical concept, disconnected from physical realizations, which makes it possible to study quantum information theory without understanding physical realizations of it – quantum mechanics provides the physical substance. We say that we can “encode” the quantum state in a degree of freedom of a physical system.
 
@@ -54,10 +40,11 @@ E_H^*\; E_V^*\end{matrix}\right)
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-polarization
+:caption: Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 # 3d arrows, omg - https://stackoverflow.com/a/74122407
 from matplotlib.patches import FancyArrowPatch
@@ -96,16 +83,10 @@ ax.text3D(2,1.5,0.0,r"$\vec{E}$", fontsize=15)
 # ax.set_xlim3d(-1,3); ax.set_ylim3d([-1,3]); ax.set_zlim3d([-1,3]); 
 # ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
 plt.show()
-
-glue("b-polarization", fig, display=False)
 ```
 
-(b-polarization)=
-```{glue:figure} b-polarization
-Polarization of a light beam, where $\vec{z}$ is the beam propagation direction.
-```
 
-:::{admonition} Note: light and wave equations
+:::{note} Light and wave equations
 :class: dropdown
 If you want to refresh your electromagnetic field knowledge, here some useful links:
   * [wikipedia on electromagnetic radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)
@@ -114,7 +95,9 @@ If you want to refresh your electromagnetic field knowledge, here some useful li
 :::
 
 ## Polarization bases
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We say that $H$ and $V$ polarizations form a basis, there are two orthogonal basis vectors because our state space is two-dimensional here (the quantum state is described by a 2-element vector). 
 
@@ -144,10 +127,12 @@ In the figure we show the qubit state vectors for $H/V$ and $D/A$, and we can ea
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-pbas
+:caption: $H$, $V$, $D$ and $A$ polarization vectors.
+
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 # 3d arrows, omg - https://stackoverflow.com/a/74122407
 from matplotlib.patches import FancyArrowPatch
@@ -186,14 +171,8 @@ ax.text3D(-0.2,1.1,0.0,"$H$", fontsize=15)
 ax.text3D(0.7,0.7,0.0,"$D$", fontsize=15)
 ax.text3D(0.7,-0.9,0.0,"$A$", fontsize=15)
 plt.show()
-
-glue("b-pbas", fig, display=False)
 ```
 
-(b-pbas)=
-```{glue:figure} b-pbas
-$H$, $V$, $D$ and $A$ polarization vectors.
-```
 
 A note: As you will see in quantum information, the bases are truly equivalent - but one has to choose which basis is which. Traditionally, the basis which is in polarization space the $H/V$ basis is called the computational basis in quantum information and it is denoted by the 0 and 1 ket vector:
 
@@ -213,15 +192,18 @@ The circular polarization basis is less often used in quantum information but ca
 
 
 ## From polarizers to quantum measurements
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We now show that a polarizer in combination with a photo detector does quantum measurements in polarization space. Let us assume that we have a horizontally polarized incident laser beam. The transmission of this beam through a polarizer depends on the relative angle between them, in fact, only the polarization component of the light that is parallel to the polarizer orientation is transmitted. With the polarizer angle $\alpha$ with respect to the horizontal polarization orientation we have the situation shown in the figure:
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-proj
+:caption: Projection of horizontal polarization onto a polarizer with angle $\alpha$ (dotted line), which lets only the field indicated by the blue line pass through. 
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(figsize=(4,3))
 ax.set_aspect("equal")
@@ -232,15 +214,9 @@ ax.plot([cos(pi/4),x],[sin(pi/4),0],':',color="grey", linewidth=3)
 ax.plot([cos(pi/4),0],[sin(pi/4),0],'-',color="blue", linewidth=5)
 ax.text(x+0.2,0.0,"$E_H$",fontsize=20)
 ax.text(0.2,0.05,r"$\alpha$",fontsize=20)
-ax.axis("off")
-
-glue("b-proj", fig, display=False)
+ax.axis("off");
 ```
 
-(b-proj)=
-```{glue:figure} b-proj
-Projection of horizontal polarization onto a polarizer with angle $\alpha$ (dotted line), which lets only the field indicated by the blue line pass through. 
-```
 
 The transmitted intensity can be calculated just by the inner product of the polarizer unit vector and the incident polarization:
 
@@ -271,7 +247,9 @@ In our polarization example here it is quite obvious, that after the measurement
 
 ## Quantum measurements and normalization
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 With this, we can already explain a suprising experiment, which you can easily do by using 3 polarizers. 
 
@@ -293,10 +271,11 @@ Also here the chance of a successful measurement is 50% - and we obtain in total
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-3pol
+:caption: The polarizer example. Left: a horizontally polarized light beam is not transmitted by a vertically oriented polarizer. Right: If a 45 degree oriented polarizer is inserted before the vertical polarizer, the transmission is not zero anymore because the polarization is projected onto the 45-degre polarizer in between!
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 # 3d arrows, omg - https://stackoverflow.com/a/74122407
 from matplotlib.patches import FancyArrowPatch
@@ -339,13 +318,5 @@ for y in yax:
 for y in yax:
     ax.plot([-1,-1],[y,y],[-0.5,0.5],'-',color="0.6")
 ax.set_xlabel("x"); ax.set_ylabel("y"); ax.set_zlabel("z")
-plt.show()
-
-glue("b-3pol", fig, display=False)
+plt.show();
 ```
-
-(b-3pol)=
-```{glue:figure} b-3pol
-The polarizer example. Left: a horizontally polarized light beam is not transmitted by a vertically oriented polarizer. Right: If a 45 degree oriented polarizer is inserted before the vertical polarizer, the transmission is not zero anymore because the polarization is projected onto the 45-degre polarizer in between!
-```
-

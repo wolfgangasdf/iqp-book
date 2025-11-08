@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -26,8 +21,8 @@ kernelspec:
 * make sure the audio is strong enough (system prefs)
 * with quicktime: float on top, check 3x that recording in progress, it's super confusing
 
-#### DONT FORGET
-* change `_config.yml` to show slidetags
+**Don't forget**
+* show slidetags before
 * make introduction, "in this video..."
 * never say left/right figure, on slides it's different
 
@@ -67,70 +62,50 @@ e.g. with kdenlive https://kdenlive.org/ :
 
 ## the iqp-book
 
-It is made using [Jupyter Book](https://jupyterbook.org/).
+It is made using [Jupyter Book](https://jupyterbook.org/), now version 2.0.
 
-### install stuff in addition to anaconda
-conda install is heavily broken, use pip!
+Bugs:
+* Numbering of equations etc, should be chapter-wise
+* code-cell output should be centered
+* Overview chapter should have no number
+* Latex numbering sometimes strange
+
+
+### install in addition to anaconda
 ```
 pip install -U jupyter-book
-pip install -U sphinx-proof
-pip install -U sphinx-exercise
-pip install -U sphinx-autobuild
-pip install -U sphinx-mathjax-offline
-pip install -U sphinx-exercise
-pip install -U sphinx-togglebutton
+pip install -U mystmd
 ```
 
 ### build and develop
 
 Go into the book sourcecode folder.
 
-This will use  `_config.yml` and  `_toc.yml` to generate conf.py:
+Settings are in `myst.yml`.
+
 ```
-jupyter-book config sphinx .
+# This builds the website:
+jupyter book build --execute
+
+#This auto-builds:
+jupyter book start --execute
+
+#This makes a website:
+export BASE_URL="/yourbaseurl"
+jupyter book build --execute --html
+
+#This makes a PDF:
+jupyter book build --execute --pdf
+
+#This cleans up, to rebuild:
+rm -r _build
 ```
 
-This makes the book in html and opens it:
-```
-sphinx-build -j auto . ./_build/html -b html
-open ./_build/html/index.html
-```
-
-This auto-builds:
-```
-sphinx-autobuild -j auto . ./_build/html
-```
-
-This cleans up, to rebuild:
-```
-rm -r _build ; jupyter-book config sphinx .
-```
-
-### important notes
+### notes
 * The best editor with preview seems to be [vscode + myst plugin](https://github.com/executablebooks/myst-vs-code). 
   * It's not very complete, best auto-build.
   * Typora is better for undistracted writing.
 * Buy https://snip.mathpix.com/ for typesetting equations from screenshots and handwritten images.
 * Syntax is very fragile - always have new lines before and after equations.
-* Key documentation: [jupyter book](https://jupyterbook.org/en/stable/content/references.html), [cheat sheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
-  * ```$$ \Psi $$(my_label) -> {eq}`my_label` ```
-  * figure: use long form to have caption.
-  * note: `:::{note}` close with `:::`
-  * similar things: 
-    * comment at right side: `{margin}`
-    * tip: `:::{tip}`
-* Debug python code: Remove `remove-output` if you want to see the error, but better use an ipynb to make plots then copy over the code.
+* Key documentation: [jupyter book](https://jupyterbook.org), [Myst MD](https://mystmd.org/guide)
 * Pictures are either made with inline matplotlib or [IPE](https://github.com/otfried/ipe) (zoom in to export PNG high-res)!
-
-### PDF version of the book
-All is very much work in progress: https://jupyterbook.org/en/stable/advanced/pdf.html.
-
-#### latex -> pdf
-Do a `jupyter-book build . --builder pdflatex` and ignore all error messages (`R`)... The book is in `_build/latex/iqp-book.pdf``, but missing pdf bookmarks etc. ...
-
-#### html -> pdf
-does not work.
-```
-pip install playwright
-jupyter-book build . --builder pdfhtml
-```

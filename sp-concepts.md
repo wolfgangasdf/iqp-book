@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -17,7 +12,9 @@ In this section, we discuss the quantum version of spinning rotation: the spin -
 
 ## Classical spin
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Classically, a body can show an orbiting motion and a spinning rotation, like the earth orbits once a year around the sun and spins every day around the north-south axis. 
 The classical-mechanics law for orbital angular momentum is $L=r \times p$, that is the cross-product between the position vector of the orbiting mass $r$, and the linear momentum $p$ of that mass. One often places the origin of the coordinate system at a position of high symmetry, for the case of the earth to the center of the sun. In this case, the orbital angular momentum of the earth is nonzero and points upwards, to the north, as shown in the figure. 
@@ -27,7 +24,7 @@ A spinning rotation leads to a spin angular momentum around the center of mass o
 ```{figure} figures/spin/spin-classical.png
 ---
 name: spin-classical
-scale: 50%
+width: 50%
 ---
 Classically, the spin angular momentum is identical to the orbital angular momentum measured around the center of mass of the spinning, and possibly orbiting, body.
 ```
@@ -36,7 +33,9 @@ Classically, the spin angular momentum is identical to the orbital angular momen
 
 ## Quantum spin
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 In quantum mechanics, the case is very different, and there is a fundamental difference between orbital and spin angular momentum. First, for the orbital angular momentum (OAM), we remember that we had seen that quantum particles can only have discrete values of angular momentum determined by the angular momentum quantum number $\ell$ - which corresponds to an angular momentum of magnitude $L=\hbar\sqrt{\ell\left(\ell+1\right)}$. 
 
@@ -52,7 +51,9 @@ The spin is so important in quantum mechanics because of a number of reasons, bu
 
 ## Spin commutation relations and eigenvalues 
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We now write down the algebraic quantum theory of the spin by exact analogy to the derivation of the quantum orbital angular momentum. Instead of $L$ we use the letter $S$, and instead of $m_\ell$ we use $m_s$. Note that the subscript to $m$ is often omitted, it should be clear from the context. We now rewrite the operator commutation relations in a shorter way using the Levi-Civita symbol $\varepsilon_{klm}$. $\varepsilon_{klm}$ is $+1$ if $k,l,m$ are cyclic like $1,2,3$ or $2,3,1$, and $-1$ if anti-cyclic, and zero otherwise.
 
@@ -93,7 +94,9 @@ Experimentalists have measured $s$ (you will see later how) for all elementary p
 
 ## The standard model of particle physics
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The so-called standard model particle physics is shown in the figure, where we see the quarks building up the nuclei with spin $1/2$, the lightweight particles, leptons, also with spin $1/2$, exchange particles with integer spin, usually $1$ except for the Higgs boson which has zero spin. Missing is the graviton, the exchange particle of gravity, we don't know yet if it really exists - since we do not have a theory of quantum gravity yet, nor do we know if such theory exists. But if it does exist, the graviton might have spin $2$.
 
@@ -102,7 +105,7 @@ For our daily interactions with nature, but also for quantum information science
 ```{figure} figures/spin/standard-model.png
 ---
 name: standard-model
-scale: 50%
+width: 75%
 ---
 The standard model of particles with mass, charge & spin. [Image credit](https://en.wikipedia.org/wiki/Standard_Model)
 ```

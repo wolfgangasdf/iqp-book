@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -20,19 +15,20 @@ Further reading: Griffiths Chapter 7.1
 
 ## A small perturbation & power series
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Let us assume that we have solved the Schrödinger equation for a particular Hamiltonian - as an example we discuss a quantum particle in the infinite square well potential, we call the  original unperturbed Hamiltonian $H_0$. Earlier in this course, we have obtained for this case a set of orthonormal eigenfunctions $\psi_n^{(0)}$ with corresponding energies or eigenvalues $E_n^{(0)}$. Now, we add a small time-indepentend perturbation to the system - for instance a small hump at the middle of the potential as shown in the figure:
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: potential-well-hump
+:caption: The infinite square well potential with a hump in the middle.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
-
 fig, ax = plt.subplots(figsize=(4,3))
-
 x = linspace(0, 1, 500)
 y=exp(-(x-0.5)**2/0.03**2)
 y[0]=10
@@ -40,18 +36,10 @@ y[-1]=10
 ax.plot(x, y, color='red')
 ax.set_xlabel('$x/a$')
 ax.set_ylabel('$V(x)$')
-ax.set_ylim(-1,5)
-
-glue("potential-well-hump", fig, display=False)
-```
-
-(potential-well-hump)=
-```{glue:figure} potential-well-hump
-The infinite square well potential with a hump in the middle.
+ax.set_ylim(-1,5);
 ```
 
 We can write the Hamiltonian as a sum of the unperturbed Hamiltonian one and the perturbation:
-
 
 $$
 H=H_0+\lambda H'
@@ -73,7 +61,9 @@ We call $E_n^{(1)}$ the *first-order correction* to the $n$th eigenvalue, and $\
 
 ## First-order perturbation theory: energy
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We plug in the power series into the Schrödinger equation and obtain:
 
@@ -109,7 +99,9 @@ So, the first-order correction to the energy is simply the expectation value of 
 
 ## Normalisation
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we want to find the first-order correction to the wavefunction, $|\psi_n^{(1)}\rangle$. In quantum mechanics, it is often useful to check and apply normalisation, let's do this! 
 
@@ -138,7 +130,9 @@ We can assume that the terms are real since in time-independent quantum mechanic
 
 ## First-order eigenstates
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We now need to play around with our equations to find an expression for $|\psi_n^{(1)}\rangle$, for the first order corrections! We use a trick that is often useful in quantum mechanics: we insert the identity and see what we can do with it.
 
@@ -183,7 +177,9 @@ $$
 E_n^{(1)} \langle\psi_k^{(0)}|\psi_n^{(0)}\rangle
 $$(ad-pt-11)
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Let's examine this. For $k = n$, the left hand side is zero and we obtain again the expression for the first-order energy correction.
 
@@ -214,14 +210,12 @@ Some observations:
 
 ## 1st order perturbation theory: example
 
-{{slidetag}}
+:::{slidetag}
+:::
 
 <!-- GProb7.1 -->
 
-```{glue:figure} potential-well-hump
-A potential with a hump.
-```
-
+![](#potential-well-hump)
 
 In physics, the simplest "hump" is often described by a delta function due to its nice algebraic properties. We assume the bump is in the middle of the potential well and $\alpha$ is a constant describing the height of the hump:
 
@@ -241,7 +235,9 @@ $$(ad-pt-16)
 
 Remember that the Poisson brackets can be taken literally as an integral over all parameters, in this case position. We will continue to use the ket notation although one could also use the real-space wavefunction - since we have explicit expressions for it.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We obtain as the first-order correction to the energy
 
@@ -256,10 +252,11 @@ This means that if $n$ is even, there is correction needed!. Remember that the w
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: potential-well-wavefunctions2
+:caption: The first wavefunctions of the unperturbed infinite square well potential. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(figsize=(4,3))
 x = linspace(0, 1, 500)
@@ -271,20 +268,14 @@ ax.set_xlabel('$x/a$')
 ax.set_ylabel('$\psi_n^{(0)}(x)$')
 ax.set_ylim(-1,15)
 ax.set_yticks([0])
-fig.legend(loc='outside right')
-
-glue("potential-well-wavefunctions2", fig, display=False)
+fig.legend(loc='outside right');
 ```
-
-(potential-well-wavefunctions2)=
-```{glue:figure} potential-well-wavefunctions2
-The first wavefunctions of the unperturbed infinite square well potential. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
-```
-
 
 For odd $n$, we obtain a slightly higher energy, which can be explained that the wavefunction *feels* the raised potantial in the middle.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we want to find explicitly the 1st-order correction to the wavefunction for the ground state with $n=1$. Before, we derived for this the equation:
 
@@ -308,7 +299,9 @@ $$
 E_1^{(0)}-E_m^{(0)}=\frac{\pi^2 \hbar^2}{2 m_0 a^2}\left(1-m^2\right)
 $$(ad-pt-20)
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we can combine the results and obtain
 
@@ -321,50 +314,39 @@ We see that the contribution of higher states decreases quadratically, so, lucki
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: potential-well-perturbed-wf
+:caption: The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculated up to $m=20$.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
-
 fig, ax = plt.subplots(figsize=(4,3))
-
 def psi0(n,x):
     return sqrt(2/a)*sin(n*pi/a*x)
-
 def psi11summand(m,x):
     alpha=1
     hbar=1
     a=1
     m0=1
     return (2*alpha/a)*sin(m*pi/2) / (pi**2*hbar**2/(2*m0*a**2)*(1-m**2)) * psi0(m,x)
-
 x = linspace(0, 1, 500)
-
 y=psi0(1,x)
 ax.plot(x, y)
-
 for ii in range(3,20):
     y=y+psi11summand(ii,x)
-
 ax.plot(x, y)
-ax.set_xlabel('$x/a$')
-ax.set_ylabel('$\psi(x)$')
 # ax.set_ylim(-1,18)
-
-glue("potential-well-perturbed-wf", fig, display=False)
-```
-
-(potential-well-perturbed-wf)=
-```{glue:figure} potential-well-perturbed-wf
-The unperturbed (blue) $n=1$ wavefunction and the perturbed one, calculated up to $m=20$.
+ax.set_xlabel('$x/a$')
+ax.set_ylabel('$\psi(x)$');
 ```
 
 <!--G problem 7.1 as exercise.-->
 
 ## Higher order corrections
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The procedure for the second-order corrections is in principle similar to the first-order ones above, but now we will obtain double sums. 
 

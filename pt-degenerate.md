@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -23,7 +18,9 @@ Further reading: Griffiths Chapter 7.2
 
 ## Example: 2D infinite square well
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Often a quantum systems has degenerate eigenvalues or energies - this happens if different solutions of the Hamiltonian result in the same energy. Then our previous expression for the first-order correction to energy blows up:
 
@@ -51,47 +48,35 @@ $$
 E_{1,2}=E_{2,1}=\frac{\hbar^2 \pi^2}{2m_0 a^2}(1^2+2^2)
 $$(ad-ptd-3)
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We show the two solutions in the figure:
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: potential-well-2d
+:caption: The two first excited wavefunctions of the 2d infinite square well potential. The line indicates where we will add the perturbation in the potential.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 from matplotlib import cm
-
 fig = plt.figure(figsize=(8,3))
-
 ax1 = fig.add_subplot(1,2, 1, projection='3d')
 ax2 = fig.add_subplot(1,2, 2, projection='3d')
-
 def psi(nx,ny,x,y,a):
     return (2/a)*sin(nx*pi*x/a)*sin(ny*pi*y/a)
-    
 a=1
 x = linspace(0,a,100);
 X, Y = meshgrid(x,x)
-
-ax1.plot_surface(X, Y, psi(1,2,X,Y,a), cmap=cm.coolwarm,
-                       linewidth=0.2, rcount=20, ccount=20, edgecolor='0.7')
-ax2.plot_surface(X, Y, psi(2,1,X,Y,a), cmap=cm.coolwarm,
-                       linewidth=0.2, rcount=20, ccount=20, edgecolor='0.7')
+ax1.plot_surface(X, Y, psi(1,2,X,Y,a), cmap=cm.coolwarm, linewidth=0.2, rcount=20, ccount=20, edgecolor='0.7')
+ax2.plot_surface(X, Y, psi(2,1,X,Y,a), cmap=cm.coolwarm, linewidth=0.2, rcount=20, ccount=20, edgecolor='0.7')
 ax1.set_xticks([]); ax1.set_yticks([]); ax1.set_zticks([])
 ax2.set_xticks([]); ax2.set_yticks([]); ax2.set_zticks([])
 ax1.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100)
-ax2.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100)
-
-glue("potential-well-2d", fig, display=False)
+ax2.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100);
 ```
-
-(potential-well-2d)=
-```{glue:figure} potential-well-2d
-The two first excited wavefunctions of the 2d infinite square well potential. The line indicates where we will add the perturbation in the potential.
-```
-
 
 Now we add our perturbation, we use again a delta function, now placed off-center at one quarter in each direction, indicated by the dashed line in the figure:
 
@@ -103,7 +88,9 @@ Remember, the increased potential at the position of the perturbation has as the
 
 ## The perturbation couples states
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we redefine the two states $\psi_a^{(0)}\equiv\psi_{1,2}^{(0)}$ and $\psi_b^{(0)}\equiv\psi_{2,1}^{(0)}$ also to emphasize the generic nature of our procedure. First, we calculate the matrix elements of $H'$ by integrating now over two coordinates:
 
@@ -134,7 +121,9 @@ If we use these new states, we will now show that our previous non-degenerate pe
 
 ## Finding good quantum states
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We go back to our power-series Schrödinger equation, up to first order, from Eq. {eq}`pt-1storderseq` but with ommitted state number $n$:
 
@@ -184,7 +173,9 @@ Note that this procedure can be generalized to $n$-fold degeneracies, one basica
 
 ## The new quantum states
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 By inserting our matrix elements from before we obtain:
 
 $$
@@ -214,30 +205,28 @@ As we had anticipated before, they are superpositions of the unperturbed but deg
 
 ## The new quantum states and solutions
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We plot the newly found states in the figure, the dashed line again indicates the position of our perturbation.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: potential-well-2d-pm
+:caption: The two new wavefunctions $\psi^{(0)}_+$ (left) and $\psi^{(0)}_-$ (right) lifting the degeneracy of first-order perturbation theory.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 from matplotlib import cm
-
 fig = plt.figure(figsize=(8,3))
-
 ax1 = fig.add_subplot(1,2, 1, projection='3d')
 ax2 = fig.add_subplot(1,2, 2, projection='3d')
-
 def psi(nx,ny,x,y,a):
     return (2/a)*sin(nx*pi*x/a)*sin(ny*pi*y/a)
-    
 a=1
 x = linspace(0,a,100);
 X, Y = meshgrid(x,x)
-
 ax1.plot_surface(X, Y, 1/sqrt(2)*psi(1,2,X,Y,a)+psi(2,1,X,Y,a), cmap=cm.coolwarm,
                        linewidth=0.2, rcount=20, ccount=20, edgecolor='0.7')
 ax2.plot_surface(X, Y, 1/sqrt(2)*psi(1,2,X,Y,a)-psi(2,1,X,Y,a), cmap=cm.coolwarm,
@@ -247,14 +236,7 @@ ax2.set_xticks([]); ax2.set_yticks([]); ax2.set_zticks([])
 ax1.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100)
 ax2.plot([1/4,1/4],[1/4,1/4],[-2,2],'k--',zorder = 100)
 ax1.text2D(0.02,0.03,r"$\psi^{(0)}_+$")
-ax2.text2D(0.02,0.03,r"$\psi^{(0)}_-$")
-
-glue("potential-well-2d-pm", fig, display=False)
-```
-
-(potential-well-2d-pm)=
-```{glue:figure} potential-well-2d-pm
-The two new wavefunctions $\psi^{(0)}_+$ (left) and $\psi^{(0)}_-$ (right) lifting the degeneracy of first-order perturbation theory.
+ax2.text2D(0.02,0.03,r"$\psi^{(0)}_-$");
 ```
 
 It is clear that $\psi^{(0)}_+$ must have a higher energy, since it has a higher expectation value at the position of the perturbation, and this increases the energy of that state.

@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -21,7 +16,9 @@ Further reading: Griffiths Chapter 4.3
 
 ## Classical angular momentum
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Symmetries in physics lead to conservation laws - for instance, translation symmetry leads to linear momentum conservation - this is the reason why the velocity of a moving body remains constant if no forces act on it. 
 
@@ -37,7 +34,7 @@ Here, the vector $\vec{L}$ is the angular momentum, $\vec{r}$ the position of th
 ```{figure} figures/schroedinger/classical-angular-momentum.png
 ---
 name: classical-am
-scale: 40%
+width: 50%
 ---
 Classical angular momentum.
 ```
@@ -47,7 +44,9 @@ The angular momentum is an extensive quantity, so for a composite system and not
 
 ## Quantum angular momentum
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 How about the angular momentum of the electron in the quantum case? How does it depend on the quantum numbers that appeared while solving the hydrogen atom problem?
 
@@ -62,7 +61,9 @@ We now want to figure out what quantum mechanical angular momenta are allowed. S
 3. We find the highest-energy angular momentum state, and use ladder operators to find all possible eigenstates and energies. By purely algebraic means we therefore find all possible eigenvalues
 4. We find the eigenfunctions, which will allow for comparison to the hydrogen atom.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 You can follow the derivations in Griffiths chapter 4.3, here only the results. We have 3 angular momentum operators along the 3 coordinates
 
@@ -91,7 +92,9 @@ Therefore, let us find now the eingenvalues of $L^2$ and one component, where tr
 
 For $L_z$, one can show that the ladder operators are $L_{ \pm} \equiv L_x \pm i L_y$, which therefore also commute with $L^2$. 
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Similar to the quantum harmonic oscillator, we start by defining $f_t$ as the highest angular momentum state. We assume that $\hbar\ell$ is the highest eigenvalue of $L_z$, of that top state, the reason will become clear later. We therefore have $L_z f_t=\hbar \ell f_t$. 
 
@@ -102,10 +105,11 @@ Now we do the same with bottom rung of angular momentum states, and we find that
 So, the eigenvalues of $L_z$ are $m\hbar$ where $m$ goes from $-\ell$ to $\ell$ in $N$ integer steps. These states are shown in the figure for $\ell=3$, with the $L_z$ eigenvalues, action of the ladder operators, and eigenfunctions $f$.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: 3d-amladder
+:caption: Ladder of orbital angular momentum ladder states, indicated is the $L_z$ eigenvalue in $\hbar$ and the raised and lowered eigenfunctions. 
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 hbar=1
 m=1
@@ -130,17 +134,8 @@ for n in range(nmax):
 ax.set_xticks([])
 ax.set_yticks([])
 ax.set_ylim([0,8])
-ax.set_axis_off()
-fig.legend(loc='outside right')
-
-glue("3d-amladder", fig, display=False)
+ax.set_axis_off();
 ```
-
-(3d-amladder)=
-```{glue:figure} 3d-amladder
-Ladder of orbital angular momentum ladder states, indicated is the $L_z$ eigenvalue in $\hbar$ and the raised and lowered eigenfunctions. 
-```
-
 
 But, this also implies $\ell=-\ell+N$ or $\ell=N/2$ which means that $\ell$ is either integer or half-integer.
 
@@ -158,15 +153,18 @@ Exciting, half-integer values are possible - we will come back to this. But for 
 
 ## Quantum angular momentum example
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We now discuss what the obtain relations imply for an example with $\ell=2$. First, we plot a 3D sphere with a radius of the length of $|L|=\sqrt{2(2+1)}\approx 2.45$ - classically $L$ could be oriented towards any point on this sphere.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: am-l-two
+:caption: Possible angular momentum orientations for $\ell=2$. We see allowed $L$ orientations at $L_z$-values of $-2,-1,0,1,2$.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 # 3d arrows, omg - https://stackoverflow.com/a/74122407
 from matplotlib.patches import FancyArrowPatch
@@ -213,14 +211,7 @@ for m in [-2,-1,0,1,2]:
 
 ax.text3D(0.1,1.7,2,r"$\vec{L}$", fontsize=15, color='r')
 ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([-2,-1,0,1,2])
-plt.show()
-
-glue("am-l-two", fig, display=False)
-```
-
-(am-l-two)=
-```{glue:figure} am-l-two
-Possible angular momentum orientations for $\ell=2$. We see allowed $L$ orientations at $L_z$-values of $-2,-1,0,1,2$.
+plt.show();
 ```
 
 In quantum mechanics, however, the conditions on the quantum number $m$ determines which expectation values of $L_z$ can exist - and this only reaches $2$! This and the other $m$-values are indicated as circles on the sphere, because the polar orientation of $L$ is arbitrary.
@@ -232,7 +223,9 @@ Quantum mechanics predicts that this simply can't be done - and this agrees very
 ## Quantum angular momentum eigenfunctions
 
 <!-- [G4.3.2] -->
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we want to derive the eigenfunctions of the orbital angular momentum operators, in particular again for the electron of the hydrogen atom. We first write the operators in spherical coordinates, we had $\vec{L}=-i \hbar(\vec{r} \times \vec{\nabla})$ with nabla operator in spherical coordinates, where the hat indicates unit coordinates:
 

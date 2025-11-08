@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -21,7 +16,9 @@ Further reading: Griffiths Chapter 2.3
 
 ## Harmonic potentials
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 <!-- [Sakurai 2.3] [Griffiths 2.3] -->
 
 The harmonic oscillator is as it is in classical mechanics, one of the most important systems in quantum mechanics – because it appears everywhere in nature, and it is simple enough to solve it analytically and highlights many of the basic concepts and methods of quantum mechanics. It appears everywhere in nature because nearly any potential landscape can be approximated by a harmonic oscillator, from optical systems over molecular vibrations to the dynamics of nuclear particles. 
@@ -37,10 +34,11 @@ V(x)=V\left(x_0\right)+V^{\prime}\left(x_0\right)\left(x-x_0\right)+\frac{1}{2} 
 $$(se-qho-v1)
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: potential-taylor
+:caption: All potential minima can be approximated by a quadratic potential in the neighborhood of the minimum.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 fig, ax = plt.subplots(figsize=(4,3))
@@ -54,24 +52,19 @@ ax.plot(x, y1)
 
 ax.set_xlabel('$x$')
 ax.set_ylabel('$V(x)$')
-ax.set_ylim(-75,180)
-
-glue("potential-taylor", fig, display=False)
+ax.set_ylim(-75,180);
 ```
 
-(potential-taylor)=
-```{glue:figure} potential-taylor
-All potential minima can be approximated by a quadratic potential in the neighborhood of the minimum.
-```
-
-:::{admonition} Note: classical harmonic oscillator
+:::{note} Note: classical harmonic oscillator
 :class: dropdown
 To refresh your knowledge, have a look here: https://en.wikipedia.org/wiki/Harmonic_oscillator
 :::
 
 ## A Schrödinger equation for the harmonic oscillator
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 For a one-dimensional harmonic oscillator, we need to solve the Schrödinger equation for the potential
 
@@ -96,7 +89,9 @@ Solving this differential equation means finding the Eigenfunctions $\Psi$ and c
 
 ## Ladder operators
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We can write the Schrödinger equation $H\psi=E\psi$ using the momentum operator as
 
@@ -137,7 +132,9 @@ Exercise: show that $[a_-,a_+]=1$
 
 This is great! We have a Schrödinger equation that depends in a very simple form on operators, this must be useful. Now we will see that the ladder operators allow us to find the solutions.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We now assume that some wavefunction $|\psi\rangle$ satisfies the Schrödinger equation with energy $E$, that is $H|\psi\rangle=E|\psi\rangle$.
 
@@ -162,10 +159,11 @@ Therefore, $a_\pm$ are called "ladder operators", because they allow us to climb
 In the figure we show the action of the ladder operators, raising and lowering the energy of the system. Note you might already here see an important difference to the square well potential, here the energy levels are evenly spaces, while in the square well the energy scaled with the square of the state number.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: qho-ladder
+:caption: The first few energies of the quantum harmonic oscillator and the action of the ladder operators. 
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 hbar=1
@@ -197,20 +195,15 @@ ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 ax.set_xlabel('$x$')
 ax.set_xticks([])
 ax.set_yticks([])
-fig.legend(loc='outside right')
-
-glue("qho-ladder", fig, display=False)
-```
-
-(qho-ladder)=
-```{glue:figure} qho-ladder
-The first few energies of the quantum harmonic oscillator and the action of the ladder operators. 
+fig.legend(loc='outside right');
 ```
 
 
 ## The ground state
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 There has to be a catch, if we apply $a_-$ repeatedly we eventually will reach negative energies, which do not make sense - applying $a_-$ on the lowest-energy state which we call $\Psi_0$ should probably better result in "nothing":
 
@@ -233,10 +226,11 @@ $$(se-qho-gs2)
 This is a simple Gaussian distribution as shown in the figure, meaning that in the quantum ground state the probability to find the particle is highest at $x=0$ - this might still be intuitively explainable by classical thoughts - the particle is at rest. But you might remember that in quantum mechanics, a localized particle has a large momentum uncertainty so this is certainly not really at rest.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: qho-groundstate
+:caption: The quantum ground state wavefunction of the harmonic oscillator.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 fig, ax = plt.subplots(figsize=(4,3))
@@ -250,19 +244,15 @@ y=(m*omega/(pi*hbar))**(1/4) * exp(-1*m*omega/(2*hbar)*x**2)
 ax.plot(x, y)
 
 ax.set_xlabel('$x$')
-ax.set_ylabel('$\psi(x)$')
-
-glue("qho-groundstate", fig, display=False)
+ax.set_ylabel('$\psi(x)$');
 ```
 
-(qho-groundstate)=
-```{glue:figure} qho-groundstate
-The quantum ground state wavefunction of the harmonic oscillator.
-```
 
 ## Excited states
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Having the ground state energy and wave function, we can now find all excited states and energies by repeatedly applying the raising or creation operator $a^\dagger$:
 
@@ -290,10 +280,11 @@ In the first figure we show the first few solutions, but offsetted for better vi
 In the second figure we show the  probability density of the same wave functions. We see different solutions with even and odd symmetry around $x=0$. This is very different to the classical case, it looks like quantum interference patterns here - classically, the probability density would always be highest at the turning points, which is here not the case.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: qho-wavefunctions
+:caption: The first few wavefunctions of the quantum harmonic oscillator. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 from numpy.polynomial.hermite import hermval
 import math
@@ -329,23 +320,17 @@ ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 ax.set_xlabel('$x$')
 ax.set_xticks([])
 ax.set_yticks([])
-fig.legend(loc='outside right')
-
-glue("qho-wavefunctions", fig, display=False)
-```
-
-(qho-wavefunctions)=
-```{glue:figure} qho-wavefunctions
-The first few wavefunctions of the quantum harmonic oscillator. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
+fig.legend(loc='outside right');
 ```
 
 The corresponding probability density is the square of these wavefunctions:
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: qho-probdens
+:caption: The probability density of the first few states of the quantum harmonic oscillator, vertically offsetted for better visibility.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 from numpy.polynomial.hermite import hermval
 
@@ -380,19 +365,12 @@ ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 ax.set_xlabel('$x$')
 ax.set_xticks([])
 ax.set_yticks([])
-fig.legend(loc='outside right')
-
-glue("qho-probdens", fig, display=False)
-```
-
-(qho-probdens)=
-```{glue:figure} qho-probdens
-The probability density of the first few states of the quantum harmonic oscillator, vertically offsetted for better visibility.
+fig.legend(loc='outside right');
 ```
 
 Here we see a rather evenly distributed probability density. This is in strong contrast to the classical harmonic oscillator like a swing, where the probability is highest at the extremal turning points where the velocity is lowest. 
 
-:::{admonition} Classical probability densities
+:::{note} Classical probability densities
 :class: dropdown
 Think about more differences concerning probability densities, like forbidden regions!
 :::
@@ -401,7 +379,9 @@ As a side remark, we can construct special quantum states that most closely rese
 
 ## Number states and number operator 
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Often, the states $|\Psi_n\rangle$ are written as $|n\rangle$, and are called *number states* or Fock states, which live in special Hilbert space called Fock space. They are called number states because the same system can be excited multiple times. We need to know how the ladder operators act on arbitrary number states, we obtain:
 
@@ -436,7 +416,9 @@ If we also want to make clear which particular internal state is meant, we use e
 
 ## The need for anharmonicity
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 I hope that with the harmonic oscillator we could introduce the basics of quantum mechanics to you. The harmonic oscillator appears everywhere in nature because every potential minimum has a quadratic term in the Taylor expansion. 
 
@@ -455,10 +437,11 @@ $$(se-qho-ah1)
 As shown in the figure, this lifts the so-called degeneracy of the energy levels, and we can make selective transitions between the states!
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: qho-anharmonic
+:caption: The first three energies of an anharmonic quantum oscillator - now state-selective transitions are possible. 
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 hbar=1
@@ -489,19 +472,15 @@ ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 ax.set_xlabel('$x$')
 # ax.set_xticks([])
 # ax.set_yticks([])
-fig.legend(loc='outside right')
-
-glue("qho-anharmonic", fig, display=False)
+fig.legend(loc='outside right');
 ```
 
-(qho-anharmonic)=
-```{glue:figure} qho-anharmonic
-The first three energies of an anharmonic quantum oscillator - now state-selective transitions are possible. 
-```
 
 ## Two quantizations
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 You might have read that, historically, physicists talk about two so-called "quantizations" - now we can understand this.
 
@@ -518,10 +497,11 @@ A monochromatic single-wavelength electromagnetic field can be quantized in a ve
 Currently, we think that the 2nd quantization is essential to build quantum machines which can bring about really exciting new technologies.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-quant
+:caption: In the first quantization, a particle gains wave properties, and in the second quantization, a quantum wave (field) can be excited a discrete number of times - corresponding to particles.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(figsize=(8,6))
 ax.set_aspect("equal")
@@ -546,12 +526,5 @@ ax.add_patch(plt.Circle((dx-0.2,-2.2),0.15, color="orange",zorder=100))
 ax.add_patch(plt.Circle((dx,-1.8),0.15, color="orange",zorder=100))
 ax.text(0.2,0.5,"1st\nquantization")
 ax.text(2.3,0.5,"2nd\nquantization")
-ax.axis("off")
-
-glue("b-quant", fig, display=False)
-```
-
-(b-quant)=
-```{glue:figure} b-quant
-In the first quantization, a particle gains wave properties, and in the second quantization, a quantum wave (field) can be excited a discrete number of times - corresponding to particles.
+ax.axis("off");
 ```

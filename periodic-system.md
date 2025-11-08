@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -15,7 +10,9 @@ kernelspec:
 ## The electronic structure of atoms
 
 <!-- [G5.2.2 The Periodic Table and P11.1,2] -->
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we have all ingredients to understand the building blocks of matter - atoms. At least, we can understand their electronic structure, which is key for chemical reactions, how solid state matter forms from atoms, and how to make qubits from atoms. 
 
@@ -31,7 +28,9 @@ Each subshell can host $4 \ell+2$ electrons, since $m=-\ell\ldots \ell$ and we h
 
 Now, if interactions between electrons could be neglected, all electrons in the $n=1$ shell, for instance, would have the same energy. This is not the case, already due to electron-electron Coulomb interaction, but also due to spin-spin magnetic interactions the energy levels slightly change. Here only want to give a qualitative explanation which explains most of the atoms.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Here we show a table of the first few elements, and how their electronic state is characterized. The *electron configuration* is indicated by $(n\ell)^N$ - meaning $N$ electrons in shell $n$, subshell $\ell$. $\ell$ is written as letters with $s,p,d,f,\ldots$ for $\ell=0,1,2,3$.
 
@@ -58,7 +57,9 @@ To mention one, the first rule is that the configuration with lowest energy has 
 This means that, for example, the 3 electrons in the $p$ subshell will be in the $\uparrow\uparrow\uparrow$ spin state. Only if a fourth electron is added, it has to go into the spin-down state resulting in $\uparrow\downarrow\uparrow\uparrow$. Remember this simply as the “bus seat rule” - the bus fills up with individually travelling people such that everyone has two places. The reason for this rule is a bit beyond this course.
 You can look all rules in [wikipedia](https://en.wikipedia.org/wiki/Hund%27s_rules)
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 ```{figure} figures/periodic-table-configuration.png
 ---

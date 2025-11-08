@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -16,7 +11,9 @@ kernelspec:
 <!-- G9.2 -->
 In this section, we show how to calculate quantum tunneling, the passage of particles through a barrier that is not possible classically.
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 You might see quantum tunneling every day! Many fingerprint sensors are based on *frustrated total internal reflection* of light, or your fingers on the outer side of a glass when seen through water - see [wikipedia](https://en.wikipedia.org/wiki/Total_internal_reflection#Frustrated_total_internal_reflection) for some nice examples.
 
@@ -28,7 +25,9 @@ Further reading: Griffiths Chapter 9
 
 ## The WKB method
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The WKB method named after Wentzel, Kramers and Brillouin is a very useful method to calculate localized (bound) states and tunneling through potential barriers. We want to calculate what happens to a quantum wave incident from the left for the case shown in the figure.
 
@@ -36,14 +35,13 @@ A quantum wave is incident on a potential barrier described by $V(x)$. For an in
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: wkb-potential
+:caption: Quantum tunneling.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
-
 fig, ax = plt.subplots(figsize=(7,3))
-
 ee=5
 a=1
 x = linspace(-a/2, 1.5*a, 201)
@@ -61,17 +59,11 @@ ax.arrow(-0.06,1.5,-0.2,0,width=0.2, head_length=0.05, color='black')
 ax.text(-0.4,1.1,"$B$",fontsize=15)
 ax.arrow(a+0.1,3,0.2,0,width=0.2, head_length=0.05, color='black')
 ax.text(a+0.4,2.6,"$F$",fontsize=15)
-ax.set_yticks([])
-
-glue("wkb-potential", fig, display=False)
+ax.set_yticks([]);
 ```
 
-(wkb-potential)=
-```{glue:figure} wkb-potential
-Quantum tunneling.
-```
-
-{{slidetag}}
+:::{slidetag}
+:::
 
 Usually, the Schrödinger equation is written in the following form: 
 
@@ -97,7 +89,9 @@ The WKB method of obtaining wavefunctions is very powerful to calculate localize
 
 ## Tunneling
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Now we return to our problem in {numref}`wkb-potential`. We assume that the potential is slowly varying only for $0\leq x \leq a$, and we treat the hard steps at $x=0$ and $x=a$ by discussing the 3 cases separately. To the left of the barrier ($x<0$) everything is fine and we can write the wavefunction as a right and left propagating wave:
 
@@ -113,7 +107,9 @@ $$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}} e^{ \pm \frac{1}{\hbar} \int|p(x)| d x
 
 Taking the modulus of $p$ is allowed since only $p^2$ appears in the Schrödinger equation. This describes an exponentially increasing or decreasing function, which in strong contrast to the plane wave is non-oscillatory!
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 In the tunneling region we therefore have in the barrier the two possible contributions:
 
@@ -130,10 +126,11 @@ The wave function looks like this:
 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: wkb-wave
+:caption: Quantitative plot of the wave function for the tunneling problem.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(figsize=(7,3))
 ee=5
@@ -150,19 +147,12 @@ ax.set_xticklabels(["0","a"])
 ax.plot(x,x*0+15,'--',color="0.5")
 ax.plot(x,x*0+15*exp(-a),'--',color="0.5")
 ax.set_yticks([0,15*exp(-a),15*a])
-ax.set_yticklabels(["0","F", "A"])
-
-glue("wkb-wave", fig, display=False)
-```
-
-(wkb-wave)=
-```{glue:figure} wkb-wave
-Quantitative plot of the wave function for the tunneling problem.
+ax.set_yticklabels(["0","F", "A"]);
 ```
 
 We see that, in the classically forbidden region, the probability density is exponentially decaying, but also behind the barrier is a nonzero probability to find our quantum particle! This is quantum tunneling. If you calculate explicit tunneling probabilities, you will find that only for very thin barriers, on the order of the de Broglie wavelength, allow for significant tunneling.
 
-:::{admonition} Quantum tunneling and fusion reactions in stars
+:::{note} Quantum tunneling and fusion reactions in stars
 :class: dropdown
 
 In classical physics, two positively charged nuclei repel each other due to the Coulomb force. For example, in the Sun, protons would need kinetic energies on the order of hundreds of keV to overcome this repulsion. However, the typical thermal energy of protons in the Sun’s core (at $T \sim 1.5 \times 10^7\ \text{K}$) is only about 1 keV — far too small to classically overcome the barrier. If fusion were purely classical, nuclear reactions in stars would not occur at observable rates.

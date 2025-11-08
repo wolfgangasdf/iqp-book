@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -21,7 +16,9 @@ Further reading: Griffiths Chapters 7.3.1, 7.4 and 7.5
 (pt-relativistic-corrs)=
 ## Relativistic corrections
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We had seen that the quantum wavefunction of the electron has angular momentum, which also implies linear momentum - and any moving particle with mass $m$ is subject to relativistic corrections. For a point-like particle, the momentum becomes 
 
@@ -37,7 +34,9 @@ We see that now, the energy levels depend on the angular momentum quantum number
 
 ## The Zeeman effect
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The last degeneracy in $m_j$ is lifted by the Zeeman effect in an external magnetic field, which we have seen before, now with the dipole moment for electron spin $\vec{\mu}_s=-\frac{e}{m} \vec{S}$ and orbital motion $\vec{\mu}_l=-\frac{e}{2 m} \vec{L}$:
 
@@ -47,7 +46,9 @@ Depending on the strength of the magnetic field compared to the internal magneti
 
 ### Weak-field Zeeman effect
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 For $B_{\mathrm{ext}} \ll B_{\mathrm{int}}$, the fine structure splitting dominates, and $H_Z'$ can be treated as a perturbation. Luckily, $\left|n \ell j m_j\right\rangle$ are good eigenstates and we can use first-order perturbation theory (for details see Griffiths 7.4.1):
 
@@ -71,7 +72,9 @@ The magnetic field breaks rotation symmetry and $H_Z'$ lifts the degeneracy in $
 
 ### Strong-field and intermediate fields
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 If $B_{\mathrm{ext}} \gg B_{\mathrm{int}}$, we can use $H_{\mathrm{Bohr}}+H_Z^{\prime}$ as the unperturbed Hamiltonian, and use $H_{fs}'$ as the perturbation. 
 
@@ -80,7 +83,7 @@ Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a the
 ```{figure} figures/perturbation-theory/zeeman-all.png
 ---
 name: zeeman-all
-scale: 50%
+width: 75%
 ---
 Zeeman splitting of the $n=2$ states of hydrogen where we see that the different regimes connect nicely. Figure from Griffiths.
 ```
@@ -88,7 +91,9 @@ Zeeman splitting of the $n=2$ states of hydrogen where we see that the different
 
 ## Hyperfine splitting
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 As a last effect, we want to mention the hyperfine splitting, since it appears also in other qubit systems.
 

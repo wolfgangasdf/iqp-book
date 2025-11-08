@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -20,7 +15,9 @@ Further reading: Griffiths Chapter 4.1 & 4.2
 
 ## The Schrödinger equation in 3D
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 It is now time to extend our formulation of the Schrödinger equation to 3 dimensions, for instance to calculate quantum mechanically the simplest realistic case: the hydrogen atom, where a single negatively charged electron is bound to the electrostatic potential of the positively charged nucleus.
 
@@ -52,15 +49,18 @@ $$(3d-s-4)
 
 ## The Schrödinger equation in spherical coordinates
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Many quantum systems, like the hydrogen atom, have a potential which only depends on the radial coordinate, $V(r)$, so-called central potentials. To gain insight and solve the Schrödinger equation for this case, it is useful to express the Hamiltonian in spherical coordinates - since this coordinate system better represents the spherical symmetry of our potential. The spherical coordinates are the radius $r$, the polar angle $\theta$ and the azimuthal angle $\phi$, as indicated in the figure. 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: 3d-sphc
+:caption: The spherical coordinate system where a position is defined by the radius $r$ and two angles $\theta$ and $\phi$.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 # 3d arrows, omg - https://stackoverflow.com/a/74122407
 from matplotlib.patches import FancyArrowPatch
@@ -110,16 +110,8 @@ c1=pol2cart(0.7,linspace(-pi/2,-pi/4,10),pi/3)
 ax.plot(c1[0], c1[1], c1[2], color="orange", alpha=1)
 ax.text3D(0.2,0.2,-0.3,r"$\phi $", fontsize=20, color="black")
 ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
-plt.show()
-
-glue("3d-sphc", fig, display=False)
+plt.show();
 ```
-
-(3d-sphc)=
-```{glue:figure} 3d-sphc
-The spherical coordinate system where a position is defined by the radius $r$ and two angles $\theta$ and $\phi$.
-```
-
 
 We first look up the square of the nabla operator in spherical coordinates:
 
@@ -132,14 +124,16 @@ It is actually quite easy to convince yourself that this is how it needs to be -
 The time-independent Schrödinger equation then becomes
 
 $$
--\frac{\hbar^2}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=0
+-\frac{\hbar^2}{2 m}\left(\frac{1}{r^2} \frac{\partial}{\partial^2}\left(r^2 \frac{\partial}{\partial r}\right)+\frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\left(\frac{\partial^2}{\partial \phi^2}\right)\right) \psi+V \psi=E \psi
 $$(3d-s-6)
 
 We see terms with derivatives of the radial, polar, and azimuthal coordinates, and relatively simple prefactors involving different coordinates. Now, we show how you can solve this equation.
 
 ## Separation of variables
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 What we saw before that the method of separation of variables can be used to split a wavefunction up in a time-dependant and a spatial part. We use a similar approach for the 3D Schrödinger equation, we start looking for solutions that factorize in a radial part $R$ and angular part $Y$ in the following way:
 
@@ -164,7 +158,9 @@ We see that the first term in curly brackets only depends on the radial coordina
 
 ## The angular part
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 The angular part can be split up further again by separation of variables with $Y(\theta, \phi)=\Theta(\theta) \Phi(\phi)$ and we obtain:
 
@@ -181,10 +177,11 @@ $$(3d-s-11)
 Due to the periodicity of the azimuthal coordinate $\phi=\phi+2\pi$, we obtain that $m$ must be an integer number $m=0, \pm1, \ldots$ With this, we have found our first **quantum number** describing our system! Note, we have only assumed that the potential is rotationally symmetric, and already a quantum number appears! An cartoon of the azimuthal part of the wavefunction for $m=6$ is shown in the figure.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: 3d-aziwave
+:caption: An azimuthal wave function that repeats itself after one round trip.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 fig = plt.figure()
@@ -202,17 +199,12 @@ ax.plot(sin(fi), cos(fi), 0.2*sin(6*fi), color="r", linewidth=4)
 ax.set_xticks([])
 ax.set_yticks([])
 ax.set_zticks([])
-plt.show()
-
-glue("3d-aziwave", fig, display=False)
+plt.show();
 ```
 
-(3d-aziwave)=
-```{glue:figure} 3d-aziwave
-An azimuthal wave function that repeats itself after one round trip.
-```
+:::{slidetag}
+:::
 
-{{slidetag}}
 
 One can also solve the whole polar-azimuthal part, again by looking up or solving the polar differential equation yourselves, see Griffiths Chapter 4.1 for more details. At the end, the solutions turn out to be the so-called **spherical harmonics**, where we now have quantum numbers $\ell$ and $m$:
 
@@ -232,12 +224,14 @@ Later we will see that $\ell$ is associated with the total angular momentum of t
 
 ## The radial part
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 In order to solve the radial part, we can get insight even before assuming a specific radial potential. We can simplify the radial part by changing variables with $u(r) \equiv r R(r)$, then we are left with this differential equation: 
 
 $$
--\frac{\hbar^2}{2m}\ \ \frac{d^2u}{dr^2}+\left[V+\frac{\hbar^2}{2m}\ \frac{\ell\left(\ell+1\right)}{r^2}\ \ \right]u=Eu\ 
+-\frac{\hbar^2}{2m}\ \ \frac{d^2u}{dr^2}+\left[V+\frac{\hbar^2}{2m}\ \frac{\ell\left(\ell+1\right)}{r^2}\right]u=Eu
 $$(3d-s-14)
 
 This is a again a 1D Schrödinger equation, with a radial-position dependent term added to the potential term in square brackets. This term decreases quickly with radial distance, and it increases with larger $\ell$ or angular momentum - this means this term accellerates the quantum particle outwards, it is also called the centrifugal term. Together with $V$ the term in brackets is called the effective potential. 
@@ -245,7 +239,7 @@ This is a again a 1D Schrödinger equation, with a radial-position dependent ter
 To finally solve this equation and with this the full Schrödinger equation, we need to plug in a particular potential $V$. Here, we aim to calculate the electronic energy states of the simplest atom, the hydrogen atom. In this case, $V$ is given by the Coulomb potential that describes the electrostatic attraction of the electron to the nucleus that consists of a single positive charge, the proton - therefore the potential is purely attractive, or negative:
 
 $$
-V=\ -\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}\ 
+V=\ -\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}
 $$(3d-s-15)
 
 It is attractive so it counteracts the centrifugal term before - even more, if we study the effective potential with the $\ell$-term, if $\ell>0$, we see that for very small distances the effective potential results in a repulsive force - preventing the electron to fall into the core!
@@ -253,7 +247,9 @@ It is attractive so it counteracts the centrifugal term before - even more, if w
 
 ## The hydrogen atom
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 We do not derive the solution of the radial differential equation here, please have a look at Griffiths 4.2 for details. The resulting eigenvalues or energies are
 
@@ -270,14 +266,13 @@ $$(3d-s-19)
 The formula for energy means that there is an infinite number of states with negative energy - therefore states where the electron is bound to the nucleus. However, the energies approach $0$ for $n\rightarrow\infty$, therefore an electron in a highly excited state is only weakly bound to the core.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: h-energies
+:caption: Coulomb potential of the hydrogen atom showing a numnber of bound states. 
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
-
 nmax = 6
-
 def efromx(x):
     return -1/abs(x/3)
 
@@ -300,18 +295,9 @@ for n in range(1,nmax):
     ax.plot([-xfrome(ee),xfrome(ee)],[ee,ee],'-k')
     
 ax.set_ylim([-10,2])
-
 ax.axis('off')
-fig.legend(loc='outside right')
-
-glue("h-energies", fig, display=False)
+fig.legend(loc='outside right');
 ```
-% TODO new
-(h-energies)=
-```{glue:figure} h-energies
-Coulomb potential of the hydrogen atom showing a numnber of bound states. 
-```
-
 
 The energy formula is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the hydrogen atom:
 
@@ -329,7 +315,7 @@ The unit electron volt or eV is a very useful energy unit in quantum mechanics a
 
 $$1\, \mathrm{eV} = 1.6022\times10^{-19}\, \mathrm{J}$$(3d-ev)
 
-:::{admonition} Note: electronvolt
+:::{note} Note: electronvolt
 :class: dropdown
 The unit electronvolt is very useful to express energies corresponding to visible-light photons, 1.8 eV for red up to 3.1 eV for blue photons. But you can also express different quantities with it using other fundamental constants, see [wikipedia](https://en.wikipedia.org/wiki/Electronvolt).
 :::
@@ -345,8 +331,7 @@ We see that
 * there is a nice separation into radial and angular parts
 * The Laguerre polynomials and the normalization factor combines both degrees of freedom
 
-:::{Note}
-:class: dropdown
+:::{note}
 You don't need to memorize the explicit hydrogen atom solutions or precisely how you derive them, but it is useful to know the procedure - and that you can look it up here. More important is understanding the meaning of the quantum numbers $n$, $\ell$ and $m$ - their restrictions, how they are derived, and why they appear!
 :::
 
@@ -355,7 +340,9 @@ Now, we visualize some solutions and comment on a few properties.
 
 ## Hydrogen wavefunctions
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Here we show plots of $|\psi|$ - the norm or square root of the probability density to find an electron at a certain position, and for different quantum numbers, for $n=0,1,2,3$. The plots are made in the $xy$-pane at $z=0$.
 

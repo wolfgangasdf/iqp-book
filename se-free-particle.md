@@ -1,9 +1,4 @@
 ---
-jupytext:
-    formats: md:myst
-    text_representation:
-        extension: .md
-        format_name: myst
 kernelspec:
     display_name: Python 3
     language: python
@@ -16,17 +11,19 @@ In this section, we introduce the concept of a wave and a wave function for part
 
 ## De Broglie & Heisenberg
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 <!-- Ph 1.2.  -->
 An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. $h$ is the Planck constant, and $p$ the momentum of the particle. The wavelength relates to the wavenumber as $k=\ \frac{2\pi}{\lambda}$, with which we can rewrite the momentum and obtain $p=\hbar k$. 
 The wave can for instance be described by a plane wave $\Psi(\mathbf{r}, t)=\exp\left[i(\mathbf{k\cdot r}-i \omega t)\right]$ in 3D or $\Psi(x, t)=\exp\left[i(k x-i \omega t)\right]$ in one dimension.
 
-:::{admonition} De Broglie example
+:::{note} Example: De Broglie wavelength
 :class: dropdown
 What is the de Broglie wavelength in nm of one buckminsterfullerene molecule (C60), moving at a speed of 100 m/s? The weight of the molecule is $1.196\times 10^{-24}\,\text{kg}$, and the Planck constant is $h=6.626\cdot 10^{-34}\,\mathrm{kg m^2 s^{-1}}$. Under which condition is this de Broglie wavelength comparable to the size of the molecule (around 1 nm)?
 
-:::{admonition} Solution
+:::{note} Solution
 :class: dropdown
 We need to calculate 
 
@@ -41,10 +38,11 @@ With this we can already describe the Heisenberg uncertainty principle as we wil
 A wave packet consisting of a range of wave numbers between $k-\Delta k$ and $k+\Delta k$ describes a particle with an uncertain in momentum: $\Delta p\approx\hbar\Delta k$. The length of this wavepacket is a measure of the uncertainty in position, and it can be shown to be simply $\Delta x\approx\ 2\pi/\Delta k$. Note, the derivation of this requires a fourier transform! 
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-uncertainty
+:caption: The same de Broglie wavepacket plotted in position space (left) and momentum/wavevector space (right).
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 
 fig, ax = plt.subplots(1,2, figsize=(9,4))
@@ -65,14 +63,7 @@ ax[1].plot(k+kax, uk, color="k")
 ax[1].set_xlabel("$k/(1/m)$")
 ax[1].set_ylabel("$u(k)$")
 ax[1].set_yticks([0]); 
-plt.show()
-
-glue("b-uncertainty", fig, display=False)
-```
-
-(b-uncertainty)=
-```{glue:figure} b-uncertainty
-The same de Broglie wavepacket plotted in position space (left) and momentum/wavevector space (right).
+plt.show();
 ```
 
 
@@ -98,7 +89,7 @@ $$\Delta E\,\Delta t \ge \hbar$$(se-ur-et)
 Further reading: Philips Chapter 1 & 2.1
 ```
 
-:::{admonition} Note: Fourier transforms and uncertainty
+:::{note} Note: Fourier transforms and uncertainty
 :class: dropdown
 If you like to dive deeper into Fourier transforms and the Heisenberg uncertainty principle, have a look here: 
 https://quantummechanics.ucsd.edu/ph130a/130_notes/node88.html
@@ -107,7 +98,9 @@ https://quantummechanics.ucsd.edu/ph130a/130_notes/node88.html
 ## The Schrödinger equation
 
 <!-- Additional: Philips 2.1 -->
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 In physics, the dynamics of a system is described by differential equations, which are equations that naturally appear if conservation of a quantity - often the total energy - is assumed. For derivation of our differential wave equation, it is essential to find how the energy of the particle depends on the wave vector or frequency of the wave. 
 We consider a freely moving particle at non-relativistic velocity $v\ =\ p/m$ in the $x$ direction, having mass $m$, momentum $p$ and classical mechanics tells us that the kinetic energy is $E=p^2/2m$. 
@@ -140,7 +133,9 @@ Further reading: Philips Chapter 2.1
 
 ## Plane-wave superpositions and wavepackets
 
-{{slidetag}}
+:::{slidetag}
+:::
+
 
 Since $\Psi$ appears only linearly (no powers) in the differential equation, we say that the Schrödinger equation is linear in the wavefunction $\Psi$. As a consequence, any superposition of solutions for instance with a different wavelength or wavevector $k$, is also a solution. 
 
@@ -155,10 +150,11 @@ $$\Psi\left(x,t\right)=\ \sum_{n=1}^{\infty}{A_n(k_n)e^{i\left(k_nx-\omega_nt\ri
 where $\hbar\omega_n=\frac{\hbar^2k_n^2}{2m}$. If $A_n(k_n)$ is such that the sum involves only a narrow range of wave numbers around a positive value $k$, this superposition yields a **wave packet** moving in the positive $x$ direction (group) velocity $v=\hbar k/m$, preserving shape during propagation. The position and momentum uncertainties are in agreement with the Heisenberg uncertainty principle at all times as explained before.
 
 ```{code-cell} ipython3
-:tags: [hide-input, remove-output]
+:tags: [remove-input]
+:label: b-wavepackets
+:caption: The real-space (left) and wavevector-space (right) wavepacket envelope of a spatially narrow (top) and wider (bottom) wavefunction.
 
 from matplotlib import pyplot as plt
-from myst_nb import glue
 from numpy import *
 fig, ax = plt.subplots(2,2, figsize=(6,4))
 k=2*pi*4
@@ -183,15 +179,9 @@ ax[0,0].set_title("Real space")
 ax[0,1].set_title("Momentum space")
 plt.gcf().text(0.93, 0.65, "narrow", fontsize=14, rotation='vertical')
 plt.gcf().text(0.93, 0.10, "Spatially wide", fontsize=14, rotation='vertical')
-plt.show()
-
-glue("b-wavepackets", fig, display=False)
+plt.show();
 ```
 
-(b-wavepackets)=
-```{glue:figure} b-wavepackets
-The real-space (left) and wavevector-space (right) wavepacket envelope of a spatially narrow (top) and wider (bottom) wavefunction.
-```
 
 The figure shows two examples of a wavefunction, one more narrow and one wider in real space - we see what the Heisenberg uncertainty principle implies: If a wavepacket is more localized in real space, it is wider in momentum space. This is because there are fewer oscillations in the narrower wavepacket, therefore the frequency or momentum of the wave is less good defined. This is what the frequency spectrum shows us.
 
