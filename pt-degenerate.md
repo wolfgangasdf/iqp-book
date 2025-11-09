@@ -102,7 +102,7 @@ H_{aa}'=\left\langle\psi_a^{(0)}\right|H'\left|\psi_a^{(0)}\right\rangle=
 =\frac{2\lambda}{a^2}
 $$(ad-ptd-5)
 
-The same holds for $H_{aa}'$, so we have
+The same holds for $H_{bb}'$, so we have
 
 $$
 H_{bb}'=H_{aa}'

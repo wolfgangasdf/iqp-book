@@ -157,7 +157,7 @@ Exciting, half-integer values are possible - we will come back to this. But for 
 :::
 
 
-We now discuss what the obtain relations imply for an example with $\ell=2$. First, we plot a 3D sphere with a radius of the length of $|L|=\sqrt{2(2+1)}\approx 2.45$ - classically $L$ could be oriented towards any point on this sphere.
+We now discuss what the obtained relations imply for an example with $\ell=2$. First, we plot a 3D sphere with a radius of the length of $|L|=\sqrt{2(2+1)}\approx 2.45$ - classically $L$ could be oriented towards any point on this sphere.
 
 ```{code-cell} ipython3
 :tags: [remove-input]

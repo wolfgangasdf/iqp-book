@@ -66,9 +66,10 @@ It is made using [Jupyter Book](https://jupyterbook.org/), now version 2.0.
 
 Bugs:
 * Numbering of equations etc, should be chapter-wise
+* The table of contents on the left should be expanded
 * code-cell output should be centered
 * Overview chapter should have no number
-* Latex numbering sometimes strange
+* Latex numbering wrong
 
 
 ### install in addition to anaconda

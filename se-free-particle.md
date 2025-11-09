@@ -17,7 +17,7 @@ In this section, we introduce the concept of a wave and a wave function for part
 
 <!-- Ph 1.2.  -->
 An important step towards a quantum mechanical description of massive particles was done by Louis de Broglie in 1923. He proposed that a fundamental or composite particle with momentum p also has the properties of a quantum wave (like light) with wavelength $\lambda=\frac{h}{p}$, now called the de Broglie wavelength. $h$ is the Planck constant, and $p$ the momentum of the particle. The wavelength relates to the wavenumber as $k=\ \frac{2\pi}{\lambda}$, with which we can rewrite the momentum and obtain $p=\hbar k$. 
-The wave can for instance be described by a plane wave $\Psi(\mathbf{r}, t)=\exp\left[i(\mathbf{k\cdot r}-i \omega t)\right]$ in 3D or $\Psi(x, t)=\exp\left[i(k x-i \omega t)\right]$ in one dimension.
+The wave can for instance be described by a plane wave $\Psi(\mathbf{r}, t)=\exp\left[i(\mathbf{k\cdot r}-\omega t)\right]$ in 3D or $\Psi(x, t)=\exp\left[i(k x-\omega t)\right]$ in one dimension.
 
 :::{note} Example: De Broglie wavelength
 :class: dropdown
