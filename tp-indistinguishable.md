@@ -192,7 +192,7 @@ Another way of looking at this is to consider the statistics of measuring two pa
 
 For two distinguishable particles $a$ and $b$ we can discriminate the four states $\left|+_a+_b\right\rangle$, $\left|+_a-_b\right\rangle$, $\left|-_a+_b\right\rangle$, $\left|-_a-_b\right\rangle$. From measurements we therefore obtain that the probability of obtaining both particles in the $+$ state is $1/4$, also $1/4$ for both in the $-$ state, and a probability of $1/2$ for obtaining one particle in the $+$ state and the other in the $-$ state.
 
-Now we discuss indistinguishable, where we now need to discriminate bosons and fermions. If the particles are indistinguishable bosons, the two-particle system only has 3 states $\left|++\right\rangle$, $\left|--\right\rangle$, and $\left|+-\right\rangle$ - because the latter is the same as $\left|-+\right\rangle$. We therefore measure these 3 different possibilities, twice $+$, twice $-$, and one $+$ and one $-$, with equal probability of $1/3$.
+Now we discuss indistinguishable particles, where we now need to discriminate bosons and fermions. If the particles are indistinguishable bosons, the two-particle system only has 3 states $\left|++\right\rangle$, $\left|--\right\rangle$, and $\left|+-\right\rangle$ - because the latter is the same as $\left|-+\right\rangle$. We therefore measure these 3 different possibilities, twice $+$, twice $-$, and one $+$ and one $-$, with equal probability of $1/3$.
 
 Finally, if the particles are indistinguishable fermions, no two particles can be in the same state and therefore we only can measure $+$ for one particle and $-$ for the other - with unity probability.
 

@@ -216,7 +216,7 @@ ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([-2,-1,0,1,2])
 plt.show();
 ```
 
-In quantum mechanics, however, the conditions on the quantum number $m$ determines which expectation values of $L_z$ can exist - and this only reaches $2$! This and the other $m$-values are indicated as circles on the sphere, because the polar orientation of $L$ is arbitrary.
+In quantum mechanics, however, the conditions on the quantum number $m$ determines which expectation values of $L_z$ can exist - and this only reaches $2$! This and the other $m$-values are indicated as circles on the sphere: If $L_z$ has a defined value, then $L_x$ and $L_y$ are undefined. Therefore, one should think that the red vectors in the figure are smeared out over the circles.
 
 This sounds crazy - why can't I choose the z-axis along $L$?, this should solve the problem that not all components of $L$ can be measured simultaneously?
 
