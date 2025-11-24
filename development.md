@@ -109,6 +109,5 @@ rm -r _build
   * It's not very complete, best auto-build.
   * Typora is better for undistracted writing.
 * Buy https://snip.mathpix.com/ for typesetting equations from screenshots and handwritten images.
-* Syntax is very fragile - always have new lines before and after equations.
 * Key documentation: [jupyter book](https://jupyterbook.org), [Myst MD](https://mystmd.org/guide)
 * Pictures are either made with inline matplotlib or [IPE](https://github.com/otfried/ipe) (zoom in to export PNG high-res)!

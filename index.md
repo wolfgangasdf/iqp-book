@@ -13,7 +13,7 @@ authors:
 
 To gain most from this course:
 * watch the videos (next to brightspace [here](https://surfdrive.surf.nl/files/index.php/s/3o7NIf6XENYnvyH)). Due to reordering, some chapter numbers in the videos are different to the book here.
-* read this book. There is also a PDF version: [iqp-book.pdf](iqp-book.pdf).
+* read this book. There is also a PDF version: [iqp-book.pdf](iqp-book.pdf). The old version is at https://quphotonics.org/qist/iqp/iqp-book-old/
 * do the brightspace quizzes.
 * solve the exercise assignments - alone or in a group, don't look at solutions unless you are really stuck!
 * during all this, collect questions for the workgroup sessions, and possibly read a bit more in Griffiths.
