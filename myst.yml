@@ -10,33 +10,27 @@ site:
   parts:
     footer: |
       Copyright © 2025 Wolfgang Löffler. License: none yet.
+    primary_sidebar_footer: ''
 project:
   title: IQP Book
   authors:
-    - name: Wolfgang Löffler
+    - name: ''
   copyright: 2025, no license yet
   github: wolfgangasdf/iqp-book
-  exports:
-    - format: pdf
-      template: plain_latex_book
-      output: _build/exports/iqp-book.pdf
-    - format: tex
-    - format: typst
   numbering:
-    title:
-      enabled: true
+    title: true
+    # bug: if I set `numbering: title: false` in index.md, the numbering is wrong with `headings:true` here. Need to add `headings: true` to the frontmatter of every page.
+    # headings: true
     equations:
+      enabled: true
       continue: true
     figures:
+      enabled: true
       continue: true
-    heading_1: true
-    heading_2: true
-    heading_3: true
   plugins:
     - slidetag.mjs
   toc:
     - file: index.md
-      # hidden: true # doesn't work
     - file: b.md
       children:
         - file: b-qubits-realization.md

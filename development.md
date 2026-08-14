@@ -1,10 +1,6 @@
 ---
-kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
-authors:
-  - name: ''
+numbering:
+    title: false
 ---
 
 
@@ -102,6 +98,10 @@ jupyter book build --execute --pdf
 
 #This cleans up, to rebuild:
 rm -r _build
+
+# This updates the frontmatter for all normal pages:
+./updatefrontmatter.py
+
 ```
 
 ### notes

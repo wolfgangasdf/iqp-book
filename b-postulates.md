@@ -3,15 +3,15 @@ kernelspec:
     display_name: Python 3
     language: python
     name: python3
-authors:
-  - name: ''
+numbering:
+    headings: true
 ---
 
 
 (b-postulates-xr)=
 # The postulates of quantum mechanics
 
-**1. The quantum state of a system**
+## The quantum state of a system
 
 A state is represented by a state vector $|\psi\rangle$. Mathematically, this state vector belongs to the Hilbert space $\mathcal{H}$, called the state space.
 
@@ -43,7 +43,7 @@ It is useful to mention here that there are two different types of states, depen
 
   is the wavefunction, which we will use often in the following chapters. 
 
-**2. Measurements**
+## Measurements
 
 This second postulate is also called the Born rule:
 Every measurable physical quantity A is described by a Hermitian operator $\hat{A}$ acting in the state space of $\mathcal{H}$. The expectation value to measure A given the state $|\psi\rangle$ is $\langle\psi|\hat{A}|\psi\rangle$ - and the probability is $|\langle\psi|\hat{A}|\psi\rangle|^2$. We don't need the modulus since eigenvalues of hermitian operators are real.
@@ -67,6 +67,6 @@ $$|\psi\rangle \rightarrow \frac{|\lambda_i\rangle \langle\lambda_i|\psi\rangle}
 
 The renormalization is needed because the probability amplitude is not necessarily unity, and we assume that the system is in the measured states with unity probability.
 
-**3. Time evolution**
+## Time evolution
 
 The third postulate of quantum mechanics is that the time evolution of a system is determined by the Schrödinger equation - we will discuss this in the next chapter.
