@@ -187,7 +187,7 @@ ax.scatter(xs+0.2+1.0*random.random(size=shape(yr)),yr,marker=".",s=1,color="bla
 ax.text(xs,4,"N=1000")
 ax.axis("off")
 ax.set_xlim([-3,13])
-ax.set_ylim([-5,5])
+ax.set_ylim([-5,5]);
 ```
 
 :::{slidetag}
@@ -227,7 +227,7 @@ h_ang=array([926.2256,930.7482,937.8034,949.743,972.5367,1025.7222,1215.66824,12
 ax.stem(h_ang/10, log(h_int),markerfmt=' ')
 ax.set_xlabel('Wavelength / nm')
 ax.set_ylabel('Intensity')
-ax.set_xlim([50,500])
+ax.set_xlim([50,500]);
 ```
 
 

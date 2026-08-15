@@ -20,7 +20,7 @@ numbering:
 * with quicktime: float on top, check 3x that recording in progress, it's super confusing
 
 **Don't forget**
-* show slidetags before
+* enable slidetags in slidetag.mjs
 * make introduction, "in this video..."
 * never say left/right figure, on slides it's different
 
@@ -83,25 +83,25 @@ Go into the book sourcecode folder.
 Settings are in `myst.yml`.
 
 ```
-# This builds the website:
-jupyter book build --execute
-
-#This auto-builds:
+# This auto-builds the website, and starts a webserver:
 jupyter book start --execute
 
-#This makes a website:
+# This makes a website:
 export BASE_URL="/yourbaseurl"
 jupyter book build --execute --html
 
-#This makes a PDF:
+# This makes a PDF:
+./makepdflatexexportconfig.py # update export.yml
 jupyter book build --execute --pdf
 
-#This cleans up, to rebuild:
+# This cleans up, to rebuild:
 rm -r _build
 
 # This updates the frontmatter for all normal pages:
 ./updatefrontmatter.py
 
+# This makes an offline book:
+./makeofflinebook.sh
 ```
 
 ### notes

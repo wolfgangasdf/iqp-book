@@ -297,8 +297,7 @@ for n in range(1,nmax):
     ax.plot([-xfrome(ee),xfrome(ee)],[ee,ee],'-k')
     
 ax.set_ylim([-10,2])
-ax.axis('off')
-fig.legend(loc='outside right');
+ax.axis('off');
 ```
 
 The energy formula is the famous Bohr formula that was derived in a handwaving and serendipious way before the development of the theory of quantum mechanics - the so-called Bohr radius reminds of of this. It gives a good measure of the size of the hydrogen atom:

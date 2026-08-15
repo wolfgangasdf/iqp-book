@@ -203,7 +203,7 @@ ax.set_ylabel('$V(x)$')
 ax.set_xticks([0,a])
 ax.set_xticklabels(["0","a"])
 ax.set_yticks([]);
-ax.set_ylim([-10,50])
+ax.set_ylim([-10,50]);
 ```
 
 :::{slidetag}

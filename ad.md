@@ -9,5 +9,4 @@ numbering:
 
 # Advanced topics
 
-```{tableofcontents}
-```
+In this chapter, we discuss a few important advanced topics in quantum mechanics, from quantum tunneling over Rabi oscillations to the periodic table of elements.

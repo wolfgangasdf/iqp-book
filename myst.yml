@@ -11,12 +11,26 @@ site:
     footer: |
       Copyright © 2025 Wolfgang Löffler. License: none yet.
     primary_sidebar_footer: ''
+extends:
+  - export.yml # made with makelatexexportconfig.py
 project:
   title: IQP Book
   authors:
     - name: ''
   copyright: 2025, no license yet
   github: wolfgangasdf/iqp-book
+  # latex export needs level assignment, use makepdflatexexportconfig.py and import export.yml above
+  # exports:
+  #   - format: pdf
+  #     template: plain_latex_book
+  #     output: _build/exports/iqp-book.pdf
+  # typst export still too buggy with advanced latex math like \ket: https://github.com/jupyter-book/mystmd/issues/2269
+  # exports:
+  #   - format: typst
+  #     # template: https://github.com/myst-templates/plain_typst_book.git
+  #     template: plain_typst_book
+  #     output: _build/exports/book.pdf
+  #     id: output-pdf
   numbering:
     title: true
     # bug: if I set `numbering: title: false` in index.md, the numbering is wrong with `headings:true` here. Need to add `headings: true` to the frontmatter of every page.

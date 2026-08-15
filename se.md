@@ -9,5 +9,4 @@ numbering:
 
 # The Schrödinger equation
 
-```{tableofcontents}
-```
+In this chapter, we derive the Schrödinger equation that allows calculation of the wavefunction for physical systems and its dynamics, and solve it for several different important potentials.

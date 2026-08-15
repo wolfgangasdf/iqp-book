@@ -1,0 +1,94 @@
+version: 1
+project:
+  exports:
+  - format: pdf
+    template: plain_latex_book
+    output: _build/exports/iqp-book.pdf
+    authors: "Wolfgang L\xF6ffler"
+    articles:
+    - file: index.md
+      level: 0
+    - file: b.md
+      level: 0
+    - file: b-qubits-realization.md
+      level: 1
+    - file: b-degrees-of-freedom.md
+      level: 1
+    - file: b-evidence-for-qm.md
+      level: 1
+    - file: b-postulates.md
+      level: 1
+    - file: b-exercise.md
+      level: 1
+    - file: se.md
+      level: 0
+    - file: se-free-particle.md
+      level: 1
+    - file: se-1d-schroedinger.md
+      level: 1
+    - file: se-square-well.md
+      level: 1
+    - file: se-qho.md
+      level: 1
+    - file: se-exercise.md
+      level: 1
+    - file: qm3d.md
+      level: 0
+    - file: qm3d-schroedinger.md
+      level: 1
+    - file: qm3d-angular-momentum.md
+      level: 1
+    - file: qm3d-exercise.md
+      level: 1
+    - file: sp.md
+      level: 0
+    - file: sp-concepts.md
+      level: 1
+    - file: sp-half.md
+      level: 1
+    - file: sp-density-matrix.md
+      level: 1
+    - file: sp-magnetic-field.md
+      level: 1
+    - file: sp-clebschgordan.md
+      level: 1
+    - file: sp-exercise.md
+      level: 1
+    - file: tp.md
+      level: 0
+    - file: tp-intro.md
+      level: 1
+    - file: tp-indistinguishable.md
+      level: 1
+    - file: tp-exercise.md
+      level: 1
+    - file: pt.md
+      level: 0
+    - file: pt-intro.md
+      level: 1
+    - file: pt-degenerate.md
+      level: 1
+    - file: pt-apps.md
+      level: 1
+    - file: pt-exercise.md
+      level: 1
+    - file: pt-ext-apps.md
+      level: 1
+    - file: ad.md
+      level: 0
+    - file: ad-wkb.md
+      level: 1
+    - file: ad-quantum-dynamics.md
+      level: 1
+    - file: periodic-system.md
+      level: 1
+    - file: ad-exercise.md
+      level: 1
+    - file: appendix.md
+      level: 0
+    - file: development.md
+      level: 1
+    - file: formula-sheet.md
+      level: 1
+    - file: solutions.md
+      level: 1

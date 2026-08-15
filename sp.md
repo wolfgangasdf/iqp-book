@@ -9,5 +9,4 @@ numbering:
 
 # The spin
 
-```{tableofcontents}
-```
+In this chapter, we introduce the spin, the intrinsic angular momentum of elementary particles, discuss its use for qubits and explore some effects, like magnetic-field interaction and spin-spin coupling.

@@ -95,7 +95,7 @@ With this insight, we see that
 In the ket notation, the quantum states are explicitly written so it is always clear which coefficients belong to which state - this seems to be confusing for the density matrix, to which states do the matrix entries correspond? You will see that there is actually no confusion if you follow the convention that density matrices are written in the "computational" basis consisting here of $\{\ket{0},\ket{1}\}$ - but it doesn't hurt to label the matrix:
 
 $$
-\begin{array}{c} 
+\begin{array}{c c} 
 & \begin{array}{c c} \bra{0} & \bra{1} \\ \end{array} \\
 \begin{array}{c c}\ket{0}\\ \ket{1} \end{array} &
 \left[

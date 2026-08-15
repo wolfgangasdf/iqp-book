@@ -4,25 +4,26 @@ kernelspec:
     language: python
     name: python3
 authors:
-    name: Wolfgang Löffler
+    - name: Wolfgang Löffler
 numbering:
     title: false
 ---
+% bug: pdf export doesn't honor numbering.title: false, fix:
+```{raw:latex}
+\setcounter{chapter}{-1}
+\chapter{The IQP Book} 
+``` 
 
-# Overview
+## The IQP Book
 
 *Introduction to Quantum Physics* gives you a compact introduction to quantum mechanics, intended as part of the homologation module of the **Leiden/Delft MSc programme Quantum Information Science and Technology QIST**.
 
 To gain most from this course:
 * watch the videos (next to brightspace [here](https://surfdrive.surf.nl/files/index.php/s/3o7NIf6XENYnvyH)). Due to reordering, some chapter numbers in the videos are different to the book here.
-* read this book. There is also a PDF version (unfortunately, this sometimes doesn't build well): [iqp-book.pdf](iqp-book.pdf). The old version is at https://quphotonics.org/qist/iqp/iqp-book-old/
+* read this book. There is also a PDF version: [iqp-book.pdf](/iqp-book.pdf), and a local website of the book [iqp-offline_book.zip](/iqp-offline_book.zip)
 * do the brightspace quizzes.
 * solve the exercise assignments - alone or in a group, don't look at solutions unless you are really stuck!
 * during all this, collect questions for the workgroup sessions, and possibly read a bit more in Griffiths.
-
-<!-- make deeper but https://github.com/executablebooks/jupyter-book/issues/1131 -->
-```{tableofcontents}
-```
 
 ## Prerequisites
 
