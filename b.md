@@ -9,4 +9,4 @@ numbering:
 
 # Introduction
 
-In this chapter, we discuss very briefly the basics of quantum mechanics. First we explain how qubits can be encoded in physical systems, and how simple quantum measurements can be realized. Then we show that recent research demonstrated that many physical systems can encode quantum information. Then we zoom out and discuss the history and necessity to invent quantum mechanics, and finally show the postulates of quantum mechanics.
+In this chapter, we first explain briefly how qubits can be encoded in physical systems, using the polarization of light as an example, and how the results of simple quantum measurements can be calculated. Next, we briefly discuss in which physical systems quantum information can be encoded. We then discuss historical experimental evidence that motivated the development of quantum mechanics. Finally, we list the postulates of quantum mechanics. This chapter should be seen as a teaser, all concepts will appear in later chapters in more detail.
