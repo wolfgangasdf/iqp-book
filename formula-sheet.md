@@ -1,6 +1,7 @@
 ---
 numbering:
     title: false
+    equations: false
 ---
 
 

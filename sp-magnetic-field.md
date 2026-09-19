@@ -104,8 +104,12 @@ Now we perform the experiment shown in the figure. Note that it uses not electro
 
 
 ```{figure} figures/spin/stern-gerlach.png
+---
+name: spin-sterngerlach
+width: 100%
+---
 The Stern-gerlach experiment. Classically, we would expect a smeared out picture (4) but quantum mechanics correctly predicts the outcome of the experiment of two distinct spots (5)! [Image credit](https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment)
-``````
+```
 
 In classical physics, $\mu_z$ could have any value, and any force between $-1/2 \gamma\alpha$ up to $+1/2 \gamma\alpha$ is possible, therefore a vertically smeared-out picture on the electron-detecting plate is expected, label 4.
 
