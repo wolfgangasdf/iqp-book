@@ -80,7 +80,7 @@ project:
       level: 1
     - file: ad-quantum-dynamics.md
       level: 1
-    - file: periodic-system.md
+    - file: ad-periodic-system.md
       level: 1
     - file: ad-exercise.md
       level: 1

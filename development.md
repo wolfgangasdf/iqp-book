@@ -95,7 +95,8 @@ jupyter book build --execute --html
 jupyter book build --execute --pdf
 
 # This cleans up, to rebuild:
-rm -r _build
+jupyter book clean --site --temp # only site and temp
+rm -r _build # everything
 
 # This updates the frontmatter for all normal pages:
 ./updatefrontmatter.py
