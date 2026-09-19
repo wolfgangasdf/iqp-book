@@ -5,6 +5,12 @@ kernelspec:
     name: python3
 numbering:
     headings: true
+    figure:
+        start: 1
+        enumerator: "2.%s"
+    equation:
+        start: 1
+        enumerator: "2.%s"
 ---
 
 # The Schrödinger equation

@@ -5,6 +5,12 @@ kernelspec:
     name: python3
 numbering:
     headings: true
+    figure:
+        continue: true
+        enumerator: "5.%s"
+    equation:
+        continue: true
+        enumerator: "5.%s"
 ---
 
 # Indinstinguishable particles

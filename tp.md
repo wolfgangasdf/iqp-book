@@ -5,6 +5,12 @@ kernelspec:
     name: python3
 numbering:
     headings: true
+    figure:
+        start: 1
+        enumerator: "5.%s"
+    equation:
+        start: 1
+        enumerator: "5.%s"
 ---
 
 # Two particles

@@ -5,6 +5,12 @@ kernelspec:
     name: python3
 numbering:
     headings: true
+    figure:
+        start: 1
+        enumerator: "6.%s"
+    equation:
+        start: 1
+        enumerator: "6.%s"
 ---
 
 # Perturbation theory

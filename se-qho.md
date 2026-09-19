@@ -5,6 +5,12 @@ kernelspec:
     name: python3
 numbering:
     headings: true
+    figure:
+        continue: true
+        enumerator: "2.%s"
+    equation:
+        continue: true
+        enumerator: "2.%s"
 ---
 
 # The quantum harmonic oscillator

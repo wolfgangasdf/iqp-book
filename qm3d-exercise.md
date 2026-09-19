@@ -5,6 +5,12 @@ kernelspec:
     name: python3
 numbering:
     headings: true
+    figure:
+        continue: true
+        enumerator: "3.%s"
+    equation:
+        continue: true
+        enumerator: "3.%s"
 ---
 
 # Exercise
