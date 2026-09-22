@@ -58,9 +58,7 @@ Now we can use relatively simple algebra – we have two basis states, therefore
 
 $$
 S^2\left|0\right\rangle=\hbar^2\ s(s+1)\left|0\right\rangle=\frac{3}{4}\hbar^2\left|0\right\rangle\\
-
 S^2\left|1\right\rangle=\frac{3}{4}\hbar^2\left|1\right\rangle\\
-
 S_z\left|0\right\rangle=\frac{\hbar}{2}\left|0\right\rangle, 		S_z\left|1\right\rangle=-\frac{\hbar}{2}\left|1\right\rangle
 $$(sp-oh-a1)
 
