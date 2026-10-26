@@ -46,21 +46,27 @@ $$(se-qho-v1)
 :label: potential-taylor
 :caption: All potential minima can be approximated by a quadratic potential in the neighborhood of the minimum.
 
-from matplotlib import pyplot as plt
-from numpy import *
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-11, 5, 500)
+
+V = x**2 + 0.1 * x**3
+V_approx = x**2
 
 fig, ax = plt.subplots(figsize=(4,3))
 
-x = linspace(-5, 20, 500)
+ax.plot(x, V, label="Potential")
+ax.plot(x, V_approx, "--", label="Approximation")
 
-y=-x+(x-3)**2-0.1*(x-5)**3
-ax.plot(x, y)
-y1=((x-3.7)/0.7)**2
-ax.plot(x, y1)
+ax.set(
+    xlabel=r"$x$",
+    ylabel=r"$V(x)$",
+    ylim=(-1, 20),
+)
 
-ax.set_xlabel('$x$')
-ax.set_ylabel('$V(x)$')
-ax.set_ylim(-75,180);
+ax.legend(loc="upper left")
+fig.tight_layout()
 ```
 
 :::{note} Note: classical harmonic oscillator
@@ -193,17 +199,18 @@ for n in range(nmax):
     ax.plot(x, ones(size(x))*energy(n), color='0.5')
     ax.text(0, 0.2+energy(n), "$E_" + str(n) + "$")
     ax.arrow(-2,energy(n), 0, 0.8*energy(0), width=0.1, length_includes_head=False, color='r' )
-    ax.text(-3, 0.2+energy(n), "$a^\dagger$")
+    ax.text(-3, 0.2+energy(n), r"$a^\dagger$")
     ax.arrow(2,energy(n+1), 0, -0.8*energy(0), width=0.1, length_includes_head=False, color='b' )
     ax.text(2.5, 0.2+energy(n), "$a$")
 
 fudge=2.5
 ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 
-ax.set_xlabel('$x$')
+ax.set_xlabel(r'$x$')
 ax.set_xticks([])
 ax.set_yticks([])
-fig.legend(loc='outside right');
+ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.75)
 ```
 
 
@@ -251,8 +258,9 @@ hbar=1
 y=(m*omega/(pi*hbar))**(1/4) * exp(-1*m*omega/(2*hbar)*x**2)
 ax.plot(x, y)
 
-ax.set_xlabel('$x$')
-ax.set_ylabel('$\psi(x)$');
+ax.set_xlabel(r'$x$')
+ax.set_ylabel(r'$\psi(x)$');
+_ = ax.set_yticks([])
 ```
 
 
@@ -328,7 +336,8 @@ ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 ax.set_xlabel('$x$')
 ax.set_xticks([])
 ax.set_yticks([])
-fig.legend(loc='outside right');
+ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.75)
 ```
 
 The corresponding probability density is the square of these wavefunctions:
@@ -364,7 +373,7 @@ x = linspace(-5, 5, 500)
 
 for n in range(nmax):
     scale=1.3
-    ax.plot(x, energy(n)+abs(psi(n,x))**2 *scale, label="$|\psi_" + str(n) + "(x)|^2$")
+    ax.plot(x, energy(n)+abs(psi(n,x))**2 *scale, label=r"$|\psi_" + str(n) + "(x)|^2$")
     ax.plot(x, ones(size(x))*energy(n), color='0.5')
 
 fudge=2.5
@@ -373,7 +382,8 @@ ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 ax.set_xlabel('$x$')
 ax.set_xticks([])
 ax.set_yticks([])
-fig.legend(loc='outside right');
+ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.75)
 ```
 
 Here we see a rather evenly distributed probability density. This is in strong contrast to the classical harmonic oscillator like a swing, where the probability is highest at the extremal turning points where the velocity is lowest. 
@@ -478,9 +488,10 @@ fudge=2.5
 ax.plot(x,potential(x*fudge) / max(potential(x)), label="$V(x)$")
 
 ax.set_xlabel('$x$')
-# ax.set_xticks([])
-# ax.set_yticks([])
-fig.legend(loc='outside right');
+ax.set_xticks([])
+ax.set_yticks([])
+ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.75)
 ```
 
 
@@ -521,7 +532,7 @@ ax.plot(x+2,y)
 ax.arrow(3,1,0.3,0.5, linewidth=3, head_width=0.05, color='black')
 ax.arrow(3,0,0.3,0, linewidth=3, head_width=0.05, color='black')
 ax.arrow(3,-1,0.3,-0.5, linewidth=3, head_width=0.05, color='black')
-ax.text(1.5,0.5,"$\Psi$",fontsize=20)
+ax.text(1.5,0.5,r"$\Psi$",fontsize=20)
 dx=4
 ax.plot(dx+x,y+2,color="tab:blue")
 ax.plot(dx+x,y,color="tab:blue")
