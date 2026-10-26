@@ -42,22 +42,51 @@ This means that a particle in this potential can move freely inside the well and
 ```{code-cell} ipython3
 :tags: [remove-input]
 :label: potential-well
-:caption: The infinite square potential well.
+:caption: The infinite square potential well. The particle is confined to the region $0<x<a$, where $V(x)=0$, while the potential is infinite outside the well.
 
 from matplotlib import pyplot as plt
 from numpy import *
 
-fig, ax = plt.subplots(figsize=(4,3))
+fig, ax = plt.subplots(figsize=(4, 3))
 
+# Plot limits
+x_min = -0.2
+x_max = 1.2
+wall_height = 5
+
+# Grey forbidden regions
+ax.axvspan(x_min, 0, color="0.85", zorder=0)
+ax.axvspan(1, x_max, color="0.85", zorder=0)
+
+# Potential inside the well
 x = linspace(0, 1, 500)
-y = 0*x
-y[0]=10
-y[-1]=10
-ax.plot(x, y, color='red')
-ax.set_xlabel('$x/a$')
-ax.set_ylabel('$V(x)$')
-ax.set_ylim(-1,5);
+ax.plot(x, zeros_like(x), color="red", linewidth=2)
+
+# Infinite walls — start exactly at x/a = 0 and x/a = 1
+ax.plot([0, 0], [0, wall_height], color="red", linewidth=2.5)
+ax.plot([1, 1], [0, wall_height], color="red", linewidth=2.5)
+
+# Labels
+ax.text(0.5, 0.25, r"$V=0$", ha="center", va="bottom", fontsize=10)
+ax.text(-0.04, 4.2, r"$V=\infty$", ha="right", va="center", fontsize=10)
+ax.text(1.04, 4.2, r"$V=\infty$", ha="left", va="center", fontsize=10)
+
+# Axes
+ax.set_xlabel(r"$x/a$")
+ax.set_ylabel(r"$V(x)$")
+
+ax.set_xlim(x_min, x_max)
+ax.set_ylim(0, wall_height)
+
+ax.set_xticks([0, 1])
+ax.set_yticks([])
+
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+
+fig.tight_layout()
 ```
+
 
 
 Inside the well the potential energy is zero such that the time independent Schrödinger equation reads: 
@@ -139,19 +168,110 @@ Here we show the first 5 wavefunctions of the square well. The particle in the s
 :label: potential-well-wavefunctions
 :caption: The first wavefunctions of an infinite-well potential. All wavefunctions oscillate around zero, they are shown vertically offsetted for better visibility.
 
-from matplotlib import pyplot as plt
-from numpy import *
-fig, ax = plt.subplots(figsize=(4,3))
-x = linspace(0, 1, 500)
-a=1
-for n in range(1,6):
-    y=sqrt(2/a)*sin(n*pi/a*x) + 3*(n-1) # offset curves
-    ax.plot(x, y, label="$\psi_" + str(n) + "(x)$")
-ax.set_xlabel('$x/a$')
-ax.set_ylabel('$\psi_n(x)$')
-ax.set_ylim(-1,15)
-ax.set_yticks([0])
-fig.legend(loc='outside right');
+import altair as alt
+import numpy as np
+import pandas as pd
+
+widths = np.round(np.arange(0.5, 1.51, 0.1), 1)
+u = np.linspace(0, 1, 80)
+n_values = range(1, 6)
+
+# Wavefunctions and energy levels
+df = pd.DataFrame([
+    {
+        "a": a, "x": a * ui, "n": n,
+        "energy": n**2 / a**2,
+        "y": n**2 / a**2 + 2 * np.sqrt(2 / a) * np.sin(n * np.pi * ui)
+    }
+    for a in widths for n in n_values for ui in u
+])
+
+# Potential boundaries
+walls_df = pd.DataFrame([
+    {"a": a, "wall": side, "x": x, "y": y}
+    for a in widths
+    for side, x in [("left", 0), ("right", a)]
+    for y in [0, 28]
+])
+
+bottom_df = pd.DataFrame([
+    {"a": a, "x": x, "y": 0}
+    for a in widths for x in [0, a]
+])
+
+# Forbidden regions
+shade_df = pd.DataFrame([
+    {"a": a, "x": x0, "x2": x1, "y": 0, "y2": 28}
+    for a in widths
+    for x0, x1 in [(-0.25, 0), (a, 1.75)]
+])
+
+a_slider = alt.param(
+    name="well_width",
+    value=1.0,
+    bind=alt.binding_range(
+        min=0.5, max=1.5, step=0.1, name="Well width a: "
+    )
+)
+
+x_scale = alt.Scale(domain=[-0.25, 1.75], nice=False)
+y_scale = alt.Scale(domain=[0, 28], nice=False)
+
+def selected(data):
+    return alt.Chart(data).add_params(a_slider).transform_filter(
+        alt.datum.a == a_slider
+    )
+
+shade = selected(shade_df).mark_rect(color="lightgray").encode(
+    x=alt.X("x:Q", scale=x_scale, axis=alt.Axis(title="x", grid=False)),
+    x2="x2:Q",
+    y=alt.Y("y:Q", scale=y_scale, axis=alt.Axis(title="E / E₀", grid=False)),
+    y2="y2:Q"
+)
+
+bottom = selected(bottom_df).mark_line(color="red", strokeWidth=2.5).encode(
+    x=alt.X("x:Q", scale=x_scale),
+    y=alt.Y("y:Q", scale=y_scale)
+)
+
+walls = selected(walls_df).mark_line(color="red", strokeWidth=2.5).encode(
+    x=alt.X("x:Q", scale=x_scale),
+    y=alt.Y("y:Q", scale=y_scale),
+    detail="wall:N",
+    order="y:Q"
+)
+
+levels = selected(df).mark_line(
+    color="black", strokeDash=[5, 5], strokeWidth=1
+).encode(
+    x=alt.X("x:Q", scale=x_scale),
+    y=alt.Y("energy:Q", scale=y_scale),
+    detail="n:N"
+)
+
+waves = selected(df).mark_line(strokeWidth=2).encode(
+    x=alt.X("x:Q", scale=x_scale),
+    y=alt.Y("y:Q", scale=y_scale),
+    color=alt.Color("n:N", title="n"),
+    detail="n:N",
+    order="x:Q"
+)
+
+alt.layer(shade, bottom, walls, levels, waves).properties(
+    width=600,
+    height=450
+).configure_view(
+    stroke=None
+).configure_axis(
+    grid=False,
+    labelFontSize=16,
+    titleFontSize=20
+).configure_legend(
+    labelFontSize=16,
+    titleFontSize=18
+).configure_title(
+    fontSize=22
+)
 ```
 
 Finally, the solution to the time-dependent Schrödinger equation are found by taking into account the time dependent solution:
