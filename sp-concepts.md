@@ -85,17 +85,17 @@ Again, since the cartesian spin components do not commute they cannot be simulta
 We introduce the spin quantum number $s$ and the quantum number of $S_z$, $m_s$ and obtain as before for the orbital angular momentum:
 
 $$
-\begin{align}
+\begin{aligned}
 S^2\left|s,m_s\right\rangle&=\hbar^2s\left(s+1\right)\left|s,m_s\right\rangle\\
-S_z\left|s,m_s\right\rangle&=\hbar m\left|s,m_s\right\rangle\\\end{align}
+S_z\left|s,m_s\right\rangle&=\hbar m\left|s,m_s\right\rangle\end{aligned}
 $$(sp-c-s2)
 
 In contrast to the orbital angular momentum, we do not know the eigenfunctions and it does not make sense to restrict ourselves to integer $s$ and $m_s$, which was needed for the orbital angular momentum to make sense with the spherical harmonics eigenfunctions. Therefore here, also half-integer values are allowed as resulted from the algebraic theory of angular momentum in the previous section: 
 
 $$
-\begin{align}s&=0,\frac{1}{2},1,\frac{3}{2},\ldots\\
+\begin{aligned}s&=0,\frac{1}{2},1,\frac{3}{2},\ldots\\
 m_s&=-s,-s+1,\ldots,s-1,s
-\end{align}
+\end{aligned}
 $$(sp-c-s)
 
 Experimentalists have measured $s$ (you will see later how) for all elementary particles and found that every elementary particle has a specific spin $s$. But, classification of particles by their spin is also very useful for composite particles like a proton that consists of several quarks and gluons – but the case is quite complicated if done exactly, and still subject to research. 

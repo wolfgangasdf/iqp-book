@@ -85,11 +85,11 @@ $$(se-1d-sv1)
 Let’s put this back into the Schrödinger equation, we obtain for the derivatives 
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{\partial\Psi}{\partial t}&=\psi\frac{d\phi}{dt}
 \\
 \frac{\partial^2\Psi}{\partial x^2}&=\frac{d^2\psi}{dx^2}\phi
-\end{align}
+\end{aligned}
 $$(se-1d-sv2)
 
 With this the Schrödinger equation becomes 

@@ -149,12 +149,12 @@ But, this also implies $\ell=-\ell+N$ or $\ell=N/2$ which means that $\ell$ is e
 
 We summarize now with the eigenfunctions $f_{\ell}^m$:
 
-$$\begin{align*}
+$$\begin{aligned}
 L^2 f_{\ell}^m&=\hbar^2 \ell(\ell+1) f_{\ell}^m\\
 L_z f_{\ell}^m&=\hbar m f_{\ell}^m\\
 \ell&=0,1 / 2,1,3 / 2, \ldots\\
 m&=-\ell,-\ell+1, \ldots, \ell-1, \ell
-\end{align*}$$(3d-am-5)
+\end{aligned}$$(3d-am-5)
 
 Exciting, half-integer values are possible - we will come back to this. But for the hydrogen atom, remember that particular properties of the spherical harmonics require that $\ell$ is integer.
 

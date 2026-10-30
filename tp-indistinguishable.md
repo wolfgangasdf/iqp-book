@@ -88,10 +88,10 @@ $$\psi\left(x_1,x_2\right)=e^{i\phi}e^{i\phi}\psi\left(x_1,x_2\right)$$
 This implies that $e^{i\phi}$ must equal to $+1$ or $-1$.
 This means that 
 
-$$\begin{align}
+$$\begin{aligned}
 \psi\left(x_1,x_2\right)&=+\psi\left(x_2,x_1\right)\quad\text{or}\\
 \psi\left(x_1,x_2\right)&=-\psi\left(x_2,x_1\right)
-\end{align}
+\end{aligned}
 $$(tp-i-2)
 
 Where we call the first case a *symmetric* wavefunction under particle exchange, the second case an *antisymmetric* wavefunction under particle exchange.
@@ -188,7 +188,7 @@ $$\Psi\left(x_{1},x_1\right)=\psi_a\left(x_1)\ \psi_b(x_1\right)$$(tp-b-1)
 
 and for the symmetrized entangled state, where we now use $A=1/\sqrt{2}$ for proper normalization:
 
-$$\begin{align*}\psi_+\left(x_1,x_1\right)&=\frac{1}{\sqrt2}\left[\psi_a\left(x_1\right)\psi_b\left(x_1\right)\ +\ \psi_a\left(x_1\right)\psi_b\left(x_1\right)\right]\\&=\sqrt2\ \psi_a\left(x_1\right)\psi_b\left(x_1\right)\end{align*}$$(tp-b-2)
+$$\begin{aligned}\psi_+\left(x_1,x_1\right)&=\frac{1}{\sqrt2}\left[\psi_a\left(x_1\right)\psi_b\left(x_1\right)\ +\ \psi_a\left(x_1\right)\psi_b\left(x_1\right)\right]\\&=\sqrt2\ \psi_a\left(x_1\right)\psi_b\left(x_1\right)\end{aligned}$$(tp-b-2)
 
 The latter has a factor $\sqrt{2}$ which becomes 2 in probability! Apparently, the chance of finding both particles at the same position is twice as high for indistinguishable particles compared to distinguishable particles! 
 

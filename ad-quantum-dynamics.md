@@ -126,10 +126,10 @@ $$\dot{c}_a=-\frac{i}{\hbar} H_{a b}^{\prime} e^{-i \omega_0 t} c_b, \quad \dot{
 If we start with the system in the lower state, $c_a(0)=1$ and $c_b(0)=0$, on inserting these at the right-hand side of Eq. {eq}`pt-1st`, we obtain after integration:
 
 $$
-\begin{align}
+\begin{aligned}
 \frac{d c_a^{(1)}}{d t}=0 &\Rightarrow c_a^{(1)}(t)=1 \\
 \frac{d c_b^{(1)}}{d t}=-\frac{i}{\hbar} H_{b a}^{\prime} e^{i \omega_0 t} &\Rightarrow c_b^{(1)}=-\frac{i}{\hbar} \int_0^t H_{b a}^{\prime}\left(t^{\prime}\right) e^{i \omega_0 t^{\prime}} d t^{\prime}
-\end{align}
+\end{aligned}
 $$(pt-1st-res)
 
 This clearly shows that it is an approximation, since $c_a$ remains at 1 and normalization is therefore violated.
