@@ -67,16 +67,41 @@ $$
 E_{\mathrm{so}}^{(1)}=\frac{\left(E_n\right)^2}{m c^2}\left\{\frac{n[j(j+1)-\ell(\ell+1)-3 / 4]}{\ell(\ell+1 / 2)(\ell+1)}\right\}
 $$(ad-pta-5)
 
-The most important outcome of this is that the energy of the electronic states in hydrogen depend not only on $n$ and $\ell$, but also on the spin via $j$, which therefore splits different $\ell$ and $s$ states, as shown in the figure:
+The most important outcome of this is that the energy of the electronic states in hydrogen depend not only on $n$ and $\ell$, but also on the spin via $j$, which therefore splits different $\ell$ and $s$ states. Adding the relativistic correction, the total fine-structure correction becomes (Griffiths 7.3.2):
 
-```{figure} figures/perturbation-theory/h-finestructure.png
----
-name: h-finestructure
-width: 75%
----
-Electronic energy levels of hydrogen with fine structure. From Griffiths.
+$$
+E_{\mathrm{fs}}^{(1)}=\frac{\left(E_n\right)^2}{2 m c^2}\left(3-\frac{4 n}{j+1 / 2}\right)
+$$(ad-pta-fs)
+
+Remarkably, $\ell$ has dropped out: the energy depends only on $n$ and $j$, so for instance the $2S_{1/2}$ and $2P_{1/2}$ states stay degenerate. This is shown in the figure:
+
+```{code-cell} ipython3
+:tags: [remove-input]
+:label: h-finestructure
+:caption: Electronic energy levels of hydrogen with fine structure, calculated with Eq. [](#ad-pta-fs). The dashed lines show the unperturbed energies $E_n$. Not to scale: the fine-structure shifts are strongly exaggerated.
+
+from matplotlib import pyplot as plt
+
+fig, ax = plt.subplots(figsize=(6, 7))
+y0 = {1: 0, 2: 5, 3: 8.5, 4: 12}  # schematic heights of the unperturbed levels E_n
+scale = 6                         # exaggeration of the fine-structure shifts
+for n, y in y0.items():
+    ax.plot([-0.5, 3.5], [y, y], color="lightgray", lw=0.8, ls="--")
+    ax.text(-0.6, y, f"$n={n}$", ha="right", va="center")
+    for l in range(n):
+        for j in {abs(l - 0.5), l + 0.5}:
+            dE = -(n / (j + 0.5) - 3 / 4) / n**2  # fine-structure shift in units of alpha^2 |E_n|
+            yj = y + scale * dE
+            ax.plot([l - 0.25, l + 0.25], [yj, yj], color="black", lw=2)
+            up = j > l  # label j = l+1/2 just above its line, j = l-1/2 just below
+            ax.text(l + 0.28, yj, f"$j={int(2 * j)}/2$", fontsize=8,
+                    ha="left", va="bottom" if up else "top")
+ax.set_xticks(range(4), [rf"$\ell={l}$" + f"\n({s})" for l, s in enumerate("SPDF")])
+ax.set_yticks([])
+ax.tick_params(length=0)
+for side in ["left", "right", "top", "bottom"]:
+    ax.spines[side].set_visible(False)
 ```
-<!-- TODO replace also bad-->
 
 :::{slidetag}
 :::
