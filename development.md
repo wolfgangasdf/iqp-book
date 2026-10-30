@@ -74,6 +74,7 @@ Bugs:
 ```
 pip install -U jupyter-book
 pip install -U mystmd
+pip install -U vl-convert-python # needed to convert altair animations to png for pdf export (altair.vegalite)
 ```
 
 ### build and develop
