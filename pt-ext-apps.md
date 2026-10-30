@@ -86,16 +86,40 @@ The magnetic field breaks rotation symmetry and $H_Z'$ lifts the degeneracy in $
 
 If $B_{\mathrm{ext}} \gg B_{\mathrm{int}}$, we can use $H_{\mathrm{Bohr}}+H_Z^{\prime}$ as the unperturbed Hamiltonian, and use $H_{fs}'$ as the perturbation. 
 
-Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a theory needs to connect the corrections by the weak- and strong-field Zeeman effect in a continuous way. In this intermediate regime we need to treat $ H^{\prime}=H_Z^{\prime}+H_{\mathrm{fs}}^{\prime}$ as the perturbation, and it is not clear what good eigenstates are. Therefore, we have to use the Clebsch-Gordan coefficients to find the state decomposition, and have to run perturbation theory with them. We do not do this here but it works, as can be seen in Griffiths 7.4.3, and the result is shown in the figure:
+Now, what if spin-orbit coupling and Zeeman splitting are similar? Somehow a theory needs to connect the corrections by the weak- and strong-field Zeeman effect in a continuous way. In this intermediate regime we need to treat $ H^{\prime}=H_Z^{\prime}+H_{\mathrm{fs}}^{\prime}$ as the perturbation, and it is not clear what good eigenstates are. Therefore, we have to use the Clebsch-Gordan coefficients to find the state decomposition, and have to run perturbation theory with them. We do not do this here but it works, as can be seen in Griffiths 7.4.3. [](#zeeman-all) shows the Zeeman shift for the eight $n=2$ states.
 
-```{figure} figures/perturbation-theory/zeeman-all.png
----
-name: zeeman-all
-width: 75%
----
-Zeeman splitting of the $n=2$ states of hydrogen where we see that the different regimes connect nicely. Figure from Griffiths.
+$$
+E=E_2-3\gamma\pm\frac{\beta}{2}\pm'\sqrt{4\gamma^2\pm\frac{2}{3}\gamma\beta+\frac{\beta^2}{4}}
+$$(ad-pta-zeeman)
+
+where $\pm$ is the same sign in both places and $\pm'$ is independent. The result is shown in the figure:
+
+```{code-cell} ipython3
+:tags: [remove-input]
+:label: zeeman-all
+:caption: Zeeman splitting of the $n=2$ states of hydrogen, from the weak-field to the strong-field regime.
+
+from matplotlib import pyplot as plt
+from numpy import *
+
+b = linspace(0, 12, 200)  # Zeeman energy mu_B B_ext in units of gamma = (alpha/8)^2 * 13.6 eV
+levels = [-5 + b, -5 - b, -1 + 2 * b, -1 - 2 * b]  # states that do not mix
+for s in [1, -1]:  # the m_j = +1/2 and m_j = -1/2 states of 2P_1/2 and 2P_3/2 mix
+    root = sqrt(4 + s * 2 * b / 3 + b**2 / 4)
+    levels += [-3 + s * b / 2 + root, -3 + s * b / 2 - root]
+
+fig, ax = plt.subplots(figsize=(5, 6))
+for E in levels:
+    ax.plot(b, E, color="black")
+for x, regime in [(1, "weak"), (5, "intermediate"), (10.5, "strong")]:
+    ax.text(x, 22, regime, ha="center")
+ax.set_xlim(0, 12)
+ax.set_xlabel(r"$\mu_B B_{\mathrm{ext}}\,/\,\gamma$")
+ax.set_yticks([-5, -1], ["$2S_{1/2}, 2P_{1/2}$", "$2P_{3/2}$"])
+ax.set_ylabel("Energy")
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
 ```
-<!-- TODO replace G7.11 -->
 
 ## Hyperfine splitting
 
