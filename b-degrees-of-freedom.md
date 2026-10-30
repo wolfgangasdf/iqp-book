@@ -38,7 +38,6 @@ Which particles are useful for quantum technologies depends on our ability to is
 
 You might object that protons and neutrons are fundamental particles, since they consist of quarks. Yes, also composite systems show quantum behaviour and can often be treated as if they were a "single" particles, as long as we don't *look inside* the composite system, for which we would need high energies as we will see. For instance, for all normal-energy experiments, the nucleus of an atom can be considered as a single entity - only in large particle accellerators the interior of the nucleus can be investigated.
 
-<!-- TODO pdf -->
 ```{figure} figures/basics/atom.png 
 ---
 name: b-atom
