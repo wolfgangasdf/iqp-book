@@ -49,7 +49,8 @@ $$
 Operators: 
 
 $$
-\hat{x}=x,\quad\hat{p}=-i\hbar\frac{\partial}{\partial x}, \quad \hat{L}=\hat{r}\times\hat{p}
+\textrm{1D:}\quad\hat{x}=x,\quad\hat{p}_x=-i\hbar\frac{\partial}{\partial x},\quad
+\textrm{3D:}\quad\hat{p}=-i\hbar\nabla,\quad \hat{L}=\hat{r}\times\hat{p}
 $$
 
 Expectation values: 
