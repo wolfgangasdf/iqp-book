@@ -174,7 +174,7 @@ import pandas as pd
 from altair.vegalite.v6.display import html_renderer, png_renderer
 
 def html_png_renderer(spec, **metadata):
-    bundles = [html_renderer(spec, **metadata), png_renderer(spec, scale_factor=2)]
+    bundles = [html_renderer(spec, template="inline", **metadata), png_renderer(spec, scale_factor=2)]
     return {k: v for b in bundles for k, v in (b[0] if isinstance(b, tuple) else b).items()}
 
 alt.renderers.register("html_png", html_png_renderer)
